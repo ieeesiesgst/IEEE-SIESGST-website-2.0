@@ -1,38 +1,41 @@
 {
-  "name": "ieee-siesgst-website-2.0",
-  "version": "1.0.0",
-  "description": "\"Official website of IEEE SIESGST\"",
-  "main": "app.js",
-  "scripts": {
-    "start": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js",
-    "debug": "ndb server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ieeesiesgst/IEEE-SIESGST-website-2.0.git"
-  },
-  "author": "IEEE SIESGST",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ieeesiesgst/IEEE-SIESGST-website-2.0/issues"
-  },
-  "homepage": "https://github.com/ieeesiesgst/IEEE-SIESGST-website-2.0#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "mongoose": "^5.12.3",
-    "morgan": "^1.10.0",
-    "passport": "^0.4.1",
-    "slugify": "^1.5.0",
-    "validator": "^13.5.2"
-  },
-  "devDependencies": {
-    "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.1.0",
-    "nodemon": "^2.0.7",
-    "prettier": "^2.2.1"
-  }
+	"name": "ieee-siesgst-website-2.0",
+	"version": "1.0.0",
+	"description": "\"Official website of IEEE SIESGST\"",
+	"main": "app.js",
+	"scripts": {
+		"test": "start http://localhost:3000 & npm run dev",
+		"dev": "nodemon app.js",
+		"start": "node app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ieeesiesgst/IEEE-SIESGST-website-2.0.git"
+	},
+	"author": "IEEE SIESGST",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ieeesiesgst/IEEE-SIESGST-website-2.0/issues"
+	},
+	"homepage": "https://github.com/ieeesiesgst/IEEE-SIESGST-website-2.0#readme",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"connect-mongo": "^4.4.1",
+		"dotenv": "^8.2.0",
+		"ejs": "^3.1.6",
+		"express": "^4.17.1",
+		"express-session": "^1.17.1",
+		"mongoose": "^5.12.3",
+		"passport": "^0.4.1",
+		"passport-google-oauth20": "^2.0.0",
+		"passport-local-mongoose": "^6.1.0",
+		"slugify": "^1.5.0",
+		"validator": "^13.5.2"
+	},
+	"devDependencies": {
+		"eslint": "^7.24.0",
+		"eslint-config-prettier": "^8.1.0",
+		"nodemon": "^2.0.7",
+		"prettier": "^2.2.1"
+	}
 }
