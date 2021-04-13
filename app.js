@@ -17,8 +17,7 @@ if (process.env.NODE_ENV === 'development') {
 		session({
 			secret: process.env.SESSION_SECRET,
 			resave: false,
-			saveUninitialized: false,
-			store: MongoStore.create({ mongoUrl: process.env.DATABASE })
+			saveUninitialized: false
 		})
 	);
 } else {
@@ -26,7 +25,13 @@ if (process.env.NODE_ENV === 'development') {
 		session({
 			secret: process.env.SESSION_SECRET,
 			resave: false,
-			saveUninitialized: false
+			saveUninitialized: false,
+			store: MongoStore.create({
+				mongoUrl: process.env.DATABASE,
+				crypto: {
+					secret: process.env.MONGO_STORE_SECRET
+				}
+			})
 		})
 	);
 }
