@@ -27,7 +27,7 @@
 		"express": "^4.17.1",
 		"express-flash-message": "^2.1.0",
 		"express-session": "^1.17.1",
-		"mongoose": "^5.12.3",
+		"mongoose": "^5.12.4",
 		"passport": "^0.4.1",
 		"passport-azure-ad": "^4.3.0",
 		"passport-google-oauth20": "^2.0.0",
@@ -37,7 +37,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^7.24.0",
-		"eslint-config-prettier": "^8.1.0",
+		"eslint-config-prettier": "^8.2.0",
 		"nodemon": "^2.0.7",
 		"prettier": "^2.2.1"
 	}
