@@ -7,8 +7,12 @@ const ejs = require('ejs');
 
 const mongoose = require('./db/mongoose');
 const passport = require('./auth/passport');
-const authRouter = require('./routes/authRouter');
+
+const googleRouter = require('./routes/authRouters/googleRouter');
+const microsoftRouter = require('./routes/authRouters/microsoftRouter');
+
 const generalRouter = require('./routes/generalRouter');
+
 
 const app = express();
 
@@ -41,7 +45,9 @@ app.set('view engine', 'ejs');
 
 passport(app);
 
-app.use('/auth', authRouter);
+
+app.use('/auth', googleRouter);
+app.use('/auth', microsoftRouter);
 app.use('/', generalRouter);
 
 const port = process.env.PORT || 3000;

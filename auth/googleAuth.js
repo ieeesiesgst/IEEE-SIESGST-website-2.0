@@ -12,18 +12,29 @@ module.exports = () => {
 				callbackURL: '/auth/google/callback'
 			},
 			function (accessToken, refreshToken, profile, cb) {
-				User.findOne({ googleId: profile.id }, (err, user) => {
+				User.findOne({ email: profile._json.email }, (err, user) => {
 					if (err) {
 						console.log(err);
 						return cb(err, null);
 					} else if (user) {
-						return cb(null, user);
+						user.googleId = profile.id;
+						user.profilePic = profile._json.picture;
+
+						user.save((err) => {
+							if (err) {
+								console.log(err);
+								return cb(err, null);
+							} else {
+								return cb(null, user);
+							}
+						});
 					} else {
 						const newUser = new User();
 						newUser.email = profile._json.email;
 						newUser.googleId = profile.id;
 						newUser.name = profile._json.name;
 						newUser.profilePic = profile._json.picture;
+						newUser.verified = true;
 						newUser.save((error) => {
 							if (error) {
 								console.log(error);

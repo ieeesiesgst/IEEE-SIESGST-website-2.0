@@ -31,6 +31,13 @@ const userSchema = new mongoose.Schema({
 	googleId: {
 		type: String
 	},
+	microsoftId: {
+		type: String
+	},
+	verified: {
+		type: Boolean,
+		default: false 
+	},
 	profilePic: {
 		type: String
 	}
