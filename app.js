@@ -1,50 +1,27 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
-const session = require('express-session');
-const MongoStore = require('connect-mongo');
 const ejs = require('ejs');
+const flash = require('connect-flash');
 
 const mongoose = require('./db/mongoose');
 const passport = require('./auth/passport');
-
+const { limiter, authLimiter } = require('./utils/rateLimit');
 const googleRouter = require('./routes/authRouters/googleRouter');
 const microsoftRouter = require('./routes/authRouters/microsoftRouter');
-
 const generalRouter = require('./routes/generalRouter');
-
+const session = require('./utils/session');
 
 const app = express();
 
-if (process.env.NODE_ENV === 'development') {
-	app.use(
-		session({
-			secret: process.env.SESSION_SECRET,
-			resave: false,
-			saveUninitialized: false
-		})
-	);
-} else {
-	app.use(
-		session({
-			secret: process.env.SESSION_SECRET,
-			resave: false,
-			saveUninitialized: false,
-			store: MongoStore.create({
-				mongoUrl: process.env.DATABASE,
-				crypto: {
-					secret: process.env.MONGO_STORE_SECRET
-				}
-			})
-		})
-	);
-}
-
+session(app);
+app.use(limiter);
+app.use('/auth/', authLimiter);
+app.use(flash());
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 passport(app);
-
 
 app.use('/auth', googleRouter);
 app.use('/auth', microsoftRouter);

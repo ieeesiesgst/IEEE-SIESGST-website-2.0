@@ -9,9 +9,10 @@ module.exports = () => {
 			{
 				clientID: process.env.GOOGLE_CLIENT_ID,
 				clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-				callbackURL: process.env.GOOGLE_CALLBACK_URL
+				callbackURL: process.env.GOOGLE_CALLBACK_URL,
+				passReqToCallback: true
 			},
-			function (accessToken, refreshToken, profile, cb) {
+			function (req, accessToken, refreshToken, profile, cb) {
 				User.findOne({ email: profile._json.email }, (err, user) => {
 					if (err) {
 						console.log(err);
@@ -25,7 +26,11 @@ module.exports = () => {
 								console.log(err);
 								return cb(err, null);
 							} else {
-								return cb(null, user);
+								return cb(
+									null,
+									user,
+									req.flash('info', 'Flash is back!')
+								);
 							}
 						});
 					} else {

@@ -18,13 +18,13 @@ module.exports = () => {
 				responseMode: 'form_post',
 
 				redirectUrl: process.env.MICROSOFT_REDIRECT_URL,
+				passReqToCallback: true,
 				allowHttpForRedirectUrl: allowHttp,
 				clientSecret: process.env.MICROSOFT_CLIENT_SECRET,
 				validateIssuer: true,
 				scope: ['email', 'profile']
 			},
-			function (iss, sub, profile, accessToken, refreshToken, done) {
-				console.log(profile);
+			function (req, iss, sub, profile, accessToken, refreshToken, done) {
 				User.findOne({ email: profile._json.email }, (err, user) => {
 					if (err) {
 						console.log(err);
