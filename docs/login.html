@@ -17,10 +17,7 @@
   </head>
  <body>
   
-  <main>
-   <article>
-  
-      <!-- partial:index.partial.html -->
+  <main>   
     <div>
       <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">
          Login
@@ -28,24 +25,24 @@
     </div>
 
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-dialog-centered login-dialog pb-1" role="document">
       <div class="modal-content login-body">
-      <div class="modal-header border-bottom-0">
-        <div class="close" data-dismiss="modal" aria-label="Close">
+      <div class="modal-header border-bottom-0 pb-0 pt-1">
+        <div class="close pb-0" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </div>
       </div>
       <div class="modal-body">
-        <div class="form-title text-center">
+       <div class="form-title pb-3 text-center">
           <h4>Login</h4>
         </div>
         
         <div class="d-flex flex-column text-center">
          
-          <a href="#" class="google btn"><i class="fab fa-google"></i> Sign in with Google</a>
+          <a href="#" class="signin-google btn"><i class="fab fa-google"></i> Sign in with Google</a>
           <br />
-          <a href="#" class="microsoft btn"><i class="fab fa-microsoft"></i> Sign in with Microsoft</a>
-
+          <a href="#" class="signin-microsoft btn"><i class="fab fa-microsoft"></i> Sign in with Microsoft <br /><small>Only for SIESGST Students</small></a>
+            
           
           <div class="text-center delimiter"> OR </div>
           <div class="d-flex  flex-column justify-content-center">
@@ -58,26 +55,25 @@
               <div class="form-group">
                 <input type="password" class="form-control" id="password1" placeholder="Your password">
               </div>
-              <button type="button" class="btn btn-block btn-round login-button shadow-none">Login</button>
+              <button type="button" class="btn btn-block btn-round login-button shadow-none text-white">Login</button>
             </form>
             
           
         </div>
       </div>
     </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+      <div class="modal-footer d-flex flex-column justify-content-center pt-1 pb-1">
+        <div class="signup-section pb-0">Not a member yet? <a href="#a" class="text-info"> Sign Up!</a></div>
+        <div class="signup-section pt-1 pb-3 pb-sm-0"><a href="#a" class="text-info"> Forgot Password?</a></div>
       </div>
-      <div class="d-flex justify-content-center">
-        <div class="signup-section"> Forgot Password? <a href="#a" class="text-info"> Reset Now</a>.</div>
-      </div>
+     
       
   </div>
 </div>
 <!-- partial -->
 
   
-  </article>
+  
  </main>
  
    <!-- jQuery -->

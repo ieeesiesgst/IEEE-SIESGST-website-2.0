@@ -1,37 +1,36 @@
 /*------  --------  LOGIN FORM --------- ---------*/
-.container {
-    padding: 2rem 0rem;
-  }
-  
   @media (min-width: 576px) {
-    .modal-dialog {
+    .login-dialog {
       max-width: 400px;
     }
-    .modal-dialog .modal-content {
+    .login-dialog .login-body {
       padding: 1rem;
     }
   }
-  .modal-header .close {
-    margin-top: -1.5rem;
-  }
-  
-  .form-title {
-    margin: -2rem 0rem 2rem;
-  }
-  
-  .btn-round {
+   
+ /* .btn-round {
     border-radius: 3rem;
-  }
+  } */
   
   .delimiter {
     padding: 1rem;
   }
   
-  .google{
+  .signin-google{
     background-color: #dd4b39;
     color:white;
+    
   }
-  .microsoft{
+  
+  .signin-google:hover{
+    color:white;
+  }
+
+  .signin-microsoft:hover{
+    color:white;
+  }
+
+  .signin-microsoft{
     background-color: #000000;
     color: white;
   }
@@ -46,6 +45,7 @@
   }
   .login-button{
     background-color: #c65039;
+    border-radius: 3rem;
   }
 
 /*------------ ------------LOGIN FORM END ---------- --------*/
