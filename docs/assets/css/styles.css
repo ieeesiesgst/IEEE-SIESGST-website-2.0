@@ -94,3 +94,16 @@ h2{
 .segment-three form input[type=submit]{
     background:#c65039;
 }
+@media only screen and (min-width:768px) and (max-width:991px){
+    .md-mb-30{
+        margin-bottom: 30px;
+    }
+} 
+@media only screen and (max-width:767px){
+    .sm-mb-30{
+        margin-bottom: 30px;
+    }
+    .footer-top{
+        padding: 50px 0;
+    }
+}
