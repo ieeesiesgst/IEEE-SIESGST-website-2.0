@@ -38,55 +38,49 @@ button{
     background-image: url(../images/2774835\ 1.png); 
 }  */
 
-p{
+.footer-para{
     color: #999;
     line-height: 25px
 }
-h2,h3{
+.footer-title1 .footer-title{
     color: #fff;
 }
-h2{
+.footer-title1{
     font-size: 18px;
 }
 .footer-top{
     background: #111;
-    padding: 80px;
 }
-.segment-one h3{
-    font-family: 'Courier New', Courier, monospace;
+.segment-one .footer-title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
-    letter-spacing: 3px;
-    margin:10px 0;
 }
-.segment-two h2{
+.segment-two .footer-title1 {
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
 }
-.segment-two h2:before{
+.segment-two .footer-title1:before{
     content:'|';
     color: #c65039;
     padding-right: 10px;
 }
-.segment-two a{
+
+.footer-icon{
     background: #492828;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
     border-radius: 50%;
-}
-.segment-two a i{
-    font-size: 20px;
     color: #fff;
-    padding: 10px 12px;
 }
-.segment-three h2{
+.footer-icon:hover{
+    color: #fff;
+}
+.segment-three .footer-title1 {
     color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: uppercase;
-
 }
-.segment-three h2:before{
+
+.segment-three .footer-title1:before{
     content:'|';
     color: #c65039;
     padding-right: 10px;
