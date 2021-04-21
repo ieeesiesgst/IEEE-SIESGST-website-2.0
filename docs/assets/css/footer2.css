@@ -1,0 +1,33 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	top: 0;
+	left: 0;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	background: #fff;
+}
+
+.footer-univ {
+	background: #0b0c10;
+}
+
+.footer-header {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.2;
+	border-left: 2px solid #c65039;
+}
+
+.footer-content-color-fsz {
+	color: #aaa;
+	font-size: 15px;
+}
+
+.footer-social {
+	background: #c65039;
+}
