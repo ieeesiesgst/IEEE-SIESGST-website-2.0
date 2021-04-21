@@ -30,4 +30,13 @@ body {
 
 .footer-social {
 	background: #c65039;
+	transition: 0.2s;
+}
+
+.footer-social:hover {
+	opacity: 0.8;
+}
+
+.copyright-footer {
+	background: #c65039;
 }
