@@ -1,103 +1,42 @@
-/* *{
-    margin: 2px;
-    padding : 0;
-} */
-/*                NAVGATION BAR  START */
-/* .navbar-nav{
-    background: linear-gradient(180deg, rgba(103, 254, 242, 0) 0%, rgba(103, 254, 242, 0.438) 100%);
-     background-blend-mode: lighten;
-     opacity: 0.9;
-     border-radius: 15px;
-}
-.navbar{
-    font-family: 'Noto Sans JP', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-}
-.nav-link{
-    color:#FFFFFF;
-}
-.navbar-brand{
-    color:#FFFFFF;
-    
-}
-button{
-    border: none;
+html {
+	scroll-behavior: smooth;
 }
 
-/*             NAVIGATION BAR END */
-
-/* body {
-    background-color: #0b0b0b;
-    background-image: url(../images/2774835\ 1.png); 
-}  */
-
-.footer-para{
-    color: #999;
-    line-height: 25px
-}
-.footer-title1 .footer-title{
-    color: #fff;
-}
-.footer-title1{
-    font-size: 18px;
-}
-.footer-top{
-    background: #111;
-}
-.segment-one .footer-title{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
-}
-.segment-two .footer-title1 {
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-}
-.segment-two .footer-title1:before{
-    content:'|';
-    color: #c65039;
-    padding-right: 10px;
+body {
+	top: 0;
+	left: 0;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	background: #fff;
 }
 
-.footer-icon{
-    background: #492828;
-    border-radius: 50%;
-    color: #fff;
-}
-.footer-icon:hover{
-    color: #fff;
-}
-.segment-three .footer-title1 {
-    color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: uppercase;
+.footer-univ {
+	background: #0b0c10;
 }
 
-.segment-three .footer-title1:before{
-    content:'|';
-    color: #c65039;
-    padding-right: 10px;
+.footer-header {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.2;
+	border-left: 2px solid #c65039;
 }
-.segment-three form input[type=submit]{
-    background:#c65039;
+
+.footer-content-color-fsz {
+	color: #aaa;
+	font-size: 15px;
 }
-@media only screen and (min-width:768px) and (max-width:991px){
-    .md-mb-30{
-        margin-bottom: 30px;
-    }
-} 
-@media only screen and (max-width:767px){
-    .sm-mb-30{
-        margin-bottom: 30px;
-    }
-    .footer-top{
-        padding: 50px 0;
-    }
+
+.footer-social {
+	background: #c65039;
+	transition: 0.2s;
+}
+
+.footer-social:hover {
+	opacity: 0.8;
+}
+
+.copyright-footer {
+	background: #c65039;
 }
