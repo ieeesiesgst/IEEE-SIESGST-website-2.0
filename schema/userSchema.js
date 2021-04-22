@@ -47,7 +47,20 @@ const userSchema = new mongoose.Schema({
 });
 
 const options = {
-	usernameField: 'email'
+	usernameField: 'email',
+	usernameLowerCase: true,
+	limitAttempts: true,
+	maxAttempts: 5,
+	passwordValidator: (password, cb) => {
+		if (password.length < 8) {
+			return cb({
+				message: 'Password should have minimum 8 characters.'
+			});
+		} else {
+			return cb();
+		}
+	},
+	errorMessages: { NoSaltValueStoredError: 'Some error occurred.' }
 };
 
 userSchema.plugin(passportLocalMongoose, options);
