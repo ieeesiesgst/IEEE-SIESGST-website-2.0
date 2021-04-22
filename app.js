@@ -10,6 +10,7 @@ const { limiter, authLimiter } = require('./utils/rateLimit');
 const googleRouter = require('./routes/authRouters/googleRouter');
 const microsoftRouter = require('./routes/authRouters/microsoftRouter');
 const generalRouter = require('./routes/generalRouter');
+const signUpRouter = require('./routes/authRouters/signUpRouter');
 const session = require('./utils/session');
 
 const app = express();
@@ -19,13 +20,16 @@ app.use(limiter);
 app.use('/auth/', authLimiter);
 app.use(flash());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.set('view engine', 'ejs');
 
 passport(app);
 
 app.use('/auth', googleRouter);
 app.use('/auth', microsoftRouter);
+// app.use('./auth',)
 app.use('/', generalRouter);
+app.post('/signUp', signUpRouter.creatUser);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

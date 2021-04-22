@@ -36,14 +36,21 @@ const userSchema = new mongoose.Schema({
 	},
 	verified: {
 		type: Boolean,
-		default: false 
+		default: false
 	},
 	profilePic: {
+		type: String
+	},
+	password: {
 		type: String
 	}
 });
 
-userSchema.plugin(passportLocalMongoose);
+const options = {
+	usernameField: 'email'
+};
+
+userSchema.plugin(passportLocalMongoose, options);
 
 const User = new mongoose.model('User', userSchema);
 
