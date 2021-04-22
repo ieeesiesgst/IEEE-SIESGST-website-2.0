@@ -10,7 +10,7 @@ const { limiter, authLimiter } = require('./utils/rateLimit');
 const googleRouter = require('./routes/authRouters/googleRouter');
 const microsoftRouter = require('./routes/authRouters/microsoftRouter');
 const generalRouter = require('./routes/generalRouter');
-const signUpRouter = require('./routes/authRouters/signUpRouter');
+const localRouter = require('./routes/authRouters/localRouter');
 const session = require('./utils/session');
 
 const app = express();
@@ -27,7 +27,7 @@ passport(app);
 
 app.use('/auth', googleRouter);
 app.use('/auth', microsoftRouter);
-app.use('/auth', signUpRouter);
+app.use('/auth', localRouter);
 
 app.use('/', generalRouter);
 

@@ -1,5 +1,5 @@
 const User = require('../../schema/userSchema');
-const signUpController = require('../../controller/signUpController');
+const signUpController = require('../../controllers/signUpController');
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
