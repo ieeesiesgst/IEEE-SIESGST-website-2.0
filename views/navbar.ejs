@@ -1,0 +1,619 @@
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+	rel="stylesheet"
+/>
+
+<style>
+	/*Navbar*/
+	.topnav {
+		height: 83px;
+		top: 0;
+		left: 0;
+		background: #0b0c10;
+		width: 100%;
+		z-index: 1000;
+		overflow: hidden;
+		transition: 0.5s ease-in-out;
+		font-family: 'Poppins', sans-serif;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	.nav-logo {
+		left: 8%;
+	}
+
+	.nav-logo a:focus {
+		outline: none;
+		border: none;
+	}
+
+	.nav-logo-img {
+		height: 50px;
+		margin-top: 17px;
+		width: auto;
+		transition: 0.5s ease-in-out;
+	}
+
+	.toggle-bars {
+		width: 25px;
+		right: 8%;
+		margin-top: 22px;
+		display: none;
+	}
+
+	.bar {
+		height: 2px;
+		margin: 5px 0;
+		width: 100%;
+		background: #fff;
+		transition: 0.7s;
+	}
+
+	.navbar-ul {
+		text-decoration: none;
+		list-style: none;
+		float: right;
+		margin-right: 8%;
+		font-size: 15px;
+		margin-top: 29px;
+		transition: 0.5s ease-in-out;
+	}
+
+	.navbar-link {
+		display: inline-block;
+		padding: 2px 12px;
+		color: #fff;
+		text-decoration: none;
+		position: relative;
+		height: 54px;
+	}
+
+	.navbar-list {
+		position: relative;
+	}
+
+	.navbar-link-text {
+		position: relative;
+		display: block;
+	}
+
+	#reg-link {
+		background: #e85c41;
+		color: #fff;
+		margin-left: 6px;
+		padding: 2px 20px;
+		height: auto;
+	}
+
+	.navbar-link:hover,
+	.navbar-link:focus {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.navbar-list .navbar-link-text:after {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 70%;
+		background: #e85c41;
+		left: 15%;
+		bottom: -4px;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 0.5s;
+	}
+
+	.navbar-list.active .navbar-link-text:after {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 70%;
+		background: #e85c41;
+		left: 15%;
+		bottom: -4px;
+		transform-origin: right;
+		transform: scaleX(1);
+		transition: 0.5s;
+	}
+
+	.navbar-link:hover .navbar-list .navbar-link-text:after {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 70%;
+		background: #e85c41;
+		left: 15%;
+		bottom: -4px;
+		transform-origin: left;
+		transform: scaleX(1);
+	}
+
+	#reg-link:hover .navbar-list .navbar-link-text:after {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 70%;
+		background: #e85c41;
+		left: 15%;
+		bottom: -4px;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 0.5s;
+	}
+
+	@media (max-width: 850px) {
+		.topnav {
+			height: auto;
+			max-height: 60px;
+			transition: 1s ease-in;
+		}
+
+		.nav-logo-img {
+			margin-top: 10px;
+			height: 40px;
+		}
+
+		.toggle-bars {
+			margin-top: 17px;
+			display: block;
+			cursor: pointer;
+		}
+
+		.navbar-ul {
+			width: 100%;
+			margin: 60px 0 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		.navbar-link {
+			display: block;
+			margin: 5px 0;
+			height: auto;
+		}
+
+		#reg-link {
+			margin: 6px 0 10px;
+			margin-left: 0;
+			color: #fff;
+			background: #0b0c10;
+		}
+
+		.navbar-list {
+			padding: 5px;
+		}
+
+		#reg-list {
+			background: #e85c41;
+			color: #fff;
+		}
+	}
+
+	.nav-drop-down {
+		position: fixed;
+		top: 80px;
+		background: #1f2833;
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: 0.2s;
+	}
+
+	.dropdown-icon {
+		transition: 0.5s;
+		color: #e85c41;
+	}
+
+	.dropdown-head:hover .dropdown-icon,
+	.dropdown-head:active .dropdown-icon,
+	.dropdown-head:focus .dropdown-icon {
+		transform: rotate(180deg);
+	}
+
+	.dropdown-head:hover .nav-drop-down,
+	.dropdown-head:active .nav-drop-down,
+	.dropdown-head:focus .nav-drop-down {
+		transform: scaleY(1);
+	}
+
+	.navbar-drop-list {
+		padding: 10px 15px;
+		transition: 0.4s;
+		color: #e85c41;
+	}
+
+	.nav-drop-down {
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	.navbar-drop-list:hover {
+		color: #0b0c10;
+		background: #c5c6c7;
+	}
+
+	@media (max-width: 850px) {
+		.navbar-drop-list {
+			overflow: hidden;
+			transition: 0.5s;
+		}
+
+		.nav-drop-down li:first-child {
+			box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.25);
+		}
+
+		.nav-drop-down li:last-child {
+			box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+		}
+
+		.nav-drop-down {
+			position: relative;
+			top: 0px;
+			left: 0;
+			width: 100%;
+			display: inline-block;
+			margin-top: 10px;
+		}
+
+		.dropdown-head {
+			max-height: 37px;
+			transition: 0.2s;
+		}
+
+		.dropdown-head:hover,
+		.dropdown-head:active,
+		.dropdown-head:focus {
+			max-height: 1000px;
+		}
+
+		.dropdown-head:hover .dropdown-icon,
+		.dropdown-head:active .dropdown-icon,
+		.dropdown-head:focus .dropdown-icon {
+			transform: rotate(180deg);
+		}
+	}
+
+	#notnav {
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 999;
+		display: none;
+		transition: 0.2s;
+	}
+
+	#nav-buffer {
+		height: 83px;
+		background: #0b0c10;
+		transition: 0.5s;
+	}
+
+	@media (max-width: 850px) {
+		#nav-buffer {
+			height: 60px;
+		}
+	}
+
+	@media (min-width: 576px) {
+		.login-dialog {
+			max-width: 400px;
+		}
+		.login-dialog .login-body {
+			padding: 1rem;
+		}
+	}
+
+	.delimiter-login {
+		padding: 1rem;
+	}
+
+	.signin-google {
+		background-color: #dd4b39;
+		color: white;
+	}
+
+	.signin-google:hover {
+		color: white;
+	}
+
+	.signin-microsoft:hover {
+		color: white;
+	}
+
+	.signin-microsoft {
+		background-color: #000000;
+		color: white;
+	}
+
+	.signup-section {
+		padding: 0.3rem 0rem;
+	}
+	.login-body {
+		background-color: white;
+		color: black;
+	}
+	.login-button {
+		background-color: #c65039;
+		border-radius: 3rem;
+	}
+
+	.close-btn-login {
+		cursor: pointer;
+		font-size: 26px;
+		color: #777;
+		line-height: 16px;
+	}
+</style>
+
+<script type="text/javascript">
+	function menu() {
+		if (window.innerWidth <= 850) {
+			let x = document.getElementById('navbar');
+
+			if (
+				x.style.maxHeight == '60px' ||
+				x.style.maxHeight == '' ||
+				x.style.height == '60px'
+			) {
+				document.getElementById('notnav').style.display = 'block';
+
+				x.style.maxHeight = ' 1000px';
+				document.getElementById('bar1').style.transform =
+					'rotate(-405deg) translate(-3px,7px)';
+				document.getElementById('bar3').style.transform =
+					'rotate(405deg) translate(-3px,-7px)';
+				document.getElementById('bar2').style.opacity = '0';
+				setTimeout(function () {
+					x.style.transition = '';
+					x.style.transition = '0.5s cubic-bezier(0, 1, 0, 1)';
+				}, 500);
+			} else {
+				document.getElementById('notnav').style.display = 'none';
+
+				x.style.maxHeight = '60px';
+				document.getElementById('bar1').style.transform =
+					'rotate(0deg) translate(0px,0px)';
+				document.getElementById('bar3').style.transform =
+					'rotate(0deg) translate(0px,0px)';
+				document.getElementById('bar2').style.opacity = '1';
+				setTimeout(function () {
+					x.style.transition = '';
+					x.style.transition = '1s ease-in;';
+				}, 500);
+			}
+		}
+	}
+
+	function navchange() {
+		if (window.innerWidth > 850 && window.scrollY > 2) {
+			document.getElementById('nav-logo-image').style.marginTop = '13px';
+			document.getElementById('nav-logo-image').style.height = '44px';
+			document.getElementById('navbar-ul').style.marginTop = '22px';
+			document.getElementById('navbar').style.height = '70px';
+			document.getElementById('nav-buffer').style.height = '70px';
+			$('.nav-drop-down').css('top', '67px');
+		} else if (window.innerWidth > 850 && window.scrollY <= 2) {
+			document.getElementById('nav-logo-image').style.marginTop = '17px';
+			document.getElementById('nav-logo-image').style.height = '50px';
+			document.getElementById('navbar-ul').style.marginTop = '29px';
+			document.getElementById('navbar').style.height = '83px';
+			document.getElementById('nav-buffer').style.height = '83px';
+			$('.nav-drop-down').css('top', '80px');
+		} else {
+			document.getElementById('nav-logo-image').style.marginTop = '10px';
+			document.getElementById('nav-logo-image').style.height = '40px';
+			document.getElementById('navbar-ul').style.marginTop = '60px';
+			document.getElementById('navbar').style.height = 'auto';
+			document.getElementById('nav-buffer').style.height = '60px';
+			$('.nav-drop-down').css('top', '0px');
+		}
+	}
+</script>
+
+<nav class="position-fixed topnav" id="navbar">
+	<div class="nav-logo position-absolute">
+		<a href="#"
+			><img
+				src="images/ieeesiesblack.png"
+				class="nav-logo-img"
+				id="nav-logo-image"
+				alt=""
+		/></a>
+	</div>
+
+	<div class="toggle-bars position-absolute" onclick="menu();">
+		<div class="bar-1 bar" id="bar1"></div>
+		<div class="bar-2 bar" id="bar2"></div>
+		<div class="bar-3 bar" id="bar3"></div>
+	</div>
+
+	<ul class="navbar-ul mb-0" id="navbar-ul">
+		<a href="#" class="navbar-link">
+			<li class="navbar-list">
+				<div class="navbar-link-text d-inline">Home</div>
+			</li>
+		</a>
+		<a href="#" class="navbar-link">
+			<li class="navbar-list">
+				<div class="navbar-link-text d-inline">About</div>
+			</li>
+		</a>
+		<a href="#" class="navbar-link dropdown-head">
+			<li class="navbar-list">
+				<div class="navbar-link-text d-inline">
+					Explore
+					<i class="fas fa-caret-down dropdown-icon"></i>
+				</div>
+			</li>
+
+			<span class="nav-drop-down overflow-hidden">
+				<li class="navbar-drop-list">
+					<div class="navbar-link-text d-inline">Gallery</div>
+				</li>
+				<li class="navbar-drop-list">
+					<div class="navbar-link-text d-inline">Achievements</div>
+				</li>
+				<li class="navbar-drop-list">
+					<div class="navbar-link-text d-inline">Techopedia</div>
+				</li>
+				<li class="navbar-drop-list">
+					<div class="navbar-link-text d-inline">Youtube</div>
+				</li>
+			</span>
+		</a>
+		<a href="#" class="navbar-link dropdown-head">
+			<li class="navbar-list">
+				<div class="navbar-link-text d-inline">
+					Team <i class="fas fa-caret-down dropdown-icon"></i>
+				</div>
+			</li>
+
+			<span class="nav-drop-down overflow-hidden">
+				<li class="navbar-drop-list">
+					<div class="navbar-link-text d-inline">2020</div>
+				</li>
+				<li class="navbar-drop-list">
+					<div class="navbar-link-text d-inline">2019</div>
+				</li>
+			</span>
+		</a>
+		<a href="#" class="navbar-link">
+			<li class="navbar-list">
+				<div class="navbar-link-text d-inline">Contact</div>
+			</li>
+		</a>
+		<a
+			href="javascript: void(0)"
+			class="navbar-link"
+			id="reg-link"
+			data-bs-toggle="modal"
+			data-bs-target="#loginModal"
+			onclick="menu()"
+		>
+			<li class="navbar-list" id="reg-list">
+				<div class="navbar-link-text d-inline">Login</div>
+			</li>
+		</a>
+	</ul>
+</nav>
+
+<div class="w-100 position-fixed" id="notnav" onclick="menu();"></div>
+<div id="nav-buffer" class="w-100"></div>
+
+<!-- LOGIN MODAL -->
+<div
+	class="modal fade"
+	id="loginModal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="exampleModalLabel"
+	aria-hidden="false"
+>
+	<div
+		class="modal-dialog modal-dialog-centered login-dialog pb-1"
+		role="document"
+	>
+		<div class="modal-content login-body">
+			<div class="modal-header border-bottom-0 pt-sm-1 pt-3 pb-0">
+				<div
+					class="close pb-0 close-btn-login ms-auto"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				>
+					<span aria-hidden="true">&times;</span>
+				</div>
+			</div>
+			<div class="modal-body pt-0">
+				<div class="form-title pb-3 text-center">
+					<h4>Login</h4>
+				</div>
+
+				<div class="d-flex flex-column text-center">
+					<a href="#" class="signin-google btn"
+						><i class="fab fa-google"></i> Sign in with Google</a
+					>
+					<br />
+					<a href="#" class="signin-microsoft btn"
+						><i class="fab fa-microsoft"></i> Sign in with Microsoft
+						<br /><small>(Only for SIESGST Students)</small></a
+					>
+
+					<div class="text-center delimiter-login">OR</div>
+					<div class="d-flex flex-column justify-content-center">
+						<form>
+							<div class="form-group">
+								<input
+									type="email"
+									class="form-control mb-3"
+									id="email1"
+									placeholder="Your email address"
+								/>
+							</div>
+							<div class="form-group">
+								<input
+									type="password"
+									class="form-control mb-3"
+									id="password1"
+									placeholder="Your password"
+								/>
+							</div>
+							<button
+								type="button"
+								class="btn btn-block btn-round login-button shadow-none text-white w-100"
+							>
+								Login
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div
+				class="modal-footer d-flex flex-column justify-content-center pt-1 pb-1"
+			>
+				<div class="signup-section pb-0">
+					Not a member yet?
+					<a href="#a"> Sign Up!</a>
+				</div>
+				<div class="signup-section pt-1 pb-3 pb-sm-0">
+					<a href="#a"> Forgot Password?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	window.onresize = function () {
+		let x = document.getElementById('navbar');
+		navchange();
+		if (window.innerWidth > 850) {
+			document.getElementById('notnav').style.display = 'none';
+			x.style.maxHeight = '1000px';
+			document.getElementById('bar1').style.transform =
+				'rotate(0deg) translate(0px,0px)';
+			document.getElementById('bar3').style.transform =
+				'rotate(0deg) translate(0px,0px)';
+			document.getElementById('bar2').style.opacity = '1';
+		} else {
+			document.getElementById('notnav').style.display = 'none';
+			x.style.maxHeight = '60px';
+			document.getElementById('bar1').style.transform =
+				'rotate(0deg) translate(0px,0px)';
+			document.getElementById('bar3').style.transform =
+				'rotate(0deg) translate(0px,0px)';
+			document.getElementById('bar2').style.opacity = '1';
+		}
+	};
+
+	window.onscroll = function () {
+		navchange();
+	};
+
+	var loginModal = document.getElementById('loginModal');
+	loginModal.addEventListener('hide.bs.modal', function (event) {
+		setTimeout(() => {
+			document.getElementById('navbar').scrollTo(0, 0);
+		}, 350);
+	});
+</script>
