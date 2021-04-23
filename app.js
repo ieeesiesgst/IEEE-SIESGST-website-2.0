@@ -14,6 +14,7 @@ const localRouter = require('./routes/authRouters/localRouter');
 const session = require('./utils/session');
 
 const app = express();
+app.use(express.static('public'));
 
 session(app);
 app.use(limiter);
