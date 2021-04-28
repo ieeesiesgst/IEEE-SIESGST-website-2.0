@@ -333,6 +333,13 @@ rel="stylesheet"
         }
     }
     
+    .home-banner-btn-div {
+        transition: 0.6s;
+        width: 40px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
     .home-banner-btn {
         font-size: 50px;
         background: #c5c6c7;
@@ -341,12 +348,12 @@ rel="stylesheet"
         border-radius: 50%;
         transition: 0.6s;
     }
-    
-    .home-banner-btn:hover {
-        transform: translateY(10px);
+
+    .home-banner-btn-div:hover {
         opacity: 0.75;
+        padding-top: 20px;
     }
-    
+
     .banner-down {
         height: 5px;
         width: 20px;
@@ -355,26 +362,26 @@ rel="stylesheet"
         border-radius: 2px;
         transition: 0.6s;
     }
-    
+
     .banner-down-left {
         left: 3px;
         transform: rotate(45deg);
     }
-    
+
     .banner-down-right {
         right: 3px;
         transform: rotate(-45deg);
     }
-    
-    .home-banner-btn:hover .banner-down {
+
+    .home-banner-btn-div:hover .banner-down {
         width: 22px;
     }
-    
-    .home-banner-btn:hover .banner-down-left {
+
+    .home-banner-btn-div:hover .banner-down-left {
         transform: rotate(55deg);
     }
-    
-    .home-banner-btn:hover .banner-down-right {
+
+    .home-banner-btn-div:hover .banner-down-right {
         transform: rotate(-55deg);
     }
     
@@ -692,15 +699,17 @@ rel="stylesheet"
         </p>
         <div class="pb-5 pt-4">
             <div
-                class="home-banner-btn btn p-0 position-relative"
+                class="home-banner-btn-div mx-auto"
                 onclick="if(window.innerWidth>850){window.scrollTo(0, document.getElementById('scroll-from-banner').offsetTop - 70)}else{window.scrollTo(0, document.getElementById('scroll-from-banner').offsetTop - 60)}"
             >
-                <div
-                    class="banner-down-left banner-down mx-auto position-absolute"
-                ></div>
-                <div
-                    class="banner-down-right banner-down mx-auto position-absolute"
-                ></div>
+                <div class="home-banner-btn btn p-0 position-relative">
+                    <div
+                        class="banner-down-left banner-down mx-auto position-absolute"
+                    ></div>
+                    <div
+                        class="banner-down-right banner-down mx-auto position-absolute"
+                    ></div>
+                </div>
             </div>
         </div>
     </div>
