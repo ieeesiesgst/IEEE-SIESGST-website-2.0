@@ -1,0 +1,89 @@
+<div
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="false"
+>
+    <div
+        class="modal-dialog modal-dialog-centered login-dialog pb-1"
+        role="document"
+    >
+        <div class="modal-content login-body">
+            <div class="modal-header border-bottom-0 pt-sm-1 pt-3 pb-0">
+                <div
+                    class="close pb-0 close-btn-login ms-auto"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body pt-0">
+                <div class="form-title pb-3 text-center">
+                    <h4>Login</h4>
+                </div>
+
+                <div class="d-flex flex-column text-center">
+                    <a href="/auth/google" class="signin-google btn"
+                        ><i class="fab fa-google"></i> Sign in with
+                        Google</a
+                    >
+                    <br />
+                    <a href="/auth/microsoft" class="signin-microsoft btn"
+                        ><i class="fab fa-microsoft"></i> Sign in with
+                        Microsoft <br /><small
+                            >(Only for SIESGST Students)</small
+                        ></a
+                    >
+
+                    <div class="text-center delimiter-login">OR</div>
+                    <div
+                        class="d-flex flex-column justify-content-center"
+                    >
+                        <form>
+                            <div class="form-group">
+                                <input
+                                    type="email"
+                                    class="form-control mb-3"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Your Email Address"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <input
+                                    type="password"
+                                    class="form-control mb-3"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Your Password"
+                                    required
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn btn-block btn-round login-button shadow-none text-white w-100"
+                            >
+                                Login
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="modal-footer d-flex flex-column justify-content-center pt-1 pb-1"
+            >
+                <div class="signup-section pb-0">
+                    Not a member yet?
+                    <a href="#a"> Sign Up!</a>
+                </div>
+                <div class="signup-section pt-1 pb-3 pb-sm-0">
+                    <a href="#a"> Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
