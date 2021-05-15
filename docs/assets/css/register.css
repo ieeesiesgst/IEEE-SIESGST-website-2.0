@@ -33,22 +33,22 @@
 
 
 
-.c-row{
-  padding: 15px;
+.column-row{
+  padding-top: 5px;
   content :"";
   display: table;
   clear:both;
   margin: auto;
 }
 
-.column{
+.column-register{
   float: left;
   width:50%;
 }
 
 
 @media only screen and (min-width:360px){
-  .column{
+  .column-register{
     width:100%;
   }
 }
