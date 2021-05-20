@@ -27,7 +27,7 @@
 		"express": "^4.17.1",
 		"express-flash-message": "^2.1.0",
 		"express-rate-limit": "^5.2.6",
-		"express-session": "^1.17.1",
+		"express-session": "^1.17.2",
 		"mongoose": "^5.12.10",
 		"passport": "^0.4.1",
 		"passport-azure-ad": "^4.3.0",
