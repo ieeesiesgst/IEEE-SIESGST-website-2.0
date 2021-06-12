@@ -10,7 +10,7 @@ const { limiter, authLimiter } = require('./utils/rateLimit');
 const googleRouter = require('./routes/authRouters/googleRouter');
 const microsoftRouter = require('./routes/authRouters/microsoftRouter');
 const generalRouter = require('./routes/generalRouter');
-const localRouter = require('./routes/authRouters/localSignUpRouter');
+const localSignUpRouter = require('./routes/authRouters/localSignUpRouter');
 const localLoginRouter = require('./routes/authRouters/localLoginRouter');
 const session = require('./utils/session');
 
@@ -29,8 +29,13 @@ passport(app);
 
 app.use('/auth', googleRouter);
 app.use('/auth', microsoftRouter);
-app.use('/auth', localRouter);
+app.use('/auth', localSignUpRouter);
 app.use('/auth', localLoginRouter);
+
+app.get('/verifymail', (req, res) => {
+	console.log(req.query, encodeURIComponent(req.query.v));
+	res.send('done');
+});
 
 app.use('/', generalRouter);
 
