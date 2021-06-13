@@ -4,18 +4,12 @@ module.exports = (req, res, next) => {
 	if (req.body.password === req.body.passwordCheck) {
 		if (
 			!(
-				!(
-					req.body.name &&
-					req.body.college &&
-					req.body.branch &&
-					req.body.yearOfStudy
-				) ||
+				!(req.body.name && req.body.college && req.body.branch) ||
 				req.body.password == '' ||
 				req.body.name == '' ||
 				req.body.email == '' ||
 				req.body.branch == '' ||
-				req.body.college == '' ||
-				req.body.yearOfStudy == ''
+				req.body.college == ''
 			)
 		) {
 			if (
@@ -39,16 +33,12 @@ module.exports = (req, res, next) => {
 						.replace(/</g, '&lt;')
 						.replace(/>/g, '&gt;')
 						.replace(/"/g, '&quot;'),
-					yearOfStudy: String(req.body.yearOfStudy)
-						.replace(/&/g, '&amp;')
-						.replace(/</g, '&lt;')
-						.replace(/>/g, '&gt;')
-						.replace(/"/g, '&quot;'),
 					contact: String(req.body.contact)
 						.replace(/&/g, '&amp;')
 						.replace(/</g, '&lt;')
 						.replace(/>/g, '&gt;')
-						.replace(/"/g, '&quot;')
+						.replace(/"/g, '&quot;'),
+					profileDetails: true
 				};
 				next();
 			} else {

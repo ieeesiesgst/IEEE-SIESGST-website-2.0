@@ -7,7 +7,7 @@ const verifyEmail = require('../../functions/verifyEmail');
 const CryptoJS = require('crypto-js');
 
 router.get('/signup', (req, res) => {
-	res.render();
+	res.render('signUp', { title: 'SignUp | IEEE SIESGST' });
 });
 
 router.get('/signup/verifymail', (req, res) => {
@@ -100,7 +100,10 @@ router.post('/signup', signUpController, (req, res) => {
 									}
 								);
 							} else {
-								res.send(err);
+								res.send(err, {
+									AlertText:
+										'User already exists with this Email-id'
+								});
 							}
 						});
 					}

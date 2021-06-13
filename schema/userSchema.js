@@ -20,10 +20,6 @@ const userSchema = new mongoose.Schema({
 		type: String,
 		trim: true
 	},
-	yearOfStudy: {
-		type: String,
-		trim: true
-	},
 	contact: {
 		type: String,
 		trim: true
@@ -43,6 +39,10 @@ const userSchema = new mongoose.Schema({
 	},
 	password: {
 		type: String
+	},
+	profileDetails: {
+		type: Boolean,
+		default: false
 	}
 });
 

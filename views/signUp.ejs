@@ -1,169 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!--ICONS-->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
-		<!-- Bootstrap CSS -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css"
-		/>
-		<!-- Font Awesome CSS -->
-		<link
-			rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-		/>
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<%- include('./partials/head-tag.ejs') %>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=Roboto&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="assets/css/signUp.css" />
-		<title>Register</title>
 	</head>
 	<body>
-		<div class="container py-5">
-			<div class="row mx-2 justify-content-md-center">
-				<div class="col home-col home-r-col d-md-block d-none">
-					<div class="mt-5">
-						<div class="Sub-Chapters">
-							<div class="subChp-title mx-3 mb-2 text-center">
-								WIE
+		<%- include('./partials/navbar.ejs') %>
+		<div class="signUp-bg">
+			<div class="container py-5">
+				<div class="row mx-2 justify-content-md-center">
+					<div class="col home-col bg-white d-md-block d-none">
+						<div class="mt-5">
+							<div class="Sub-Chapters">
+								<div class="subChp-title mx-3 mb-2 text-center">
+									WIE
+								</div>
+								<p class="subChp-text mx-3 p-2 text-justify">
+									Create apps, connect databases and add-on
+									services, and collaborate on your apps, for
+									free.
+								</p>
+								<div class="subChp-title mx-3 mb-2 text-center">
+									MTTS
+								</div>
+								<p class="subChp-text mx-3 p-2 text-justify">
+									Create apps, connect databases and add-on
+									services, and collaborate on your apps, for
+									free.
+								</p>
+								<div class="subChp-title mx-3 mb-2 text-center">
+									ISV
+								</div>
+								<p class="subChp-text mx-3 p-2 text-justify">
+									Create apps, connect databases and add-on
+									services, and collaborate on your apps, for
+									free.
+								</p>
+								<div class="subChp-title mx-3 mb-2 text-center">
+									CS
+								</div>
+								<p class="subChp-text mx-3 p-2 text-justify">
+									Create apps, connect databases and add-on
+									services, and collaborate on your apps, for
+									free.
+								</p>
 							</div>
-							<p class="subChp-text mx-3 p-2 text-justify">
-								Create apps, connect databases and add-on
-								services, and collaborate on your apps, for
-								free.
-							</p>
-							<div class="subChp-title mx-3 mb-2 text-center">
-								MTTS
-							</div>
-							<p class="subChp-text mx-3 p-2 text-justify">
-								Create apps, connect databases and add-on
-								services, and collaborate on your apps, for
-								free.
-							</p>
-							<div class="subChp-title mx-3 mb-2 text-center">
-								ISV
-							</div>
-							<p class="subChp-text mx-3 p-2 text-justify">
-								Create apps, connect databases and add-on
-								services, and collaborate on your apps, for
-								free.
-							</p>
-							<div class="subChp-title mx-3 mb-2 text-center">
-								CS
-							</div>
-							<p class="subChp-text mx-3 p-2 text-justify">
-								Create apps, connect databases and add-on
-								services, and collaborate on your apps, for
-								free.
-							</p>
 						</div>
 					</div>
-				</div>
-				<div class="col home-col home-l-col">
-					<div class="my-3">
-						<form id="register" action="/auth/singup" method="POST" class="p-4 signup-form">
-							<div class="pb-3 text-center form-title">
-								<h4>Sign Up</h4>
-							</div>
-							<div class="form-group">
-								<input
-									type="name"
-									class="form-control"
-									required
-									placeholder="Your name"
-								/>
-							</div>
-							<div class="form-group pt-3">
-								<input
-									type="email"
-									class="form-control"
-									required
-									placeholder="Your email address"
-								/>
-							</div>
-							<div class="form-group pt-3">
-								<input
-									type="clgname"
-									class="form-control"
-									required
-									placeholder="Your college name"
-								/>
-							</div>
-							<div class="form-group row pt-3">
-								<div class="col-6 col-sm-6">
+					<div class="col home-col bg-white">
+						<div class="my-3">
+							<form id="register" class="p-4 signup-form">
+								<div class="pb-3 text-center form-title">
+									<h4>Sign Up</h4>
+								</div>
+								<div class="alert alert-warning alert-dismissible fade show d-none" role="alert">
+									Error
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+								<div class="form-group">
 									<input
-										type="branch"
+										type="text"
+										class="form-control"
+										required
+										placeholder="Your name"
+										name="name"
+									/>
+								</div>
+								<div class="form-group pt-3">
+									<input
+										type="email"
+										class="form-control"
+										required
+										placeholder="Your email address"
+										name="email"
+									/>
+								</div>
+								<div class="form-group pt-3">
+									<input
+										type="text"
+										class="form-control"
+										required
+										placeholder="Your college name"
+										name="college"
+									/>
+								</div>
+								<div class="form-group pt-3">
+									<input
+										type="text"
 										class="form-control"
 										required
 										placeholder="Branch"
+										name="branch"
 									/>
 								</div>
-								<div class="col-6 col-sm-6">
+								<div class="form-group pt-3">
 									<input
-										type="year"
+										type="text"
 										class="form-control"
 										required
-										placeholder="Year"
+										placeholder="Your contact"
+										name="contact"
 									/>
 								</div>
-							</div>
-							<div class="form-group pt-3">
-								<input
-									type="contact"
-									class="form-control"
-									required
-									placeholder="Your contact"
-								/>
-							</div>
-							<div class="form-group pt-3">
-								<input
-									type="password"
-									class="form-control"
-									required
-									placeholder="Your password"
-								/>
-							</div>
-							<div class="form-group pt-3">
-								<input
-									type="password"
-									class="form-control"
-									required
-									placeholder="Confirm password"
-								/>
-							</div>
-							<div class="d-grid gap-2 pb-2 text-center">
-								<button
-									type="submit"
-									class="
-										btn btn-round
-										login-button
-										text-white
-									"
-								>
-									Register
-								</button>
-							</div>
-							<div
-								class="modal-footer justify-content-center py-1"
-							>
-								<div class="signup-section pb-0">
-									Already a member?
-									<a href="#a" class="text-info"> Sign In!</a>
+								<div class="form-group pt-3">
+									<input
+										type="password"
+										class="form-control"
+										required
+										placeholder="Your password"
+										name="password"
+									/>
 								</div>
-							</div>
-						</form>
+								<div class="form-group pt-3">
+									<input
+										type="password"
+										class="form-control"
+										required
+										placeholder="Confirm password"
+										name="passwordCheck"
+									/>
+								</div>
+								<div class="d-grid gap-2 pb-2 text-center">
+									<button
+										type="submit"
+										class="
+											btn btn-round
+											signUp-button
+											text-white
+											mt-3
+										"
+										id="register-btn"
+									>
+										Register
+									</button>
+								</div>
+								<div
+									class="modal-footer justify-content-center py-1"
+								>
+									<div class="signup-section pb-0">
+										Already a member?
+										<a href="#a" class="text-info"> Sign In!</a>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<%- include('./partials/footer.ejs') %>
 	</body>
+	<script>
+		document.getElementById('register').addEventListener('submit', (event)=>{
+			document.getElementById('register-btn').setAttribute("disabled", "");
+			event.preventDefault();
+			var form = new FormData(document.getElementById('register'));
+			var formBody = [];
+			for (var key of form.keys()) {
+				var encodedKey = encodeURIComponent(key);
+				var encodedValue = encodeURIComponent(form.get(key));
+				formBody.push(encodedKey + '=' + encodedValue);
+			}
+			formBody = formBody.join('&');
+	
+			fetch('/auth/signup', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					body: formBody
+				})
+					.then((response) => response.json())
+					.then((data) => {
+						if(data.message == 'please verify your email.'){
+							location.reload();
+						}
+						console.log(data);
+					})
+					.catch((error) => {
+						console.log(error);
+					});
+		})
+	</script>
 </html>

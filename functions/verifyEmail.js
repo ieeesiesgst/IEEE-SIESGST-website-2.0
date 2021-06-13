@@ -7,7 +7,7 @@ module.exports = function callAppscript(mailData) {
 		axios
 			.post(process.env.EMAIL_VERIFICATION_SENT, qs.stringify(mailData))
 			.then((response) => {
-				console.log('Verification Mail Sent', response.data.mailSent);
+				console.log('Verification Mail Sent');
 			})
 			.catch((error) => {
 				console.log(error);

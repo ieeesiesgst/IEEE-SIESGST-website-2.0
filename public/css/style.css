@@ -1,0 +1,96 @@
+/*--------HOME PAGE ----------------*/
+.home-about {
+	scroll-behavior: smooth;
+	background-color: #f5ebe9;
+}
+.home-content {
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+.home-chapters {
+	background: url('../images/banner1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.home-events {
+	background-color: #ed805ffc;
+}
+
+.card-container {
+	perspective: 1000px;
+	height: 200px;
+}
+
+.card-flip,
+.card-container {
+	transform-style: preserve-3d;
+	transition: all 0.7s ease;
+}
+
+.card-flip div {
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+}
+
+.card-container:hover .card-flip {
+	transform: rotateY(180deg);
+}
+
+.card-flip {
+	display: grid;
+	grid-template: 1fr / 1fr;
+	grid-template-areas: 'frontAndBack';
+	transform-style: preserve-3d;
+	transition: all 0.7s ease;
+}
+
+.home-front {
+	grid-area: frontAndBack;
+}
+
+.home-back {
+	grid-area: frontAndBack;
+	transform: rotateY(-180deg);
+}
+
+.card-container {
+	display: grid;
+	perspective: 700px;
+}
+/*---------SIGNUP REGISTER CSS ----------*/
+.signUp-bg {
+	background: linear-gradient(
+			rgba(255, 255, 255, 0.1),
+			rgba(255, 255, 255, 0.3)
+		),
+		url('/images/signUpBg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.home-col {
+	min-width: 300px;
+	max-width: 500px;
+}
+
+.signup-form {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 15px;
+}
+
+.subChp-title {
+	/* font-weight: bold; */
+	font-size: large;
+	font-family: 'Roboto', sans-serif;
+}
+.subChp-text {
+	font-family: 'Raleway', sans-serif;
+}
+.signUp-button {
+	background-color: #c65039;
+}
+.form-title {
+	font-size: large;
+	font-family: 'Roboto', sans-serif;
+}
