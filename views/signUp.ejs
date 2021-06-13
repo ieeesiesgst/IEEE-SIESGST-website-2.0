@@ -56,10 +56,9 @@
 								<div class="pb-3 text-center form-title">
 									<h4>Sign Up</h4>
 								</div>
-								<div class="alert alert-warning alert-dismissible fade show d-none" role="alert" id='err-alert'>
-									<p id = "alert-text">Error</p>
-									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-								</div>
+								<div class="alert alert-danger d-none" role="alert" id="err-alert">
+									<span id="alert-text">This is a danger alert—check it out!</span>
+								  </div>
 								<div class="form-group">
 									<input
 										type="text"
@@ -144,7 +143,7 @@
 								>
 									<div class="signup-section pb-0">
 										Already a member?
-										<a href="#a" class="text-info"> Sign In!</a>
+										<a href="#a"> Sign In!</a>
 									</div>
 								</div>
 							</form>
@@ -180,7 +179,7 @@
 				})
 					.then((response) => response.json())
 					.then((data) => {
-						if(data.message == 'please verify your email.'){
+						if(data.message == 'done'){
 							location.reload();
 						}
 						else{

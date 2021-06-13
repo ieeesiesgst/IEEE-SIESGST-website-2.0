@@ -26,7 +26,7 @@ router.get('/signup/verifymail', (req, res) => {
 	const checkEmail = decryptedVerification[0];
 	const time = parseInt(decryptedVerification[1]);
 
-	if (req.isAuthenticated() && req.user.email != email) {
+	if (req.isAuthenticated() && req.user.email != checkEmail) {
 		res.status(404);
 		res.end();
 	} else if (time + 24 * 60 * 60 * 1000 < new Date().getTime()) {
@@ -61,13 +61,18 @@ router.get('/signup/verifymail', (req, res) => {
 router.post('/signup', signUpController, (req, res) => {
 	User.register(res.locals.user, req.body.password, (err, user) => {
 		if (err) {
-			if ((err.name = 'UserExistsError')) {
+			if (err.name == 'UserExistsError') {
 				User.where({ email: req.body.email }).findOne((error, user) => {
 					if (error) {
 						res.status(501).send({ message: 'Server Error' });
 					} else if (user && (user.googleId || user.microsoftId)) {
 						res.send({
 							message: 'User exists with Microsoft/Google id'
+						});
+						return;
+					} else if (user && user.verified) {
+						res.send({
+							message: 'User already exists!'
 						});
 						return;
 					} else {
@@ -91,6 +96,28 @@ router.post('/signup', signUpController, (req, res) => {
 												req,
 												res,
 												() => {
+													var verifyURL = CryptoJS.Rabbit.encrypt(
+														req.body.email +
+															' ' +
+															new Date().getTime(),
+														process.env
+															.VERIFY_ENCRYPTION
+													).toString();
+
+													verifyURL =
+														req.headers.host +
+														'/auth/signup/verifymail?v=' +
+														encodeURIComponent(
+															verifyURL
+														);
+
+													const mailData = {
+														email: req.body.email,
+														name: req.body.name,
+														verifyURL: verifyURL
+													};
+													verifyEmail(mailData);
+
 													res.send({
 														message: 'done'
 													});
@@ -100,7 +127,8 @@ router.post('/signup', signUpController, (req, res) => {
 									}
 								);
 							} else {
-								res.send(err);
+								res.send({ message: 'Unknown Error Occurred' });
+								console.log(1);
 							}
 						});
 					}
@@ -111,7 +139,7 @@ router.post('/signup', signUpController, (req, res) => {
 		} else {
 			passport.authenticate('local')(req, res, () => {
 				var verifyURL = CryptoJS.Rabbit.encrypt(
-					req.user.email + ' ' + new Date().getTime(),
+					req.body.email + ' ' + new Date().getTime(),
 					process.env.VERIFY_ENCRYPTION
 				).toString();
 
@@ -127,7 +155,7 @@ router.post('/signup', signUpController, (req, res) => {
 				};
 				verifyEmail(mailData);
 
-				res.send({ message: 'please verify your email.' });
+				res.send({ message: 'done' });
 			});
 		}
 	});
