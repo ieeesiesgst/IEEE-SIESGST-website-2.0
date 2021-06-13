@@ -1,14 +1,9 @@
 body {
-	background: url('../images/8.png');
+	background: url('../images/signUpBg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.signUp-title {
-	color: white;
-	text-align: center;
-	font-family: 'Roboto', sans-serif;
-	font-weight: bold;
-}
+
 .home-col {
 	min-width: 300px;
 	max-width: 500px;

@@ -7,7 +7,7 @@ const verifyEmail = require('../../functions/verifyEmail');
 const CryptoJS = require('crypto-js');
 
 router.get('/signup', (req, res) => {
-	res.send({ message: 'singUp page' });
+	res.render();
 });
 
 router.get('/signup/verifymail', (req, res) => {
