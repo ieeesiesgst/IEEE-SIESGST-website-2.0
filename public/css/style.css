@@ -1,4 +1,35 @@
 /*--------HOME PAGE ----------------*/
+
+.underline-overall-white::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	height: 2px;
+	left: 20%;
+	bottom: -10px;
+	background: #fff;
+}
+
+.underline-overall-black::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	height: 2px;
+	left: 20%;
+	bottom: -10px;
+	background: #000;
+}
+
+.underline-overall-orange::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	height: 2px;
+	left: 20%;
+	bottom: -10px;
+	background: #ce5841;
+}
+
 .home-about {
 	scroll-behavior: smooth;
 	background-color: #f5ebe9;
@@ -13,6 +44,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
 .home-events {
 	background-color: #ed805ffc;
 }
