@@ -1,12 +1,12 @@
 {
 	"name": "ieee-siesgst-website-2.0",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "\"Official website of IEEE SIESGST\"",
-	"main": "app.js",
+	"main": "src/app.js",
 	"scripts": {
 		"test": "start http://localhost:3000 & npm run dev",
-		"dev": "nodemon app.js",
-		"start": "node app.js"
+		"dev": "nodemon src/app.js",
+		"start": "node src/app.js"
 	},
 	"repository": {
 		"type": "git",

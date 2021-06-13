@@ -3,6 +3,7 @@ const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const flash = require('connect-flash');
+const path = require('path');
 
 const mongoose = require('./db/mongoose');
 const passport = require('./auth/passport');
@@ -15,7 +16,7 @@ const localLoginRouter = require('./routes/authRouters/localLoginRouter');
 const session = require('./utils/session');
 
 const app = express();
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, './public')));
 
 session(app);
 app.use(limiter);
@@ -23,6 +24,7 @@ app.use('/auth/', authLimiter);
 app.use(flash());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs');
 
 passport(app);
