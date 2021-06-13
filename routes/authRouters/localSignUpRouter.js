@@ -100,10 +100,7 @@ router.post('/signup', signUpController, (req, res) => {
 									}
 								);
 							} else {
-								res.send(err, {
-									AlertText:
-										'User already exists with this Email-id'
-								});
+								res.send(err);
 							}
 						});
 					}
