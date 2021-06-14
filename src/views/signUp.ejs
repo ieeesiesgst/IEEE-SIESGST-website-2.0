@@ -182,8 +182,13 @@
 						if(data.message == 'done'){
 							location.reload();
 						}
-						else{
+						else if(data.message) {
 							document.getElementById('alert-text').innerHTML = data.message;
+							document.getElementById('err-alert').classList.remove('d-none');
+							document.getElementById('register-btn').removeAttribute("disabled", "");
+						}
+						else {
+							document.getElementById('alert-text').innerHTML = 'Unknown error occurred';
 							document.getElementById('err-alert').classList.remove('d-none');
 							document.getElementById('register-btn').removeAttribute("disabled", "");
 						}
@@ -191,6 +196,9 @@
 					})
 					.catch((error) => {
 						console.log(error);
+						document.getElementById('alert-text').innerHTML = 'Unknown error occurred';
+						document.getElementById('err-alert').classList.remove('d-none');
+						document.getElementById('register-btn').removeAttribute("disabled", "");
 					});
 		})
 	</script>
