@@ -96,13 +96,14 @@ router.post('/signup', signUpController, (req, res) => {
 												req,
 												res,
 												() => {
-													var verifyURL = CryptoJS.Rabbit.encrypt(
-														req.body.email +
-															' ' +
-															new Date().getTime(),
-														process.env
-															.VERIFY_ENCRYPTION
-													).toString();
+													var verifyURL =
+														CryptoJS.Rabbit.encrypt(
+															req.body.email +
+																' ' +
+																new Date().getTime(),
+															process.env
+																.VERIFY_ENCRYPTION
+														).toString();
 
 													verifyURL =
 														req.headers.host +
@@ -128,7 +129,6 @@ router.post('/signup', signUpController, (req, res) => {
 								);
 							} else {
 								res.send({ message: 'Unknown Error Occurred' });
-								console.log(1);
 							}
 						});
 					}
