@@ -326,6 +326,24 @@ rel="stylesheet"
         font-size: 18px;
         font-weight: 400;
     }
+
+    @media (min-width: 500px) {
+        .header .home-banner-sub {
+            font-size: 19px;
+        }
+    }
+
+    @media (min-width: 700px) {
+        .header .home-banner-sub {
+            font-size: 20px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .header .home-banner-sub {
+            font-size: 22px;
+        }
+    }
     
     @media (max-width: 850px) and (min-height: 640px) and (max-height: 750px) {
         .header {
@@ -440,6 +458,10 @@ rel="stylesheet"
         color: #777;
         line-height: 16px;
     }
+
+    .typing-translate {
+        vertical-align: text-top;
+    }
 </style>
 
 <script type="text/javascript">
@@ -547,6 +569,37 @@ rel="stylesheet"
             document.getElementById('nav-buffer').style.background =
                 '#0b0c10';
         }
+    }
+    
+    var strings = ['``````````````````````IEEE SIES GST', 'Student Branch', '``````````````````````````Join us in an amazing journey of learning through competitions, workshops, seminars', 'and much more...'];
+    defaultSpeed = 50
+
+    function typingEffect(iter, speed) {
+        let typer = setInterval(()=>{
+            $('#typing'+iter).toggleClass('invisible')
+        }, 200)
+        let printed = 0;
+        let typeLine = setInterval(()=>{
+            if(printed != strings[iter].length) {
+                if(strings[iter][printed] != '`') {
+                    document.getElementById('banner-line'+iter).innerHTML += strings[iter][printed]
+                }
+                printed += 1;
+            }
+            else {
+                clearInterval(typeLine)
+                if(iter+1 != strings.length) {
+                    let speedNext = defaultSpeed;
+                    if(iter>0) {
+                        speedNext = 25;
+                    }
+                    clearInterval(typer)
+                    $('#typing'+iter).addClass('d-none')
+                    typingEffect(iter+1, speedNext)
+                }
+            }
+            
+        }, speed)
     }
 </script>
 
@@ -689,13 +742,30 @@ rel="stylesheet"
         class="container text-center position-absolute w-100 header-content"
     >
         <h1 class="pt-5 pb-3 home-banner-h1">
-            <span class="d-inline-block">IEEE SIES GST</span>
-            <span class="d-inline-block">Student Branch</span>
+            <span class="d-inline-block">
+                <span id="banner-line0">
+                    
+                </span>
+                <span class="typing-pipe invisible typing-translate" id="typing0">|</span>
+            </span>
+            <span class="d-inline-block">
+                <span id="banner-line1">
+                    
+                </span>
+                <span class="typing-pipe invisible typing-translate" id="typing1">|</span>
+            </span>
         </h1>
         <p class="home-banner-sub pt-4 pb-3">
-            Join us in an amazing journey of learning through
-            competitions, workshops, seminars
-            <span class="d-inline-block">and much more...</span>
+            <span id="banner-line2">
+                
+            </span>
+            <span class="typing-pipe invisible" id="typing2">|</span>
+            <span class="d-inline-block">
+                <span id="banner-line3">
+
+                </span>
+                <span class="typing-pipe invisible" id="typing3">|</span>
+            </span>
         </p>
         <div class="pb-5 pt-4">
             <div
@@ -784,4 +854,7 @@ rel="stylesheet"
             document.getElementById('navbar').scrollTo(0, 0);
         }, 350);
     });
+
+    typingEffect(0, defaultSpeed)
+    
 </script>
