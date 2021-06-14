@@ -1,4 +1,4 @@
-name: Format Code and Run Build
+name: Format Code
 
 on:
     push:
