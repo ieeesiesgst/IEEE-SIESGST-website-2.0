@@ -7,8 +7,8 @@
 		"test": "start http://localhost:3000 & npm run dev",
 		"dev": "nodemon src/app.js",
 		"start": "node src/app.js",
-		"format:check": "prettier --check src/**/*.js & prettier --check src/**/*.json & prettier --check src/**/*.html & prettier --check src/**/*.css",
-		"format": "prettier --write src/**/*.js & prettier --write src/**/*.json & prettier --write src/**/*.html & prettier --write src/**/*.css"
+		"format:check": "prettier --check **/*.js & prettier --check **/*.json & prettier --check **/*.html & prettier --check **/*.css",
+		"format": "prettier --write **/*.js & prettier --write **/*.json & prettier --write **/*.html & prettier --write **/*.css"
 	},
 	"repository": {
 		"type": "git",
