@@ -602,6 +602,18 @@ rel="stylesheet"
             
         }, speed)
     }
+
+    function addNavBorder() {
+        let footer = document.getElementsByTagName('footer')[0];
+        let navbar = $('#navbar');
+
+        if(footer && footer.offsetTop < window.scrollY + navbar.height()) {
+            navbar.css('border-bottom', '#222 solid 1px')
+        }
+        else {
+            navbar.css('border-bottom', '#222 solid 0px')
+        }
+    }
 </script>
 
 <div class="header position-relative overflow-hidden" id="home-header">
@@ -807,10 +819,13 @@ rel="stylesheet"
             'rotate(0deg) translate(0px,0px)';
         document.getElementById('bar2').style.opacity = '1';
         document.getElementById('notnav').style.display = 'none';
+
+        addNavBorder();
     };
 
     window.onscroll = function () {
         navchange();
+        addNavBorder();
     };
 
     var lFollowX = 0,
