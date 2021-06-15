@@ -166,12 +166,18 @@
 			margin: 60px 0 0;
 			padding: 0;
 			text-align: center;
+            max-height: calc(100vh - 60px);
+            overflow: auto;
 		}
 
 		.navbar-link {
 			display: block;
 			margin: 5px 0;
 			height: auto;
+		}
+
+		.navbar-link:last-child {
+			margin: 5px 0 10px;
 		}
 
 		#reg-link {
@@ -253,12 +259,19 @@
 			width: 100%;
 			display: inline-block;
 			margin-top: 10px;
+			max-height: 0px;
 		}
 
 		.dropdown-head {
 			max-height: 37px;
 			transition: 0.2s;
 		}
+        
+        .dropdown-head:hover .nav-drop-down,
+        .dropdown-head:active .nav-drop-down,
+        .dropdown-head:focus .nav-drop-down {
+            max-height: 1000px;
+        }
 
 		.dropdown-head:hover,
 		.dropdown-head:active,
