@@ -409,6 +409,18 @@
 			$('.nav-drop-down').css('top', '0px');
 		}
 	}
+
+	function addNavBorder() {
+        let footer = document.getElementsByTagName('footer')[0];
+        let navbar = $('#navbar');
+
+        if(footer && footer.offsetTop < window.scrollY + navbar.height()) {
+            navbar.css('border-bottom', '#222 solid 1px')
+        }
+        else {
+            navbar.css('border-bottom', '#222 solid 0px')
+        }
+    }
 </script>
 
 <nav class="position-fixed topnav" id="navbar">
@@ -483,7 +495,7 @@
 				<div class="navbar-link-text d-inline">Contact</div>
 			</li>
 		</a>
-		<a
+		<!-- <a
 			href="javascript: void(0)"
 			class="navbar-link"
 			id="reg-link"
@@ -494,15 +506,14 @@
 			<li class="navbar-list" id="reg-list">
 				<div class="navbar-link-text d-inline">Login</div>
 			</li>
-		</a>
+		</a> -->
 	</ul>
 </nav>
 
 <div class="w-100 position-fixed" id="notnav" onclick="menu();"></div>
 <div id="nav-buffer" class="w-100"></div>
 
-<!-- LOGIN MODAL -->
-<%- include('./login-modal.ejs') %> 
+<!-- LOGIN MODAL --> 
 
 <script>
 	window.onresize = function () {
@@ -525,10 +536,13 @@
 				'rotate(0deg) translate(0px,0px)';
 			document.getElementById('bar2').style.opacity = '1';
 		}
+
+		addNavBorder()
 	};
 
 	window.onscroll = function () {
 		navchange();
+		addNavBorder()
 	};
 
 	var loginModal = document.getElementById('loginModal');
