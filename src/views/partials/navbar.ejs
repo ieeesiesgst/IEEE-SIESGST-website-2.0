@@ -492,7 +492,7 @@
 		</a>
 		<a href="#" class="navbar-link">
 			<li class="navbar-list">
-				<div class="navbar-link-text d-inline">Contact</div>
+				<div class="navbar-link-text d-inline">Contact Us</div>
 			</li>
 		</a>
 		<!-- <a
@@ -546,9 +546,11 @@
 	};
 
 	var loginModal = document.getElementById('loginModal');
-	loginModal.addEventListener('hide.bs.modal', function (event) {
-		setTimeout(() => {
-			document.getElementById('navbar').scrollTo(0, 0);
-		}, 350);
-	});
+	if(loginModal) {
+        loginModal.addEventListener('hide.bs.modal', function (event) {
+            setTimeout(() => {
+                document.getElementById('navbar').scrollTo(0, 0);
+            }, 350);
+        });
+    }
 </script>
