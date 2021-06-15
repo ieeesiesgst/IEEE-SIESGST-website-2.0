@@ -1,3 +1,5 @@
+
+
 /*--------HOME PAGE ----------------*/
 
 .underline-overall-white::before {
@@ -34,6 +36,24 @@
 	scroll-behavior: smooth;
 	background-color: #f5ebe9;
 }
+.home-image{
+	display: grid;
+	grid-column: 1fr;
+}
+.about-fimage {
+  grid-column: 2 / span 2;
+  grid-row: 1/ span 2;
+}
+.about-simage {
+	grid-column: 2 / span 2;
+	grid-row: 1/ span 2;
+	transform: rotate(10deg);
+}
+.about-timage {
+	grid-column: 2 / span 2;
+	grid-row: 1/ span 2;
+	transform: rotate(-10deg);
+}
 .home-content {
 	padding: 15px;
 	margin-bottom: 15px;
@@ -46,13 +66,19 @@
 }
 
 .home-events {
-	background-color: #ed805ffc;
+	background-color: #E85C41;
+}
+.event-card{
+	background-color: #E85C41;
+	border: 0px;
+
 }
 
-.card-container {
-	perspective: 1000px;
+/* .card-container {
+	perspective: 700px;
 	height: 200px;
-}
+} */
+
 
 .card-flip,
 .card-container {
@@ -89,6 +115,7 @@
 .card-container {
 	display: grid;
 	perspective: 700px;
+	
 }
 /*---------SIGNUP REGISTER CSS ----------*/
 .signUp-bg {
