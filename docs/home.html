@@ -189,22 +189,22 @@ jQuery(document).ready(function($) {
 
 });
 
-function updateValue() {
+// function updateValue() {
 
-    $('#count').html(Math.floor(Math.random() * (1000 - 1)) + 1);
-    $('#count').each(function() {
+//     $('#count').html(Math.floor(Math.random() * (1000 - 1)) + 1);
+//     $('#count').each(function() {
 
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 3000,
-            easing: 'swing',
-            step: function(now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
-}
+//         $(this).prop('Counter', 0).animate({
+//             Counter: $(this).text()
+//         }, {
+//             duration: 3000,
+//             easing: 'swing',
+//             step: function(now) {
+//                 $(this).text(Math.ceil(now));
+//             }
+//         });
+//     });
+// }
 
 
 // $('.count').counterUp(
