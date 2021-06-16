@@ -27,17 +27,17 @@ app.use(express.json());
 app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs');
 
-passport(app);
+// passport(app);
 
-app.use('/auth', googleRouter);
-app.use('/auth', microsoftRouter);
-app.use('/auth', localSignUpRouter);
-app.use('/auth', localLoginRouter);
+// app.use('/auth', googleRouter);
+// app.use('/auth', microsoftRouter);
+// app.use('/auth', localSignUpRouter);
+// app.use('/auth', localLoginRouter);
 
-app.get('/verifymail', (req, res) => {
-	console.log(req.query, encodeURIComponent(req.query.v));
-	res.send('done');
-});
+// app.get('/verifymail', (req, res) => {
+// 	console.log(req.query, encodeURIComponent(req.query.v));
+// 	res.send('done');
+// });
 
 app.use('/', generalRouter);
 
