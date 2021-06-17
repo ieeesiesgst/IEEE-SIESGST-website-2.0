@@ -5,22 +5,22 @@ const ejs = require('ejs');
 const flash = require('connect-flash');
 const path = require('path');
 
-const mongoose = require('./db/mongoose');
+// const mongoose = require('./db/mongoose');
 const passport = require('./auth/passport');
-const { limiter, authLimiter } = require('./utils/rateLimit');
-const googleRouter = require('./routes/authRouters/googleRouter');
-const microsoftRouter = require('./routes/authRouters/microsoftRouter');
+// const { limiter, authLimiter } = require('./utils/rateLimit');
+// const googleRouter = require('./routes/authRouters/googleRouter');
+// const microsoftRouter = require('./routes/authRouters/microsoftRouter');
 const generalRouter = require('./routes/generalRouter');
-const localSignUpRouter = require('./routes/authRouters/localSignUpRouter');
-const localLoginRouter = require('./routes/authRouters/localLoginRouter');
-const session = require('./utils/session');
+// const localSignUpRouter = require('./routes/authRouters/localSignUpRouter');
+// const localLoginRouter = require('./routes/authRouters/localLoginRouter');
+// const session = require('./utils/session');
 
 const app = express();
 app.use(express.static(path.join(__dirname, './public')));
 
-session(app);
-app.use(limiter);
-app.use('/auth/', authLimiter);
+// session(app);
+// app.use(limiter);
+// app.use('/auth/', authLimiter);
 app.use(flash());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
