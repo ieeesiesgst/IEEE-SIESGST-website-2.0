@@ -18,15 +18,19 @@
 	cursor: pointer;
 	color: white;
 }
-/* Sub chapter */
+/*----------Home-Sub chapter --------------*/
 .sub-l-col {
 	background-color: #424242;
 	border-radius: 15px 0px 0px 15px;
+	/* background-image: url('../images/sub-1.jpg'); */
 }
 .sub-r-col {
 	background-color: #c4c4c4;
 	font-size: x-large;
 	border-radius: 0px 15px 15px 0px;
+}
+.sub-img {
+	opacity: 0.6;
 }
 .sub-chp {
 	font-family: 'PT Sans Narrow', sans-serif;
@@ -35,11 +39,18 @@
 .sub-btn:hover {
 	color: #f1f0ec;
 	cursor: pointer;
-	/* text-decoration-line: overline; */
-	/* text-decoration-color: #ce5841; */
 	background-color: #424242;
 	outline: 12px solid #424242;
 	outline-offset: 1px;
+}
+/* #sub-image {
+	opacity: 0.6;
+	content: 'fjkbsibvk waeihsvbiaw';
+} */
+@media screen and (max-width: 280px) {
+	.sub-btn:hover {
+		outline: 5px solid #424242;
+	}
 }
 @media screen and (max-width: 576px) {
 	.sub-l-col {
