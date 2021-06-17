@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--- StyleSheet --->
 		<link rel="stylesheet" href="assets/css/styles.css" />
-		<link rel="stylesheet" href="assets/css/stylesold.css" />
+		<!-- <link rel="stylesheet" href="assets/css/stylesold.css" /> -->
 		<!----Tiny Slider CSS ----->
 		<link
 			rel="stylesheet"
@@ -31,27 +31,27 @@
 	<body>
 		<section class="home-about">
 			<div class="container p-4">
-				<h3 class="about-headlines text-center pt-4">
+				<h3 class="about-headlines text-center pt-4 fs-2 fw-bolder">
 					<span class="position-relative underline-overall-orange"
 						>ABOUT US</span
 					>
 				</h3>
-				<p class="about-content text-center p-2">
+				<p class="about-content text-center p-2 mt-4">
 					IEEE SIESGST. One of the most vibrant and largest Student
 					Branch in the Bombay Section, IEEE SSIESGST have made a
 					significant mark for itself over the years.
 				</p>
 
 				<div class="about-number text-center">
-					<div class="d-inline-block text-center p-4">
+					<div class="d-inline-block text-center p-4 fs-5">
 						<span class="count">150</span>+
 						<p>Members</p>
 					</div>
-					<div class="d-inline-block text-center p-4">
+					<div class="d-inline-block text-center p-4 fs-5">
 						<span class="count">50</span>+
 						<p>Awards</p>
 					</div>
-					<div class="d-inline-block text-center p-4">
+					<div class="d-inline-block text-center p-4 fs-5">
 						<span class="count">10</span>+
 						<p>Events</p>
 					</div>
@@ -60,9 +60,18 @@
 			</div>
 		</section>
 		<section class="home-events p-4 pt-3">
-			<h2 class="about-headlines text-center p-4 text-white">
+			<h2
+				class="
+					about-headlines
+					text-center
+					p-4
+					text-white
+					fs-2
+					fw-bolder
+				"
+			>
 				<span class="position-relative underline-overall-white"
-					>Upcoming Events</span
+					>UPCOMING EVENTS</span
 				>
 			</h2>
 			<div class="container">
@@ -167,14 +176,14 @@
 			<div class="text-center" id="controls">
 				<span class="previous">
 					<i
-						class="fa fa-chevron-left fa-2x control-btn"
+						class="fa fa-chevron-left control-btn fa-lg"
 						aria-hidden="true"
 					></i>
 				</span>
 				<span>&nbsp;</span>
 				<span class="next">
 					<i
-						class="fa fa-chevron-right fa-2x control-btn"
+						class="fa fa-chevron-right control-btn fa-lg"
 						aria-hidden="true"
 					></i>
 				</span>
@@ -183,27 +192,12 @@
 
 		<section>
 			<div class="container .text-secondary">
-				<h3 class="about-headlines text-center pt-4">
+				<h3 class="about-headlines text-center pt-4 fs-2 fw-bolder">
 					<span class="position-relative underline-overall-orange"
-						>Sub-Chapters</span
+						>SUB-CHAPTERS</span
 					>
 				</h3>
 				<div class="row my-5 mx-3 sub-chp">
-					<!-- <div class="col-sm-9 sub-l-col card text-white bg-light">
-						<img
-							src="./assets/images/sub-1.jpg"
-							class="img-fluid py-3"
-							id="sub-image"
-							alt="..."
-						/>
-						<div class="card-img-overlay">
-							<p class="card-text">
-								This is a wider card with supporting text below
-								as a natural lead-in to additional content. This
-								content is a little bit longer.
-							</p>
-						</div>
-					</div> -->
 					<div class="col-sm-9 sub-l-col">
 						<div class="card bg-dark text-white my-3">
 							<img
@@ -213,7 +207,15 @@
 								id="sub-image"
 							/>
 							<div class="card-img-overlay">
-								<p class="card-text text-center">
+								<p
+									class="
+										card-text
+										text-center
+										mt-lg-4
+										sub-text
+									"
+									id="sub-img-text"
+								>
 									Our goal at WIE is to foster and facilitate
 									the participation & retention of women in
 									the technical domain.
@@ -284,6 +286,7 @@
 					</div>
 				</div>
 			</div>
+			<br /><br />
 		</section>
 
 		<script
@@ -349,22 +352,31 @@
 			});
 
 			document.getElementById('wie').addEventListener('click', () => {
-				changeImage(1);
+				var text1 =
+					'Our goal at WIE is to foster and facilitate the participation & retention of women in the technical domain.';
+				changeImage(1, text1);
 			});
 			document.getElementById('mtts').addEventListener('click', () => {
-				changeImage(2);
+				var text2 =
+					'Our mission is to continue to understand and influence microwave technology and to provide a forum for all microwave engineers';
+				changeImage(2, text2);
 			});
 			document.getElementById('cs').addEventListener('click', () => {
-				changeImage(3);
+				var text3 =
+					'Our goal is to develop and inculcate computing skills in all students.';
+				changeImage(3, text3);
 			});
 			document.getElementById('isv').addEventListener('click', () => {
-				changeImage(2);
+				var text4 =
+					'isv short description will be here...................................';
+				changeImage(2, text4);
 			});
 
-			function changeImage(i) {
+			function changeImage(i, text) {
 				document
 					.getElementById('sub-image')
 					.setAttribute('src', `./assets/images/sub-${i}.jpg`);
+				document.getElementById('sub-img-text').innerHTML = text;
 			}
 		</script>
 	</body>
