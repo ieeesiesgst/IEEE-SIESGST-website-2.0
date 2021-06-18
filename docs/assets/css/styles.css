@@ -34,10 +34,15 @@
 
 .home-about {
 	scroll-behavior: smooth;
-	background-color: #e2e2e2;
+	background-color: #fff;
 }
 .home-events {
-	background-color: #e85c41;
+	/* background-color: #e85c41; */
+	background: url('../images/orange.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
 .about-headlines {
 	font-family: 'Poppins', sans-serif;
@@ -60,11 +65,15 @@
 .sub-l-col {
 	background-color: #424242;
 	border-radius: 15px 0px 0px 15px;
+	/* box-shadow: 10px 10px grey; */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .sub-r-col {
 	background-color: #c4c4c4;
 	font-size: x-large;
 	border-radius: 0px 15px 15px 0px;
+	/* box-shadow: 10px 10px grey; */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .sub-img {
 	opacity: 0.3;
@@ -80,8 +89,8 @@
 	color: #f1f0ec;
 	cursor: pointer;
 	background-color: #424242;
-	outline: 12px solid #424242;
-	outline-offset: 1px;
+	outline: 13px solid #424242;
+	outline-offset: -1px;
 }
 @media screen and (max-width: 280px) {
 	.sub-btn:hover {

@@ -36,9 +36,9 @@
 						>ABOUT US</span
 					>
 				</h3>
-				<p class="about-content text-center p-2 mt-4">
+				<p class="about-content text-center p-2 mt-4 fs-5">
 					IEEE SIESGST. One of the most vibrant and largest Student
-					Branch in the Bombay Section, IEEE SSIESGST have made a
+					Branch in the Bombay Section, IEEE SIESGST have made a
 					significant mark for itself over the years.
 				</p>
 
@@ -286,7 +286,7 @@
 					</div>
 				</div>
 			</div>
-			<br /><br />
+			<br />
 		</section>
 
 		<script
@@ -328,28 +328,63 @@
 				nextButton: '.next'
 			});
 
-			$('.count').each(function () {
-				$(this)
-					.prop('Counter', 0)
-					.animate(
-						{
-							Counter: $(this).text()
-						},
-						{
-							duration: 5000,
-							easing: 'swing',
-							step: function (now) {
-								$(this).text(Math.ceil(now));
-							}
-						}
-					);
-			});
+			// $('.count').each(function () {
+			// 	$(this)
+			// 		.prop('Counter', 0)
+			// 		.animate(
+			// 			{
+			// 				Counter: $(this).text()
+			// 			},
+			// 			{
+			// 				duration: 5000,
+			// 				easing: 'swing',
+			// 				step: function (now) {
+			// 					$(this).text(Math.ceil(now));
+			// 				}
+			// 			}
+			// 		);
+			// });
 
-			jQuery(document).ready(function ($) {
-				setInterval(function () {
-					updateValue();
-				}, 6000);
-			});
+			// jQuery(document).ready(function ($) {
+			// 	setInterval(function () {
+			// 		updateValue();
+			// 	}, 6000);
+			// });
+
+			$(window).scroll(testScroll);
+			var viewed = false;
+
+			function isScrolledIntoView(elem) {
+				var docViewTop = $(window).scrollTop();
+				var docViewBottom = docViewTop + $(window).height();
+
+				var elemTop = $(elem).offset().top;
+				var elemBottom = elemTop + $(elem).height();
+
+				return elemBottom <= docViewBottom && elemTop >= docViewTop;
+			}
+
+			function testScroll() {
+				if (isScrolledIntoView($('.home-about')) && !viewed) {
+					viewed = true;
+					$('.count').each(function () {
+						$(this)
+							.prop('Counter', 0)
+							.animate(
+								{
+									Counter: $(this).text()
+								},
+								{
+									duration: 4000,
+									easing: 'swing',
+									step: function (now) {
+										$(this).text(Math.ceil(now));
+									}
+								}
+							);
+					});
+				}
+			}
 
 			document.getElementById('wie').addEventListener('click', () => {
 				var text1 =
