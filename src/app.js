@@ -34,11 +34,6 @@ app.set('view engine', 'ejs');
 // app.use('/auth', localSignUpRouter);
 // app.use('/auth', localLoginRouter);
 
-// app.get('/verifymail', (req, res) => {
-// 	console.log(req.query, encodeURIComponent(req.query.v));
-// 	res.send('done');
-// });
-
 app.use('/', generalRouter);
 
 const port = process.env.PORT || 3000;

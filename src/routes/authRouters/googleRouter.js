@@ -11,12 +11,13 @@ router.get(
 
 router.get(
 	'/google/callback',
-	passport.authenticate('google', { failureRedirect: '/', failureFlash: true, }),
+	passport.authenticate('google', {
+		failureRedirect: '/',
+		failureFlash: true
+	}),
 	function (req, res) {
 		res.redirect('/');
 	}
 );
-
-
 
 module.exports = router;

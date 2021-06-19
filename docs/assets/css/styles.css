@@ -45,13 +45,12 @@
 	background-position: center;
 }
 .btn-slide {
-	
 	border: 2px solid #ce5841;
 	border-radius: 10px;
-    display: block;
-	
+	display: block;
+
 	align-items: center;
-	
+
 	text-decoration: none;
 	font-size: 14px;
 	color: black;
@@ -60,14 +59,11 @@
 	-webkit-transition: ease-out0.4s;
 	-moz-transition: ease-out 0.4s;
 	transition: ease-out 0.4s;
-
 }
 .btn-slide:hover {
 	box-shadow: inset 0 100px 0 0 #ce5841;
 	text-decoration: none;
 	color: white;
-	
-
 }
 .about-headlines {
 	font-family: 'Poppins', sans-serif;
