@@ -7,7 +7,7 @@ const path = require('path');
 
 // const mongoose = require('./db/mongoose');
 const passport = require('./auth/passport');
-// const { limiter, authLimiter } = require('./utils/rateLimit');
+const { limiter, authLimiter } = require('./utils/rateLimit');
 // const googleRouter = require('./routes/authRouters/googleRouter');
 // const microsoftRouter = require('./routes/authRouters/microsoftRouter');
 const generalRouter = require('./routes/generalRouter');

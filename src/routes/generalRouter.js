@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 	if (req.isAuthenticated()) {
 		res.send(req.user);
 	} else {
-		res.render('test', { title: 'test' });
+		res.render('test', { title: 'HOME | IEEE SIESGST' });
 	}
 });
 
