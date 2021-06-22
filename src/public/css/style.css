@@ -234,6 +234,8 @@
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-weight: 200;
 }
+
+.active-sub,
 .sub-btn:hover {
 	color: #f1f0ec;
 	cursor: pointer;
@@ -241,7 +243,14 @@
 	outline: 13px solid #424242;
 	outline-offset: -1px;
 }
+/* .active-sub {
+	background-color: #424242;
+	outline: 13px solid #424242;
+	outline-offset: -1px;
+	color: white;
+} */
 @media screen and (max-width: 280px) {
+	.active-sub,
 	.sub-btn:hover {
 		outline: 5px solid #424242;
 	}
@@ -253,6 +262,7 @@
 	.sub-r-col {
 		border-radius: 0px 0px 15px 15px;
 	}
+	.active-sub,
 	.sub-btn:hover {
 		outline: 5px solid #424242;
 	}

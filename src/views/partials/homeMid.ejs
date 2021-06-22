@@ -7,10 +7,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"/>
 	</head>
 	<body>
-		<section class="home-about">
+		<section class="homeabout">
 			<div class="container p-4">
 				<h3 class="about-headlines text-center pt-4 fs-2 fw-bolder">
-					<span class="position-relative underline-overall-orange"
+					<span class="position-relative underline-overall-orange home-about"
 						>ABOUT US</span
 					>
 				</h3>
@@ -59,7 +59,7 @@
 							<div class="card">
 								<img
 									class="d-block w-100"
-									src="/images/temp.png"
+									src="/images/2774835 1.png"
 								/>
 								<div class="card-title text-center pt-2">
 									TECHOPEDIA 2.0
@@ -75,7 +75,7 @@
 							<div class="card">
 								<img
 									class="d-block w-100"
-									src="/images/temp.png"
+									src="/images/2774835 1.png"
 								/>
 								<div class="card-title text-center pt-2">
 									TECHOPEDIA 2.0
@@ -91,7 +91,7 @@
 							<div class="card">
 								<img
 									class="d-block w-100"
-									src="/images/temp.png"
+									src="/images/2774835 1.png"
 								/>
 								<div class="card-title text-center pt-2">
 									TECHOPEDIA 2.0
@@ -107,7 +107,7 @@
 							<div class="card">
 								<img
 									class="d-block w-100"
-									src="/images/temp.png"
+									src="/images/2774835 1.png"
 								/>
 								<div class="card-title text-center pt-2">
 									TECHOPEDIA 2.0
@@ -190,7 +190,7 @@
 									mt-2 mt-lg-3
 									bd-highlight
 									text-center
-									sub-btn
+									sub-btn 
 								"
 								id="wie"
 							>
@@ -319,7 +319,7 @@
 					viewed = true;
 					$('.count').each(function () {
 						$(this)
-							.prop('Counter', 0)
+							.prop('Counter', -1)
 							.animate(
 								{
 									Counter: $(this).text()
@@ -336,33 +336,41 @@
 				}
 			}
 
-			document.getElementById('wie').addEventListener('click', () => {
-				var text1 =
+			var text1 =
 					'Our goal at WIE is to foster and facilitate the participation & retention of women in the technical domain.';
-				changeImage(1, text1);
+			var text2 =
+					'Our mission is to continue to understand and influence microwave technology and to provide a forum for all microwave engineers';
+			var text3 =
+					'Our goal is to develop and inculcate computing skills in all students.';
+			var text4 =
+					'isv short description will be here...................................';
+
+			document.getElementById('wie').classList.add('active-sub');
+
+			document.getElementById('wie').addEventListener('click', () => {	
+				changeImage(1, text1,['mtts','cs','isv','wie']);
 			});
 			document.getElementById('mtts').addEventListener('click', () => {
-				var text2 =
-					'Our mission is to continue to understand and influence microwave technology and to provide a forum for all microwave engineers';
-				changeImage(2, text2);
+				changeImage(2, text2,['wie','cs','isv','mtts']);
 			});
 			document.getElementById('cs').addEventListener('click', () => {
-				var text3 =
-					'Our goal is to develop and inculcate computing skills in all students.';
-				changeImage(3, text3);
+				changeImage(3, text3,['wie','mtts','isv','cs']);
 			});
 			document.getElementById('isv').addEventListener('click', () => {
-				var text4 =
-					'isv short description will be here...................................';
-				changeImage(2, text4);
+				changeImage(2, text4,['wie','mtts','cs','isv']);
 			});
 
-			function changeImage(i, text) {
+			function changeImage(i, text,sub) {
 				document
 					.getElementById('sub-image')
 					.setAttribute('src', `/images/sub-${i}.jpg`);
 				document.getElementById('sub-img-text').innerHTML = text;
+				document.getElementById(sub[3]).classList.add('active-sub');
+				for(var i =0;i<3;i++){
+					document.getElementById(sub[i]).classList.remove('active-sub');
+				}
 			}
+			
 		</script>
 	</body>
 </html>
