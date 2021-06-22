@@ -130,34 +130,32 @@
 	}
 }
 /*----------------- EVENTS PAGE --------------*/
-.events-bg{
+.events-bg {
 	/* background: url('../images/bg-events.png'); */
 	background: url('../images/backgruond-events.png');
 }
 
-.events-container{
-	
-	background: #EEEEEE;
+.events-container {
+	background: #eeeeee;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 12px;
-	}
+}
 
-.events-bg-img{
-	background: #E5E5E5;
+.events-bg-img {
+	background: #e5e5e5;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	/* border-radius: 20px */
 	/* max-height: 100%; 
 	max-width: 100%; */
 }
-.events-desc{
-		font-family: Poppins;
+.events-desc {
+	font-family: Poppins;
 	font-style: normal;
-	
+
 	font-size: 14px;
 	line-height: 21px;
 }
-.btn-events{
-
+.btn-events {
 	border: 2px solid #ce5841;
 	/* border-radius: 10px; */
 	text-decoration: none;
@@ -165,7 +163,6 @@
 	font-family: 'Poppins';
 	display: inline-flex;
 	background: #ce5841;
-	
+
 	text-decoration: none;
-	
 }
