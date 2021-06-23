@@ -132,14 +132,10 @@
 /*----------------- EVENTS PAGE --------------*/
 .events-bg {
 	/* background: url('../images/bg-events.png'); */
-	background: linear-gradient(
-			rgba(22, 22, 22, 0.1),
-			rgba(100, 99, 99, 0.3)
-		),
+	background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
 		url('../images/backgruond-events.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-
 }
 
 .events-container {
@@ -158,7 +154,7 @@
 .events-desc {
 	font-family: 'Poppins', sans-serif;
 	font-style: normal;
-    color: #000000;
+	color: #000000;
 	font-size: 14px;
 	line-height: 21px;
 }
