@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
 			domain: 'events',
 			topic: 'events'
 		};
+
 		var homeEvent = await getData(domainData);
 		if (homeEvent == 'error') {
 			res.send({ message: 'Server Error!!' });

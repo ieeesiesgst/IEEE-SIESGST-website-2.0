@@ -149,14 +149,13 @@
 	bottom: -10px;
 	background: #000;
 }
-
 .underline-overall-orange::before {
 	content: '';
 	position: absolute;
 	width: 60%;
 	height: 4px;
 	left: 20%;
-	bottom: -5px;
+	bottom: -10px;
 	background: #ce5841;
 }
 
@@ -266,4 +265,43 @@
 	.sub-btn:hover {
 		outline: 5px solid #424242;
 	}
+}
+/*----------------- EVENTS PAGE --------------*/
+.events-bg {
+	/* background: url('../images/bg-events.png'); */
+	background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
+		url('../images/backgruond-events.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.events-container {
+	background: #eeeeee;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 12px;
+}
+.events-bg-img {
+	background: #e5e5e5;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	/* border-radius: 20px */
+	/* max-height: 100%; 
+	max-width: 100%; */
+}
+.events-desc {
+	font-family: 'Poppins', sans-serif;
+	font-style: normal;
+	color: #000000;
+	font-size: 14px;
+	line-height: 21px;
+}
+.btn-events {
+	border: 2px solid #ce5841;
+	/* border-radius: 10px; */
+	text-decoration: none;
+	font-size: 14px;
+	font-family: 'Poppins';
+	display: inline-flex;
+	background: #ce5841;
+
+	text-decoration: none;
 }
