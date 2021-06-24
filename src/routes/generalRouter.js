@@ -11,10 +11,16 @@ router.get('/', async (req, res) => {
 			domain: 'events',
 			topic: 'events'
 		};
-		var x = await getData(domainData);
-		console.log(x);
-		// res.send('correct');
-		res.render('test', { title: 'HOME | IEEE SIESGST' });
+		var homeEvent = await getData(domainData);
+		if (homeEvent == 'error') {
+			res.send({ message: 'Server Error!!' });
+		} else {
+			res.render('test', {
+				title: 'HOME | IEEE SIESGST',
+				eventName: homeEvent.name,
+				eventPic: homeEvent.pic
+			});
+		}
 	}
 });
 

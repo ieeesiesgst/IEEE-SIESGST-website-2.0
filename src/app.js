@@ -19,8 +19,8 @@ const app = express();
 app.use(express.static(path.join(__dirname, './public')));
 
 // session(app);
-// app.use(limiter);
-// app.use('/auth/', authLimiter);
+app.use(limiter);
+app.use('/auth/', authLimiter);
 app.use(flash());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
