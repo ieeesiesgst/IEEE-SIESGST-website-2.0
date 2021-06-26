@@ -89,7 +89,7 @@
 				<div class="row p-3 align-items-center">
 					<div class="my-slider">
 						
-						<% for(var i = 0; i< eventName.length; i++) { %>
+						<% for(var i = eventName.length-1; i>=0; i--) { %>
 						<div class="col-12 p-3">
 							<div class="card">
 								<img
@@ -97,13 +97,11 @@
 									id = 'eventImg'
 									src = "<%= eventPic[i] %>" 
 								/>
-								<div class="card-title text-center pt-2">
-									<!-- TECHOPEDIA 2.0 -->
-									<%= eventName[i] %>
-									
+								<div class="card-title text-center pt-2 homeMid-text">
+									<%= eventName[i] %>									
 								</div>
 								<div class="text-center pe-5 ps-5 p-2 pb-4">
-									<a href="#" class="p-2 btn-slide"
+									<a href="#" class="p-2 btn-slide homeMid-text"
 										>Explore</a
 									>
 								</div>
