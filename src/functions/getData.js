@@ -8,11 +8,7 @@ module.exports = function callAppScript(domainData) {
 			.then((response) => {
 				// handle success
 				// console.log('working', response.data);
-				var homeEvent = {
-					name: response.data.Ename,
-					pic: response.data.Epic
-				};
-				resolve(homeEvent);
+				resolve(response);
 			})
 			.catch(function (error) {
 				// handle error

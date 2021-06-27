@@ -4,24 +4,34 @@ const getData = require('../functions/getData');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-	if (req.isAuthenticated()) {
-		res.send(req.user);
-	} else {
-		const domainData = {
-			domain: 'events',
-			topic: 'events'
-		};
-
-		var homeEvent = await getData(domainData);
-		if (homeEvent == 'error') {
-			res.send({ message: 'Server Error!!' });
+	try {
+		if (req.isAuthenticated()) {
+			res.send(req.user);
 		} else {
-			res.render('test', {
-				title: 'HOME | IEEE SIESGST',
-				eventName: homeEvent.name,
-				eventPic: homeEvent.pic
-			});
+			const domainData = {
+				domain: 'events',
+				topic: 'events'
+			};
+			const homeResponse = await getData(domainData);
+			homeEvent = {
+				name: homeResponse.data.Ename,
+				pic: homeResponse.data.Epic
+			};
+			if (homeEvent == 'error') {
+				res.send({ message: 'Server Error!!' });
+			} else {
+				res.render('test', {
+					title: 'HOME | IEEE SIESGST',
+					eventName: homeEvent.name,
+					eventPic: homeEvent.pic
+				});
+			}
 		}
+	} catch (err) {
+		res.status(400).json({
+			status: 'Fail',
+			message: 'Server Error!'
+		});
 	}
 });
 
