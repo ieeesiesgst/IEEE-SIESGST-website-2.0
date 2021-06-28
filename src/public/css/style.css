@@ -156,12 +156,15 @@
 }
 .btn-events {
 	border: 2px solid #ce5841;
-	text-decoration: none;
 	font-size: 14px;
 	font-family: 'Lora';
 	display: inline-flex;
 	background: #ce5841;
 	text-decoration: none;
+}
+.btn-events:hover {
+	cursor: pointer;
+	box-shadow: 3px 3px 1px grey;
 }
 .event-head {
 	font-family: 'Roboto';

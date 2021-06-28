@@ -15,15 +15,23 @@ function activeUpcoming(i, content) {
 	Ename = content.Ename[i];
 	pic = content.Epic[i];
 	time = content.Etime[i];
-	start = content.Estart[i];
+	start = new Date(content.Estart[i])
+		.toDateString()
+		.split(' ')
+		.slice(1)
+		.join(' ');
 	small = content.Esmall[i];
+	web = content.Eweb[i];
+	register = content.Ereg[i];
 
 	let obj = {
 		name: Ename,
 		pic: pic,
 		time: time,
 		start: start,
-		small: small
+		small: small,
+		website: web,
+		reg: register
 	};
 	return obj;
 }
@@ -74,22 +82,22 @@ module.exports = function (info) {
 	const content = info.data;
 	let active = [];
 	let upcoming = [];
-	let name, pic, time, start, small;
+	// let name, pic, time, start, small;
 
 	for (let i = 0; i <= content.Ename.length - 1; i++) {
 		let parseDate = parseISOString(content.Eend[i]);
 		const rangeDate = parseDate.addDays(-7);
 
 		if (rangeDate <= today && today <= parseDate) {
-			console.log('active');
+			// console.log('active');
 			const object = activeUpcoming(i, content);
 			active.push(object);
 		} else if (rangeDate >= today) {
-			console.log('upcoming');
+			// console.log('upcoming');
 			const object = activeUpcoming(i, content);
 			upcoming.push(object);
-		} else {
-			console.log('offline');
 		}
 	}
+	console.log(active[0]);
+	return (divided = { activeE: active, upcomingE: upcoming });
 };
