@@ -13,11 +13,11 @@ router.get('/', async (req, res) => {
 		const homeResponse = await getData(domainData);
 		const eventArray = await eventDivision(homeResponse);
 
-		// homeEvent = {
-		// 	name: homeResponse.data.Ename,
-		// 	pic: homeResponse.data.Epic
-		// };
-		res.render('partials/events', { title: 'EVENTS | IEEE SIESGST' });
+		// console.log('heree', eventArray.activeE[0].small);
+		res.render('partials/events', {
+			title: 'EVENTS | IEEE SIESGST',
+			eventArray: eventArray
+		});
 	} catch (err) {
 		console.log(err);
 		res.status(400).json({
