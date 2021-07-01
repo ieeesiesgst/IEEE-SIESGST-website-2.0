@@ -63,13 +63,13 @@
 
 /* ------------------------------------- */
 .about-headlines {
-	font-family: 'Lora';
+	font-family: 'Roboto';
 }
 .about-content {
-	font-family: 'Lora';
+	font-family: 'Roboto';
 }
 .about-number {
-	font-family: 'Lora';
+	font-family: 'Roboto';
 	font-weight: bold;
 }
 .control-btn:hover {
@@ -79,7 +79,7 @@
 
 /*----------Home-Sub chapter --------------*/
 .homeMid-text {
-	font-family: 'Lora';
+	font-family: 'Roboto';
 }
 .sub-l-col {
 	background-color: #424242;
@@ -99,26 +99,33 @@
 }
 .sub-text {
 	font-size: 2.5vw;
-	font-family: 'Lora';
+	font-family: 'Roboto';
 }
 .sub-chp {
-	font-family: 'Lora';
+	font-family: 'Roboto';
 	font-weight: 200;
 }
-.active-sub,
 .sub-btn:hover {
+	color: #f1f0ec;
+	cursor: pointer;
+	background-color: #5e5e5e;
+	outline: 13px solid #5e5e5e;
+	outline-offset: -1px;
+	font-family: 'Roboto';
+}
+.active-sub {
 	color: #f1f0ec;
 	cursor: pointer;
 	background-color: #424242;
 	outline: 13px solid #424242;
 	outline-offset: -1px;
-	font-family: 'Lora';
+	font-family: 'Roboto';
 }
 @media screen and (max-width: 280px) {
 	.active-sub,
 	.sub-btn:hover {
 		outline: 5px solid #424242;
-		font-family: 'Lora';
+		font-family: 'Roboto';
 	}
 }
 @media screen and (max-width: 576px) {
@@ -131,7 +138,7 @@
 	.active-sub,
 	.sub-btn:hover {
 		outline: 5px solid #424242;
-		font-family: 'Lora';
+		font-family: 'Roboto';
 	}
 }
 
@@ -162,7 +169,7 @@
 .btn-events {
 	border: 2px solid #ce5841;
 	font-size: 15px;
-	font-family: 'Lora';
+	font-family: 'Roboto';
 	display: inline-flex;
 	background: #ce5841;
 	text-decoration: none;
@@ -179,8 +186,8 @@
 	transition: all 250ms;
 }
 .event-head {
-	font-family: 'Lora';
+	font-family: 'Roboto';
 }
 .event-tail {
-	font-family: 'Lora';
+	font-family: 'Roboto';
 }

@@ -54,6 +54,6 @@ module.exports = function (info) {
 			upcoming.push(object);
 		}
 	}
-	console.log(active[0]);
+	// console.log(active[0]);
 	return (divided = { activeE: active, upcomingE: upcoming });
 };
