@@ -12,8 +12,6 @@ router.get('/', async (req, res) => {
 		};
 		const homeResponse = await getData(domainData);
 		const eventArray = await eventDivision(homeResponse);
-
-		// console.log('heree', eventArray.activeE[0].small);
 		res.render('partials/events', {
 			title: 'EVENTS | IEEE SIESGST',
 			eventArray: eventArray

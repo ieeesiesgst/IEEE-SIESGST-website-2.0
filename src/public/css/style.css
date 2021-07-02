@@ -113,7 +113,7 @@
 	outline: 13px solid #5e5e5e;
 	outline-offset: -1px;
 	font-family: 'Roboto';
-	transition: ease-out 0.5s;
+	transition: ease-out 0.2s;
 }
 .active-sub {
 	color: #f1f0ec;
