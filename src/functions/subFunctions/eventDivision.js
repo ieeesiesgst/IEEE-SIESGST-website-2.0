@@ -1,5 +1,3 @@
-const express = require('express');
-
 Date.prototype.addDays = function (days) {
 	var date = new Date(this.valueOf());
 	date.setDate(date.getDate() + days);
@@ -36,7 +34,7 @@ function activeUpcoming(i, content) {
 	return obj;
 }
 
-module.exports = function (info) {
+module.exports = function (info, page) {
 	const today = new Date();
 	const content = info.data;
 	let active = [];
@@ -44,16 +42,22 @@ module.exports = function (info) {
 
 	for (let i = 0; i <= content.Ename.length - 1; i++) {
 		let parseDate = parseISOString(content.Eend[i]);
-		const rangeDate = parseDate.addDays(-7);
+		const offlineDate = parseDate.addDays(1);
 
-		if (rangeDate <= today && today <= parseDate) {
-			const object = activeUpcoming(i, content);
-			active.push(object);
-		} else if (rangeDate >= today) {
-			const object = activeUpcoming(i, content);
-			upcoming.push(object);
+		if (offlineDate > today) {
+			if (content.Estatus[i] == 'ACTIVE') {
+				const object = activeUpcoming(i, content);
+				active.push(object);
+			} else if (content.Estatus[i] == 'UPCOMING') {
+				const object = activeUpcoming(i, content);
+				upcoming.push(object);
+			}
 		}
 	}
-	// console.log(active[0]);
-	return (divided = { activeE: active, upcomingE: upcoming });
+	if (page == 2) {
+		return (divided = { activeE: active, upcomingE: upcoming });
+	} else if (page == 1) {
+		const allEvent = active.concat(upcoming);
+		return allEvent;
+	}
 };

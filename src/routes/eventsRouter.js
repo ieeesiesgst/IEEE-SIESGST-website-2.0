@@ -11,8 +11,8 @@ router.get('/', async (req, res) => {
 			topic: 'events'
 		};
 		const homeResponse = await getData(domainData);
-		const eventArray = await eventDivision(homeResponse);
-		res.render('partials/events', {
+		const eventArray = await eventDivision(homeResponse, 2);
+		res.render('events', {
 			title: 'EVENTS | IEEE SIESGST',
 			eventArray: eventArray
 		});

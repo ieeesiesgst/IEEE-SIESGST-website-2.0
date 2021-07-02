@@ -7,7 +7,6 @@ module.exports = function callAppScript(domainData) {
 			.post(process.env.GET_SCRIPT_DATA, qs.stringify(domainData))
 			.then((response) => {
 				// handle success
-				// console.log('working', response.data);
 				resolve(response);
 			})
 			.catch(function (error) {

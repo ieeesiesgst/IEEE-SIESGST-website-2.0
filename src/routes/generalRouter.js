@@ -1,31 +1,24 @@
 const express = require('express');
 const getData = require('../functions/getData');
+const eventDivision = require('../functions/subFunctions/eventDivision');
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
 	try {
-		if (req.isAuthenticated()) {
-			res.send(req.user);
+		const domainData = {
+			domain: 'events',
+			topic: 'events'
+		};
+		const homeRes = await getData(domainData);
+		const eventArray = await eventDivision(homeRes, 1);
+		if (eventArray == 'error') {
+			res.send({ message: 'Server Error!!' });
 		} else {
-			const domainData = {
-				domain: 'events',
-				topic: 'events'
-			};
-			const homeResponse = await getData(domainData);
-			homeEvent = {
-				name: homeResponse.data.Ename,
-				pic: homeResponse.data.Epic
-			};
-			if (homeEvent == 'error') {
-				res.send({ message: 'Server Error!!' });
-			} else {
-				res.render('test', {
-					title: 'HOME | IEEE SIESGST',
-					eventName: homeEvent.name,
-					eventPic: homeEvent.pic
-				});
-			}
+			res.render('test', {
+				title: 'HOME | IEEE SIESGST',
+				event: eventArray
+			});
 		}
 	} catch (err) {
 		res.status(400).json({
@@ -34,10 +27,5 @@ router.get('/', async (req, res) => {
 		});
 	}
 });
-
-// router.get('/logout', function (req, res) {
-// 	req.logout();
-// 	res.redirect('/');
-// });
 
 module.exports = router;
