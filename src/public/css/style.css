@@ -113,6 +113,7 @@
 	outline: 13px solid #5e5e5e;
 	outline-offset: -1px;
 	font-family: 'Roboto';
+	transition: ease-out 0.5s;
 }
 .active-sub {
 	color: #f1f0ec;
@@ -123,8 +124,11 @@
 	font-family: 'Roboto';
 }
 @media screen and (max-width: 280px) {
-	.active-sub,
 	.sub-btn:hover {
+		outline: 5px solid #5e5e5e;
+		font-family: 'Roboto';
+	}
+	.active-sub {
 		outline: 5px solid #424242;
 		font-family: 'Roboto';
 	}
@@ -136,8 +140,11 @@
 	.sub-r-col {
 		border-radius: 0px 0px 15px 15px;
 	}
-	.active-sub,
 	.sub-btn:hover {
+		outline: 5px solid #5e5e5e;
+		font-family: 'Roboto';
+	}
+	.active-sub {
 		outline: 5px solid #424242;
 		font-family: 'Roboto';
 	}

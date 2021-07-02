@@ -3,8 +3,13 @@
 	<head>
 		<%- include('head-tag.ejs') %>
 		<!-- <title>IEEE SIESGST</title> -->
+		<script>	
+		function displayId(idName)
+			{
+				document.getElementById(idName).display = none;
+			}
+		</script>
 	</head>
-
 	<body class="events-bg">
 		<%- include('navbar.ejs') %>
 		<% if(eventArray.activeE.length == 0){ %>
@@ -28,19 +33,22 @@
 			<% for(var i = eventArray.activeE.length-1; i>=0; i--) { %>
 			<div class="container events-container p-4 my-3">
 				<div class="row">
-					<div class="col-md-4">
-						<img
-							src="<%= eventArray.activeE[i].pic %>" 
-							class="
-								img-thumbnail img-fluid
-								w-100
-								events-bg-img
-								rounded
-								p-2
-							"
-						/>
-					</div>
-					<div class="col-md-8 p-3 events-desc">
+					<% if(eventArray.activeE[i].pic == 'NIL'){ %>
+						<div class="p-3 events-desc" id="activeDes">
+					<% }else{ %>
+						<div class="col-md-4" id="activePic">
+							<img
+								src="<%= eventArray.activeE[i].pic %>" 
+								class="
+									img-thumbnail img-fluid
+									w-100
+									events-bg-img
+									rounded
+									p-2"
+							/>
+						</div>
+						<div class="col-md-8 p-3 events-desc" id="activeDes">
+					<% } %>
 						<div class="row">
 							<p>
 								<span class="fw-bold">DESCRIPTION: </span>
@@ -50,14 +58,20 @@
 								</span>
 							</p>
 							<br />
-
-							<div>
-								<span class="fw-bolder">DATE: </span><%= eventArray.activeE[i].start %>
-							</div>
-
-							<div>
-								<span class="fw-bolder">TIME: </span><%= eventArray.activeE[i].time %>
-							</div>
+								<% if(eventArray.activeE[i].start == 'NIL'){%>
+									<script>document.getElementById('activeDate').display = none</script>
+								<% }else{ %>
+									<div id="activeDate">
+										<span class="fw-bolder">DATE: </span><%= eventArray.activeE[i].start %>
+									</div>
+								<% } %>
+								<% if(eventArray.activeE[i].time == 'NIL'){%>
+									<script>document.getElementById('activeTime').display = none</script>
+								<% }else{ %>
+									<div id="activeTime">
+										<span class="fw-bolder">TIME: </span><%= eventArray.activeE[i].time %>
+									</div>
+								<% } %>
 						</div>
 
 						<div class="row float-end">
@@ -122,19 +136,23 @@
 			<% for(var i = eventArray.upcomingE.length-1; i>=0; i--) { %>
 				<div class="container events-container p-4 my-3">
 					<div class="row">
-						<div class="col-md-4">
-							<img
-								src="<%= eventArray.upcomingE[i].pic %>" 
-								class="
-									img-thumbnail img-fluid
-									w-100
-									events-bg-img
-									rounded
-									p-2
-								"
-							/>
-						</div>
-						<div class="col-md-8 p-3 events-desc">
+						<% if(eventArray.upcomingE[i].pic == 'NIL'){ %>
+							<div class="p-3 events-desc" id="upcomingDes">
+						<% }else{ %>
+							<div class="col-md-4">
+								<img
+									src="<%= eventArray.upcomingE[i].pic %>" 
+									class="
+										img-thumbnail img-fluid
+										w-100
+										events-bg-img
+										rounded
+										p-2
+									"
+								/>
+							</div>
+							<div class="col-md-8 p-3 events-desc" id="upcomingDes">
+						<% } %>
 							<div class="row">
 								<p>
 									<span class="fw-bold">DESCRIPTION: </span>
@@ -144,16 +162,21 @@
 									</span>
 								</p>
 								<br />
-	
-								<div>
-									<span class="fw-bolder">DATE: </span><%= eventArray.upcomingE[i].start %>
-								</div>
-	
-								<div>
-									<span class="fw-bolder">TIME: </span><%= eventArray.upcomingE[i].time %>
-								</div>
+								<% if(eventArray.upcomingE[i].start == 'NIL'){%>
+									<script>document.getElementById('upcomingDate').display = none</script>
+								<% }else{ %>
+									<div>
+										<span class="fw-bolder" id="upcomingDate">DATE: </span><%= eventArray.upcomingE[i].start %>
+									</div>
+								<% } %>
+								<% if(eventArray.upcomingE[i].time == 'NIL'){%>
+									<script>document.getElementById('upcomingTime').display = none</script>
+								<% }else{ %>
+									<div>
+										<span class="fw-bolder" id="upcomingTime">TIME: </span><%= eventArray.upcomingE[i].time %>
+									</div>
+								<% } %>
 							</div>
-	
 							<div class="row float-end">
 								<div class="d-inline-flex mt-2">
 									<% if(eventArray.upcomingE[i].website == 'NIL'){%>
@@ -201,10 +224,6 @@
 			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
 			crossorigin="anonymous"
 		>
-		function displayId(idName)
-		{
-			document.getElementById(idName).display = none;
-		}
 	</script>
 		<%- include('footer.ejs') %>
     </body>
