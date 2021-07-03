@@ -15,6 +15,7 @@ const generalRouter = require('./routes/generalRouter');
 // const localLoginRouter = require('./routes/authRouters/localLoginRouter');
 // const session = require('./utils/session');
 const eventsRouter = require('./routes/eventsRouter');
+const galleryRouter = require('./routes/galleryRouter');
 
 const app = express();
 app.use(express.static(path.join(__dirname, './public')));
@@ -35,6 +36,7 @@ app.set('view engine', 'ejs');
 // app.use('/auth', localSignUpRouter);
 // app.use('/auth', localLoginRouter);
 app.use('/events', eventsRouter);
+app.use('/gallery', galleryRouter);
 
 app.use('/', generalRouter);
 

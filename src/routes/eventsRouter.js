@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 		console.log(err);
 		res.status(400).json({
 			status: 'Fail',
-			essage: 'Server Error!'
+			message: 'Server Error!'
 		});
 	}
 });

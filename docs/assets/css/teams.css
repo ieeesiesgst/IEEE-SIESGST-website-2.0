@@ -4,13 +4,13 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.grid-col {
+.gPic-col {
 	flex: 1;
 	padding: 0 2em;
 }
-.grid-col--2,
-.grid-col--3,
-.grid-col--4 {
+.gPic-col--2,
+.gPic-col--3,
+.gPic-col--4 {
 	display: none;
 }
 .gallery-item {
@@ -57,17 +57,17 @@
 	.gallery-container {
 		width: 90%;
 	}
-	.grid-col {
+	.gPic-col {
 		flex: 1;
 		padding: 0 0.3em;
 	}
-	.grid-col--2 {
+	.gPic-col--2 {
 		display: block;
 	}
 }
 
 @media (min-width: 1080px) {
-	.grid-col--3 {
+	.gPic-col--3 {
 		display: block;
 	}
 	.gallery-container {

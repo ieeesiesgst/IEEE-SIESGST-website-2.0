@@ -1,36 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--- StyleSheet --->
-		<link rel="stylesheet" href="assets/css/styles.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/teams.css" />
-		<!-- Bootstrap CSS -->
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-			crossorigin="anonymous"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-		/>
-		<!----- Font Awesome CSS ------>
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-		/>
-
-		<title>GALLERY | IEEE SIESGST</title>
+		<%- include('./partials/head-tag.ejs') %>
+		<!-- <title>GALLERY | IEEE SIESGST</title> -->
 	</head>
 	<body class="gallery-events-bg">
+        <%- include('./partials/navbar.ejs') %>
 		<div class="container align-items-center">
 			<h3 class="text-center pb-5 fs-1 about-headlines fw-bolder p-5">
 				<span class="position-relative underline-overall-orange"
@@ -54,7 +29,7 @@
 					<div class="gallery-hover">
 						<div class="img-thumbnail">
 							<img
-								src="assets/images/sameer.jpg"
+								src="/images/sameer.jpg"
 								class="w-100"
 								alt=""
 							/>
@@ -82,7 +57,7 @@
 					<div class="gallery-hover">
 						<div class="img-thumbnail">
 							<img
-								src="assets/images/stem_lec.jpg"
+								src="/images/stem_lec.jpg"
 								class="w-100"
 								alt=""
 							/>
@@ -110,7 +85,7 @@
 					<div class="gallery-hover">
 						<div class="img-thumbnail">
 							<img
-								src="assets/images/panel.jpg"
+								src="/images/panel.jpg"
 								class="w-100"
 								alt=""
 							/>
@@ -138,7 +113,7 @@
 					<div class="gallery-hover">
 						<div class="img-thumbnail">
 							<img
-								src="assets/images/aisywc.jpg"
+								src="/images/aisywc.jpg"
 								class="w-100"
 								alt=""
 							/>
@@ -166,7 +141,7 @@
 					<div class="gallery-hover">
 						<div class="img-thumbnail">
 							<img
-								src="assets/images/magazine.jpg"
+								src="/images/magazine.jpg"
 								class="w-100"
 								alt=""
 							/>
@@ -194,7 +169,7 @@
 					<div class="gallery-hover">
 						<div class="img-thumbnail">
 							<img
-								src="assets/images/bg-events.png"
+								src="/images/bg-events.png"
 								class="w-100"
 								alt=""
 							/>
@@ -222,7 +197,7 @@
 					<div class="gallery-hover">
 						<div class="img-thumbnail">
 							<img
-								src="assets/images/magazine.jpg"
+								src="/images/magazine.jpg"
 								class="w-100"
 								alt=""
 							/>
@@ -250,7 +225,7 @@
 					<div class="gallery-hover">
 						<div class="img-thumbnail">
 							<img
-								src="assets/images/magazine.jpg"
+								src="/images/magazine.jpg"
 								class="w-100"
 								alt=""
 							/>
@@ -278,7 +253,7 @@
 					<div class="gallery-hover">
 						<div class="img-thumbnail">
 							<img
-								src="assets/images/magazine.jpg"
+								src="/images/magazine.jpg"
 								class="w-100"
 								alt=""
 							/>
@@ -324,26 +299,18 @@
 				></a>
 			</div>
 		</form>
-
-		<!-- Optional JavaScript; choose one of the two! -->
-
-		<!-- Option 1: Bootstrap Bundle with Popper -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 			crossorigin="anonymous"
 		></script>
 		<script src="https://unpkg.com/colcade@0/colcade.js"></script>
-		<!-- Option 2: Separate Popper and Bootstrap JS -->
-		<!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
 		<script>
 			var colc = new Colcade('.grid', {
 				columns: '.gPic-col',
 				items: '.grid-item'
 			});
 		</script>
+        <%- include('./partials/footer.ejs') %>
 	</body>
 </html>
