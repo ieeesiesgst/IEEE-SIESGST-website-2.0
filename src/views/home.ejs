@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-        <!-- Meta tag Keywords -->
-		 <meta
+<head>
+    <%- include('./partials/head-tag.ejs') %>
+
+		<meta
 		 name="description"
 		 content="Official website of IEEE student chapter of SIES GST, Navi Mumbai."
 		/>
@@ -23,44 +24,48 @@
 		/>
 		<!-- //Meta tag Keywords -->
 		<link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"/>
-	</head>
-	<script>
-		function testScroll() {
-			if (isScrolledIntoView($('.home-about')) && !viewed) {
-				viewed = true;
-				$('.count').each(function () {
-					$(this)
-						.prop('Counter', -1)
-						.animate(
-							{
-								Counter: $(this).text()
-							},
-							{
-								duration: 4000,
-								easing: 'swing',
-								step: function (now) {
-									$(this).text(Math.ceil(now));
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"/>
+
+		<script>
+			function testScroll() {
+				if (isScrolledIntoView($('.home-about')) && !viewed) {
+					viewed = true;
+					$('.count').each(function () {
+						$(this)
+							.prop('Counter', -1)
+							.animate(
+								{
+									Counter: $(this).text()
+								},
+								{
+									duration: 4000,
+									easing: 'swing',
+									step: function (now) {
+										$(this).text(Math.ceil(now));
+									}
 								}
-							}
-						);
-				});
+							);
+					});
+				}
 			}
-		}
-		function changeImage(i, text,sub) {
-			document
-				.getElementById('sub-image')
-				.setAttribute('src', `/images/sub-${i}.jpg`);
-			document.getElementById('sub-img-text').innerHTML = text;
-			document.getElementById(sub[3]).classList.add('active-sub');
-			for(var i =0;i<3;i++){
-				document.getElementById(sub[i]).classList.remove('active-sub');
+			function changeImage(i, text,sub) {
+				document
+					.getElementById('sub-image')
+					.setAttribute('src', `/images/sub-${i}.jpg`);
+				document.getElementById('sub-img-text').innerHTML = text;
+				document.getElementById(sub[3]).classList.add('active-sub');
+				for(var i =0;i<3;i++){
+					document.getElementById(sub[i]).classList.remove('active-sub');
+				}
 			}
-		}
-	</script>
-	<body>
-		<section class="home-about">
+		</script>
+</head>
+<body>
+    <%- include('./partials/home-navbar.ejs') %>
+
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+    <section class="home-about">
 			<div class="container p-4">
 				<h3 class="about-headlines text-center pt-4 fs-2 fw-bolder pb-2">
 					<span class="position-relative underline-overall-orange"
@@ -252,13 +257,6 @@
 			<br>
 		</section>
 
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-			crossorigin="anonymous"
-		></script>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 		<script>
 			let slider = tns({
@@ -325,5 +323,7 @@
 			});
 			
 		</script>
-	</body>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
 </html>

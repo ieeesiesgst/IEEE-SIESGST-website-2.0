@@ -15,12 +15,13 @@ router.get('/', async (req, res) => {
 		if (eventArray == 'error') {
 			res.send({ message: 'Server Error!!' });
 		} else {
-			res.render('test', {
+			res.render('home', {
 				title: 'HOME | IEEE SIESGST',
 				event: eventArray
 			});
 		}
 	} catch (err) {
+		console.log(err);
 		res.status(400).json({
 			status: 'Fail',
 			message: 'Server Error!'
