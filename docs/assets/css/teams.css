@@ -98,13 +98,17 @@
 	border-left: 2px solid #d3d3d3;
 	height: 18px;
 }
+.page-line1 {
+	border-left: 2px solid #d3d3d3;
+	height: 18px;
+}
 
 .pagination-box {
 	border: 1px solid #d3d3d3;
 	border-radius: 4px;
 
 	background-color: #ffffff;
-	width: 25px;
+	width: 40px;
 	background: transparent;
 	/* color: white; */
 }
