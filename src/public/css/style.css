@@ -113,7 +113,7 @@
 	outline: 13px solid #5e5e5e;
 	outline-offset: -1px;
 	font-family: 'Roboto';
-	transition: ease-out 0.2s;
+	transition: all ease-out 0.2s;
 }
 .active-sub {
 	color: #f1f0ec;
@@ -134,6 +134,10 @@
 	}
 }
 @media screen and (max-width: 576px) {
+	.sub-text {
+		font-size: 3.5vw;
+		font-family: 'Roboto';
+	}
 	.sub-l-col {
 		border-radius: 15px 15px 0px 0px;
 	}
