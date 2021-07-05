@@ -193,6 +193,9 @@
 	background: #eeee;
 	transition: all 250ms;
 }
+.home-carousel {
+	max-width: 400px;
+}
 .event-head {
 	font-family: 'Roboto';
 }
