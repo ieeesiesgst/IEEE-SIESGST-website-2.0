@@ -44,7 +44,7 @@
 	scrollbar-width: 10px;
 }
 .gallery-desc {
-	color: #cccccc;
+	color: #e2e2e2;
 	padding-left: 5px;
 	/* padding-right: 5px; */
 }
@@ -57,7 +57,7 @@
 	visibility: visible;
 	opacity: 1;
 
-	transition: 0.5s ease;
+	transition: 0.2s ease;
 }
 
 @media (min-width: 768px) {
