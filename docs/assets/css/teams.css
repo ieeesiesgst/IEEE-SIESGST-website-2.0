@@ -48,6 +48,10 @@
 	padding-left: 5px;
 	/* padding-right: 5px; */
 }
+.gallery-content::-webkit-scrollbar{
+  width:5px;
+  color:#0000;
+}
 
 .gallery-item:hover .gallery-content {
 	visibility: visible;
