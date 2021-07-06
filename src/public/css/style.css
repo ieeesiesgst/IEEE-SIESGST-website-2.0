@@ -203,7 +203,7 @@
 	font-family: 'Roboto';
 }
 
-/* ----------------- GALLERY PAGE -------------- */
+/*----------GALLERY PAGE ---------*/
 .gallery-events-bg {
 	background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
 		url('../images/bg-events1.png');
@@ -232,7 +232,6 @@
 	font-size: 21px;
 	padding: 16px;
 }
-
 .gallery-content {
 	font-family: 'Roboto';
 	position: absolute;
@@ -247,21 +246,20 @@
 	border-radius: 5px;
 	align-items: center;
 	box-shadow: 2px 2px 4px #6c757d7a;
-	scrollbar-width: 10px;
 }
 .gallery-desc {
-	color: #cccccc;
+	color: #e2e2e2;
 	padding-left: 5px;
 }
 .gallery-content::-webkit-scrollbar {
 	width: 5px;
 	color: #0000;
 }
-
 .gallery-item:hover .gallery-content {
 	visibility: visible;
 	opacity: 1;
-	transition: 0.5s ease;
+
+	transition: 0.2s ease;
 }
 @media (min-width: 768px) {
 	.gallery-container {
@@ -300,12 +298,15 @@
 	border-left: 2px solid #d3d3d3;
 	height: 18px;
 }
-
+.page-line1 {
+	border-left: 2px solid #d3d3d3;
+	height: 18px;
+}
 .pagination-box {
 	border: 1px solid #d3d3d3;
 	border-radius: 4px;
 	background-color: #ffffff;
-	width: 25px;
+	width: 40px;
 	background: transparent;
 }
 .pagination-box:focus {
@@ -319,3 +320,37 @@
 	color: #444444;
 	transition: ease-in 0.5s;
 }
+.gallery-content::-webkit-scrollbar {
+	width: 4px;
+}
+
+/* Track */
+.gallery-content::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 8px;
+}
+
+/* Handle */
+.gallery-content::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 8px;
+}
+
+/* Handle on hover */
+.gallery-content::-webkit-scrollbar-thumb:hover {
+	background: #555;
+	border: 1px solid #666;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.pagination-box::-webkit-outer-spin-button,
+.pagination-box::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+.pagination-box {
+	-moz-appearance: textfield;
+}
+/*-------------GALLERY PAGE ENDS-------*/
