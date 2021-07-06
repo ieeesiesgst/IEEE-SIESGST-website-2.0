@@ -892,14 +892,14 @@
 
     moveBackground();
 
-    var loginModal = document.getElementById('loginModal');
-    if(loginModal) {
-        loginModal.addEventListener('hide.bs.modal', function (event) {
-            setTimeout(() => {
-                document.getElementById('navbar').scrollTo(0, 0);
-            }, 350);
-        });
-    }
+    let loginModal = document.getElementsByClassName('modal')
+		for(let i=0; i<loginModal.length; i++) {
+			loginModal[i].addEventListener('hide.bs.modal', function (event) {
+				setTimeout(() => {
+					document.getElementById('navbar').scrollTo(0, 0);
+				}, 350);
+			});
+		}
 
     typingEffect(0, defaultSpeed)
     
