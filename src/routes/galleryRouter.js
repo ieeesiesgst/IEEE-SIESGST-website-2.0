@@ -12,26 +12,26 @@ router.get('/', async (req, res) => {
 		};
 		const galleryRes = await getData(domainData);
 		const Gdata = galleryRes.data;
-		console.log(Gdata.Gname);
+		// console.log(Gdata.Gname);
 
 		const lastPg = Math.ceil(Gdata.Gname.length / 9);
-		const limit = 9;
+		// const limit = 9;
 		let page;
 
 		if (req.query.page * 1 > lastPg) {
 			page = lastPg;
-		} else if (req.query.page * 1 == 0) {
-			page = 1;
-		} else {
+		} else if (req.query.page * 1 <= lastPg && req.query.page * 1 > 0) {
 			page = req.query.page * 1;
+		} else {
+			page = 1;
 		}
 
-		const skip = (page - 1) * limit;
+		const skip = (page - 1) * 9;
 		let imgName = [],
 			imgDes = [],
 			imgLink = [];
 
-		for (let i = skip; i < skip + limit; i++) {
+		for (let i = skip; i < skip + 9; i++) {
 			if (Gdata.Gname[i] != undefined) {
 				imgName.push(Gdata.Gname[i]);
 			}
@@ -42,7 +42,7 @@ router.get('/', async (req, res) => {
 				imgLink.push(Gdata.Gimg[i]);
 			}
 		}
-		console.log(imgName);
+		// console.log(imgName);
 		// console.log(imgDes);
 		// console.log(imgLink);
 
