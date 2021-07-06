@@ -2,6 +2,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Sans+Narrow:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
 /* --------HOME PAGE --------- */
+.cursor-pointer {
+	cursor: pointer;
+}
+
 .underline-overall-white::before {
 	content: '';
 	position: absolute;
@@ -174,80 +178,28 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.gPic-col {
-	flex: 1;
-	padding: 0 2em;
-}
-.gPic-col--2,
-.gPic-col--3,
-.gPic-col--4 {
-	display: none;
-}
-.gallery-item {
-	position: relative;
-	margin-bottom: 10px;
-}
-.gallery-headline {
-	position: sticky;
-	top: 0;
-	overflow-y: hidden;
-	background-color: rgba(0, 0, 0);
-	color: #ffffff;
-	font-size: 21px;
-	padding: 16px;
-}
 
 .gallery-content {
-	font-family: 'Roboto';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0, 0, 0, 0.8);
-	visibility: hidden;
 	opacity: 0;
-	overflow-y: auto;
-	height: 100%;
-	border-radius: 5px;
-	align-items: center;
-	box-shadow: 2px 2px 4px #6c757d7a;
-}
-.gallery-desc {
-	color: #e2e2e2;
-	padding-left: 5px;
-}
-.gallery-content::-webkit-scrollbar {
-	width: 5px;
-	color: #0000;
+	transition: 0.2s;
+	background: rgba(0, 0, 0, 0.75);
 }
 
 .gallery-item:hover .gallery-content {
-	visibility: visible;
 	opacity: 1;
-
-	transition: 0.2s ease;
 }
 
-@media (min-width: 768px) {
-	.gallery-container {
-		width: 90%;
-	}
-	.gPic-col {
-		flex: 1;
-		padding: 0 0.3em;
-	}
-	.gPic-col--2 {
-		display: block;
-	}
+.gallery-title {
+	border-bottom: 1px solid #666;
 }
 
-@media (min-width: 1080px) {
-	.gPic-col--3 {
-		display: block;
-	}
-	.gallery-container {
-		width: 80%;
-	}
+.gallery-modal-img {
+	width: 100%;
+	height: auto;
+}
+
+.gallery-modal-body {
+	padding: 0px;
 }
 
 .gallery-pagination {
@@ -293,24 +245,25 @@
 	color: #444444;
 	transition: ease-in 0.5s;
 }
-.gallery-content::-webkit-scrollbar {
+
+.gallery-desc::-webkit-scrollbar {
 	width: 4px;
 }
 
 /* Track */
-.gallery-content::-webkit-scrollbar-track {
+.gallery-desc::-webkit-scrollbar-track {
 	background: #f1f1f1;
 	border-radius: 8px;
 }
 
 /* Handle */
-.gallery-content::-webkit-scrollbar-thumb {
+.gallery-desc::-webkit-scrollbar-thumb {
 	background: #888;
 	border-radius: 8px;
 }
 
 /* Handle on hover */
-.gallery-content::-webkit-scrollbar-thumb:hover {
+.gallery-desc::-webkit-scrollbar-thumb:hover {
 	background: #555;
 	border: 1px solid #666;
 }
