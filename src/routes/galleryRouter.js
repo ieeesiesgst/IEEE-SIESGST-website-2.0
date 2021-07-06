@@ -11,18 +11,40 @@ router.get('/', async (req, res) => {
 			topic: 'gallery'
 		};
 		const galleryRes = await getData(domainData);
-		// console.log(galleryRes.data);
-		// console.log(req.query.page);
-		// const imgName = galleryRes.data.Gname;
-		// console.log(imgName);
+		const Gdata = galleryRes.data;
+		console.log(Gdata.Gname);
 
-		// const page = 1;
-		// const limit = 10;
-		// const skip = (page - 1) * limit;
+		const lastPg = Math.ceil(Gdata.Gname.length / 9);
+		const limit = 9;
+		let page;
 
-		// for(let i=0; i)
+		if (req.query.page * 1 > lastPg) {
+			page = lastPg;
+		} else if (req.query.page * 1 == 0) {
+			page = 1;
+		} else {
+			page = req.query.page * 1;
+		}
 
-		// console.log(imgName.skip(5).limit(limit));
+		const skip = (page - 1) * limit;
+		let imgName = [],
+			imgDes = [],
+			imgLink = [];
+
+		for (let i = skip; i < skip + limit; i++) {
+			if (Gdata.Gname[i] != undefined) {
+				imgName.push(Gdata.Gname[i]);
+			}
+			if (Gdata.Gdes[i] != undefined) {
+				imgDes.push(Gdata.Gdes[i]);
+			}
+			if (Gdata.Gimg[i] != undefined) {
+				imgLink.push(Gdata.Gimg[i]);
+			}
+		}
+		console.log(imgName);
+		// console.log(imgDes);
+		// console.log(imgLink);
 
 		res.render('gallery', {
 			title: 'GALLERY | IEEE SIESGST'
