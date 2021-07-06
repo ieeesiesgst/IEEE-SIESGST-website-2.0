@@ -23,212 +23,100 @@
 		/>
 		<!-- //Meta tag Keywords -->
 		<%- include('./partials/head-tag.ejs') %>
-		<script>	
-		function displayId(idName)
-			{
-				document.getElementById(idName).display = none;
-			}
-		</script>
 	</head>
 	<body class="events-bg">
 		<%- include('./partials/navbar.ejs') %>
-		<% if(eventArray.activeE.length == 0){ %>
-			<script>displayId('activeId')</script>
-		<% }else{ %>
-		<section class="upcoming-events px-3 pt-3" id='activeId'>
-			<h3
-				class="
-					about-headlines
-					text-center text-white
-					p-5
-					pb-5
-					fs-2
-					fw-bolder
-				"
-			>
-				<span class="position-relative underline-overall-orange"
-					>Active Events</span
+		<% if(eventArray.activeE.length != 0){ %>
+			<section class="upcoming-events px-3 pt-3" id='activeId'>
+				<h3
+					class="
+						about-headlines
+						text-center text-white
+						p-5
+						pb-5
+						fs-2
+						fw-bolder
+					"
 				>
-			</h3>
-			<% for(var i = eventArray.activeE.length-1; i>=0; i--) { %>
-			<div class="container events-container p-4 my-3">
-				<div class="row">
-					<% if(eventArray.activeE[i].pic == 'NIL'){ %>
-						<div class="p-3 events-desc" id="activeDes">
-					<% }else{ %>
-						<div class="col-md-4" id="activePic">
-							<img
-								src="<%= eventArray.activeE[i].pic %>" 
-								class="
-									img-thumbnail img-fluid
-									w-100
-									events-bg-img
-									rounded
-									p-2"
-							/>
-						</div>
-						<div class="col-md-8 p-3 events-desc" id="activeDes">
-					<% } %>
-						<div class="row">
-							<p>
-								<span class="fw-bold">DESCRIPTION: </span>
-								<br />
-								<span class="fw-normal text-center">
-									<%= eventArray.activeE[i].small %>
-								</span>
-							</p>
-							<br />
-								<% if(eventArray.activeE[i].start == 'Date'){%>
-									<script>document.getElementById('activeDate').display = none</script>
-								<% }else{ %>
-									<div id="activeDate">
-										<span class="fw-bolder">DATE: </span><%= eventArray.activeE[i].start %>
-									</div>
-								<% } %>
-								<% if(eventArray.activeE[i].time == 'NIL'){%>
-									<script>document.getElementById('activeTime').display = none</script>
-								<% }else{ %>
-									<div id="activeTime">
-										<span class="fw-bolder">TIME: </span><%= eventArray.activeE[i].time %>
-									</div>
-								<% } %>
-						</div>
-
-						<div class="row float-end">
-							<div class="d-inline-flex mt-2">
-								<% if(eventArray.activeE[i].website == 'NIL'){%>
-									<script>displayId('knowA')</script>
-								<% }else{ %>
-								<a
-									href="<%= eventArray.activeE[i].website %>"
-									class="
-										p-2
-										pe-lg-5
-										ps-lg-5
-										ps-lg-3
-										btn-events
-									"
-									id="knowA"
-									>Know More</a
-								>
-								<% } %>
-								&nbsp; &nbsp;
-								<% if(eventArray.activeE[i].reg == 'NIL'){%>
-									<script>displayId('regA')</script>
-								<% }else{ %>
-								<a
-									href="<%= eventArray.activeE[i].reg %>"
-									class="
-									p-2
-									pe-lg-5
-									ps-lg-5
-									ps-lg-3
-									btn-events
-									" id="regA"
-									>Register Now</a
-								><% } %>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<% } %>
-		</section>
-		<% } %>
-		<% if(eventArray.upcomingE.length == 0){ %>
-			<script>displayId('upcomingId')</script>
-		<% }else{ %>
-		<section class="upcoming-events px-3 pt-3 pb-5" id="upcomingId">
-			<h3
-				class="
-					about-headlines
-					text-center text-white
-					pt-4
-					px-5
-					pb-5
-					fs-2
-					fw-bolder
-				"
-			>
-				<span class="position-relative underline-overall-orange"
-					>Upcoming Events</span
-				>
-			</h3>
-			<% for(var i = eventArray.upcomingE.length-1; i>=0; i--) { %>
+					<span class="position-relative underline-overall-orange"
+						>Active Events</span
+					>
+				</h3>
+				<% for(var i = eventArray.activeE.length-1; i>=0; i--) { %>
 				<div class="container events-container p-4 my-3">
 					<div class="row">
-						<% if(eventArray.upcomingE[i].pic == 'NIL'){ %>
-							<div class="p-3 events-desc" id="upcomingDes">
+						<% if(eventArray.activeE[i].pic == 'NIL'){ %>
+							<div class="p-3 events-desc" id="activeDes">
 						<% }else{ %>
-							<div class="col-md-4">
+							<div class="col-md-4" id="activePic">
 								<img
-									src="<%= eventArray.upcomingE[i].pic %>" 
+									src="<%= eventArray.activeE[i].pic %>" 
 									class="
 										img-thumbnail img-fluid
 										w-100
 										events-bg-img
 										rounded
-										p-2
-									"
+										p-2"
 								/>
 							</div>
-							<div class="col-md-8 p-3 events-desc" id="upcomingDes">
+							<div class="col-md-8 p-3 events-desc" id="activeDes">
 						<% } %>
 							<div class="row">
 								<p>
 									<span class="fw-bold">DESCRIPTION: </span>
 									<br />
 									<span class="fw-normal text-center">
-										<%= eventArray.upcomingE[i].small %>
+										<%= eventArray.activeE[i].small %>
 									</span>
 								</p>
 								<br />
-								<% if(eventArray.upcomingE[i].start == 'Date'){%>
-									<script>document.getElementById('upcomingDate').display = none</script>
-								<% }else{ %>
-									<div>
-										<span class="fw-bolder" id="upcomingDate">DATE: </span><%= eventArray.upcomingE[i].start %>
-									</div>
-								<% } %>
-								<% if(eventArray.upcomingE[i].time == 'NIL'){%>
-									<script>document.getElementById('upcomingTime').display = none</script>
-								<% }else{ %>
-									<div>
-										<span class="fw-bolder" id="upcomingTime">TIME: </span><%= eventArray.upcomingE[i].time %>
-									</div>
-								<% } %>
+									<% if(eventArray.activeE[i].start == 'Date'){%>
+										<script>document.getElementById('activeDate').display = none</script>
+									<% }else{ %>
+										<div id="activeDate">
+											<span class="fw-bolder">DATE: </span><%= eventArray.activeE[i].start %>
+										</div>
+									<% } %>
+									<% if(eventArray.activeE[i].time == 'NIL'){%>
+										<script>document.getElementById('activeTime').display = none</script>
+									<% }else{ %>
+										<div id="activeTime">
+											<span class="fw-bolder">TIME: </span><%= eventArray.activeE[i].time %>
+										</div>
+									<% } %>
 							</div>
+	
 							<div class="row float-end">
 								<div class="d-inline-flex mt-2">
-									<% if(eventArray.upcomingE[i].website == 'NIL'){%>
-										<script>displayId('knowU')</script>
+									<% if(eventArray.activeE[i].website == 'NIL'){%>
+										<script>displayId('knowA')</script>
 									<% }else{ %>
 									<a
-										href="<%= eventArray.upcomingE[i].website %>"
+										href="<%= eventArray.activeE[i].website %>"
 										class="
-										p-2
-										pe-lg-5
-										ps-lg-5
-										ps-lg-3
-										btn-events
+											p-2
+											pe-lg-5
+											ps-lg-5
+											ps-lg-3
+											btn-events
 										"
-										id="knowU"
+										id="knowA"
 										>Know More</a
 									>
 									<% } %>
 									&nbsp; &nbsp;
-									<% if(eventArray.upcomingE[i].reg == 'NIL'){%>
-										<script>displayId('regU')</script>
+									<% if(eventArray.activeE[i].reg == 'NIL'){%>
+										<script>displayId('regA')</script>
 									<% }else{ %>
 									<a
-										href="<%= eventArray.upcomingE[i].reg %>"
+										href="<%= eventArray.activeE[i].reg %>"
 										class="
 										p-2
 										pe-lg-5
 										ps-lg-5
 										ps-lg-3
 										btn-events
-										" id="regU"
+										" id="regA"
 										>Register Now</a
 									><% } %>
 								</div>
@@ -237,9 +125,111 @@
 					</div>
 				</div>
 				<% } %>
-		</section>
+			</section>
+		
 		<% } %>
-
+		<% if(eventArray.upcomingE.length != 0){ %>
+			<section class="upcoming-events px-3 pt-3 pb-5" id="upcomingId">
+				<h3
+					class="
+						about-headlines
+						text-center text-white
+						pt-4
+						px-5
+						pb-5
+						fs-2
+						fw-bolder
+					"
+				>
+					<span class="position-relative underline-overall-orange"
+						>Upcoming Events</span
+					>
+				</h3>
+				<% for(var i = eventArray.upcomingE.length-1; i>=0; i--) { %>
+					<div class="container events-container p-4 my-3">
+						<div class="row">
+							<% if(eventArray.upcomingE[i].pic == 'NIL'){ %>
+								<div class="p-3 events-desc" id="upcomingDes">
+							<% }else{ %>
+								<div class="col-md-4">
+									<img
+										src="<%= eventArray.upcomingE[i].pic %>" 
+										class="
+											img-thumbnail img-fluid
+											w-100
+											events-bg-img
+											rounded
+											p-2
+										"
+									/>
+								</div>
+								<div class="col-md-8 p-3 events-desc" id="upcomingDes">
+							<% } %>
+								<div class="row">
+									<p>
+										<span class="fw-bold">DESCRIPTION: </span>
+										<br />
+										<span class="fw-normal text-center">
+											<%= eventArray.upcomingE[i].small %>
+										</span>
+									</p>
+									<br />
+									<% if(eventArray.upcomingE[i].start == 'Date'){%>
+										<script>document.getElementById('upcomingDate').display = none</script>
+									<% }else{ %>
+										<div>
+											<span class="fw-bolder" id="upcomingDate">DATE: </span><%= eventArray.upcomingE[i].start %>
+										</div>
+									<% } %>
+									<% if(eventArray.upcomingE[i].time == 'NIL'){%>
+										<script>document.getElementById('upcomingTime').display = none</script>
+									<% }else{ %>
+										<div>
+											<span class="fw-bolder" id="upcomingTime">TIME: </span><%= eventArray.upcomingE[i].time %>
+										</div>
+									<% } %>
+								</div>
+								<div class="row float-end">
+									<div class="d-inline-flex mt-2">
+										<% if(eventArray.upcomingE[i].website == 'NIL'){%>
+											<script>displayId('knowU')</script>
+										<% }else{ %>
+										<a
+											href="<%= eventArray.upcomingE[i].website %>"
+											class="
+											p-2
+											pe-lg-5
+											ps-lg-5
+											ps-lg-3
+											btn-events
+											"
+											id="knowU"
+											>Know More</a
+										>
+										<% } %>
+										&nbsp; &nbsp;
+										<% if(eventArray.upcomingE[i].reg == 'NIL'){%>
+											<script>displayId('regU')</script>
+										<% }else{ %>
+										<a
+											href="<%= eventArray.upcomingE[i].reg %>"
+											class="
+											p-2
+											pe-lg-5
+											ps-lg-5
+											ps-lg-3
+											btn-events
+											" id="regU"
+											>Register Now</a
+										><% } %>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<% } %>
+			</section>
+		<% } %>
 		<%- include('./partials/footer.ejs') %>
     </body>
 </html>
