@@ -327,7 +327,12 @@
 		<form method="GET">
 			<div class="text-center px-5 pb-5 pt-3">
 				<div class="gallery-pagination rounded-pill text-center">
-					<a href="#" class="text-decoration-none pt-2">
+
+					<% if(callPg!=1){ %>
+						<a href="/gallery?page=<%= callPg-1 %>" class="text-decoration-none pt-2">
+					<% } else { %>
+						<a href="javascript: void(0)" class="text-decoration-none pt-2">
+						<% } %>
 						<i
 							class="fa fa-chevron-left pagination-icon"
 							aria-hidden="true"
@@ -348,7 +353,11 @@
 					<span class="text-center p-1"><%= lastPg %></span>
 					<span class="pagination-line me-2"></span>
 
-					<a href="#" class="ps-1 text-decoration-none">
+					<% if(callPg==lastPg){ %>
+						<a href="javascript: void(0)" class="ps-1 text-decoration-none">
+					<% } else { %>
+						<a href="/gallery?page=<%= callPg+1 %>" class="text-decoration-none pt-2">
+						<% } %>
 						<span class=""
 							><i
 								class="fa fa-chevron-right pagination-icon"
