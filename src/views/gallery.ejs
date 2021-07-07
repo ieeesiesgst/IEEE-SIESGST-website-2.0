@@ -28,7 +28,6 @@
 		/>
         
 		<%- include('./partials/head-tag.ejs') %>
-	</head>
 		<script>
 			const getLargest = (arr) => {
 				let max = 0;
@@ -126,6 +125,8 @@
 					document.getElementById('gallery-loader').style.display =
 						'none';
 				}
+				document.getElementById('gallery').style.height =
+					getLargest(col) + 20 + 'px';
 			};
 
 			const fullScreenImage = (eleId) => {
@@ -156,12 +157,13 @@
 		</div>
 
 		<div class="container-fluid">
-			<div id="gallery" class="position-relative overflow-hidden">
+			<div
+				id="gallery"
+				class="position-relative overflow-hidden"
+				style="height: 50vh"
+			>
 				<div id="gallery-loader" class="text-center py-5">
-					<i
-						class="fas fa-spinner fa-pulse fa-10x"
-						style="text-shadow: 2px 2px 8px #ce5841"
-					></i>
+					<div class="gallery-loading-animation">Loading...</div>
 				</div>
 
 				<div
@@ -692,10 +694,16 @@
 			</div>
 		</form>
 		<%- include('./partials/footer.ejs') %>
+
 		<script>
+			let currentWidth = window.innerWidth;
 			window.onresize = () => {
-				makeGallery(null);
+				let newWidth = window.innerWidth;
+				if (newWidth !== currentWidth) {
+					currentWidth = newWidth;
+					makeGallery(null);
+				}
 			};
-		</script>	
+		</script>
 	</body>
 </html>
