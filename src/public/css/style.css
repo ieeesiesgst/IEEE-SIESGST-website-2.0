@@ -344,6 +344,10 @@ video:focus {
 	border: 1px solid #ce5841;
 }
 
+.pagination-disabled {
+	opacity: 0.7;
+}
+
 .pagination-icon {
 	color: #ce5841;
 }

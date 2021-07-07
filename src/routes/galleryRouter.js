@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
 	try {
 		let callPg = parseInt(req.query.page);
-		if (isNaN(callPg)) {
+		if (isNaN(callPg) || callPg < 1) {
 			callPg = 1;
 		}
 		const domainData = {
@@ -15,6 +15,10 @@ router.get('/', async (req, res) => {
 			page: callPg
 		};
 		const galleryRes = await getData(domainData);
+
+		if (callPg > galleryRes.data.GlastPg) {
+			callPg = galleryRes.data.GlastPg;
+		}
 		// Gdata -- object of arrays i.e name, imgLink, description, type, alt, lastPg
 		res.render('gallery', {
 			title: 'GALLERY | IEEE SIESGST',

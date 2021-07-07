@@ -329,9 +329,9 @@
 				<div class="gallery-pagination rounded-pill text-center">
 
 					<% if(callPg!=1){ %>
-						<a href="/gallery?page=<%= callPg-1 %>" class="text-decoration-none pt-2">
+						<a href="/gallery?page=<%= callPg-1 %>" class="text-decoration-none">
 					<% } else { %>
-						<a href="javascript: void(0)" class="text-decoration-none pt-2">
+						<a class="text-decoration-none pagination-disabled" disabled>
 						<% } %>
 						<i
 							class="fa fa-chevron-left pagination-icon"
@@ -354,16 +354,15 @@
 					<span class="pagination-line me-2"></span>
 
 					<% if(callPg==lastPg){ %>
-						<a href="javascript: void(0)" class="ps-1 text-decoration-none">
+						<a class="text-decoration-none ps-1 pagination-disabled" disabled>
 					<% } else { %>
-						<a href="/gallery?page=<%= callPg+1 %>" class="text-decoration-none pt-2">
+						<a href="/gallery?page=<%= callPg+1 %>" class="text-decoration-none ps-1">
 						<% } %>
-						<span class=""
-							><i
-								class="fa fa-chevron-right pagination-icon"
-								aria-hidden="true"
-							></i></span
-					></a>
+						<i
+							class="fa fa-chevron-right pagination-icon"
+							aria-hidden="true"
+						></i>
+					</a>
 				</div>
 			</div>
 		</form>
