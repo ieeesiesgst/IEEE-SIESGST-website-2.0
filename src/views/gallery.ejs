@@ -29,297 +29,644 @@
         
 		<%- include('./partials/head-tag.ejs') %>
 	</head>
+		<script>
+			const getLargest = (arr) => {
+				let max = 0;
+				arr.forEach((ele) => {
+					if (ele > max) {
+						max = ele;
+					}
+				});
+				return max;
+			};
+
+			const getSmallest = (arr) => {
+				let minLoc = Math.floor(Math.random() * arr.length);
+				let min = arr[minLoc];
+				arr.forEach((ele, idx) => {
+					if (ele < min) {
+						min = ele;
+						minLoc = idx;
+					}
+				});
+				return minLoc;
+			};
+
+			const makeGallery = (eleId) => {
+				if (eleId) {
+					document.getElementById(
+						'gallery-div-' + eleId
+					).style.transform = 'scale(1)';
+				}
+
+				let col = [0];
+				if (window.innerWidth > 540) {
+					col.push(0);
+				}
+				if (window.innerWidth > 800) {
+					col.push(0);
+				}
+				if (window.innerWidth > 1200) {
+					col.push(0);
+				}
+				if (window.innerWidth > 1500) {
+					col.push(0);
+				}
+
+				let galleryItems =
+					document.getElementsByClassName('gallery-item');
+
+				for (let i = 0; i < galleryItems.length; i++) {
+					if (galleryItems[i].style.transform == 'scale(0)') {
+						continue;
+					}
+
+					let tempHeight =
+						(galleryItems[i].getElementsByTagName('img')[0]
+							.naturalHeight /
+							galleryItems[i].getElementsByTagName('img')[0]
+								.naturalWidth) *
+						Math.floor(window.innerWidth / col.length);
+
+					let tempWidth =
+						(document
+							.getElementById('gallery')
+							.getBoundingClientRect().width -
+							20 * (col.length - 1)) /
+						col.length;
+
+					let smallLoc;
+					if (galleryItems.length <= col.length) {
+						smallLoc = i;
+					} else {
+						smallLoc = getSmallest(col);
+					}
+
+					galleryItems[i].style.width = tempWidth + 'px';
+					galleryItems[i].style.height = tempHeight + 'px';
+					galleryItems[i].style.marginLeft =
+						(tempWidth + 20) * smallLoc + 'px';
+					galleryItems[i].style.marginTop = col[smallLoc] + 'px';
+
+					col[smallLoc] += tempHeight + 20;
+
+					let largeHeight = getLargest(col);
+
+					if (
+						!document.getElementById('gallery').style.height ||
+						parseInt(
+							document.getElementById('gallery').style.height
+						) <
+							largeHeight + 20
+					) {
+						document.getElementById('gallery').style.height =
+							largeHeight + 20 + 'px';
+					}
+
+					document.getElementById('gallery-loader').style.display =
+						'none';
+				}
+			};
+
+			const fullScreenImage = (eleId) => {
+				let src = document
+					.getElementById('gallery-div-' + eleId)
+					.getElementsByTagName('img')[0].src;
+
+				$('.gallery-modal-body').html(
+					`<button type="button" class="btn position-absolute py-0 px-2 text-white end-0" style="border: 1px solid #000; background: rgba(0,0,0,0.7);" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+					<img src="${src}" class='gallery-modal-img'>`
+				);
+
+				$('#full-screen-modal').modal();
+				new bootstrap.Modal(
+					document.getElementById('full-screen-modal')
+				).toggle();
+			};
+		</script>
+	</head>
 	<body class="gallery-events-bg">
 		<%- include('./partials/navbar.ejs') %>
-		<div class="container align-items-center">
+		<div class="container">
 			<h3 class="text-center pb-5 fs-1 about-headlines fw-bolder p-5">
 				<span class="position-relative underline-overall-orange"
 					>Gallery</span
 				>
 			</h3>
-			<div class="grid d-flex align-items-center">
-				<!-- .grid-item will populate these -->
-				<div class="gPic-col gPic-col--1"></div>
-				<div class="gPic-col gPic-col--2"></div>
-				<div class="gPic-col gPic-col--3"></div>
-				<div class="gPic-col gPic-col--4"></div>
+		</div>
+
+		<div class="container-fluid">
+			<div id="gallery" class="position-relative overflow-hidden">
+				<div id="gallery-loader" class="text-center py-5">
+					<i
+						class="fas fa-spinner fa-pulse fa-10x"
+						style="text-shadow: 2px 2px 8px #ce5841"
+					></i>
+				</div>
 
 				<div
-					class="
-						grid-item
-						gallery-item
-						animate__animated animate__backInDown animate__slow
-					"
+					class="position-absolute gallery-item"
+					style="transform: scale(0); transition: 0.5s"
+					id="gallery-div-1"
 				>
-					<div class="gallery-hover">
-						<div class="img-thumbnail">
-							<img
-								src="/images/sameer.jpg"
-								class="w-100"
-								alt=""
-							/>
+					<img
+						src="https://source.unsplash.com/1600x1200"
+						alt=""
+						class="
+							img-fluid
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+						"
+						onload="makeGallery(1)"
+					/>
+
+					<div
+						class="
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+							d-flex
+							flex-column
+							pt-2
+							gallery-content
+						"
+					>
+						<div
+							class="
+								gallery-title
+								text-center text-white
+								d-flex
+								flex-row
+								pb-2
+								px-3
+							"
+						>
+							<div class="d-flex flex-grow-1">
+								<h5 class="mb-0">Ready</h5>
+							</div>
+							<div class="d-flex flex-grow-0 pt-1">
+								<i
+									class="fas fa-expand cursor-pointer"
+									title="Full Screen"
+									onclick="fullScreenImage(1)"
+								></i>
+							</div>
 						</div>
-						<div class="gallery-content text-center">
-							<div class="gallery-headline">
-								<span>SAMEER VISIT</span>
-							</div>
-							<div class="gallery-desc pt-2 p-4">
-								MTT-S members of IEEE SIES GST got the
-								opportunity to visit the Society of Applied
-								Microwave and Electronic Engineering Research
-								(SAMEER) in Kharghar, Navi Mumbai. More on
-								<a href="#" class="text-white">MTT-S</a> MTT-S
-								members of IEEE SIES GST got the opportunity to
-								visit the Society of Applied Microwave and
-								Electronic Engineering Research (SAMEER) in
-								Kharghar, Navi Mumbai. More on
-								<a href="#" class="text-white">MTT-S</a>
-							</div>
+						<div
+							class="
+								gallery-desc
+								text-center
+								overflow-auto
+								text-white
+								d-flex
+								flex-column
+								text-center
+								px-2
+								pb-2
+								pt-1
+							"
+						>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Eos, earum eveniet. Vitae rerum quisquam, sunt
+							recusandae cum reiciendis. Cupiditate officiis
+							quidem reprehenderit deleniti harum commodi! Sed rem
+							minus quis velit! Lorem ipsum dolor, sit amet
+							consectetur adipisicing elit. Nesciunt provident
+							veniam vero ab suscipit, tempore soluta repellat,
+							facere eligendi sunt qui porro possimus excepturi
+							nulla quo totam distinctio, veritatis nostrum.
 						</div>
 					</div>
 				</div>
+
 				<div
-					class="
-						grid-item
-						gallery-item
-						animate__animated animate__backInDown animate__slow
-					"
+					class="position-absolute gallery-item"
+					style="transform: scale(0); transition: 0.5s"
+					id="gallery-div-2"
 				>
-					<div class="gallery-hover">
-						<div class="img-thumbnail">
-							<img
-								src="/images/stem_lec.jpg"
-								class="w-100"
-								alt=""
-							/>
+					<img
+						src="https://source.unsplash.com/1700x1200"
+						alt=""
+						class="
+							img-fluid
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+						"
+						onload="makeGallery(2)"
+					/>
+
+					<div
+						class="
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+							d-flex
+							flex-column
+							pt-2
+							gallery-content
+						"
+					>
+						<div
+							class="
+								gallery-title
+								text-center text-white
+								d-flex
+								flex-row
+								pb-2
+								px-3
+							"
+						>
+							<div class="d-flex flex-grow-1">
+								<h5 class="mb-0">Title</h5>
+							</div>
+							<div class="d-flex flex-grow-0 pt-1">
+								<i
+									class="fas fa-expand cursor-pointer"
+									title="Full Screen"
+									onclick="fullScreenImage(2)"
+								></i>
+							</div>
 						</div>
-						<div class="gallery-content text-center">
-							<div class="gallery-headline">
-								<span class="pt-1">SAMEER VISIT</span>
-							</div>
-							<div class="gallery-desc pt-2 p-4">
-								MTT-S members of IEEE SIES GST got the
-								opportunity to visit the Society of Applied
-								Microwave and Electronic Engineering Research
-								(SAMEER) in Kharghar, Navi Mumbai. More on
-								<a href="#" class="text-white">MTT-S</a> MTT-S
-								members of IEEE SIES GST got the opportunity to
-								visit the Society of Applied Microwave and
-								Electronic Engineering Research (SAMEER) in
-								Kharghar, Navi Mumbai. More on
-								<a href="#" class="text-white">MTT-S</a>
-							</div>
+						<div
+							class="
+								gallery-desc
+								text-center
+								overflow-auto
+								text-white
+								d-flex
+								flex-column
+								text-center
+								px-2
+								pb-2
+								pt-1
+							"
+						>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Eos, earum eveniet. Vitae rerum quisquam, sunt
+							recusandae cum reiciendis. Cupiditate officiis
+							quidem reprehenderit deleniti harum commodi! Sed rem
+							minus quis velit! Lorem ipsum dolor, sit amet
+							consectetur adipisicing elit. Nesciunt provident
+							veniam vero ab suscipit, tempore soluta repellat,
+							facere eligendi sunt qui porro possimus excepturi
+							nulla quo totam distinctio, veritatis nostrum.
 						</div>
 					</div>
 				</div>
+
 				<div
-					class="
-						grid-item
-						gallery-item
-						animate__animated animate__backInDown animate__slow
-					"
+					class="position-absolute gallery-item"
+					style="transform: scale(0); transition: 0.5s"
+					id="gallery-div-3"
 				>
-					<div class="gallery-hover">
-						<div class="img-thumbnail">
-							<img
-								src="/images/panel.jpg"
-								class="w-100"
-								alt=""
-							/>
+					<img
+						src="https://source.unsplash.com/600x1200"
+						alt=""
+						class="
+							img-fluid
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+						"
+						onload="makeGallery(3)"
+					/>
+
+					<div
+						class="
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+							d-flex
+							flex-column
+							pt-2
+							gallery-content
+						"
+					>
+						<div
+							class="
+								gallery-title
+								text-center text-white
+								d-flex
+								flex-row
+								pb-2
+								px-3
+							"
+						>
+							<div class="d-flex flex-grow-1">
+								<h5 class="mb-0">Title</h5>
+							</div>
+							<div class="d-flex flex-grow-0 pt-1">
+								<i
+									class="fas fa-expand cursor-pointer"
+									title="Full Screen"
+									onclick="fullScreenImage(3)"
+								></i>
+							</div>
 						</div>
-						<div class="gallery-content text-center">
-							<div class="gallery-headline">
-								<span class="pt-1">Image Title</span>
-							</div>
-							<div class="gallery-desc pt-2 p-4">
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Ispum Lorem
-								Ispum Lorem Ispum Lorem Ispum
-							</div>
+						<div
+							class="
+								gallery-desc
+								text-center
+								overflow-auto
+								text-white
+								d-flex
+								flex-column
+								text-center
+								px-2
+								pb-2
+								pt-1
+							"
+						>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Eos, earum eveniet. Vitae rerum quisquam, sunt
+							recusandae cum reiciendis. Cupiditate officiis
+							quidem reprehenderit deleniti harum commodi! Sed rem
+							minus quis velit! Lorem ipsum dolor, sit amet
+							consectetur adipisicing elit. Nesciunt provident
+							veniam vero ab suscipit, tempore soluta repellat,
+							facere eligendi sunt qui porro possimus excepturi
+							nulla quo totam distinctio, veritatis nostrum.
 						</div>
 					</div>
 				</div>
+
 				<div
-					class="
-						grid-item
-						gallery-item
-						animate__animated animate__backInDown animate__slow
-					"
+					class="position-absolute gallery-item"
+					style="transform: scale(0); transition: 0.5s"
+					id="gallery-div-4"
 				>
-					<div class="gallery-hover">
-						<div class="img-thumbnail">
-							<img
-								src="/images/aisywc.jpg"
-								class="w-100"
-								alt=""
-							/>
+					<img
+						src="https://source.unsplash.com/1000x1200"
+						alt=""
+						class="
+							img-fluid
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+						"
+						onload="makeGallery(4)"
+					/>
+
+					<div
+						class="
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+							d-flex
+							flex-column
+							pt-2
+							gallery-content
+						"
+					>
+						<div
+							class="
+								gallery-title
+								text-center text-white
+								d-flex
+								flex-row
+								pb-2
+								px-3
+							"
+						>
+							<div class="d-flex flex-grow-1">
+								<h5 class="mb-0">Title</h5>
+							</div>
+							<div class="d-flex flex-grow-0 pt-1">
+								<i
+									class="fas fa-expand cursor-pointer"
+									title="Full Screen"
+									onclick="fullScreenImage(4)"
+								></i>
+							</div>
 						</div>
-						<div class="gallery-content text-center">
-							<div class="gallery-headline">
-								<span class="pt-1">Image Title</span>
-							</div>
-							<div class="gallery-desc pt-2 p-4">
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Ispum Lorem
-								Ispum Lorem Ispum Lorem Ispum
-							</div>
+						<div
+							class="
+								gallery-desc
+								text-center
+								overflow-auto
+								text-white
+								d-flex
+								flex-column
+								text-center
+								px-2
+								pb-2
+								pt-1
+							"
+						>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Eos, earum eveniet. Vitae rerum quisquam, sunt
+							recusandae cum reiciendis. Cupiditate officiis
+							quidem reprehenderit deleniti harum commodi! Sed rem
+							minus quis velit! Lorem ipsum dolor, sit amet
+							consectetur adipisicing elit. Nesciunt provident
+							veniam vero ab suscipit, tempore soluta repellat,
+							facere eligendi sunt qui porro possimus excepturi
+							nulla quo totam distinctio, veritatis nostrum.
 						</div>
 					</div>
 				</div>
+
 				<div
-					class="
-						grid-item
-						gallery-item
-						animate__animated animate__backInDown animate__slow
-					"
+					class="position-absolute gallery-item"
+					style="transform: scale(0); transition: 0.5s"
+					id="gallery-div-5"
 				>
-					<div class="gallery-hover">
-						<div class="img-thumbnail">
-							<img
-								src="/images/magazine.jpg"
-								class="w-100"
-								alt=""
-							/>
+					<img
+						src="https://source.unsplash.com/1000x500"
+						alt=""
+						class="
+							img-fluid
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+						"
+						onload="makeGallery(5)"
+					/>
+
+					<div
+						class="
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+							d-flex
+							flex-column
+							pt-2
+							gallery-content
+						"
+					>
+						<div
+							class="
+								gallery-title
+								text-center text-white
+								d-flex
+								flex-row
+								pb-2
+								px-3
+							"
+						>
+							<div class="d-flex flex-grow-1">
+								<h5 class="mb-0">Title</h5>
+							</div>
+							<div class="d-flex flex-grow-0 pt-1">
+								<i
+									class="fas fa-expand cursor-pointer"
+									title="Full Screen"
+									onclick="fullScreenImage(5)"
+								></i>
+							</div>
 						</div>
-						<div class="gallery-content text-center">
-							<div class="gallery-headline">
-								<span class="pt-1">Image Title</span>
-							</div>
-							<div class="gallery-desc pt-2 p-4">
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Ispum Lorem
-								Ispum Lorem Ispum Lorem Ispum
-							</div>
+						<div
+							class="
+								gallery-desc
+								text-center
+								overflow-auto
+								text-white
+								d-flex
+								flex-column
+								text-center
+								px-2
+								pb-2
+								pt-1
+							"
+						>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Eos, earum eveniet. Vitae rerum quisquam, sunt
+							recusandae cum reiciendis. Cupiditate officiis
+							quidem reprehenderit deleniti harum commodi! Sed rem
+							minus quis velit! Lorem ipsum dolor, sit amet
+							consectetur adipisicing elit. Nesciunt provident
+							veniam vero ab suscipit, tempore soluta repellat,
+							facere eligendi sunt qui porro possimus excepturi
+							nulla quo totam distinctio, veritatis nostrum.
 						</div>
 					</div>
 				</div>
+
 				<div
-					class="
-						grid-item
-						gallery-item
-						animate__animated animate__backInDown animate__slow
-					"
+					class="position-absolute gallery-item"
+					style="transform: scale(0); transition: 0.5s"
+					id="gallery-div-6"
 				>
-					<div class="gallery-hover">
-						<div class="img-thumbnail">
-							<img
-								src="/images/aisywc.jpg"
-								class="w-100"
-								alt=""
-							/>
-						</div>
-						<div class="gallery-content text-center">
-							<div class="gallery-headline">
-								<span class="pt-1">Image Title</span>
+					<img
+						src="https://source.unsplash.com/800x800"
+						alt=""
+						class="
+							img-fluid
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+						"
+						onload="makeGallery(6)"
+					/>
+
+					<div
+						class="
+							position-absolute
+							start-0
+							top-0
+							w-100
+							h-100
+							d-flex
+							flex-column
+							pt-2
+							gallery-content
+						"
+					>
+						<div
+							class="
+								gallery-title
+								text-center text-white
+								d-flex
+								flex-row
+								pb-2
+								px-3
+							"
+						>
+							<div class="d-flex flex-grow-1">
+								<h5 class="mb-0">Title</h5>
 							</div>
-							<div class="gallery-desc pt-2 p-4">
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Ispum Lorem
-								Ispum Lorem Ispum Lorem Ispum
-							</div>
-						</div>
-					</div>
-				</div>
-				<div
-					class="
-						grid-item
-						gallery-item
-						animate__animated animate__backInDown animate__slow
-					"
-				>
-					<div class="gallery-hover">
-						<div class="img-thumbnail">
-							<img
-								src="/images/magazine.jpg"
-								class="w-100"
-								alt=""
-							/>
-						</div>
-						<div class="gallery-content text-center">
-							<div class="gallery-headline">
-								<span class="pt-1">Image Title</span>
-							</div>
-							<div class="gallery-desc pt-2 p-4">
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Ispum Lorem
-								Ispum Lorem Ispum Lorem Ispum
-							</div>
-						</div>
-					</div>
-				</div>
-				<div
-					class="
-						grid-item
-						gallery-item
-						animate__animated animate__backInDown animate__slow
-					"
-				>
-					<div class="gallery-hover">
-						<div class="img-thumbnail">
-							<img
-								src="/images/magazine.jpg"
-								class="w-100"
-								alt=""
-							/>
-						</div>
-						<div class="gallery-content text-center">
-							<div class="gallery-headline">
-								<span class="pt-1">Image Title</span>
-							</div>
-							<div class="gallery-desc pt-2 p-4">
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Ispum Lorem
-								Ispum Lorem Ispum Lorem Ispum
+							<div class="d-flex flex-grow-0 pt-1">
+								<i
+									class="fas fa-expand cursor-pointer"
+									title="Full Screen"
+									onclick="fullScreenImage(6)"
+								></i>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div
-					class="
-						grid-item
-						gallery-item
-						animate__animated animate__backInDown animate__slow
-					"
-				>
-					<div class="gallery-hover">
-						<div class="img-thumbnail">
-							<img
-								src="/images/magazine.jpg"
-								class="w-100"
-								alt=""
-							/>
-						</div>
-						<div class="gallery-content text-center">
-							<div class="gallery-headline">
-								<span class="pt-1">SAMEER VISIT</span>
-							</div>
-							<div class="gallery-desc pt-2 p-4">
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum
-								Lorem Ispum Lorem Ispum Lorem Ispum Ispum Lorem
-								Ispum Lorem Ispum Lorem Ispum
-							</div>
+						<div
+							class="
+								gallery-desc
+								text-center
+								overflow-auto
+								text-white
+								d-flex
+								flex-column
+								text-center
+								px-2
+								pb-2
+								pt-1
+							"
+						>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Eos, earum eveniet. Vitae rerum quisquam, sunt
+							recusandae cum reiciendis. Cupiditate officiis
+							quidem reprehenderit deleniti harum commodi! Sed rem
+							minus quis velit! Lorem ipsum dolor, sit amet
+							consectetur adipisicing elit. Nesciunt provident
+							veniam vero ab suscipit, tempore soluta repellat,
+							facere eligendi sunt qui porro possimus excepturi
+							nulla quo totam distinctio, veritatis nostrum.
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<!-- Modal -->
+		<div id="full-screen-modal" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-dialog-centered">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="gallery-modal-body"></div>
+				</div>
+			</div>
+		</div>
+
 		<form>
-			<div class="text-center p-5">
+			<div class="text-center px-5 pb-5 pt-3">
 				<div class="gallery-pagination rounded-pill text-center">
-					<a href="#" class="text-decoration-none pt-2"
-						><i
+					<a href="#" class="text-decoration-none pt-2">
+						<i
 							class="fa fa-chevron-left pagination-icon"
 							aria-hidden="true"
 						></i>
-						&nbsp; <span class="page-line"></span
-					></a>
+						&nbsp;
+						<span class="page-line"></span>
+					</a>
 					&nbsp;
 
 					<label
@@ -328,6 +675,7 @@
 							value="2"
 							size="4"
 							class="no-outline pagination-box text-center"
+							onclick="this.select();"
 					/></label>
 					<span class="">of </span>
 					<span class="text-center p-1">6</span>
@@ -343,22 +691,11 @@
 				</div>
 			</div>
 		</form>
-
-		<script src="https://unpkg.com/colcade@0/colcade.js"></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-			crossorigin="anonymous"
-		></script>
+		<%- include('./partials/footer.ejs') %>
 		<script>
-			var colc = new Colcade('.grid', {
-				columns: '.gPic-col',
-				items: '.grid-item'
-			});
-			$('input').focus(function () {
-				$(this).select();
-			});
-		</script>
-        <%- include('./partials/footer.ejs') %>
+			window.onresize = () => {
+				makeGallery(null);
+			};
+		</script>	
 	</body>
 </html>
