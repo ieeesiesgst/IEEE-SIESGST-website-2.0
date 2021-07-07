@@ -121,8 +121,18 @@
 
 					col[smallLoc] += tempHeight + 20;
 
-					document.getElementById('gallery').style.height =
-						getLargest(col) + 20 + 'px';
+					let largeHeight = getLargest(col);
+
+					if (
+						!document.getElementById('gallery').style.height ||
+						parseInt(
+							document.getElementById('gallery').style.height
+						) <
+							largeHeight + 20
+					) {
+						document.getElementById('gallery').style.height =
+							largeHeight + 20 + 'px';
+					}
 
 					document.getElementById('gallery-loader').style.display =
 						'none';
