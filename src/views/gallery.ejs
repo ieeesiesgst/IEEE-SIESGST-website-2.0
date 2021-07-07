@@ -72,27 +72,42 @@
 					col.push(0);
 				}
 
-				let galleryItems =
-					document.getElementsByClassName('gallery-item');
+				let galleryItems = document.getElementsByClassName(
+					'gallery-item overflow-hidden'
+				);
 
 				for (let i = 0; i < galleryItems.length; i++) {
 					if (galleryItems[i].style.transform == 'scale(0)') {
 						continue;
 					}
 
-					let tempHeight =
-						(galleryItems[i].getElementsByTagName('img')[0]
-							.naturalHeight /
-							galleryItems[i].getElementsByTagName('img')[0]
-								.naturalWidth) *
-						Math.floor(window.innerWidth / col.length);
-
-					let tempWidth =
+					let tempWidth = Math.floor(
 						(document
 							.getElementById('gallery')
 							.getBoundingClientRect().width -
 							20 * (col.length - 1)) /
-						col.length;
+							col.length
+					);
+
+					let elementType = galleryItems[i].getAttribute('dataType');
+					let tempHeight;
+
+					if (elementType == 'video') {
+						let vid =
+							galleryItems[i].getElementsByTagName('video')[0];
+						tempHeight =
+							(vid.videoHeight / vid.videoWidth) * tempWidth;
+					} else if (elementType == 'iframe') {
+						tempHeight = parseInt((tempWidth / 3) * 2);
+					} else if (elementType == 'audio') {
+						tempHeight = 60;
+					} else {
+						let image =
+							galleryItems[i].getElementsByTagName('img')[0];
+						tempHeight =
+							(image.naturalHeight / image.naturalWidth) *
+							tempWidth;
+					}
 
 					let smallLoc;
 					if (galleryItems.length <= col.length) {
@@ -167,13 +182,13 @@
 				</div>
 
 				<div
-					class="position-absolute gallery-item"
+					class="position-absolute gallery-item overflow-hidden"
 					style="transform: scale(0); transition: 0.5s"
 					id="gallery-div-1"
+					dataType="video"
 				>
-					<img
-						src="https://source.unsplash.com/1600x1200"
-						alt=""
+					<video
+						src="https://www.w3schools.com/tags/movie.mp4"
 						class="
 							img-fluid
 							position-absolute
@@ -182,158 +197,39 @@
 							w-100
 							h-100
 						"
-						onload="makeGallery(1)"
-					/>
-
-					<div
-						class="
-							position-absolute
-							start-0
-							top-0
-							w-100
-							h-100
-							d-flex
-							flex-column
-							pt-2
-							gallery-content
-						"
-					>
-						<div
-							class="
-								gallery-title
-								text-center text-white
-								d-flex
-								flex-row
-								pb-2
-								px-3
-							"
-						>
-							<div class="d-flex flex-grow-1">
-								<h5 class="mb-0">Ready</h5>
-							</div>
-							<div class="d-flex flex-grow-0 pt-1">
-								<i
-									class="fas fa-expand cursor-pointer"
-									title="Full Screen"
-									onclick="fullScreenImage(1)"
-								></i>
-							</div>
-						</div>
-						<div
-							class="
-								gallery-desc
-								text-center
-								overflow-auto
-								text-white
-								d-flex
-								flex-column
-								text-center
-								px-2
-								pb-2
-								pt-1
-							"
-						>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Eos, earum eveniet. Vitae rerum quisquam, sunt
-							recusandae cum reiciendis. Cupiditate officiis
-							quidem reprehenderit deleniti harum commodi! Sed rem
-							minus quis velit! Lorem ipsum dolor, sit amet
-							consectetur adipisicing elit. Nesciunt provident
-							veniam vero ab suscipit, tempore soluta repellat,
-							facere eligendi sunt qui porro possimus excepturi
-							nulla quo totam distinctio, veritatis nostrum.
-						</div>
-					</div>
+						controls
+						controlsList="nodownload"
+						onloadeddata="makeGallery(1)"
+					></video>
 				</div>
 
 				<div
-					class="position-absolute gallery-item"
+					class="position-absolute gallery-item overflow-hidden"
 					style="transform: scale(0); transition: 0.5s"
 					id="gallery-div-2"
+					dataType="iframe"
 				>
-					<img
-						src="https://source.unsplash.com/1700x1200"
-						alt=""
-						class="
-							img-fluid
-							position-absolute
-							start-0
-							top-0
-							w-100
-							h-100
-						"
-						onload="makeGallery(2)"
-					/>
-
-					<div
-						class="
-							position-absolute
-							start-0
-							top-0
-							w-100
-							h-100
-							d-flex
-							flex-column
-							pt-2
-							gallery-content
-						"
-					>
-						<div
-							class="
-								gallery-title
-								text-center text-white
-								d-flex
-								flex-row
-								pb-2
-								px-3
-							"
-						>
-							<div class="d-flex flex-grow-1">
-								<h5 class="mb-0">Title</h5>
-							</div>
-							<div class="d-flex flex-grow-0 pt-1">
-								<i
-									class="fas fa-expand cursor-pointer"
-									title="Full Screen"
-									onclick="fullScreenImage(2)"
-								></i>
-							</div>
-						</div>
-						<div
-							class="
-								gallery-desc
-								text-center
-								overflow-auto
-								text-white
-								d-flex
-								flex-column
-								text-center
-								px-2
-								pb-2
-								pt-1
-							"
-						>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Eos, earum eveniet. Vitae rerum quisquam, sunt
-							recusandae cum reiciendis. Cupiditate officiis
-							quidem reprehenderit deleniti harum commodi! Sed rem
-							minus quis velit! Lorem ipsum dolor, sit amet
-							consectetur adipisicing elit. Nesciunt provident
-							veniam vero ab suscipit, tempore soluta repellat,
-							facere eligendi sunt qui porro possimus excepturi
-							nulla quo totam distinctio, veritatis nostrum.
-						</div>
-					</div>
+					<iframe
+						src="https://open.spotify.com/embed/episode/7dOzGOU6y5JzLlUfpacRav"
+						width="100%"
+						height="232"
+						frameborder="0"
+						allowtransparency="true"
+						allow="encrypted-media"
+					></iframe>
 				</div>
 
 				<div
-					class="position-absolute gallery-item"
+					class="position-absolute gallery-item overflow-hidden"
 					style="transform: scale(0); transition: 0.5s"
 					id="gallery-div-3"
+					dataType="audio"
 				>
-					<img
-						src="https://source.unsplash.com/600x1200"
-						alt=""
+					<audio
+						src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+						onloadeddata="makeGallery(3)"
+						controls
+						controlsList="nodownload"
 						class="
 							img-fluid
 							position-absolute
@@ -342,72 +238,11 @@
 							w-100
 							h-100
 						"
-						onload="makeGallery(3)"
-					/>
-
-					<div
-						class="
-							position-absolute
-							start-0
-							top-0
-							w-100
-							h-100
-							d-flex
-							flex-column
-							pt-2
-							gallery-content
-						"
-					>
-						<div
-							class="
-								gallery-title
-								text-center text-white
-								d-flex
-								flex-row
-								pb-2
-								px-3
-							"
-						>
-							<div class="d-flex flex-grow-1">
-								<h5 class="mb-0">Title</h5>
-							</div>
-							<div class="d-flex flex-grow-0 pt-1">
-								<i
-									class="fas fa-expand cursor-pointer"
-									title="Full Screen"
-									onclick="fullScreenImage(3)"
-								></i>
-							</div>
-						</div>
-						<div
-							class="
-								gallery-desc
-								text-center
-								overflow-auto
-								text-white
-								d-flex
-								flex-column
-								text-center
-								px-2
-								pb-2
-								pt-1
-							"
-						>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Eos, earum eveniet. Vitae rerum quisquam, sunt
-							recusandae cum reiciendis. Cupiditate officiis
-							quidem reprehenderit deleniti harum commodi! Sed rem
-							minus quis velit! Lorem ipsum dolor, sit amet
-							consectetur adipisicing elit. Nesciunt provident
-							veniam vero ab suscipit, tempore soluta repellat,
-							facere eligendi sunt qui porro possimus excepturi
-							nulla quo totam distinctio, veritatis nostrum.
-						</div>
-					</div>
+					></audio>
 				</div>
 
 				<div
-					class="position-absolute gallery-item"
+					class="position-absolute gallery-item overflow-hidden"
 					style="transform: scale(0); transition: 0.5s"
 					id="gallery-div-4"
 				>
@@ -487,7 +322,7 @@
 				</div>
 
 				<div
-					class="position-absolute gallery-item"
+					class="position-absolute gallery-item overflow-hidden"
 					style="transform: scale(0); transition: 0.5s"
 					id="gallery-div-5"
 				>
@@ -567,7 +402,7 @@
 				</div>
 
 				<div
-					class="position-absolute gallery-item"
+					class="position-absolute gallery-item overflow-hidden"
 					style="transform: scale(0); transition: 0.5s"
 					id="gallery-div-6"
 				>
@@ -658,7 +493,7 @@
 			</div>
 		</div>
 
-		<form>
+		<form method="GET">
 			<div class="text-center px-5 pb-5 pt-3">
 				<div class="gallery-pagination rounded-pill text-center">
 					<a href="#" class="text-decoration-none pt-2">
@@ -666,10 +501,8 @@
 							class="fa fa-chevron-left pagination-icon"
 							aria-hidden="true"
 						></i>
-						&nbsp;
-						<span class="page-line"></span>
 					</a>
-					&nbsp;
+					<span class="pagination-line mx-2"></span>
 
 					<label
 						><input
@@ -677,12 +510,13 @@
 							value="2"
 							size="4"
 							class="no-outline pagination-box text-center"
+							name="page"
 							onclick="this.select();"
 					/></label>
 					<span class="">of </span>
 					<span class="text-center p-1">6</span>
-					<span class="page-line1"></span>
-					&nbsp;
+					<span class="pagination-line me-2"></span>
+
 					<a href="#" class="ps-1 text-decoration-none">
 						<span class=""
 							><i
@@ -694,7 +528,6 @@
 			</div>
 		</form>
 		<%- include('./partials/footer.ejs') %>
-
 		<script>
 			let currentWidth = window.innerWidth;
 			window.onresize = () => {
@@ -704,6 +537,33 @@
 					makeGallery(null);
 				}
 			};
+
+			let galleryItem = document.getElementsByClassName(
+				'gallery-item overflow-hidden'
+			);
+			for (let i = 0; i < galleryItem.length; i++) {
+				let frames = galleryItem[i].getElementsByTagName('iframe');
+
+				if (frames.length > 0) {
+					let gallerySplit = galleryItem[i].id.split('-');
+
+					frames[0].onload = () => {
+						makeGallery(i + 1);
+					};
+
+					frames[0].removeAttribute('height');
+					frames[0].removeAttribute('width');
+					frames[0].style.background = 'rgba(0,0,255,0.5)';
+					frames[0].classList.add(
+						'img-fluid',
+						'position-absolute',
+						'start-0',
+						'top-0',
+						'w-100',
+						'h-100'
+					);
+				}
+			}
 		</script>
 	</body>
 </html>

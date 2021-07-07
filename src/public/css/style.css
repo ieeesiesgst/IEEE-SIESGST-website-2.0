@@ -202,7 +202,6 @@
 .event-tail {
 	font-family: 'Roboto';
 }
-
 /*----------GALLERY PAGE ---------*/
 .gallery-events-bg {
 	background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
@@ -219,6 +218,11 @@
 	-moz-user-select: none; /* Firefox all */
 	-ms-user-select: none; /* IE 10+ */
 	user-select: none;
+	font-family: 'Roboto';
+}
+
+.gallery-item {
+	border-radius: 10px;
 }
 
 .gallery-item:hover .gallery-content {
@@ -312,11 +316,7 @@
 .pagination-content {
 	color: rgba(0, 0, 0);
 }
-.page-line {
-	border-left: 2px solid #d3d3d3;
-	height: 18px;
-}
-.page-line1 {
+.pagination-line {
 	border-left: 2px solid #d3d3d3;
 	height: 18px;
 }

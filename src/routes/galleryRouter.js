@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 		};
 		const galleryRes = await getData(domainData);
 		const Gdata = galleryRes.data;
-		// Gdata -- object of arrays i.e name, imgLink, description, type
+		// Gdata -- object of arrays i.e name, imgLink, description, type, alt, lastPg
 
 		// console.log(Gdata);
 		console.log(Gdata.Gname);
