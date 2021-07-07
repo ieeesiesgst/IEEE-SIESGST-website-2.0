@@ -353,8 +353,11 @@ video:focus {
 /*-------------GALLERY PAGE ENDS-------*/
 
 /*--------------TEAMS PAGE ----------*/
-.teams-bg{
-	background: linear-gradient(rgba(236, 227, 227, 0.3), rgba(196, 191, 191, 0.6)),
+.teams-bg {
+	background: linear-gradient(
+			rgba(236, 227, 227, 0.3),
+			rgba(196, 191, 191, 0.6)
+		),
 		url('../images/bg-teams.png');
 	background-repeat: no-repeat;
 	background-size: cover;
