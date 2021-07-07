@@ -287,7 +287,7 @@
 										<i
 											class="fas fa-expand cursor-pointer"
 											title="Full Screen"
-											onclick="fullScreenImage(4)"
+											onclick="fullScreenImage('<%= index %>')"
 										></i>
 									</div>
 								</div>
@@ -311,6 +311,9 @@
 						</div>
 					<% }
 				}) %>
+			</div>
+		</div>
+		
 		<!-- Modal -->
 		<div id="full-screen-modal" class="modal fade" role="dialog">
 			<div class="modal-dialog modal-dialog-centered">
