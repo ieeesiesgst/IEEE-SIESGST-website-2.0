@@ -183,7 +183,10 @@
 	opacity: 0;
 	transition: 0.2s;
 	background: rgba(0, 0, 0, 0.75);
-	cursor: default;
+	-webkit-user-select: none; /* Chrome all / Safari all */
+	-moz-user-select: none; /* Firefox all */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none;
 }
 
 .gallery-item:hover .gallery-content {
