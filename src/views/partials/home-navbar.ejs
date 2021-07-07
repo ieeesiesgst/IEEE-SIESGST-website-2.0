@@ -167,6 +167,28 @@
             max-height: calc(100vh - 60px);
             overflow: auto;
         }
+
+        .navbar-ul::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        /* Track */
+        .navbar-ul::-webkit-scrollbar-track {
+            background: #0b0c10;
+            border-radius: 8px;
+        }
+
+        /* Handle */
+        .navbar-ul::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 8px;
+        }
+
+        /* Handle on hover */
+        .navbar-ul::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            border: 1px solid #666;
+        }
     
         .navbar-link {
             display: block;

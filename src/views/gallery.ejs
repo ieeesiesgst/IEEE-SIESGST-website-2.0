@@ -385,9 +385,11 @@
 					frames[0].removeAttribute('height');
 					frames[0].removeAttribute('width');
 					frames[0].style.background = 'rgba(0,0,255,0.5)';
+					frames[0].setAttribute('scrolling', 'no')
 					frames[0].classList.add(
 						'img-fluid',
 						'position-absolute',
+						'overflow-hidden',
 						'start-0',
 						'top-0',
 						'w-100',
