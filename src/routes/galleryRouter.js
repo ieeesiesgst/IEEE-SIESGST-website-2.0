@@ -1,6 +1,5 @@
 const express = require('express');
 const getData = require('../functions/getData');
-const mongoose = require('mongoose');
 
 const router = express.Router();
 
@@ -14,8 +13,8 @@ router.get('/', async (req, res) => {
 		const galleryRes = await getData(domainData);
 		const Gdata = galleryRes.data;
 		// Gdata -- object of arrays i.e name, imgLink, description, type
-		// console.log(Gdata);
 
+		// console.log(Gdata);
 		console.log(Gdata.Gname);
 		// console.log(Gdata.Gdes);
 		// console.log(Gdata.Gimg);

@@ -115,7 +115,7 @@
 					<% for(var i = event.length-1; i>=0; i--) { %>
 					<div class="col-12 p-3 home-carousel">
 						<div class="card">
-							<% if(event[i].pic == 'NIL'){ %>
+							<% if(event[i].pic.trim() == 'NIL'){ %>
 								<P class="p-2"><%= event[i].small %></P>
 							<% }else{ %>
 							<img
