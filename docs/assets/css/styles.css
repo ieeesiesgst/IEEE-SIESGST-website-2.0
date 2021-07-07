@@ -189,6 +189,10 @@
 	user-select: none;
 }
 
+.gallery-item {
+	border-radius: 10px;
+}
+
 .gallery-item:hover .gallery-content {
 	opacity: 1;
 }
