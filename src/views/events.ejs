@@ -45,7 +45,7 @@
 				<% for(var i = eventArray.activeE.length-1; i>=0; i--) { %>
 				<div class="container events-container p-4 my-3">
 					<div class="row">
-						<% if(eventArray.activeE[i].pic.trim() == 'NIL'){ %>
+						<% if(eventArray.activeE[i].pic.trim().toLowerCase() == 'nil'){ %>
 							<div class="p-3 events-desc" id="activeDes">
 						<% }else{ %>
 							<div class="col-md-4" id="activePic">
@@ -70,14 +70,14 @@
 									</span>
 								</p>
 								<br />
-									<% if(eventArray.activeE[i].start.trim() == 'Date'){%>
+									<% if(eventArray.activeE[i].start.trim().toLowerCase() == 'Date'){%>
 										<script>document.getElementById('activeDate').display = none</script>
 									<% }else{ %>
 										<div id="activeDate">
 											<span class="fw-bolder">DATE: </span><%= eventArray.activeE[i].start %>
 										</div>
 									<% } %>
-									<% if(eventArray.activeE[i].time.trim() == 'NIL'){%>
+									<% if(eventArray.activeE[i].time.trim().toLowerCase() == 'nil'){%>
 										<script>document.getElementById('activeTime').display = none</script>
 									<% }else{ %>
 										<div id="activeTime">
@@ -88,7 +88,7 @@
 	
 							<div class="row float-end">
 								<div class="d-inline-flex mt-2">
-									<% if(eventArray.activeE[i].website.trim() == 'NIL'){%>
+									<% if(eventArray.activeE[i].website.trim().toLowerCase() == 'nil'){%>
 										<script>displayId('knowA')</script>
 									<% }else{ %>
 									<a
@@ -105,7 +105,7 @@
 									>
 									<% } %>
 									&nbsp; &nbsp;
-									<% if(eventArray.activeE[i].reg.trim() == 'NIL'){%>
+									<% if(eventArray.activeE[i].reg.trim().toLowerCase() == 'nil'){%>
 										<script>displayId('regA')</script>
 									<% }else{ %>
 									<a
@@ -148,7 +148,7 @@
 				<% for(var i = eventArray.upcomingE.length-1; i>=0; i--) { %>
 					<div class="container events-container p-4 my-3">
 						<div class="row">
-							<% if(eventArray.upcomingE[i].pic.trim() == 'NIL'){ %>
+							<% if(eventArray.upcomingE[i].pic.trim().toLowerCase() == 'nil'){ %>
 								<div class="p-3 events-desc" id="upcomingDes">
 							<% }else{ %>
 								<div class="col-md-4">
@@ -174,14 +174,14 @@
 										</span>
 									</p>
 									<br />
-									<% if(eventArray.upcomingE[i].start.trim() == 'Date'){%>
+									<% if(eventArray.upcomingE[i].start.trim().toLowerCase() == 'Date'){%>
 										<script>document.getElementById('upcomingDate').display = none</script>
 									<% }else{ %>
 										<div>
 											<span class="fw-bolder" id="upcomingDate">DATE: </span><%= eventArray.upcomingE[i].start %>
 										</div>
 									<% } %>
-									<% if(eventArray.upcomingE[i].time.trim() == 'NIL'){%>
+									<% if(eventArray.upcomingE[i].time.trim().toLowerCase() == 'nil'){%>
 										<script>document.getElementById('upcomingTime').display = none</script>
 									<% }else{ %>
 										<div>
@@ -191,7 +191,7 @@
 								</div>
 								<div class="row float-end">
 									<div class="d-inline-flex mt-2">
-										<% if(eventArray.upcomingE[i].website.trim() == 'NIL'){%>
+										<% if(eventArray.upcomingE[i].website.trim().toLowerCase() == 'nil'){%>
 											<script>displayId('knowU')</script>
 										<% }else{ %>
 										<a
@@ -208,7 +208,7 @@
 										>
 										<% } %>
 										&nbsp; &nbsp;
-										<% if(eventArray.upcomingE[i].reg.trim() == 'NIL'){%>
+										<% if(eventArray.upcomingE[i].reg.trim().toLowerCase() == 'nil'){%>
 											<script>displayId('regU')</script>
 										<% }else{ %>
 										<a

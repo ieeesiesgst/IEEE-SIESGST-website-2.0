@@ -16,6 +16,7 @@ router.get('/', async (req, res) => {
 		};
 		const galleryRes = await getData(domainData);
 		// Gdata -- object of arrays i.e name, imgLink, description, type, alt, lastPg
+		// console.(galleryRes.data.GalRes);
 		res.render('gallery', {
 			title: 'GALLERY | IEEE SIESGST',
 			lastPg: galleryRes.data.GlastPg,
