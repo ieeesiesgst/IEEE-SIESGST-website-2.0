@@ -20,6 +20,7 @@ router.get('/', async (req, res) => {
 			callPg = galleryRes.data.GlastPg;
 		}
 		// Gdata -- object of arrays i.e name, imgLink, description, type, alt, lastPg
+		// console.(galleryRes.data.GalRes);
 		res.render('gallery', {
 			title: 'GALLERY | IEEE SIESGST',
 			lastPg: galleryRes.data.GlastPg,
