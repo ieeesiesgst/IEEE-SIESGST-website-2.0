@@ -217,8 +217,9 @@ video:focus {
 }
 /*----------GALLERY PAGE ---------*/
 .gallery-events-bg {
-	background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
-		url('../images/bg-events1.png');
+	/* background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
+		url('../images/bg-events1.png'); */
+	background-color: #eeee;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
