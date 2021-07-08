@@ -11,8 +11,12 @@ module.exports = function callAppScript(domainData) {
 			})
 			.catch(function (error) {
 				// handle error
+				// resolve('error');
 				console.log(JSON.stringify(error));
-				resolve('error');
+				res.status(500).json({
+					status: 'Fail',
+					message: 'Server Error!'
+				});
 			});
 	});
 };

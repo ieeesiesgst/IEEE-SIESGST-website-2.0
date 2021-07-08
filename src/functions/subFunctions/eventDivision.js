@@ -10,26 +10,20 @@ function parseISOString(s) {
 }
 
 function activeUpcoming(i, content) {
-	Ename = content.Ename[i];
-	pic = content.Epic[i];
-	time = content.Etime[i];
 	start = new Date(content.Estart[i])
 		.toDateString()
 		.split(' ')
 		.slice(1)
 		.join(' ');
-	small = content.Esmall[i];
-	web = content.Eweb[i];
-	register = content.Ereg[i];
 
 	let obj = {
-		name: Ename,
-		pic: pic,
-		time: time,
+		name: content.Ename[i],
+		pic: content.Epic[i],
+		time: content.Etime[i],
 		start: start,
-		small: small,
-		website: web,
-		reg: register
+		small: content.Esmall[i],
+		website: content.Ewebsite[i],
+		reg: content.Ereg[i]
 	};
 	return obj;
 }
