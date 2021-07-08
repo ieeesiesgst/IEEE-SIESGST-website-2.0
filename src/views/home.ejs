@@ -112,20 +112,20 @@
 			</h2>
 			<div class="row p-3 align-items-center">
 				<div class="my-slider text-center">
-					<% for(var i = event.length-1; i>=0; i--) { %>
+					<% eventArray.forEach((res,index)=>{ %>
 					<div class="col-12 p-3 home-carousel">
 						<div class="card">
-							<% if(event[i].pic.trim().toLowerCase() == 'nil'){ %>
-								<P class="p-2"><%= event[i].small %></P>
+							<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
+								<P class="p-2"><%= res.small %></P>
 							<% }else{ %>
 							<img
 								class="d-block w-100"
-								id = 'eventImg-<%= i %>'
-								src = "<%= event[i].pic %>" 
+								id = 'eventImg-<%= index %>'
+								src = "<%= res.pic %>" 
 							/>
 							<% } %>
 							<div class="card-title text-center pt-2 homeMid-text">
-								<%= event[i].name %>									
+								<%= res.name %>									
 							</div>
 							<div class="text-center px-5 p-2 pb-4">
 								<a href="#" class="p-2 btn-slide homeMid-text"
@@ -134,7 +134,7 @@
 							</div>
 						</div>
 					</div>
-					<% } %>
+					<% }) %>
 				</div>
 			</div>
 

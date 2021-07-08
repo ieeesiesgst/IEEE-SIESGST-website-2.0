@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 		} else {
 			res.render('home', {
 				title: 'HOME | IEEE SIESGST',
-				event: eventArray
+				eventArray: eventArray
 			});
 		}
 	} catch (err) {
