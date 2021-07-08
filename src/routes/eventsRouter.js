@@ -7,8 +7,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
 	try {
 		const domainData = {
-			domain: 'events',
-			topic: 'events'
+			domain: 'events'
 		};
 		const homeResponse = await getData(domainData);
 		const eventArray = await eventDivision(homeResponse, 2);
@@ -18,7 +17,7 @@ router.get('/', async (req, res) => {
 		});
 	} catch (err) {
 		console.log(err);
-		res.status(400).json({
+		res.status(500).json({
 			status: 'Fail',
 			message: 'Server Error!'
 		});

@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 		});
 	} catch (err) {
 		console.log(err);
-		res.status(400).json({
+		res.status(500).json({
 			status: 'Fail',
 			message: 'Server Error!'
 		});
