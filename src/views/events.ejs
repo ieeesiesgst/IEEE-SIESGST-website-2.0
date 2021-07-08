@@ -42,15 +42,15 @@
 						>Active Events</span
 					>
 				</h3>
-				<% for(var i = eventArray.activeE.length-1; i>=0; i--) { %>
+				<% eventArray.activeE.forEach((res)=>{ %>
 				<div class="container events-container p-4 my-3">
 					<div class="row">
-						<% if(eventArray.activeE[i].pic.trim().toLowerCase() == 'nil'){ %>
+						<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
 							<div class="p-3 events-desc" id="activeDes">
 						<% }else{ %>
 							<div class="col-md-4" id="activePic">
 								<img
-									src="<%= eventArray.activeE[i].pic %>" 
+									src="<%= res.pic %>" 
 									class="
 										img-thumbnail img-fluid
 										w-100
@@ -66,33 +66,33 @@
 									<span class="fw-bold">DESCRIPTION: </span>
 									<br />
 									<span class="fw-normal text-center">
-										<%= eventArray.activeE[i].small %>
+										<%= res.small %>
 									</span>
 								</p>
 								<br />
-									<% if(eventArray.activeE[i].start.trim().toLowerCase() == 'Date'){%>
+									<% if(res.start.trim().toLowerCase() == 'Date'){%>
 										<script>document.getElementById('activeDate').display = none</script>
 									<% }else{ %>
 										<div id="activeDate">
-											<span class="fw-bolder">DATE: </span><%= eventArray.activeE[i].start %>
+											<span class="fw-bolder">DATE: </span><%= res.start %>
 										</div>
 									<% } %>
-									<% if(eventArray.activeE[i].time.trim().toLowerCase() == 'nil'){%>
+									<% if(res.time.trim().toLowerCase() == 'nil'){%>
 										<script>document.getElementById('activeTime').display = none</script>
 									<% }else{ %>
 										<div id="activeTime">
-											<span class="fw-bolder">TIME: </span><%= eventArray.activeE[i].time %>
+											<span class="fw-bolder">TIME: </span><%= res.time %>
 										</div>
 									<% } %>
 							</div>
 	
 							<div class="row float-end">
 								<div class="d-inline-flex mt-2">
-									<% if(eventArray.activeE[i].website.trim().toLowerCase() == 'nil'){%>
+									<% if(res.website.trim().toLowerCase() == 'nil'){%>
 										<script>displayId('knowA')</script>
 									<% }else{ %>
 									<a
-										href="<%= eventArray.activeE[i].website %>"
+										href="<%= res.website %>"
 										class="
 											p-2
 											pe-lg-5
@@ -105,11 +105,11 @@
 									>
 									<% } %>
 									&nbsp; &nbsp;
-									<% if(eventArray.activeE[i].reg.trim().toLowerCase() == 'nil'){%>
+									<% if(res.reg.trim().toLowerCase() == 'nil'){%>
 										<script>displayId('regA')</script>
 									<% }else{ %>
 									<a
-										href="<%= eventArray.activeE[i].reg %>"
+										href="<%res.reg %>"
 										class="
 										p-2
 										pe-lg-5
@@ -124,10 +124,10 @@
 						</div>
 					</div>
 				</div>
-				<% } %>
+				<% }) %>
 			</section>
-		
 		<% } %>
+
 		<% if(eventArray.upcomingE.length != 0){ %>
 			<section class="upcoming-events px-3 pt-3 pb-5" id="upcomingId">
 				<h3
@@ -145,15 +145,15 @@
 						>Upcoming Events</span
 					>
 				</h3>
-				<% for(var i = eventArray.upcomingE.length-1; i>=0; i--) { %>
+				<% eventArray.upcomingE.forEach((res)=>{%>
 					<div class="container events-container p-4 my-3">
 						<div class="row">
-							<% if(eventArray.upcomingE[i].pic.trim().toLowerCase() == 'nil'){ %>
+							<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
 								<div class="p-3 events-desc" id="upcomingDes">
 							<% }else{ %>
 								<div class="col-md-4">
 									<img
-										src="<%= eventArray.upcomingE[i].pic %>" 
+										src="<%= res.pic %>" 
 										class="
 											img-thumbnail img-fluid
 											w-100
@@ -170,32 +170,32 @@
 										<span class="fw-bold">DESCRIPTION: </span>
 										<br />
 										<span class="fw-normal text-center">
-											<%= eventArray.upcomingE[i].small %>
+											<%= res.small %>
 										</span>
 									</p>
 									<br />
-									<% if(eventArray.upcomingE[i].start.trim().toLowerCase() == 'Date'){%>
+									<% if(res.start.trim().toLowerCase() == 'Date'){%>
 										<script>document.getElementById('upcomingDate').display = none</script>
 									<% }else{ %>
 										<div>
-											<span class="fw-bolder" id="upcomingDate">DATE: </span><%= eventArray.upcomingE[i].start %>
+											<span class="fw-bolder" id="upcomingDate">DATE: </span><%= res.start %>
 										</div>
 									<% } %>
-									<% if(eventArray.upcomingE[i].time.trim().toLowerCase() == 'nil'){%>
+									<% if(res.time.trim().toLowerCase() == 'nil'){%>
 										<script>document.getElementById('upcomingTime').display = none</script>
 									<% }else{ %>
 										<div>
-											<span class="fw-bolder" id="upcomingTime">TIME: </span><%= eventArray.upcomingE[i].time %>
+											<span class="fw-bolder" id="upcomingTime">TIME: </span><%= res.time %>
 										</div>
 									<% } %>
 								</div>
 								<div class="row float-end">
 									<div class="d-inline-flex mt-2">
-										<% if(eventArray.upcomingE[i].website.trim().toLowerCase() == 'nil'){%>
+										<% if(res.website.trim().toLowerCase() == 'nil'){%>
 											<script>displayId('knowU')</script>
 										<% }else{ %>
 										<a
-											href="<%= eventArray.upcomingE[i].website %>"
+											href="<%= res.website %>"
 											class="
 											p-2
 											pe-lg-5
@@ -208,11 +208,11 @@
 										>
 										<% } %>
 										&nbsp; &nbsp;
-										<% if(eventArray.upcomingE[i].reg.trim().toLowerCase() == 'nil'){%>
+										<% if(res.reg.trim().toLowerCase() == 'nil'){%>
 											<script>displayId('regU')</script>
 										<% }else{ %>
 										<a
-											href="<%= eventArray.upcomingE[i].reg %>"
+											href="<%= res.reg %>"
 											class="
 											p-2
 											pe-lg-5
@@ -227,7 +227,7 @@
 							</div>
 						</div>
 					</div>
-					<% } %>
+					<% }) %>
 			</section>
 		<% } %>
 		<%- include('./partials/footer.ejs') %>
