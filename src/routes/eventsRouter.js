@@ -10,11 +10,18 @@ router.get('/', async (req, res) => {
 			domain: 'events'
 		};
 		const homeResponse = await getData(domainData);
-		const eventArray = await eventDivision(homeResponse, 2);
-		res.render('events', {
-			title: 'EVENTS | IEEE SIESGST',
-			eventArray: eventArray
-		});
+		if (homeResponse.data.Error) {
+			res.status(500).json({
+				status: 'Fail',
+				message: 'Server Error!'
+			});
+		} else {
+			const eventArray = await eventDivision(homeResponse, 2);
+			res.render('events', {
+				title: 'EVENTS | IEEE SIESGST',
+				eventArray: eventArray
+			});
+		}
 	} catch (err) {
 		console.log(err);
 		res.status(500).json({

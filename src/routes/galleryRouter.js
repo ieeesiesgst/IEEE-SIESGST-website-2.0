@@ -16,15 +16,22 @@ router.get('/', async (req, res) => {
 		};
 		const galleryRes = await getData(domainData);
 
-		if (callPg > galleryRes.data.GlastPg) {
-			callPg = galleryRes.data.GlastPg;
+		if (galleryRes.data.Error) {
+			res.status(500).json({
+				status: 'Fail',
+				message: 'Server Error!'
+			});
+		} else {
+			if (callPg > galleryRes.data.GlastPg) {
+				callPg = galleryRes.data.GlastPg;
+			}
+			res.render('gallery', {
+				title: 'GALLERY | IEEE SIESGST',
+				lastPg: galleryRes.data.GlastPg,
+				galResponse: galleryRes.data.GalRes,
+				callPg: callPg
+			});
 		}
-		res.render('gallery', {
-			title: 'GALLERY | IEEE SIESGST',
-			lastPg: galleryRes.data.GlastPg,
-			galResponse: galleryRes.data.GalRes,
-			callPg: callPg
-		});
 	} catch (err) {
 		console.log(err);
 		res.status(500).json({
