@@ -417,7 +417,7 @@ video:focus {
 	float: right;
 	background-color: #e85c41;
 }
-@media (max-width: 320px) {
+@media (max-width: 350px) {
 	.half-circle {
 		width: 110px;
 		height: 110px;
@@ -435,9 +435,13 @@ video:focus {
 	width: 100%;
 }
 .input-space:focus {
-	transition: ease text-indent 0.4s 0.4s;
+	transition: ease text-indent 0.3s 0.3s;
 	text-indent: -50%;
 	opacity: 1;
+}
+.input-space:hover {
+	color: #ce5841;
+	border-color: #ce5841;
 }
 .submit-contact {
 	font-family: 'Roboto';
@@ -446,13 +450,14 @@ video:focus {
 	text-decoration: none;
 	cursor: pointer;
 	color: white;
+	border: none;
+	border: 1px solid #ce5841;
 }
 .submit-contact:hover {
-	cursor: pointer;
-	color: black;
-	transition: all 250ms;
-	background: linear-gradient(0.2turn, #db9c8f, #ce5841);
-	transition: ease 0.4s;
+	outline-offset: -3px;
+	outline: 2px solid white;
+	border: 2px solid #ce5841;
+	transition: all 150ms;
 }
 .contact-vertical {
 	border-left: thin solid #ff0000;
@@ -460,6 +465,4 @@ video:focus {
 .contact-r-text {
 	font-family: 'Roboto';
 }
-
-/* @media (min-width: 768px) and (max-width: 1024px) {
-} */
+/* ---------------- CONTACT PAGE ENDS------------- */
