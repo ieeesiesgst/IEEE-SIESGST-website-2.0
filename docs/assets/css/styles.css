@@ -398,3 +398,12 @@ video:focus {
 		display: inline-block;
 	}
 }
+/* CONTACT PAGE STARTS */
+.contact-box {
+	background-color: #eeee;
+	/* max-width: 1000px; */
+}
+.contact-head {
+	padding-left: 60px;
+	font-family: 'Roboto';
+}
