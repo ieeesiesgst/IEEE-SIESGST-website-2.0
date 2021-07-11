@@ -446,12 +446,13 @@ video:focus {
 	transition: ease 0.4s;
 }
 .contact-vertical {
-	border-left: medium solid #ff0000;
-	border-collapse: separate;
-	border-spacing: 15px 50px;
+	border-left: thin solid #ff0000;
 }
 @media screen and (max-width: 767px) {
 	.contact-vertical {
 		border-left: none;
 	}
+}
+.contact-r-text {
+	font-family: 'Roboto';
 }
