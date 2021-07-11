@@ -362,36 +362,39 @@ video:focus {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.teams-card-1{
-	background-color: #FFE5E0;
+.teams-card-1 {
+	background-color: #ffe5e0;
 	height: 9em;
 }
-.teams-card-2{
+.teams-card-2 {
 	background-color: #444444;
 	height: 9em;
 }
-.teams-card-3{
-	background-color: #E85C41;
+.teams-card-3 {
+	background-color: #e85c41;
 	height: 9em;
 }
-.teams-card-4{
-	background-color: #C4C4C4;
-	height : 9em;
+.teams-card-4 {
+	background-color: #c4c4c4;
+	height: 9em;
 }
-.teams-card-5{
-	background-color: #FDC727;
-	height : 9em;
+.teams-card-5 {
+	background-color: #fdc727;
+	height: 9em;
 }
 
-@media (min-width: 360px) and (max-width: 500px) { 
-	.teams-card-1,.teams-card-2,.teams-card-3,.teams-card-4,.teams-card-5{
-		height : 7em;
+@media (min-width: 360px) and (max-width: 500px) {
+	.teams-card-1,
+	.teams-card-2,
+	.teams-card-3,
+	.teams-card-4,
+	.teams-card-5 {
+		height: 7em;
 		padding-bottom: 12px;
-		
 	}
- }
- @media (min-width: 768px) {
-	 .teams-col-2{
-		 display: inline-block;
-	 }
- }
+}
+@media (min-width: 768px) {
+	.teams-col-2 {
+		display: inline-block;
+	}
+}
