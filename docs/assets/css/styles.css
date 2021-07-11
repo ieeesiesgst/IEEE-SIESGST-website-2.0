@@ -401,9 +401,21 @@ video:focus {
 /* CONTACT PAGE STARTS */
 .contact-box {
 	background-color: #eeee;
-	/* max-width: 1000px; */
+	/* clip-path: circle(18.6% at 100% 0); */
 }
 .contact-head {
 	padding-left: 60px;
 	font-family: 'Roboto';
+}
+.input-space {
+	border: none;
+	border-bottom: 1px solid #000000;
+	outline: none;
+	background: transparent;
+	width: 100%;
+}
+.input-space:focus {
+	transition: ease text-indent 0.4s 0.4s;
+	text-indent: -50%;
+	opacity: 1;
 }
