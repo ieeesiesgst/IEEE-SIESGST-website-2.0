@@ -1,8 +1,19 @@
 {
+	"env": {
+		"browser": true,
+		"node": true,
+		"es2021": true
+	},
+	"parserOptions": { "ecmaVersion": "latest" },
 	"extends": ["prettier", "eslint:recommended"],
 	"plugins": ["prettier"],
 	"rules": {
-		"prettier/prettier": "error",
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
+		],
 		"spaced-comment": "off",
 		"no-console": "warn",
 		"consistent-return": "off",
