@@ -168,12 +168,13 @@ video:focus {
 }
 .btn-events {
 	border: 2px solid #ce5841;
-	/* border-radius: 10px; */
-	text-decoration: none;
-	font-size: 14px;
-	font-family: 'Poppins';
+	font-size: 15px;
+	font-family: 'Roboto';
 	display: inline-flex;
 	background: #ce5841;
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
 }
 
 /*----------GALLERY PAGE ---------*/
@@ -398,10 +399,18 @@ video:focus {
 		display: inline-block;
 	}
 }
+
 /* CONTACT PAGE STARTS */
 .contact-box {
 	background-color: #eeee;
-	/* clip-path: circle(18.6% at 100% 0); */
+}
+.half-circle {
+	/* clip-path: circle(70% at 100% 0); */
+	clip-path: ellipse(90% 55% at 100% 10%);
+	width: 150px;
+	height: 150px;
+	float: right;
+	background-color: #e85c41;
 }
 .contact-head {
 	padding-left: 60px;
@@ -418,4 +427,31 @@ video:focus {
 	transition: ease text-indent 0.4s 0.4s;
 	text-indent: -50%;
 	opacity: 1;
+}
+.submit-contact {
+	/* border: 2px solid #ce5841; */
+	/* font-size: 15px; */
+	font-family: 'Roboto';
+	display: inline-flex;
+	background: #ce5841;
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+}
+.submit-contact:hover {
+	cursor: pointer;
+	color: black;
+	transition: all 250ms;
+	background: linear-gradient(0.2turn, #db9c8f, #ce5841);
+	transition: ease 0.4s;
+}
+.contact-vertical {
+	border-left: medium solid #ff0000;
+	border-collapse: separate;
+	border-spacing: 15px 50px;
+}
+@media screen and (max-width: 767px) {
+	.contact-vertical {
+		border-left: none;
+	}
 }
