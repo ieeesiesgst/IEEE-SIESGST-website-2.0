@@ -395,3 +395,69 @@ video:focus {
 	-moz-appearance: textfield;
 }
 /*-------------GALLERY PAGE ENDS-------*/
+/* -----------CONTACT PAGE STARTS----- */
+.contact-bg {
+	background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
+		url('../images/backgruond-events.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.contact-box {
+	background-color: white;
+}
+.half-circle {
+	clip-path: ellipse(99% 55% at 100% 10%);
+	width: 130px;
+	height: 130px;
+	float: right;
+	background-color: #e85c41;
+}
+@media (max-width: 350px) {
+	.half-circle {
+		width: 110px;
+		height: 110px;
+	}
+}
+.contact-head {
+	padding-left: 60px;
+	font-family: 'Roboto';
+}
+.input-space {
+	border: none;
+	border-bottom: 1px solid #000000;
+	outline: none;
+	background: transparent;
+	width: 100%;
+}
+.input-space:focus {
+	transition: ease text-indent 0.3s 0.3s;
+	text-indent: -90%;
+	opacity: 1;
+}
+.input-space:hover {
+	color: #ce5841;
+	border-color: #ce5841;
+}
+.submit-contact {
+	font-family: 'Roboto';
+	display: inline-flex;
+	background: #ce5841;
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+	border: none;
+	border: 1px solid #ce5841;
+}
+.submit-contact:hover {
+	outline-offset: -3px;
+	outline: 2px solid white;
+	border: 2px solid #ce5841;
+	transition: all 150ms;
+}
+.contact-vertical {
+	border-left: thin solid #ff0000;
+}
+.contact-r-text {
+	font-family: 'Roboto';
+}
+/* ---------------- CONTACT PAGE ENDS------------- */
