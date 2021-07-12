@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta tag Keywords -->
+		<meta
+		name="description"
+		content="Contact IEEE student chapter of SIES GST, Navi Mumbai."
+		/>
+		<meta
+			name="keywords"
+			content="IEEE, ieee, sies, gst, siesgst, SIESGST, official, student, website, contact, Contact us"
+		/>
+		<!--whatsapp and fb-->
+		<meta
+			property="og:description"
+			content="Contact IEEE student chapter of SIES GST, Navi Mumbai."
+		/>
+		<meta property="og:image:alt" content="IEEE SIES GST" />
+		<!--twitter-->
+		<meta
+			property="twitter:description"
+			content="Contact IEEE student chapter of SIES GST, Navi Mumbai."
+		/>
+		<!-- //Meta tag Keywords -->
+		<%- include('./partials/head-tag.ejs') %>
+	</head>
+	<body class="contact-bg">
+        <%- include('./partials/navbar.ejs') %>
+		<h3
+			class="
+				about-headlines
+				text-center
+				pt-5
+				pb-3
+				fs-2
+				fw-bolder
+				text-white
+			"
+		>
+			<span class="position-relative underline-overall-orange"
+				>CONTACT US</span
+			>
+		</h3>
+		<div class="container">
+			<div class="mx-lg-5">
+				<div
+					class="
+						contact-box
+						border
+						rounded
+						text-left
+						mt-5
+						mx-3 mx-lg-5
+						shadow
+					"
+				>
+					<div class="half-circle"></div>
+					<h1 class="pt-5 contact-head">
+						Fill the form.
+						<p>It's easy.</p>
+					</h1>
+					<div class="row m-5">
+						<div class="col-md col-sm-12 me-5">
+							<form>
+								<div class="row g-3 mb-3">
+									<div class="col-sm">
+										<input
+											type="text"
+											required
+											class="input-space px-2 py-2"
+											placeholder="First name"
+											aria-label="First name"
+										/>
+									</div>
+									<div class="col-sm">
+										<input
+											type="text"
+											required
+											class="input-space px-2 py-2"
+											placeholder="Last name"
+											aria-label="Last name"
+										/>
+									</div>
+								</div>
+								<input
+									type="email"
+									required
+									class="my-3 input-space px-2 py-2"
+									placeholder="Email"
+									aria-label="Email"
+								/>
+								<input
+									type="text"
+									required
+									class="my-3 input-space px-2 py-2"
+									placeholder="phone Number"
+									aria-label="phone Number"
+								/>
+								<input
+									type="text"
+									required
+									class="my-3 input-space px-2 py-2"
+									placeholder="Your message"
+									aria-label="Your message"
+								/>
+								<button
+									type="submit"
+									class="px-4 py-2 submit-contact fs-6"
+								>
+									Submit
+								</button>
+							</form>
+						</div>
+						<div
+							class="
+								col-md
+								mt-sm-3
+								contact-vertical
+								d-none d-lg-block
+							"
+						>
+							<div class="p-2 contact-r-text">
+								<h2>Get in touch :)</h2>
+								<p class="pe-5">
+									Want to get in touch? We'd love to hear from
+									you. leave a message and we'll reach out to
+									you soon!
+								</p>
+								<p class="pe-5">
+									Let's get this conversation started. Tell us
+									a bit about yourself, and we'll get in
+									touchas soon as we can.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<br />
+        <%- include('/partials/footer.ejs') %>
+	</body>
+</html>
