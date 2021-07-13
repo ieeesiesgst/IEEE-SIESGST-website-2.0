@@ -27,9 +27,8 @@ router.post('/', async (req, res) => {
 			message: req.body.message
 		};
 		const homeResponse = await getData(domainData);
-		console.log(homeResponse.data);
 
-		res.json({ message: 'done' });
+		res.status(200).json({ message: homeResponse.data.message });
 	} catch (err) {
 		console.log(err);
 		res.status(500).json({

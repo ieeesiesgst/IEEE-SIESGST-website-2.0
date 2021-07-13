@@ -23,6 +23,33 @@
 		/>
 		<!-- //Meta tag Keywords -->
 		<%- include('./partials/head-tag.ejs') %>
+
+		<script>
+			function sendMessage() {
+				const form = new FormData(document.getElementById('contactSubmit'));
+				
+				let formBody = [];
+				for (let key of form.keys()) {
+					const encodedKey = encodeURIComponent(key);
+					const encodedValue = encodeURIComponent(form.get(key));
+					formBody.push(encodedKey + '=' + encodedValue);
+				}
+				formBody = formBody.join('&');
+
+				fetch('/contact', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					body: formBody
+				})
+					.then((response) => response.json())
+					.then((data) => {
+						alert(data.message);
+						window.location.reload();
+					})
+			}
+		</script>
 	</head>
 	<body class="contact-bg">
         <%- include('./partials/navbar.ejs') %>
@@ -145,5 +172,13 @@
 		<br />
 		<br>
         <%- include('./partials/footer.ejs') %>
+		<script>
+			document
+				.getElementById('contactSubmit')
+				.addEventListener('submit', (data) => {
+					data.preventDefault();
+					sendMessage();
+				});
+		</script>
 	</body>
 </html>
