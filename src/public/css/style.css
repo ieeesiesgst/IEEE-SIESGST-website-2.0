@@ -429,11 +429,11 @@ video:focus {
 	background: transparent;
 	width: 100%;
 }
-.input-space:focus {
+/* .input-space:focus {
 	transition: ease text-indent 0.3s 0.3s;
-	text-indent: -90%;
+	text-indent: -100%;
 	opacity: 1;
-}
+} */
 .input-space:hover {
 	color: #ce5841;
 	border-color: #ce5841;

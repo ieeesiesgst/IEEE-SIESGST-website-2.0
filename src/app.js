@@ -23,6 +23,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, './public')));
 
 // session(app);
+// const parser = bodyParser.urlencoded({ extended: false });
 app.use(limiter);
 app.use('/auth/', authLimiter);
 app.use(flash());
