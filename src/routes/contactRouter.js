@@ -1,14 +1,10 @@
 const express = require('express');
-// const getData = require('../functions/getData');
+const getData = require('../functions/getData');
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
 	try {
-		// const domainData = {
-		// 	domain: 'events'
-		// };
-		// const homeResponse = await getData(domainData);
 		res.render('contact', {
 			title: 'CONTACT | IEEE SIESGST'
 		});
@@ -21,22 +17,17 @@ router.get('/', (req, res) => {
 	}
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
 	try {
-		const data = {
+		const domainData = {
+			domain: 'contact',
 			name: req.body.firstName + ' ' + req.body.lastName,
 			email: req.body.email,
 			phone: req.body.phoneNumber,
 			message: req.body.message
 		};
-		console.log(data);
-
-		const domainData = {
-			domain: 'contact',
-			data
-		};
-		// const homeResponse = await getData(domainData);
-		// console.log(req);
+		const homeResponse = await getData(domainData);
+		console.log(homeResponse.data);
 
 		res.json({ message: 'done' });
 	} catch (err) {
