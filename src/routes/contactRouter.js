@@ -28,7 +28,14 @@ router.post('/', async (req, res) => {
 		};
 		const homeResponse = await getData(domainData);
 
-		res.status(200).json({ message: homeResponse.data.message });
+		if (homeResponse.data.Error) {
+			res.status(500).json({
+				status: 'Fail',
+				message: 'Error sending message! Please try again.'
+			});
+		} else {
+			res.status(200).json({ message: homeResponse.data.message });
+		}
 	} catch (err) {
 		console.log(err);
 		res.status(500).json({
