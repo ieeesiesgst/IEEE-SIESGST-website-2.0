@@ -466,3 +466,38 @@ video:focus {
 	font-family: 'Roboto';
 }
 /* ---------------- CONTACT PAGE ENDS------------- */
+
+/*-------------------TECHNICAL PAGE---------------*/
+.tech-content{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+.tech-card{
+    background: linear-gradient(rgba(22, 22, 22, 0.4), rgba(43, 28, 28, 0.4)),
+		url('../images/Group\ 34.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/* .card{
+    border-radius: 0;
+    box-shadow: 5px 5px 15px ;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+
+} */
+
+/* .column {
+    /* float: left; */
+    /* width: 25%; */
+    /* padding: 0 10px; */
+    /* ppx; */
+    
+  /* } */ 
+
+/*------------------TECHNICAL PAGE ENDS----------*/
