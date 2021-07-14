@@ -481,35 +481,34 @@ video:focus {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.card-img{
-	height:150px;
-	width:150px;
+.card-img {
+	height: 150px;
+	width: 150px;
 	border-radius: 50%;
-	
-/*     
+
+	/*     
 	clip-path: circle(34.9% at 50% 50%); */
-	
 }
 /* .team-card{
 	max-width: 21rem;
 } */
 .social-link {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    border-radius: 50%;
-    transition: all 0.3s;
-    font-size: 0.9rem;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #666;
+	border-radius: 50%;
+	transition: all 0.3s;
+	font-size: 0.9rem;
 }
-.team-position{
-	color:#7C7878;
-} 
-.team-card1{
-	background-color: #E5E5E5;
+.team-position {
+	color: #7c7878;
+}
+.team-card1 {
+	background-color: #e5e5e5;
 }
 /* .card{
     border-radius: 0;
