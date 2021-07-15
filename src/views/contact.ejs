@@ -27,7 +27,7 @@
 		<script>
 			function sendMessage() {
 				const form = new FormData(document.getElementById('contactSubmit'));
-				document.getElementById('submitBtn').disabled = true;;
+				document.getElementById('loading').style.display = "block";
 				
 				let formBody = [];
 				for (let key of form.keys()) {
@@ -54,10 +54,13 @@
 		</script>
 	</head>
 	<body class="contact-bg">
-		<div class="spinner-border text-light" role="status">
-			<span class="visually-hidden">Loading...</span>
-		</div>
         <%- include('./partials/navbar.ejs') %>
+		<div id="loading" style="display: none">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
 		<h3
 			class="
 				about-headlines

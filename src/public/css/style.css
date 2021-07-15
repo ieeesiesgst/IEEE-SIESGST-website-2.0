@@ -460,4 +460,72 @@ video:focus {
 .contact-r-text {
 	font-family: 'Roboto';
 }
+/* .contact-loader {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+} */
+/* .sending-loader {
+	opacity: 0.7;
+} */
+#loading {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 100;
+}
+.line {
+	animation: expand 1s ease-in-out infinite;
+	border-radius: 10px;
+	display: inline-block;
+	transform-origin: center center;
+	margin: 0 3px;
+	width: 1px;
+	height: 25px;
+	top: 50%;
+	position: absolute;
+}
+.line:nth-child(1) {
+	background: #27ae60;
+	left: 49%;
+}
+.line:nth-child(2) {
+	animation-delay: 180ms;
+	background: #f1c40f;
+	left: 50%;
+}
+.line:nth-child(3) {
+	animation-delay: 360ms;
+	background: #e67e22;
+	left: 51%;
+}
+
+.line:nth-child(4) {
+	animation-delay: 540ms;
+	background: #2980b9;
+	left: 52%;
+}
+@media screen and (max-width: 650px) {
+	.line:nth-child(1) {
+		left: 50%;
+	}
+	.line:nth-child(2) {
+		left: 52%;
+	}
+	.line:nth-child(3) {
+		left: 54%;
+	}
+	.line:nth-child(4) {
+		left: 56%;
+	}
+}
+@keyframes expand {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(2);
+	}
+}
 /* ---------------- CONTACT PAGE ENDS------------- */
