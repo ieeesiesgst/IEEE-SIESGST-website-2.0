@@ -546,16 +546,20 @@ video:focus {
 	background-color: #e85c41;
 }
 .team-card {
-	max-width: 360px;
+	max-width: 420px;
 }
 .parent > ul {
-	/* display: inline-block; */
+	display: inline-block;
 	list-style: none;
+	list-style-position: inside;
+    padding-left: 0;
 }
 .parent {
 	text-align: center;
-	padding-left: 20rem;
-	padding-right: 20rem;
+	font-size: 21px;
+	font-family: 'Roboto';
+	/* padding-left: 20rem;
+	padding-right: 20rem; */
 }
 
 .parent ul li::before {
@@ -564,8 +568,10 @@ video:focus {
 	font-weight: bolder;
 	display: inline-block;
 	width: 1em;
-	/* margin-left: -1em;  */
-	font-size: 41px;
+	margin-left: -1em; 
+	font-size: 3rem;
+	
+	
 }
 
 /*------------------TECHNICAL PAGE ENDS----------*/
