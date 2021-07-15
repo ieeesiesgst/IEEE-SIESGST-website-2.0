@@ -552,7 +552,7 @@ video:focus {
 	display: inline-block;
 	list-style: none;
 	list-style-position: inside;
-    padding-left: 0;
+	padding-left: 0;
 }
 .parent {
 	text-align: center;
@@ -568,10 +568,8 @@ video:focus {
 	font-weight: bolder;
 	display: inline-block;
 	width: 1em;
-	margin-left: -1em; 
+	margin-left: -1em;
 	font-size: 3rem;
-	
-	
 }
 
 /*------------------TECHNICAL PAGE ENDS----------*/
