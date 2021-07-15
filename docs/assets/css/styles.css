@@ -480,51 +480,95 @@ video:focus {
 		url('../images/Group\ 34.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
 .card-img {
-	height: 150px;
-	width: 150px;
+	height: 190px;
+	width: 190px;
 	border-radius: 50%;
-
+	
 	/*     
 	clip-path: circle(34.9% at 50% 50%); */
+}
+.card-border-1{
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23000000FF' stroke-width='5' stroke-dasharray='15' stroke-dashoffset='98' stroke-linecap='butt'/%3e%3c/svg%3e");
+border-radius: 100px;
+	
+	padding: 10px;
+}
+.card-border-2{
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='5' stroke-dasharray='15' stroke-dashoffset='98' stroke-linecap='butt'/%3e%3c/svg%3e");
+border-radius: 100px;
+padding: 10px;
 }
 /* .team-card{
 	max-width: 21rem;
 } */
-.social-link {
+.social-link-1 {
 	width: 30px;
 	height: 30px;
-	border: 1px solid #ddd;
+	border: 1px solid #000;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #666;
+	color: #000000;
 	border-radius: 50%;
 	transition: all 0.3s;
-	font-size: 0.9rem;
+	font-size: 1.2rem;
 }
-.team-position {
-	color: #7c7878;
+.social-link-1:hover{
+	background-color: #000000 ;
+	color: white;
+	padding: 2px;
 }
-.team-card1 {
+.social-link-2 {
+	width: 30px;
+	height: 30px;
+	border: 1px solid #ffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	border-radius: 50%;
+	transition: all 0.3s;
+	font-size: 1.2rem;
+}
+.social-link-2:hover{
+	background-color: #ffff;
+	color: #E85C41;
+	padding: 2px;
+}
+.team-card-1 {
 	background-color: #e5e5e5;
+	
 }
-/* .card{
-    border-radius: 0;
-    box-shadow: 5px 5px 15px ;
-    transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
+.team-card-2{
+	background-color: #E85C41;
+}
+.team-card {
+	max-width: 360px;
+}
+.parent > ul{
+	/* display: inline-block; */
+	list-style: none;
+}
+.parent{
+	text-align: center;
+	padding-left: 20rem;
+	padding-right: 20rem;
+}
 
-} */
+.parent ul li::before {
+	content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+	color: #E85C41; 
+	font-weight: bolder; 
+	display: inline-block; 
+	width: 1em; 
+	/* margin-left: -1em;  */
+	font-size: 41px;
+  }
 
-/* .column {
-    /* float: left; */
-/* width: 25%; */
-/* padding: 0 10px; */
-/* ppx; */
 
-/* } */
 
 /*------------------TECHNICAL PAGE ENDS----------*/
