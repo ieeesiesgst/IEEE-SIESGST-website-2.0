@@ -548,28 +548,20 @@ video:focus {
 .team-card {
 	max-width: 420px;
 }
-.parent > ul {
-	display: inline-block;
-	list-style: none;
-	list-style-position: inside;
-	padding-left: 0;
-}
-.parent {
-	text-align: center;
-	font-size: 21px;
-	font-family: 'Roboto';
-	/* padding-left: 20rem;
-	padding-right: 20rem; */
-}
 
-.parent ul li::before {
-	content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-	color: #e85c41;
-	font-weight: bolder;
-	display: inline-block;
-	width: 1em;
-	margin-left: -1em;
+.p {
+    position: relative;
+    margin: 20px;
+    margin-left: 50px;
+}
+.text-bullet {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    font-weight: bolder;
 	font-size: 3rem;
+	color: #e85c41;
 }
 
 /*------------------TECHNICAL PAGE ENDS----------*/
