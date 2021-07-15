@@ -487,20 +487,20 @@ video:focus {
 	height: 190px;
 	width: 190px;
 	border-radius: 50%;
-	
+
 	/*     
 	clip-path: circle(34.9% at 50% 50%); */
 }
-.card-border-1{
+.card-border-1 {
 	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23000000FF' stroke-width='5' stroke-dasharray='15' stroke-dashoffset='98' stroke-linecap='butt'/%3e%3c/svg%3e");
-border-radius: 100px;
-	
+	border-radius: 100px;
+
 	padding: 10px;
 }
-.card-border-2{
+.card-border-2 {
 	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='5' stroke-dasharray='15' stroke-dashoffset='98' stroke-linecap='butt'/%3e%3c/svg%3e");
-border-radius: 100px;
-padding: 10px;
+	border-radius: 100px;
+	padding: 10px;
 }
 /* .team-card{
 	max-width: 21rem;
@@ -517,8 +517,8 @@ padding: 10px;
 	transition: all 0.3s;
 	font-size: 1.2rem;
 }
-.social-link-1:hover{
-	background-color: #000000 ;
+.social-link-1:hover {
+	background-color: #000000;
 	color: white;
 	padding: 2px;
 }
@@ -534,41 +534,38 @@ padding: 10px;
 	transition: all 0.3s;
 	font-size: 1.2rem;
 }
-.social-link-2:hover{
+.social-link-2:hover {
 	background-color: #ffff;
-	color: #E85C41;
+	color: #e85c41;
 	padding: 2px;
 }
 .team-card-1 {
 	background-color: #e5e5e5;
-	
 }
-.team-card-2{
-	background-color: #E85C41;
+.team-card-2 {
+	background-color: #e85c41;
 }
 .team-card {
 	max-width: 360px;
 }
-.parent > ul{
+.parent > ul {
 	/* display: inline-block; */
 	list-style: none;
 }
-.parent{
+.parent {
 	text-align: center;
 	padding-left: 20rem;
 	padding-right: 20rem;
 }
 
 .parent ul li::before {
-	content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-	color: #E85C41; 
-	font-weight: bolder; 
-	display: inline-block; 
-	width: 1em; 
+	content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+	color: #e85c41;
+	font-weight: bolder;
+	display: inline-block;
+	width: 1em;
 	/* margin-left: -1em;  */
 	font-size: 41px;
-  }
-
-
+}
 
 /*------------------TECHNICAL PAGE ENDS----------*/
