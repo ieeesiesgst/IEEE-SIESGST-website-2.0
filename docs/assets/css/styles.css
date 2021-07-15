@@ -550,16 +550,16 @@ video:focus {
 }
 
 .p {
-    position: relative;
-    margin: 20px;
-    margin-left: 50px;
+	position: relative;
+	margin: 20px;
+	margin-left: 50px;
 }
 .text-bullet {
-    position: absolute;
-    left: -40px;
-    top: 50%;
-    transform: translate(0%,-50%);
-    font-weight: bolder;
+	position: absolute;
+	left: -40px;
+	top: 50%;
+	transform: translate(0%, -50%);
+	font-weight: bolder;
 	font-size: 3rem;
 	color: #e85c41;
 }
