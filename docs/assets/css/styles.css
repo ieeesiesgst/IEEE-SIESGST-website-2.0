@@ -546,10 +546,10 @@ video:focus {
 	background-color: #e85c41;
 }
 .team-card {
-	max-width: 420px;
+	max-width: 400px;
 }
 
-.p {
+.team-points {
 	position: relative;
 	margin: 20px;
 	margin-left: 50px;
