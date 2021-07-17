@@ -73,20 +73,16 @@
 						</h3>
 					</div>
 				</div>
-				<div class="row ps-5 pe-5 pt-2 align-items-center">
-					<div id="my-slider">
+				<div class="row m-3 align-items-center">
+					<div class="my-slider">
 						<div class="col-12 ps-lg-3 ps-md-3 ps-sm-0 team-card">
 							<div class="card team-card-1">
 								<div class="card-body text-center">
-									<div class="card-outline">
-										<img
-											class="
-												img-fluid
-												card-img card-border-1
-											"
-											src="assets/images/2774835 1.png"
-										/>
-									</div>
+									<img
+										class="img-fluid card-img card-border-1"
+										src="assets/images/2774835 1.png"
+									/>
+
 									<div class="card-title text-center pt-2">
 										<h2>Nandita</h2>
 										<h5 class="lead">Head</h5>
@@ -119,15 +115,11 @@
 						<div class="col-12 ps-lg-3 ps-md-3 ps-sm-0 team-card">
 							<div class="card team-card-2">
 								<div class="card-body text-center">
-									<div class="card-outline-2">
-										<img
-											class="
-												img-fluid
-												card-img card-border-2
-											"
-											src="assets/images/2774835 1.png"
-										/>
-									</div>
+									<img
+										class="img-fluid card-img card-border-2"
+										src="assets/images/2774835 1.png"
+									/>
+
 									<div
 										class="
 											card-title
@@ -166,15 +158,11 @@
 						<div class="col-12 ps-lg-3 ps-md-3 ps-sm-0 team-card">
 							<div class="card team-card-1">
 								<div class="card-body text-center">
-									<div class="card-outline">
-										<img
-											class="
-												img-fluid
-												card-img card-border-1
-											"
-											src="assets/images/2774835 1.png"
-										/>
-									</div>
+									<img
+										class="img-fluid card-img card-border-1"
+										src="assets/images/2774835 1.png"
+									/>
+
 									<div class="card-title text-center pt-2">
 										<h2>Nandita</h2>
 										<h5 class="lead">Head</h5>
@@ -207,15 +195,11 @@
 						<div class="col-12 ps-lg-3 ps-md-3 ps-sm-0 team-card">
 							<div class="card team-card-2">
 								<div class="card-body text-center">
-									<div class="card-outline">
-										<img
-											class="
-												img-fluid
-												card-img card-border-2
-											"
-											src="assets/images/2774835 1.png"
-										/>
-									</div>
+									<img
+										class="img-fluid card-img card-border-2"
+										src="assets/images/2774835 1.png"
+									/>
+
 									<div
 										class="
 											card-title
@@ -253,21 +237,21 @@
 						</div>
 					</div>
 				</div>
-				<div class="text-white" id="controls">
-					<span class="carousel-control-prev previous">
-						<i
-							class="fa fa-chevron-left control-btn fa-lg"
-							aria-hidden="true"
-						></i>
-					</span>
-					<span>&nbsp;</span>
-					<span class="carousel-control-next next">
-						<i
-							class="fa fa-chevron-right control-btn fa-lg"
-							aria-hidden="true"
-						></i>
-					</span>
-				</div>
+			</div>
+			<div class="text-center pt-4 text-white" id="controls">
+				<span class="previous">
+					<i
+						class="fa fa-chevron-left control-btn fa-lg"
+						aria-hidden="true"
+					></i>
+				</span>
+				<span>&nbsp;</span>
+				<span class="next">
+					<i
+						class="fa fa-chevron-right control-btn fa-lg"
+						aria-hidden="true"
+					></i>
+				</span>
 			</div>
 		</section>
 		<section class="tech-offer pb-4">
@@ -289,7 +273,7 @@
 			</h3>
 			<div class="container ps-lg-5 align-items-center pe-lg-5">
 				<div class="justify-content-center parent ps-lg-5 pe-lg-5">
-					<div class="p">
+					<div class="team-points">
 						<div class="text-bullet">&#8226;</div>
 
 						lorem ipsum Lorem ipsum dolor sit amet, consectetur
@@ -297,7 +281,7 @@
 						consectetur adipiscing elit. Ac nulla eu sed
 						ullamcorpermassa.
 					</div>
-					<div class="p">
+					<div class="team-points">
 						<div class="text-bullet">&#8226;</div>
 
 						lorem ipsum Lorem ipsum dolor sit amet, consectetur
@@ -305,7 +289,7 @@
 						consectetur adipiscing elit. Ac nulla eu sed
 						ullamcorpermassa.
 					</div>
-					<div class="p">
+					<div class="team-points">
 						<div class="text-bullet">&#8226;</div>
 
 						lorem ipsum Lorem ipsum dolor sit amet, consectetur
@@ -329,8 +313,8 @@
 		<script src="https://use.fontawesome.com/ce94556118.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 		<script>
-			let slider = tns({
-				container: '#my-slider',
+			let sliderOptions = tns({
+				container: '.my-slider',
 				items: 1,
 
 				slideBy: 'page',
@@ -338,13 +322,13 @@
 				nav: false,
 
 				responsive: {
-					640: {
+					450: {
 						items: 2
 					},
-					1000: {
+					860: {
 						items: 3
 					},
-					1400: {
+					1260: {
 						items: 4
 					}
 				},
@@ -367,6 +351,7 @@
 					};
 					break;
 			}
+			let slider = tns(sliderOptions);
 		</script>
 
 		<!-- Option 2: Separate Popper and Bootstrap JS -->
