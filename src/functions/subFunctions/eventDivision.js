@@ -10,7 +10,7 @@ function parseISOString(s) {
 }
 
 function activeUpcoming(i, content) {
-	start = new Date(content.Estart[i])
+	let start = new Date(content.Estart[i])
 		.toDateString()
 		.split(' ')
 		.slice(1)
@@ -39,17 +39,17 @@ module.exports = function (info, page) {
 		const offlineDate = parseDate.addDays(1);
 
 		if (offlineDate > today) {
-			if (content.Estatus[i] == 'ACTIVE') {
+			if (content.Estatus[i].trim().toLowerCase() == 'active') {
 				const object = activeUpcoming(i, content);
 				active.push(object);
-			} else if (content.Estatus[i] == 'UPCOMING') {
+			} else if (content.Estatus[i].trim().toLowerCase() == 'upcoming') {
 				const object = activeUpcoming(i, content);
 				upcoming.push(object);
 			}
 		}
 	}
 	if (page == 2) {
-		return (divided = { activeE: active, upcomingE: upcoming });
+		return { activeE: active, upcomingE: upcoming };
 	} else if (page == 1) {
 		const allEvent = active.concat(upcoming);
 		return allEvent;
