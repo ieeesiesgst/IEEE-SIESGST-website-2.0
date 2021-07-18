@@ -374,9 +374,66 @@ video:focus {
 
 .all-team-div {
 	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
 }
+
 .all-team-name {
-	border: 1px solid;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	transition: 0.5s;
+	box-shadow: 0 0 0 0 #333;
+}
+
+.teams-bg-1 {
+	background: #ffc8bd;
+}
+
+.teams-bg-2 {
+	background: #444444;
+	color: #fff;
+}
+
+.teams-bg-3 {
+	background: #fdc727;
+}
+
+.teams-bg-4 {
+	background: #c4c4c4;
+}
+
+.teams-bg-5 {
+	background: #e85c41;
+	color: #fff;
+}
+
+.teams-bg-6 {
+	background: #042d6e;
+	color: #fff;
+}
+
+.teams-bg-7 {
+	background: #50f253;
+}
+
+.teams-bg-2 .all-team-name,
+.teams-bg-5 .all-team-name,
+.teams-bg-6 .all-team-name {
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.all-team-div:hover .all-team-name {
+	transition: 1s;
+	transform: scale(1.1);
+	opacity: 0.9;
+	border: 1px solid rgba(0, 0, 0, 0);
+	box-shadow: 0 0 100px #000;
+}
+
+@media (max-width: 575px) {
+	.all-team-div:hover .all-team-name {
+		transition: 1s;
+		transform: scale(1.05);
+		opacity: 0.8;
+	}
 }
 
 /* ---------------- CONTACT PAGE STARTS------------- */
