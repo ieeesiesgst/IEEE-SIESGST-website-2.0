@@ -46,9 +46,9 @@
 						</h3>
 					</div>
 				</div>
-				<div class="row m-3 align-items-center">
-					<div class="my-slider">
-						<div class="col-12 p-3 team-card">
+				<div class="container team-grid">
+					<div class="row m-3 justify-content-center">
+						<div class="col-md-4 p-3 team-card">
 							<div class="card team-card-1">
 								<div class="card-body text-center">
 									<img
@@ -85,7 +85,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 p-3 team-card">
+						<div class="col-md-4 p-3 team-card">
 								<div class="card team-card-2">
 								<div class="card-body text-center">
 									<img
@@ -128,7 +128,51 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 p-3 team-card">
+						<!-- <div class="col-md-4 p-3 team-card">
+							<div class="card team-card-2">
+							<div class="card-body text-center">
+								<img
+									class="img-fluid card-img card-border-2"
+									src="assets/images/2774835 1.png"
+								/>
+
+								<div
+									class="
+										card-title
+										text-white text-center
+										pt-2
+									"
+								>
+									<h2>Nandita</h2>
+									<h5>Head</h5>
+								</div>
+								<ul class="social mb-0 list-inline mt-3">
+									<li class="list-inline-item">
+										<a
+											href="#"
+											class="
+												social-link-2
+												text-decoration-none
+											"
+											><i class="fa fa-github"></i
+										></a>
+									</li>
+									<li class="list-inline-item">
+										<a
+											href="#"
+											class="
+												social-link-2
+												text-decoration-none
+											"
+											><i class="fa fa-linkedin"></i
+										></a>
+									</li>
+								</ul>
+							</div>
+						</div> -->
+					</div>
+					<div class="row m-3 justify-content-center">
+						<div class="col-md-4 p-3 team-card">
 							<div class="card team-card-1">
 								<div class="card-body text-center">
 									<img
@@ -165,8 +209,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 p-3 team-card">
-							<div class="card team-card-2">
+						<div class="col-md-4 p-3 team-card">
+								<div class="card team-card-2">
 								<div class="card-body text-center">
 									<img
 										class="img-fluid card-img card-border-2"
@@ -208,24 +252,50 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-md-4 p-3 team-card">
+							<div class="card team-card-1">
+								<div class="card-body text-center">
+									<img
+										class="img-fluid card-img card-border-1"
+										src="assets/images/2774835 1.png"
+									/>
+
+									<div class="card-title text-center pt-2">
+										<h2>Nandita</h2>
+										<h5 class="lead">Head</h5>
+									</div>
+									<ul class="social mb-0 list-inline mt-3">
+										<li class="list-inline-item">
+											<a
+												href="#"
+												class="
+													social-link-1
+													text-decoration-none
+												"
+												><i class="fa fa-github"></i
+											></a>
+										</li>
+										<li class="list-inline-item">
+											<a
+												href="#"
+												class="
+													social-link-1
+													text-decoration-none
+												"
+												><i class="fa fa-linkedin"></i
+											></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>	
+							
+						
 					</div>
 				</div>
 			</div>
-			<div class="text-center pt-4 text-white" id="controls">
-				<span class="previous">
-					<i
-						class="fa fa-chevron-left control-btn fa-lg"
-						aria-hidden="true"
-					></i>
-				</span>
-				<span>&nbsp;</span>
-				<span class="next">
-					<i
-						class="fa fa-chevron-right control-btn fa-lg"
-						aria-hidden="true"
-					></i>
-				</span>
-			</div>
+			
 		</section>
 		<section class="tech-offer p-4">
 			<div class="container">
@@ -276,47 +346,8 @@
 
 		<script src="https://use.fontawesome.com/ce94556118.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-		<script>
-			let sliderOptions = tns({
-				container: '.my-slider',
-				items: 1,
-
-				slideBy: 'page',
-				autoplay: true,
-				nav: false,
-
-				responsive: {
-					450: {
-						items: 2
-					},
-					860: {
-						items: 3
-					},
-					1260: {
-						items: 4
-					}
-				},
-				autoplayButtonOutput: false,
-				controlsContainer: '#controls',
-				prevButton: '.previous',
-				nextButton: '.next'
-			});
-			switch (document.getElementsByClassName('team-card').length) {
-				case 1:
-					sliderOptions.responsive = {};
-					break;
-				case 2:
-					sliderOptions.responsive = { 450: { items: 2 } };
-					break;
-				case 3:
-					sliderOptions.responsive = {
-						450: { items: 2 },
-						860: { items: 3 }
-					};
-					break;
-			}
-			let slider = tns(sliderOptions);
-		</script>
+		
+			
 
 		<!-- Option 2: Separate Popper and Bootstrap JS -->
 		<!--
