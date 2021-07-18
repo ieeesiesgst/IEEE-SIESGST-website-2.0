@@ -456,7 +456,7 @@ video:focus {
 }
 .tech-card {
 	background: linear-gradient(rgba(22, 22, 22, 0.4), rgba(43, 28, 28, 0.4)),
-		url('../images/Group\ 34.png');
+		url('../images/tech-background.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
