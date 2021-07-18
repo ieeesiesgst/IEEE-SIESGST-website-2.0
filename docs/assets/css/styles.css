@@ -473,7 +473,8 @@ video:focus {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
-	line-height: 21px;
+	/* line-height: 21px;
+	width:70px; */
 }
 .tech-card {
 	background: linear-gradient(rgba(22, 22, 22, 0.4), rgba(43, 28, 28, 0.4)),
@@ -553,6 +554,8 @@ video:focus {
 	position: relative;
 	margin: 20px;
 	margin-left: 50px;
+	font-size: 20px;
+	font-family: 'Roboto';
 }
 .text-bullet {
 	position: absolute;
