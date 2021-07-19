@@ -364,23 +364,16 @@ video:focus {
 	background-size: cover;
 }
 
-/*
-#ffe5e0;
-#444444;
-#e85c41;
-#c4c4c4;
-#fdc727;
- */
-
 .all-team-div {
 	font-family: 'Roboto', sans-serif;
-	cursor: pointer;
 }
 
 .all-team-name {
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	transition: 0.5s;
+	transition-timing-function: ease-out;
 	box-shadow: 0 0 0 0 #333;
+	cursor: pointer;
 }
 
 .teams-bg-1 {
@@ -410,8 +403,8 @@ video:focus {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.all-team-div:hover .all-team-name {
-	transition: 1s;
+.all-team-div .all-team-name:hover {
+	transition: 0.3s;
 	transform: scale(1.1);
 	opacity: 0.9;
 	border: 1px solid rgba(0, 0, 0, 0);
@@ -419,10 +412,8 @@ video:focus {
 }
 
 @media (max-width: 575px) {
-	.all-team-div:hover .all-team-name {
-		transition: 1s;
+	.all-team-div .all-team-name:hover {
 		transform: scale(1.05);
-		opacity: 0.8;
 	}
 }
 
