@@ -405,18 +405,8 @@ video:focus {
 	color: #fff;
 }
 
-.teams-bg-6 {
-	background: #042d6e;
-	color: #fff;
-}
-
-.teams-bg-7 {
-	background: #50f253;
-}
-
 .teams-bg-2 .all-team-name,
-.teams-bg-5 .all-team-name,
-.teams-bg-6 .all-team-name {
+.teams-bg-5 .all-team-name {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
