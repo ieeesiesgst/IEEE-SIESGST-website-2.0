@@ -603,3 +603,19 @@ video:focus {
 .wie-info {
 	background-color: #ebebf2;
 }
+.underline-overall-pink1::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	left: 30%;
+	bottom: -10px;
+	background: #da5aa0;
+}
+.wie-button{
+	background: #FFFFFF;
+border: 2px solid #DA5AA0;
+box-sizing: border-box;
+border-radius: 15px;
+
+}
