@@ -585,11 +585,11 @@ video:focus {
 
 /*------------------TECHNICAL PAGE ENDS----------*/
 /*------------------SUBCHAPTERS PAGE ------------*/
-.wie-banner{
-	background: linear-gradient(#A53B6D 0%, #24216E 100%);
+.wie-banner {
+	background: linear-gradient(#a53b6d 0%, #24216e 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.47);
+	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.47);
 }
 .underline-overall-pink::before {
 	content: '';
@@ -598,8 +598,8 @@ video:focus {
 	height: 4px;
 	left: 20%;
 	bottom: -10px;
-	background: #DA5AA0;
+	background: #da5aa0;
 }
-.wie-info{
-	background-color: #EBEBF2;
+.wie-info {
+	background-color: #ebebf2;
 }
