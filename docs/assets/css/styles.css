@@ -584,3 +584,22 @@ video:focus {
 }
 
 /*------------------TECHNICAL PAGE ENDS----------*/
+/*------------------SUBCHAPTERS PAGE ------------*/
+.wie-banner{
+	background: linear-gradient(#A53B6D 0%, #24216E 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.47);
+}
+.underline-overall-pink::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	height: 4px;
+	left: 20%;
+	bottom: -10px;
+	background: #DA5AA0;
+}
+.wie-info{
+	background-color: #EBEBF2;
+}
