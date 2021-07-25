@@ -606,9 +606,10 @@ video:focus {
 .underline-overall-pink1::before {
 	content: '';
 	position: absolute;
-	width: 100%;
+	width: 150px;
 	height: 4px;
-	left: 30%;
+	left:10%;
+   
 	bottom: -10px;
 	background: #da5aa0;
 }
