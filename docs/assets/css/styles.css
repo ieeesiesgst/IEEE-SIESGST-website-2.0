@@ -612,10 +612,9 @@ video:focus {
 	bottom: -10px;
 	background: #da5aa0;
 }
-.wie-button{
-	background: #FFFFFF;
-border: 2px solid #DA5AA0;
-box-sizing: border-box;
-border-radius: 15px;
-
+.wie-button {
+	background: #ffffff;
+	border: 2px solid #da5aa0;
+	box-sizing: border-box;
+	border-radius: 15px;
 }
