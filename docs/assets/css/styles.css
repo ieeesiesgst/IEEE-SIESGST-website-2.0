@@ -608,8 +608,8 @@ video:focus {
 	position: absolute;
 	width: 150px;
 	height: 4px;
-	left:10%;
-   
+	left: 10%;
+
 	bottom: -10px;
 	background: #da5aa0;
 }
