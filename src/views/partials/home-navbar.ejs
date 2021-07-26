@@ -638,6 +638,12 @@
         }, speed)
     }
 
+    function clearBanner() {
+        for (let i = 0; i < strings.length; i++) {
+            document.getElementById('banner-line'+i).innerHTML = ''
+        }
+    }
+
     function addNavBorder() {
         let footer = document.getElementsByTagName('footer')[0];
         let navbar = $('#navbar');
@@ -808,25 +814,25 @@
         <h1 class="pt-5 pb-3 home-banner-h1">
             <span class="d-inline-block">
                 <span id="banner-line0">
-                    
+                    IEEE SIES GST
                 </span>
                 <span class="typing-pipe invisible typing-translate" id="typing0">|</span>
             </span>
             <span class="d-inline-block">
                 <span id="banner-line1">
-                    
+                    Student Branch
                 </span>
                 <span class="typing-pipe invisible typing-translate" id="typing1">|</span>
             </span>
         </h1>
         <p class="home-banner-sub pt-4 pb-3">
             <span id="banner-line2">
-                
+                Join us in an amazing journey of learning through competitions, workshops, seminars
             </span>
             <span class="typing-pipe invisible" id="typing2">|</span>
             <span class="d-inline-block">
                 <span id="banner-line3">
-
+                    and much more...
                 </span>
                 <span class="typing-pipe invisible" id="typing3">|</span>
             </span>
@@ -923,6 +929,7 @@
 			});
 		}
 
+    clearBanner();
     typingEffect(0, defaultSpeed)
     
 </script>
