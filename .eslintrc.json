@@ -10,7 +10,6 @@
 	"rules": {
 		"prettier/prettier": "off",
 		"spaced-comment": "off",
-		"no-console": "warn",
 		"consistent-return": "off",
 		"func-names": "off",
 		"object-shorthand": "off",
@@ -20,6 +19,7 @@
 		"no-underscore-dangle": "off",
 		"class-methods-use-this": "off",
 		"prefer-destructuring": ["error", { "object": true, "array": false }],
-		"no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
+		"no-unused-vars": ["off", { "argsIgnorePattern": "req|res|next|val" }],
+		"no-console": "off"
 	}
 }

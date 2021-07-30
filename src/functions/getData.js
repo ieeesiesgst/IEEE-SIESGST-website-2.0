@@ -7,16 +7,12 @@ module.exports = function callAppScript(domainData) {
 			.post(process.env.GET_SCRIPT_DATA, qs.stringify(domainData))
 			.then((response) => {
 				// handle success
-				resolve(response);
+				return resolve(response);
 			})
 			.catch(function (error) {
 				// handle error
-				// resolve('error');
 				console.log(JSON.stringify(error));
-				res.status(500).json({
-					status: 'Fail',
-					message: 'Server Error!'
-				});
+				return reject('error');
 			});
 	});
 };

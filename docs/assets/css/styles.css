@@ -564,6 +564,7 @@ video:focus {
 }
 .team-card {
 	max-width: 300px;
+	min-width: 250px;
 }
 
 .team-points {
