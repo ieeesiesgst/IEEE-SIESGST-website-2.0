@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const express = require('express');
 const getData = require('../functions/getData');
 const eventDivision = require('../functions/subFunctions/eventDivision');
@@ -24,7 +23,6 @@ router.get('/', async (req, res) => {
 			});
 		}
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.log(err);
 		res.status(500).json({
 			status: 'Fail',

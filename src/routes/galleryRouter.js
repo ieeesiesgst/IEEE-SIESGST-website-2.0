@@ -1,4 +1,3 @@
-// const { parse } = require('dotenv');
 const express = require('express');
 const getData = require('../functions/getData');
 const cachedata = require('../cache/cacheData');
@@ -35,7 +34,7 @@ router.get('/', async (req, res) => {
 					galleryRes = result;
 				})
 				.catch((err) => {
-					//ejected promise error
+					//rejected promise error
 					console.log(err);
 					res.status(500).json({
 						status: 'Fail',
