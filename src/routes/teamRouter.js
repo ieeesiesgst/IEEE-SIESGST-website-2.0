@@ -5,12 +5,12 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
 	try {
-		const domainData = {
-			domain: 'team',
-			topic: 'team'
-		};
+		// const domainData = {
+		// 	domain: 'team',
+		// 	topic: 'team'
+		// };
 		// const homeResponse = await getData(domainData);
-		res.render('events', {
+		res.render('teams', {
 			title: 'TEAM | IEEE SIESGST'
 		});
 	} catch (err) {

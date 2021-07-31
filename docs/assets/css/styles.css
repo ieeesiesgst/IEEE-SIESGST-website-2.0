@@ -489,8 +489,6 @@ video:focus {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
-	/* line-height: 21px;
-	width:70px; */
 }
 .tech-card {
 	background: linear-gradient(rgba(22, 22, 22, 0.4), rgba(43, 28, 28, 0.4)),
@@ -519,9 +517,6 @@ video:focus {
 	border-radius: 100px;
 	padding: 10px;
 }
-/* .team-card{
-	max-width: 21rem;
-} */
 .social-link-1 {
 	width: 30px;
 	height: 30px;
