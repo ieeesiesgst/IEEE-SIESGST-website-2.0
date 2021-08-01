@@ -609,7 +609,7 @@ video:focus {
 	background-attachment: fixed;
 	background-position: center;
 }
-.card-img {
+.memberCard-img {
 	height: 190px;
 	width: 190px;
 	border-radius: 50%;
