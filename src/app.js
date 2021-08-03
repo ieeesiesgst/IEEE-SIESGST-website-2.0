@@ -17,6 +17,7 @@ const generalRouter = require('./routes/generalRouter');
 const eventsRouter = require('./routes/eventsRouter');
 const galleryRouter = require('./routes/galleryRouter');
 const teamRouter = require('./routes/teamRouter');
+const memberRouter = require('./routes/memberRouter');
 const contactRouter = require('./routes/contactRouter');
 
 const app = express();
@@ -41,6 +42,7 @@ app.set('view engine', 'ejs');
 app.use('/events', eventsRouter);
 app.use('/gallery', galleryRouter);
 app.use('/allteams', teamRouter);
+app.use('/members', memberRouter);
 app.use('/contact', contactRouter);
 
 app.use('/', generalRouter);
