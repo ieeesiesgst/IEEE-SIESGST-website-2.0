@@ -217,28 +217,55 @@
 				</div>
 			</div>
 		</section>
-		<section class="">
+		<section class="m-4">
 			<div class="container wie-activities">
-				<div class="about-headlines text-center pt-5 fs-2 fw-bolder">
+				<div class="about-headlines text-center pt-lg-5 pb-lg-0 pb-md-4 fs-2 fw-bolder">
 					<span class="position-relative underline-overall-pink"
-						>ACTIVITIES CONDUCTED BY US</span
+						>ACTIVITIES</span
 					>
 				</div>
 
 				<div class="row">
 					<div class="col">
-						<div class="carousel-wie-wrapper align-items-center">
-							<button class="carousel-wie-button prev-btn">
-								&#171;
-							</button>
-							<img
-								name="slideshow"
-								class="wie-standard wie-image"
-								alt="slideshow"
-							/>
-							<button class="carousel-wie-button next-btn">
-								&#187;
-							</button>
+						<div class="container pb-4">
+							<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+								
+									<div class="carousel-indicators">
+										<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active wie-active" aria-current="true" aria-label="Slide 1"></button>
+										<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+										<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+									  </div>
+								
+								<div class="carousel-inner p-lg-5">
+								  <div class="carousel-item active">
+									<div class="row">
+										<img src="assets/images/aisywc.jpg" class=" d-block w-100" />
+										<div class="pt-lg-5 pt-sm-0 text-center">Lorem Ispum tattatataaaatatatatatattatatattat</div>
+									</div>
+								  </div>
+								  <div class="carousel-item">
+									<div class="row">
+										<img src="assets/images/stem_lec.jpg" class=" d-block w-100" />
+										<div class="pt-lg-5 pt-sm-0 text-center">Lorem Ispum tattatataaaatatatatatattatatattat</div>
+									</div>
+								  </div>
+								  <div class="carousel-item">
+									<div class="row">
+										<img src="assets/images/magazine.jpg" class=" d-block w-100" />
+										<div class="pt-lg-5 pt-sm-0 text-center">Lorem Ispum tattatataaaatatatatatattatatattat</div>
+									</div>
+								  </div>
+								  
+								</div>
+								<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+								  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								  <span class="visually-hidden">Previous</span>
+								</button>
+								<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+								  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+								  <span class="visually-hidden">Next</span>
+								</button>
+							  </div>
 						</div>
 					</div>
 				</div>
@@ -253,73 +280,7 @@
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 			crossorigin="anonymous"
 		></script>
-		<script>
-			let i = 0;
-			let images = [];
-
-			images[0] = 'assets/images/WiE.png';
-			images[1] = 'assets/images/Admin.png';
-			images[2] = 'assets/images/Tech.png';
-
-			function setImage() {
-				document.slideshow.src = images[i];
-			}
-
-			window.onload = setImage;
-
-			const nextBtn = document.querySelector('.next-btn');
-			const image = document.querySelector('.wie-image');
-
-			nextBtn.addEventListener('click', () => {
-				if (!image.classList.contains('wie-image')) return;
-
-				if (i < images.length - 1) {
-					++i;
-					image.classList.remove('wie-image');
-					setTimeout(() => {
-						document.slideshow.src = images[i];
-					}, 400);
-					setTimeout(() => {
-						image.classList.add('wie-image');
-					}, 500);
-				} else {
-					i = 0;
-					image.classList.remove('wie-image');
-					setTimeout(() => {
-						document.slideshow.src = images[i];
-					}, 400);
-					setTimeout(() => {
-						image.classList.add('wie-image');
-					}, 500);
-				}
-			});
-
-			const prevBtn = document.querySelector('.prev-btn');
-
-			prevBtn.addEventListener('click', () => {
-				if (!image.classList.contains('wie-image')) return;
-
-				if (i === 0) {
-					i = images.length - 1;
-					image.classList.remove('wie-image');
-					setTimeout(() => {
-						document.slideshow.src = images[i];
-					}, 400);
-					setTimeout(() => {
-						image.classList.add('image');
-					}, 500);
-				} else {
-					--i;
-					image.classList.remove('image');
-					setTimeout(() => {
-						document.slideshow.src = images[i];
-					}, 400);
-					setTimeout(() => {
-						image.classList.add('image');
-					}, 500);
-				}
-			});
-		</script>
+	
 		<!-- Option 2: Separate Popper and Bootstrap JS -->
 		<!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

@@ -619,59 +619,7 @@ video:focus {
 	border-radius: 20px;
 	overflow: hidden;
 }
-
-.carousel-wie-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* border: 1px solid silver;
-	box-shadow: 0 0 8px silver; */
-	width: 35%;
-	height: 60%;
-	margin: 20vh auto;
-	padding: 1% 0;
-
-	border-radius: 3px;
-}
-
-.wie-standard {
-	min-width: 50%;
-	min-height: 50%;
-
-	object-fit: cover;
-
-	transition: 0.3s linear;
-	opacity: 0;
-}
-
-.wie-image {
-	opacity: 1;
-}
-
-.carousel-wie-button {
-	border: none;
-	background: none;
-	margin: 5%;
-	font-size: 3rem;
-	display: flex;
-	align-items: center;
-	color: #da5aa0;
-}
-
-.carousel-wie-button:hover {
-	cursor: pointer;
-}
-
-.carousel-wie-button:focus {
-	outline: none;
-}
-
-@media (max-width: 600px) {
-	.carousel-wie-wrapper {
-		width: 90vw;
-	}
-
-	.wie-standard {
-		width: 70vw;
-	}
+.wie-active{
+	color:#a53b6d;
+	background-color: #a53b6d;
 }
