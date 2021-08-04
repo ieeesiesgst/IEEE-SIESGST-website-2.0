@@ -1,15 +1,15 @@
 const express = require('express');
-// const getData = require('../functions/getData');
+const getData = require('../functions/getData');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
 	try {
-		// const domainData = {
-		// 	domain: 'team',
-		// 	topic: 'team'
-		// };
-		// const homeResponse = await getData(domainData);
+		const domainData = {
+			domain: 'teams'
+		};
+		const teamRes = await getData(domainData);
+		// console.log(teamRes.data);
 		res.render('members', {
 			title: 'TEAM | IEEE SIESGST'
 		});
