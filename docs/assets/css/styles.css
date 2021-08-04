@@ -613,16 +613,12 @@ video:focus {
 	box-sizing: border-box;
 	border-radius: 15px;
 }
-.wie-activities{
-	border: 4px solid #DA5AA0;
-    box-sizing: border-box;
-    border-radius: 20px;
+.wie-activities {
+	border: 4px solid #da5aa0;
+	box-sizing: border-box;
+	border-radius: 20px;
 	overflow: hidden;
 }
-
-
-
-
 
 .carousel-wie-wrapper {
 	display: flex;
@@ -636,24 +632,23 @@ video:focus {
 	padding: 1% 0;
 
 	border-radius: 3px;
-  }
-  
-  .wie-standard {
+}
+
+.wie-standard {
 	min-width: 50%;
 	min-height: 50%;
-	
-	
+
 	object-fit: cover;
-	
-	transition: .3s linear;
+
+	transition: 0.3s linear;
 	opacity: 0;
-  }
-  
-  .wie-image {
+}
+
+.wie-image {
 	opacity: 1;
-  }
-  
-  .carousel-wie-button {
+}
+
+.carousel-wie-button {
 	border: none;
 	background: none;
 	margin: 5%;
@@ -661,25 +656,22 @@ video:focus {
 	display: flex;
 	align-items: center;
 	color: #da5aa0;
-  }
-  
-  .carousel-wie-button:hover {
+}
+
+.carousel-wie-button:hover {
 	cursor: pointer;
-  }
-  
-  .carousel-wie-button:focus {
+}
+
+.carousel-wie-button:focus {
 	outline: none;
-  }
-  
-  @media (max-width: 600px){
+}
+
+@media (max-width: 600px) {
 	.carousel-wie-wrapper {
-	  width: 90vw;
+		width: 90vw;
 	}
-	
+
 	.wie-standard {
-	  width: 70vw;
+		width: 70vw;
 	}
-  }
-  
-  
-  
+}
