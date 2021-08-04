@@ -55,22 +55,23 @@
 				</div>
 				<div class="container team-grid">
 					<div class= "row m-3 justify-content-center">
+						<% memberRes.forEach((res,index)=>{ %>
 						<div class="col-4 p-3 team-card">
 							<div class="card pt-2 team-card-1">
 								<div class="card-body text-center">
 									<img
 										class="img-fluid memberCard-img card-border-1"
-										src="/images/2774835 1.png"
+										src="<%= res.profilePic %>"
 									/>
 
 									<div class="card-title text-center pt-2">
-										<div class="fs-4 fw-bold">Madhuri Ramakrishnan</div>
-										<div class="lead">Head</div>
+										<div class="fs-4 fw-bold"><%= res.name %></div>
+										<div class="lead"><%= res.post %></div>
 									</div>
 									<ul class="social mb-2 list-inline mt-3">
 										<li class="list-inline-item">
 											<a
-												href="#"
+												href="<%= res.linkdIn %>"
 												class="
 													social-link-1
 													text-decoration-none
@@ -80,7 +81,7 @@
 										</li>
 										<li class="list-inline-item">
 											<a
-												href="#"
+												href="<%= res.gmail %>"
 												class="
 													social-link-1
 													text-decoration-none
@@ -92,166 +93,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-4 p-3 team-card ">
-								<div class="card pt-2 team-card-2">
-								<div class="card-body text-center">
-									<img
-										class="img-fluid memberCard-img card-border-2"
-										src="/images/2774835 1.png"
-									/>
-
-									<div
-										class="
-											card-title
-											text-white text-center
-											pt-2
-										"
-									>
-									<div class="fs-4 fw-bold">Madhuri Ramakrishnan</div>
-										<div class="fs-5">Head</div>
-									</div>
-									<ul class="social mb-2 list-inline mt-3">
-										<li class="list-inline-item">
-											<a
-												href="#"
-												class="
-													social-link-2
-													text-decoration-none
-												"
-												><i class="fa fa-github"></i
-											></a>
-										</li>
-										<li class="list-inline-item">
-											<a
-												href="#"
-												class="
-													social-link-2
-													text-decoration-none
-												"
-												><i class="fa fa-linkedin"></i
-											></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>				
-						<div class="col-4 p-3 team-card">
-							<div class="card pt-2 team-card-1">
-								<div class="card-body text-center">
-									<img
-										class="img-fluid memberCard-img card-border-1"
-										src="/images/2774835 1.png"
-									/>
-
-									<div class="card-title text-center pt-2">
-										<div class="fs-4 fw-bold">Madhuri Ramakrishnan</div>
-										<div class="lead">Head</div>
-									</div>
-									<ul class="social mb-2 list-inline mt-3">
-										<li class="list-inline-item">
-											<a
-												href="#"
-												class="
-													social-link-1
-													text-decoration-none
-												"
-												><i class="fa fa-github"></i
-											></a>
-										</li>
-										<li class="list-inline-item">
-											<a
-												href="#"
-												class="
-													social-link-1
-													text-decoration-none
-												"
-												><i class="fa fa-linkedin"></i
-											></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-4 p-3 team-card">
-								<div class="card pt-2 team-card-2">
-								<div class="card-body text-center">
-									<img
-										class="img-fluid memberCard-img card-border-2"
-										src="/images/2774835 1.png"
-									/>
-
-									<div
-										class="
-											card-title
-											text-white text-center
-											pt-2
-										"
-									>
-									<div class="fs-4 fw-bold">Madhuri Ramakrishnan</div>
-										<div class="fs-5">Head</div>
-									</div>
-									<ul class="social mb-2 list-inline mt-3">
-										<li class="list-inline-item">
-											<a
-												href="#"
-												class="
-													social-link-2
-													text-decoration-none
-												"
-												><i class="fa fa-github"></i
-											></a>
-										</li>
-										<li class="list-inline-item">
-											<a
-												href="#"
-												class="
-													social-link-2
-													text-decoration-none
-												"
-												><i class="fa fa-linkedin"></i
-											></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-4 p-3 team-card">
-							<div class="card pt-2 team-card-1">
-								<div class="card-body text-center">
-									<img
-										class="img-fluid memberCard-img card-border-1"
-										src="/images/2774835 1.png"
-									/>
-
-									<div class="card-title text-center pt-2">
-										<div class="fs-4 fw-bold">Madhuri Ramakrishnan</div>
-										<div class="lead">Head</div>
-									</div>
-									<ul class="social mb-2 list-inline mt-3">
-										<li class="list-inline-item">
-											<a
-												href="#"
-												class="
-													social-link-1
-													text-decoration-none
-												"
-												><i class="fa fa-github"></i
-											></a>
-										</li>
-										<li class="list-inline-item">
-											<a
-												href="#"
-												class="
-													social-link-1
-													text-decoration-none
-												"
-												><i class="fa fa-linkedin"></i
-											></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+						<% }) %>
 					</div>
 				</div>	
 							

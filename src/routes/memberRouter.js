@@ -9,8 +9,6 @@ router.get('/', async (req, res) => {
 			domain: 'teams'
 		};
 		const teamRes = await getData(domainData);
-		// console.log(teamRes.data);
-		const teamName = req.query.team;
 		let memberRes;
 
 		if (req.query.team == 'core') {
