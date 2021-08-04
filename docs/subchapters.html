@@ -268,28 +268,28 @@
 			window.onload = setImage;
 
 			const nextBtn = document.querySelector('.next-btn');
-			const image = document.querySelector('.image');
+			const image = document.querySelector('.wie-image');
 
 			nextBtn.addEventListener('click', () => {
-				if (!image.classList.contains('image')) return;
+				if (!image.classList.contains('wie-image')) return;
 
 				if (i < images.length - 1) {
-					i++;
-					image.classList.remove('image');
+					++i;
+					image.classList.remove('wie-image');
 					setTimeout(() => {
 						document.slideshow.src = images[i];
 					}, 400);
 					setTimeout(() => {
-						image.classList.add('image');
+						image.classList.add('wie-image');
 					}, 500);
 				} else {
 					i = 0;
-					image.classList.remove('image');
+					image.classList.remove('wie-image');
 					setTimeout(() => {
 						document.slideshow.src = images[i];
 					}, 400);
 					setTimeout(() => {
-						image.classList.add('image');
+						image.classList.add('wie-image');
 					}, 500);
 				}
 			});
@@ -297,11 +297,11 @@
 			const prevBtn = document.querySelector('.prev-btn');
 
 			prevBtn.addEventListener('click', () => {
-				if (!image.classList.contains('image')) return;
+				if (!image.classList.contains('wie-image')) return;
 
 				if (i === 0) {
 					i = images.length - 1;
-					image.classList.remove('image');
+					image.classList.remove('wie-image');
 					setTimeout(() => {
 						document.slideshow.src = images[i];
 					}, 400);
@@ -309,7 +309,7 @@
 						image.classList.add('image');
 					}, 500);
 				} else {
-					i--;
+					--i;
 					image.classList.remove('image');
 					setTimeout(() => {
 						document.slideshow.src = images[i];
