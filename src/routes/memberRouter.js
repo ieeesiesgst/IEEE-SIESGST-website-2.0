@@ -1,50 +1,48 @@
 const express = require('express');
 const getData = require('../functions/getData');
+const cachedata = require('../cache/cacheData');
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
 	try {
-		const domainData = {
-			domain: 'teams'
-		};
-		const teamRes = await getData(domainData);
+		const teamRes = cachedata('teams');
 		let memberRes;
 
 		if (req.query.team == 'core') {
-			memberRes = teamRes.data.core;
+			memberRes = teamRes.core;
 		} else if (req.query.team == 'faculty') {
-			memberRes = teamRes.data.faculty;
+			memberRes = teamRes.faculty;
 		} else if (req.query.team == 'wie') {
-			memberRes = teamRes.data.wie;
+			memberRes = teamRes.wie;
 		} else if (req.query.team == 'cs') {
-			memberRes = teamRes.data.cs;
+			memberRes = teamRes.cs;
 		} else if (req.query.team == 'mtts') {
-			memberRes = teamRes.data.mtts;
+			memberRes = teamRes.mtts;
 		} else if (req.query.team == 'isv') {
-			memberRes = teamRes.data.isv;
+			memberRes = teamRes.isv;
 		} else if (req.query.team == 'jsec') {
-			memberRes = teamRes.data.jsec;
+			memberRes = teamRes.jsec;
 		} else if (req.query.team == 'tech') {
-			memberRes = teamRes.data.tech;
+			memberRes = teamRes.tech;
 		} else if (req.query.team == 'admin') {
-			memberRes = teamRes.data.admin;
+			memberRes = teamRes.admin;
 		} else if (req.query.team == 'pr') {
-			memberRes = teamRes.data.pr;
+			memberRes = teamRes.pr;
 		} else if (req.query.team == 'media') {
-			memberRes = teamRes.data.media;
+			memberRes = teamRes.media;
 		} else if (req.query.team == 'publicity') {
-			memberRes = teamRes.data.publicity;
+			memberRes = teamRes.publicity;
 		} else if (req.query.team == 'design') {
-			memberRes = teamRes.data.design;
+			memberRes = teamRes.design;
 		} else if (req.query.team == 'creative') {
-			memberRes = teamRes.data.creative;
+			memberRes = teamRes.creative;
 		} else if (req.query.team == 'mdo') {
-			memberRes = teamRes.data.mdo;
+			memberRes = teamRes.mdo;
 		} else if (req.query.team == 'treasurer') {
-			memberRes = teamRes.data.treasurer;
+			memberRes = teamRes.treasurer;
 		} else {
-			memberRes = teamRes.data.core;
+			memberRes = teamRes.core;
 		}
 		res.render('members', {
 			title: 'TEAM MEMBERS | IEEE SIESGST',
