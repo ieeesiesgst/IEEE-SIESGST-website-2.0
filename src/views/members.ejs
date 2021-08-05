@@ -35,11 +35,11 @@
 			<div class="container justify-content-center pb-4 p-4">
 				<h3 class="about-headlines text-center pt-5 fs-2 fw-bolder">
 					<span class="position-relative underline-overall-orange"
-						>TECHNICAL TEAM</span
+						><%= memberRes.team  %> TEAM</span
 					>
 				</h3>
 				<div class="about-content text-center p-4 mt-4 pb-5 ps-xl-5 pe-xl-5 fs-5">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac nulla eu sed ullamcorper massa consectetur adipiscing elit. Ac nulla eu sed ullamcorper massa..Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac nulla eu sed ullamcorper massa consectetur adipiscing elit. Ac nulla eu sed ullamcorper massa..
+					<%= memberRes.des  %>
 				</div>
 		</section>
 		<section class="tech-card pb-4">
@@ -55,7 +55,7 @@
 				</div>
 				<div class="container team-grid">
 					<div class= "row m-3 justify-content-center">
-						<% memberRes.forEach((res,index)=>{ if(index%2 ==0){ %>
+						<% memberRes.member.forEach((res,index)=>{ if(index%2 ==0){ %>
 							<div class="col-4 p-3 team-card">
 								<div class="card pt-2 team-card-1">
 									<div class="card-body text-center">
@@ -109,7 +109,7 @@
 											pt-2
 										"
 									>
-									<div class="fs-4 fw-bold"><%= res.name%></div>
+									<div class="fs-4 fw-bold"><%= res.name %></div>
 										<div class="fs-5"><%= res.post %></div>
 									</div>
 									<ul class="social mb-2 list-inline mt-3">
@@ -157,30 +157,12 @@
 			</div>
 			<div class="container ps-lg-5 align-items-center pb-5 pe-lg-5">
 				<div class="justify-content-center parent ps-lg-5 pe-lg-5">
+					<% memberRes.offer.forEach((res,index)=>{ %>
 					<div class="team-points my-4 ms-4">
 						<div class="text-bullet">&#8226;</div>
-
-						lorem ipsum Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit. Ac nulla eu sed ullamcorper massa
-						consectetur adipiscing elit. Ac nulla eu sed
-						ullamcorpermassa.
+						<%= res %>
 					</div>
-					<div class="team-points my-4 ms-4">
-						<div class="text-bullet">&#8226;</div>
-
-						lorem ipsum Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit. Ac nulla eu sed ullamcorper massa
-						consectetur adipiscing elit. Ac nulla eu sed
-						ullamcorpermassa.
-					</div>
-					<div class="team-points my-4 ms-4">
-						<div class="text-bullet">&#8226;</div>
-
-						lorem ipsum Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit. Ac nulla eu sed ullamcorper massa
-						consectetur adipiscing elit. Ac nulla eu sed
-						ullamcorpermassa.
-					</div>
+					<% }) %>
 				</div>
 			</div>
 		</section>
