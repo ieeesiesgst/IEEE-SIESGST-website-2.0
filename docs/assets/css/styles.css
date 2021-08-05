@@ -640,3 +640,12 @@ video:focus {
 	font-size: 25px;
 	opacity: 1;
 }
+.wie-bg-wave{
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wie-img{
+	border-radius: 12px;
+}
