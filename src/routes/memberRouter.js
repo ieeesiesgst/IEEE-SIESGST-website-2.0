@@ -47,7 +47,7 @@ router.get('/', async (req, res) => {
 			memberRes = teamRes.data.core;
 		}
 		res.render('members', {
-			title: 'TEAM | IEEE SIESGST',
+			title: 'TEAM MEMBERS | IEEE SIESGST',
 			memberRes: memberRes
 		});
 	} catch (err) {
