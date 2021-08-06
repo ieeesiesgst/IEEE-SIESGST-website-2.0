@@ -645,6 +645,7 @@ video:focus {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	scroll-behavior: smooth;
 }
 .wie-img {
 	border-radius: 12px;
@@ -652,4 +653,11 @@ video:focus {
 .wie-chevron-carousel {
 	color: #da5aa0;
 	font-size: 36px;
+	position: relative;
+	overflow: hidden;
+}
+.wie-carousel-card{
+	background: transparent;
+	border: none;
+	margin: 10px;
 }
