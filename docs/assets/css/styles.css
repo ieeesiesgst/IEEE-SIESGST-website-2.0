@@ -655,9 +655,14 @@ video:focus {
 	font-size: 36px;
 	position: relative;
 	overflow: hidden;
+	left: 0;
+  z-index: 1;
 }
+
 .wie-carousel-card {
 	background: transparent;
 	border: none;
 	margin: 10px;
+	transition-duration:  3s;
+	transition-timing-function: ease-in-out;
 }
