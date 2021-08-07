@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 Date.prototype.addDays = function (days) {
 	var date = new Date(this.valueOf());
 	date.setDate(date.getDate() + days);
@@ -31,7 +30,7 @@ function activeUpcoming(i, content) {
 
 module.exports = function (info, page) {
 	const today = new Date();
-	const content = info.data;
+	const content = info;
 	let active = [];
 	let upcoming = [];
 

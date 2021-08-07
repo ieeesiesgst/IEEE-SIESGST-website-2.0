@@ -1,16 +1,14 @@
 const express = require('express');
-const getData = require('../functions/getData');
+// const getData = require('../functions/getData');
 const eventDivision = require('../functions/subFunctions/eventDivision');
+const cachedata = require('../cache/cacheData');
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
 	try {
-		const domainData = {
-			domain: 'events'
-		};
-		const homeResponse = await getData(domainData);
-		if (homeResponse.data.Error) {
+		const homeResponse = cachedata('events');
+		if (homeResponse.Error) {
 			res.status(500).json({
 				status: 'Fail',
 				message: 'Server Error!'
