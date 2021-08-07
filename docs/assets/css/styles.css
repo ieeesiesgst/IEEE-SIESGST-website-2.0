@@ -680,11 +680,10 @@ video:focus {
 	cursor: pointer;
 	padding: 10px;
 	border-radius: 10px;
+}
 
-  }
-  
-  #myBtn:hover {
+#myBtn:hover {
 	background-color: #ffff;
 	border: 2px solid #a53b6d;
-	color:#a53b6d;
-  }
+	color: #a53b6d;
+}
