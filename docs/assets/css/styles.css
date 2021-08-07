@@ -666,3 +666,25 @@ video:focus {
 	transition-duration:  3s;
 	transition-timing-function: ease-in-out;
 }
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 27px;
+	border: none;
+	outline: none;
+	background-color: #a53b6d;
+	color: white;
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 21px;
+
+  }
+  
+  #myBtn:hover {
+	background-color: #ffff;
+	border: 2px solid #a53b6d;
+	color:#a53b6d;
+  }
