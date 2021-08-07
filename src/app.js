@@ -19,6 +19,7 @@ const galleryRouter = require('./routes/galleryRouter');
 const teamRouter = require('./routes/teamRouter');
 const memberRouter = require('./routes/memberRouter');
 const contactRouter = require('./routes/contactRouter');
+const subChapter = require('./routes/subChp');
 
 const app = express();
 app.use(express.static(path.join(__dirname, './public')));
@@ -44,6 +45,7 @@ app.use('/gallery', galleryRouter);
 app.use('/allteams', teamRouter);
 app.use('/members', memberRouter);
 app.use('/contact', contactRouter);
+app.use('/subChapter', subChapter);
 
 app.use('/', generalRouter);
 
