@@ -441,17 +441,17 @@ video:focus {
 .submit-contact {
 	font-family: 'Roboto';
 	display: inline-flex;
-	background: #ce5841;
+	background: #e85c41;
 	text-decoration: none;
 	cursor: pointer;
 	color: white;
 	border: none;
-	border: 1px solid #ce5841;
+	border: 1px solid #e85c41;
 }
 .submit-contact:hover {
 	outline-offset: -3px;
 	outline: 2px solid white;
-	border: 2px solid #ce5841;
+	border: 2px solid #e85c41;
 	transition: all 150ms;
 }
 .contact-vertical {
