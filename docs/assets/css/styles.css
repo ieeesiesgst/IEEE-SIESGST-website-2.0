@@ -483,7 +483,7 @@ video:focus {
 }
 /* ---------------- CONTACT PAGE ENDS------------- */
 
-/*-------------------TECHNICAL PAGE---------------*/
+/*-------------------TECHNICAL PAGE STARTS---------------*/
 .tech-content {
 	font-family: 'Roboto';
 	font-style: normal;
@@ -578,12 +578,16 @@ video:focus {
 }
 
 /*------------------TECHNICAL PAGE ENDS----------*/
+
 /*------------------SUBCHAPTERS PAGE ------------*/
 .wie-banner {
 	background: linear-gradient(#a53b6d 0%, #24216e 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.47);
+}
+.wie-home {
+	max-height: 610px;
 }
 .underline-overall-pink::before {
 	content: '';
@@ -810,3 +814,5 @@ video:focus {
 		background: #da5aa0;
 	}
 }
+
+/*------------------SUBCHAPTERS PAGE ENDS ------------*/
