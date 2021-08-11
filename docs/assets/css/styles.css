@@ -761,7 +761,7 @@ video:focus {
 	transition-duration: 3s;
 	transition-timing-function: ease-in-out;
 }
-#myBtn {
+#scrollTop {
 	display: none;
 	position: fixed;
 	bottom: 20px;
@@ -777,8 +777,14 @@ video:focus {
 	border-radius: 30px;
 }
 
-#myBtn:hover {
+#scrollTop:hover {
 	background-color: #ffff;
 	border: 2px solid #a53b6d;
 	color: #a53b6d;
+}
+.wie-link{
+	color: #a53b6d;
+}
+.wie-link:hover{
+	color:#ffffff;
 }
