@@ -658,7 +658,13 @@ video:focus {
 	left: 0;
 	z-index: 1;
 }
-
+.wie-chevron-banner {
+	color: #ffffff;
+	font-size: 42px;
+	position: relative;
+	
+	
+}
 .wie-carousel-card {
 	background: transparent;
 	border: none;
@@ -672,14 +678,14 @@ video:focus {
 	bottom: 20px;
 	right: 30px;
 	z-index: 99;
-	font-size: 27px;
+	font-size: 21px;
 	border: none;
 	outline: none;
 	background-color: #a53b6d;
 	color: white;
 	cursor: pointer;
-	padding: 10px;
-	border-radius: 10px;
+	padding:12px;
+	border-radius: 30px;
 }
 
 #myBtn:hover {
@@ -687,3 +693,5 @@ video:focus {
 	border: 2px solid #a53b6d;
 	color: #a53b6d;
 }
+
+
