@@ -787,7 +787,7 @@ video:focus {
 .wie-link:hover {
 	color: #ffffff;
 }
-@media only screen and (max-width:990px) and (min-width:760px) {
+@media only screen and (max-width: 990px) and (min-width: 760px) {
 	.underline-overall-pink1::before {
 		content: '';
 		position: absolute;
@@ -797,5 +797,4 @@ video:focus {
 		bottom: -10px;
 		background: #da5aa0;
 	}
-	
 }
