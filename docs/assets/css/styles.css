@@ -600,10 +600,9 @@ video:focus {
 .underline-overall-pink1::before {
 	content: '';
 	position: absolute;
-	width: 150px;
+	width: 60%;
 	height: 4px;
-	left: 10%;
-
+	left: 20%;
 	bottom: -10px;
 	background: #da5aa0;
 }
@@ -625,7 +624,7 @@ video:focus {
 	color: #a53b6d;
 	background-color: #a53b6d;
 }
-.wie-chevron1 {
+/* .wie-chevron1 {
 	color: #da5aa0;
 	font-size: 23px;
 	opacity: 0.3;
@@ -684,7 +683,7 @@ video:focus {
 	100% {
 		opacity: 1;
 	}
-}
+} */
 .wie-bg-wave {
 	background-attachment: fixed;
 	background-position: center;
@@ -787,4 +786,16 @@ video:focus {
 }
 .wie-link:hover {
 	color: #ffffff;
+}
+@media only screen and (max-width:990px) and (min-width:760px) {
+	.underline-overall-pink1::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		left: 20%;
+		bottom: -10px;
+		background: #da5aa0;
+	}
+	
 }
