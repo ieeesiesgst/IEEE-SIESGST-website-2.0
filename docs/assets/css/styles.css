@@ -629,43 +629,41 @@ video:focus {
 	color: #da5aa0;
 	font-size: 23px;
 	opacity: 0.3;
-	animation:chevron1 5s infinite alternate;
+	animation: chevron1 5s infinite alternate;
 }
 @keyframes chevron1 {
-	0%{
-		opacity:0.4
+	0% {
+		opacity: 0.4;
 	}
-	40%{
-		opacity:0.6
+	40% {
+		opacity: 0.6;
 	}
-	80%{
+	80% {
 		opacity: 1;
 	}
-	100%{
+	100% {
 		opacity: 0.3;
 	}
-	
 }
 .wie-chevron2 {
 	color: #da5aa0;
 	font-size: 24px;
 	opacity: 0.6;
-	animation:chevron2 5s infinite alternate;
+	animation: chevron2 5s infinite alternate;
 }
 @keyframes chevron2 {
-	0%{
-		opacity:0.8
+	0% {
+		opacity: 0.8;
 	}
-	40%{
-		opacity:1
+	40% {
+		opacity: 1;
 	}
-	80%{
+	80% {
 		opacity: 0.3;
 	}
-	100%{
-		opacity:0.6;
+	100% {
+		opacity: 0.6;
 	}
-	
 }
 .wie-chevron3 {
 	color: #da5aa0;
@@ -674,19 +672,18 @@ video:focus {
 	animation: chevron3 5s infinite alternate;
 }
 @keyframes chevron3 {
-	0%{
-		opacity:0.3
+	0% {
+		opacity: 0.3;
 	}
-	40%{
-		opacity:.6
+	40% {
+		opacity: 0.6;
 	}
-	80%{
+	80% {
 		opacity: 0.8;
 	}
-	100%{
-		opacity:1;
+	100% {
+		opacity: 1;
 	}
-	
 }
 .wie-bg-wave {
 	background-attachment: fixed;
@@ -710,64 +707,53 @@ video:focus {
 	color: #ffffff;
 	font-size: 42px;
 	position: relative;
-	animation:colorchange 20s infinite alternate;
+	animation: colorchange 20s infinite alternate;
 }
 
 @keyframes colorchange {
 	0% {
-	  
-	  color: #fff;
+		color: #fff;
 	}
-	
+
 	10% {
-	  
-	  color: #a53b6d;
+		color: #a53b6d;
 	}
-	
+
 	20% {
-	  
-	  color: #ffffff;
+		color: #ffffff;
 	}
-	
+
 	30% {
-	  
-	  color: #da5aa0;
+		color: #da5aa0;
 	}
-	
+
 	40% {
-	  
-	  color: #ffff;
+		color: #ffff;
 	}
-	
+
 	50% {
-	  
-	  color: #da5aa0;
+		color: #da5aa0;
 	}
-	
+
 	60% {
-	  
-	  color: #ffffff;
+		color: #ffffff;
 	}
-	
+
 	70% {
-	  
-	  color: #da5aa0;
+		color: #da5aa0;
 	}
 	80% {
-   
-	  color: #ffffff;
+		color: #ffffff;
 	}
-	
+
 	90% {
-   
-	  color: #da5aa0;
+		color: #da5aa0;
 	}
-	
+
 	100% {
-	  
-	  color: #ffffff;
+		color: #ffffff;
 	}
-  }
+}
 .wie-carousel-card {
 	background: transparent;
 	border: none;
