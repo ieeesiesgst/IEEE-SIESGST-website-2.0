@@ -608,7 +608,7 @@ video:focus {
 	background: #da5aa0;
 }
 .wie-button {
-	background: #ffffff;
+	background: #ebebf2;
 	border: 2px solid #da5aa0;
 	box-sizing: border-box;
 	border-radius: 15px;
@@ -662,7 +662,64 @@ video:focus {
 	color: #ffffff;
 	font-size: 42px;
 	position: relative;
+	animation:colorchange 20s infinite alternate;
 }
+
+@keyframes colorchange {
+	0% {
+	  
+	  color: #fff;
+	}
+	
+	10% {
+	  
+	  color: #a53b6d;
+	}
+	
+	20% {
+	  
+	  color: #ffffff;
+	}
+	
+	30% {
+	  
+	  color: #da5aa0;
+	}
+	
+	40% {
+	  
+	  color: #ffff;
+	}
+	
+	50% {
+	  
+	  color: #da5aa0;
+	}
+	
+	60% {
+	  
+	  color: #ffffff;
+	}
+	
+	70% {
+	  
+	  color: #da5aa0;
+	}
+	80% {
+   
+	  color: #ffffff;
+	}
+	
+	90% {
+   
+	  color: #da5aa0;
+	}
+	
+	100% {
+	  
+	  color: #ffffff;
+	}
+  }
 .wie-carousel-card {
 	background: transparent;
 	border: none;
