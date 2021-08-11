@@ -629,16 +629,64 @@ video:focus {
 	color: #da5aa0;
 	font-size: 23px;
 	opacity: 0.3;
+	animation:chevron1 5s infinite alternate;
+}
+@keyframes chevron1 {
+	0%{
+		opacity:0.4
+	}
+	40%{
+		opacity:0.6
+	}
+	80%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0.3;
+	}
+	
 }
 .wie-chevron2 {
 	color: #da5aa0;
 	font-size: 24px;
 	opacity: 0.6;
+	animation:chevron2 5s infinite alternate;
+}
+@keyframes chevron2 {
+	0%{
+		opacity:0.8
+	}
+	40%{
+		opacity:1
+	}
+	80%{
+		opacity: 0.3;
+	}
+	100%{
+		opacity:0.6;
+	}
+	
 }
 .wie-chevron3 {
 	color: #da5aa0;
 	font-size: 25px;
 	opacity: 1;
+	animation: chevron3 5s infinite alternate;
+}
+@keyframes chevron3 {
+	0%{
+		opacity:0.3
+	}
+	40%{
+		opacity:.6
+	}
+	80%{
+		opacity: 0.8;
+	}
+	100%{
+		opacity:1;
+	}
+	
 }
 .wie-bg-wave {
 	background-attachment: fixed;
@@ -651,7 +699,7 @@ video:focus {
 	border-radius: 12px;
 }
 .wie-chevron-carousel {
-	color: #da5aa0;
+	color: #a53b6d;
 	font-size: 36px;
 	position: relative;
 	overflow: hidden;
@@ -736,7 +784,7 @@ video:focus {
 	font-size: 21px;
 	border: none;
 	outline: none;
-	background-color: #a53b6d;
+	background-color: #da5aa0;
 	color: white;
 	cursor: pointer;
 	padding: 12px;
