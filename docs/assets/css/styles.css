@@ -799,7 +799,7 @@ video:focus {
 	}
 }
 
-@media only screen and (max-width:349px) and (min-width:250px) {
+@media only screen and (max-width: 349px) and (min-width: 250px) {
 	.underline-overall-pink1::before {
 		content: '';
 		position: absolute;
