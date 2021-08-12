@@ -697,6 +697,12 @@ video:focus {
 }
 .wie-img {
 	border-radius: 12px;
+	max-height: 400px;
+	max-width: 800px;
+}
+.sub-activity {
+	max-height: 500px;
+	max-width: 1000px;
 }
 .wie-chevron-carousel {
 	color: #a53b6d;
