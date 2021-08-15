@@ -686,3 +686,188 @@ video:focus {
 }
 
 /*------------------MEMBERS PAGE ENDS----------*/
+
+/*------------------SUBCHAPTERS PAGE ------------*/
+.wie-banner {
+	background: linear-gradient(#a53b6d 0%, #24216e 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.47);
+}
+.wie-home {
+	max-height: 610px;
+	font-family: 'Roboto';
+}
+.underline-overall-pink::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	height: 4px;
+	left: 20%;
+	bottom: -10px;
+	background: #da5aa0;
+}
+.wie-info {
+	background-color: #ebebf2;
+}
+.underline-overall-pink1::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	height: 4px;
+	left: 20%;
+	bottom: -10px;
+	background: #da5aa0;
+}
+.wie-button {
+	background: #ebebf2;
+	border: 2px solid #da5aa0;
+	box-sizing: border-box;
+	border-radius: 15px;
+	font-weight: 500;
+	font-size: 21px;
+}
+.wie-activities {
+	border: 4px solid #da5aa0;
+	box-sizing: border-box;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.wie-active {
+	color: #a53b6d;
+	background-color: #a53b6d;
+}
+.wie-bg-wave {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	scroll-behavior: smooth;
+}
+.wie-img {
+	border-radius: 12px;
+	max-height: 400px;
+	max-width: 800px;
+}
+.sub-activity {
+	max-height: 500px;
+	max-width: 1000px;
+}
+.wie-chevron-carousel {
+	color: #a53b6d;
+	font-size: 36px;
+	position: relative;
+	overflow: hidden;
+	left: 0;
+	z-index: 1;
+}
+.wie-chevron-banner {
+	color: #ffffff;
+	font-size: 42px;
+	position: relative;
+	animation: colorchange 20s infinite alternate;
+}
+@keyframes colorchange {
+	0% {
+		color: #fff;
+	}
+	10% {
+		color: #a53b6d;
+	}
+	20% {
+		color: #ffffff;
+	}
+	30% {
+		color: #da5aa0;
+	}
+	40% {
+		color: #ffff;
+	}
+	50% {
+		color: #da5aa0;
+	}
+	60% {
+		color: #ffffff;
+	}
+	70% {
+		color: #da5aa0;
+	}
+	80% {
+		color: #ffffff;
+	}
+	90% {
+		color: #da5aa0;
+	}
+	100% {
+		color: #ffffff;
+	}
+}
+.wie-carousel-card {
+	background: transparent;
+	border: none;
+	margin: 10px;
+	transition-duration: 3s;
+	transition-timing-function: ease-in-out;
+}
+#scrollTop {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 21px;
+	border: none;
+	outline: none;
+	background-color: #da5aa0;
+	color: white;
+	cursor: pointer;
+	padding: 7px;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+#scrollTop:hover {
+	background-color: #ffff;
+	border: 2px solid #a53b6d;
+	color: #a53b6d;
+	transition-timing-function: ease-in;
+	transition: background 0.2s;
+}
+.sub-up-arrow {
+	position: relative;
+	top: 0;
+	transition: top ease-in 0.2s;
+}
+.sub-up-arrow:hover {
+	top: -4px;
+}
+.wie-link {
+	color: #a53b6d;
+}
+.wie-link:hover {
+	color: #ffffff;
+}
+@media only screen and (max-width: 990px) and (min-width: 760px) {
+	.underline-overall-pink1::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		left: 20%;
+		bottom: -10px;
+		background: #da5aa0;
+	}
+}
+@media only screen and (max-width: 349px) and (min-width: 250px) {
+	.underline-overall-pink1::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		left: 20%;
+		bottom: -10px;
+		background: #da5aa0;
+	}
+}
+
+/*------------------SUBCHAPTERS PAGE ENDS ------------*/

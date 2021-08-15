@@ -45,15 +45,19 @@
         </script>
 	</head>
 	<body>
-        <%- include('./partials/navbar.ejs') %>
+		<%- include('./partials/navbar.ejs') %>
 		<button onclick="topFunction()" id="scrollTop" title="Go to top">
-			<i class="fa fa-angle-double-up sub-up-arrow"></i>
-        </button>
+			<i
+			class="
+				fa fa-angle-double-up
+				sub-up-arrow
+			"
+		></i></button>
 		<section class="wie-banner wie-bg-wave">
-			<div class="container p-5 wie-home">
+			<div class="container px-5 pb-2 wie-home">
 				<div class="row h-100 justify-content-center align-items-center">
 					<div class="col-md-6">
-						<img src="assets/images/wie-home.gif" class="w-100 h-100" alt="wie"/>
+						<img src="/images/wie-home.gif" class="w-100 h-100" alt="wie"/>
 					</div>
 					<div class="col-md-6">
 						<div class="py-2">
@@ -65,12 +69,17 @@
 				</div>
 				<div class="text-center" >
 					<a href="#wie">
-                        <i class=" fa fa-angle-double-down wie-chevron-banner"></i>
-                    </a>
+						<i
+						class="
+							fa fa-angle-double-down
+							
+							wie-chevron-banner
+						"	
+						></i>
+					</a>
 				</div>
 			</div>	
 		</section>
-        
 		<section class="wie-about wie-bg-wave ">
 			<div class="container p-3 pt-5">
 				<div class="row" id="wie">
@@ -92,7 +101,7 @@
 					</div>
 					<div class="col-md-6">
 						<img
-							src="assets/images/Group 10.png"
+							src="/images/wieSies.png"
 							class="w-100 h-100 pt-5"
 							alt="wie-about"
 						/>
@@ -139,7 +148,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						<img
-							src="assets/images/stem_lec.jpg"
+							src="/images/stem_lec.jpg"
 							class="d-block w-100 pt-lg-5"
 							alt="wie-info"
 						/>
@@ -212,7 +221,7 @@
 						</div>
 						<div class="col-md-6">
 							<img
-								src="assets/images/Group 22.png"
+								src="/images/wieGoal.png"
 								class="h-100 w-100"
 								alt="wie-info"
 							/>
@@ -278,7 +287,7 @@
 													<div class="card wie-carousel-card">
 														<div class="row">
 															<img
-																src="assets/images/aisywc.jpg"
+																src="/images/aisywc.jpg"
 																class="
 																    img-fluid
 																	d-block
@@ -329,7 +338,6 @@
 				</div>
 			</div>
 		</section>
-
         <%- include('./partials/footer.ejs') %>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 		} else {
 			chapterRes = subRes.Isv;
 		}
-		console.log(chapterRes);
+		// console.log(chapterRes);
 
 		if (subRes.Error) {
 			res.status(500).json({
@@ -26,10 +26,10 @@ router.get('/', (req, res) => {
 				message: 'Server Error!'
 			});
 		} else {
-			// res.render('', {
-			// 	title: 'SUB-CHAPTERS MEMBERS | IEEE SIESGST'
-			// });
-			res.send('done');
+			res.render('wie', {
+				title: 'SUB-CHAPTERS MEMBERS | IEEE SIESGST'
+			});
+			// res.send('done');
 		}
 	} catch (err) {
 		console.log(err);
