@@ -63,7 +63,7 @@
 					</div>
 				</div>
 				<div class="text-center" >
-					<a href="#wie">
+					<!-- <a href="#wie">
 						<i
 						class="
 							fa fa-angle-double-down
@@ -71,10 +71,23 @@
 							wie-chevron-banner
 						"	
 						></i>
-					</a>
+					</a> -->
+					<div
+						class="home-banner-btn-div mx-auto"
+						onclick="if(window.innerWidth>850){window.scrollTo(0, document.getElementById('scroll-wie-banner').offsetTop - 70)}else{window.scrollTo(0, document.getElementById('scroll-wie-banner').offsetTop - 60)}"
+					>
+						<i
+						class="
+							fa fa-angle-double-down
+							
+							wie-chevron-banner
+						"	
+						></i>
+					</div>
 				</div>
 			</div>	
 		</section>
+		<div id="scroll-wie-banner" class="w-100"></div>
 		<section class="wie-about wie-bg-wave "id="wie">
 			<div class="container p-3 pt-5">
 				<div class="row" >
@@ -224,7 +237,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="pt-4 mx-2 mb-5">
+		<section class="pt-4 mt-3 mx-2 mb-4 pb-5">
 			<div class="container wie-activities">
 				<div class="about-headlines text-center fs-2 fw-bolder pb-4 pt-2">
 					<span class="position-relative underline-overall-pink"
@@ -338,12 +351,6 @@
 
 		// When the user scrolls down 20px from the top of the document, show the button
 		window.onscroll = function() {scrollFunction()};
-
 		</script>
-		<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"
-		></script>
 	</body>
 </html>

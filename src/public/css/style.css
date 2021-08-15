@@ -689,17 +689,17 @@ video:focus {
 
 /*------------------SUBCHAPTERS PAGE ------------*/
 .wie-banner {
-	background: linear-gradient(#a53b6d 20%, #24216e 100%);
+	background: linear-gradient(#a53b6d 20%, #24216e 110%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.47);
 }
 .wie-home {
-	max-height: 610px;
+	min-height: 450px;
 	font-family: 'Roboto';
 }
 .wie-home-row {
-	max-height: 490px;
+	max-height: 485px;
 }
 .underline-overall-pink::before {
 	content: '';
@@ -749,11 +749,11 @@ video:focus {
 }
 .wie-img {
 	border-radius: 12px;
-	max-height: 400px;
-	max-width: 800px;
+	max-height: 380px;
+	max-width: 700px;
 }
 .sub-activity {
-	max-height: 500px;
+	max-height: 450px;
 	max-width: 1000px;
 }
 .wie-chevron-carousel {
@@ -769,6 +769,9 @@ video:focus {
 	font-size: 42px;
 	position: relative;
 	animation: colorchange 20s infinite alternate;
+}
+.wie-chevron-banner:hover {
+	cursor: pointer;
 }
 @keyframes colorchange {
 	0% {
