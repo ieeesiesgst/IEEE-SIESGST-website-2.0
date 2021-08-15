@@ -689,7 +689,7 @@ video:focus {
 
 /*------------------SUBCHAPTERS PAGE ------------*/
 .wie-banner {
-	background: linear-gradient(#a53b6d 0%, #24216e 100%);
+	background: linear-gradient(#a53b6d 20%, #24216e 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.47);
@@ -697,6 +697,9 @@ video:focus {
 .wie-home {
 	max-height: 610px;
 	font-family: 'Roboto';
+}
+.wie-home-row {
+	max-height: 490px;
 }
 .underline-overall-pink::before {
 	content: '';
