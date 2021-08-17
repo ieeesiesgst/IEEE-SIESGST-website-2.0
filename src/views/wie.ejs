@@ -41,16 +41,16 @@
 	</head>
 	<body>
 		<%- include('./partials/navbar.ejs') %>
-		<button onclick="topFunction()" id="scrollTop" title="Go to top">
+		<button onclick="topFunction()" id="scrollTop" class="subScrollTop scrollTop-color1" title="Go to top">
 			<i
 			class="
 				fa fa-angle-double-up
 				sub-up-arrow
 			"
 		></i></button>
-		<section class="wie-banner wie-bg-wave">
-			<div class="container px-5 pb-2 wie-home">
-				<div class="row h-100 justify-content-center align-items-center wie-home-row">
+		<section class="sub-banner sub-banner-color1 sub-bg-wave">
+			<div class="container px-5 pb-2 sub-home">
+				<div class="row h-100 justify-content-center align-items-center sub-home-row">
 					<div class="col-md-6">
 						<img src="/images/wie-home.gif" class="w-100 h-100" alt="wie"/>
 					</div>
@@ -63,15 +63,6 @@
 					</div>
 				</div>
 				<div class="text-center" >
-					<!-- <a href="#wie">
-						<i
-						class="
-							fa fa-angle-double-down
-							
-							wie-chevron-banner
-						"	
-						></i>
-					</a> -->
 					<div
 						class="home-banner-btn-div mx-auto"
 						onclick="if(window.innerWidth>850){window.scrollTo(0, document.getElementById('scroll-wie-banner').offsetTop - 70)}else{window.scrollTo(0, document.getElementById('scroll-wie-banner').offsetTop - 60)}"
@@ -80,7 +71,7 @@
 						class="
 							fa fa-angle-double-down
 							
-							wie-chevron-banner
+							sub-chevron-banner sub-chevron-color1
 						"	
 						></i>
 					</div>
@@ -88,13 +79,13 @@
 			</div>	
 		</section>
 		<div id="scroll-wie-banner" class="w-100"></div>
-		<section class="wie-about wie-bg-wave "id="wie">
+		<section class="wie-about sub-bg-wave "id="wie">
 			<div class="container p-3 pt-5">
 				<div class="row" >
 					<div class="col-md-6">
 						<div class="about-headlines text-center pt-lg-5 fs-2 fw-bolder">
 							<span
-								class="position-relative underline-overall-pink1"
+								class="position-relative sub-underline-home underline-color1"
 								>IEEE SIESGST WIE Chapter</span
 							>
 						</div>
@@ -124,16 +115,16 @@
 							d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
 						></path>
 					</svg>
-					<div class=" wie-info pb-lg-4">
+					<div class=" sub-info pb-lg-4">
 						<div
 							class="about-headlines text-center pt-lg-0 pt-5 fs-2 fw-bolder"
                         >
-							<span class="position-relative underline-overall-pink"
+							<span class="position-relative sub-underline-overall underline-color1"
 								>IEEE Women In Engineering
                             </span>
 						</div>
 						<div class="fs-5 text-center pt-5 px-4 px-lg-5 pb-4 mx-lg-5 mx-md-0">
-							<a href="#" class="wie-link">IEEE Women in Engineering</a> (WIE) is one of the largest
+							<a href="#" class="sub-link-color1 sub-link">IEEE Women in Engineering</a> (WIE) is one of the largest
 							international professional organizations dedicated to
 							promoting women engineers and scientists and inspiring
 							girls around the world to follow their academic
@@ -148,7 +139,7 @@
 		<section>
 			<div class="container p-4 pb-lg-0">
 				<div class="about-headlines text-center fs-2 fw-bolder pb-5 pt-4">
-					<span class="position-relative underline-overall-pink"
+					<span class="position-relative sub-underline-overall underline-color1"
 						>HIGHLIGHTS
                     </span>
 				</div>
@@ -157,7 +148,7 @@
 						<img
 							src="/images/stem_lec.jpg"
 							class="d-block w-100 pt-lg-5"
-							alt="wie-info"
+							alt="sub-info"
 						/>
 					</div>
 					<div class="col-md-6 fs-2">
@@ -195,7 +186,7 @@
 					></path>
 				</svg>
 			</div>
-			<div class="wie-info">
+			<div class="sub-info">
 				<div class="container pb-5">
 					<div class="row pb-lg-5">
 						<div class="col-md-6">
@@ -212,7 +203,7 @@
 								<span
 									class="
 										position-relative
-										underline-overall-pink
+										sub-underline-overall underline-color1 
 									"
 									>OUR GOAL
                                 </span>
@@ -230,7 +221,7 @@
 							<img
 								src="/images/wieGoal.png"
 								class="h-100 w-100"
-								alt="wie-info"
+								alt="sub-info"
 							/>
 						</div>
 					</div>
@@ -238,9 +229,9 @@
 			</div>
 		</section>
 		<section class="pt-4 mt-3 mx-2 mb-4 pb-5">
-			<div class="container wie-activities">
+			<div class="container sub-activities sub-act-color1">
 				<div class="about-headlines text-center fs-2 fw-bolder pb-4 pt-2">
-					<span class="position-relative underline-overall-pink"
+					<span class="position-relative sub-underline-overall underline-color1"
 						>ACTIVITIES
                     </span>
 				</div>
@@ -264,7 +255,7 @@
                                                 class="
                                                     fa fa-angle-double-left
                                                     
-                                                    wie-chevron-carousel
+                                                    sub-chevron-carousel sub-carousel-color1
                                                 "
                                             ></i>
                                             <span class="visually-hidden"
@@ -290,7 +281,7 @@
 														active
 													"
 												>
-													<div class="card wie-carousel-card">
+													<div class="card sub-carousel-card">
 														<div class="row">
 															<img
 																src="/images/aisywc.jpg"
@@ -298,7 +289,7 @@
 																    img-fluid
 																	d-block
 																	w-100
-																	wie-img
+																	subChp-img
 																"
 															/>
 															<div
@@ -329,7 +320,7 @@
 												class="
 													fa fa-angle-double-right
 													
-													wie-chevron-carousel
+													sub-chevron-carousel sub-carousel-color1
 												"
 											></i>
 											<span class="sr-only"

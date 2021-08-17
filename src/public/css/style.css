@@ -688,66 +688,58 @@ video:focus {
 /*------------------MEMBERS PAGE ENDS----------*/
 
 /*------------------SUBCHAPTERS PAGE ------------*/
-.wie-banner {
-	background: linear-gradient(#a53b6d 20%, #24216e 110%);
+.sub-banner {
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.47);
 }
-.wie-home {
-	min-height: 450px;
+.sub-banner-color1 {
+	background: linear-gradient(#a53b6d 20%, #24216e 110%);
+}
+.sub-home {
 	font-family: 'Roboto';
 }
-.wie-home-row {
+.sub-home-row {
 	max-height: 485px;
 }
-.underline-overall-pink::before {
+.sub-underline-overall::before {
 	content: '';
 	position: absolute;
 	width: 60%;
 	height: 4px;
 	left: 20%;
 	bottom: -10px;
+}
+.underline-color1::before {
 	background: #da5aa0;
 }
-.wie-info {
+.sub-info {
 	background-color: #ebebf2;
 }
-.underline-overall-pink1::before {
+.sub-underline-home::before {
 	content: '';
 	position: absolute;
 	width: 60%;
 	height: 4px;
 	left: 20%;
 	bottom: -10px;
-	background: #da5aa0;
 }
-.wie-button {
-	background: #ebebf2;
-	border: 2px solid #da5aa0;
-	box-sizing: border-box;
-	border-radius: 15px;
-	font-weight: 500;
-	font-size: 21px;
-}
-.wie-activities {
-	border: 4px solid #da5aa0;
+.sub-activities {
 	box-sizing: border-box;
 	border-radius: 20px;
 	overflow: hidden;
 }
-.wie-active {
-	color: #a53b6d;
-	background-color: #a53b6d;
+.sub-act-color1 {
+	border: 4px solid #da5aa0;
 }
-.wie-bg-wave {
+.sub-bg-wave {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	scroll-behavior: smooth;
 }
-.wie-img {
+.subChp-img {
 	border-radius: 12px;
 	max-height: 380px;
 	max-width: 700px;
@@ -756,24 +748,28 @@ video:focus {
 	max-height: 450px;
 	max-width: 1000px;
 }
-.wie-chevron-carousel {
-	color: #a53b6d;
+.sub-chevron-carousel {
 	font-size: 36px;
 	position: relative;
 	overflow: hidden;
 	left: 0;
 	z-index: 1;
 }
-.wie-chevron-banner {
+.sub-carousel-color1 {
+	color: #a53b6d;
+}
+.sub-chevron-banner {
 	color: #ffffff;
 	font-size: 42px;
 	position: relative;
-	animation: colorchange 20s infinite alternate;
 }
-.wie-chevron-banner:hover {
+.sub-chevron-banner:hover {
 	cursor: pointer;
 }
-@keyframes colorchange {
+.sub-chevron-color1 {
+	animation: colorchange1 20s infinite alternate;
+}
+@keyframes colorchange1 {
 	0% {
 		color: #fff;
 	}
@@ -808,14 +804,14 @@ video:focus {
 		color: #ffffff;
 	}
 }
-.wie-carousel-card {
+.sub-carousel-card {
 	background: transparent;
 	border: none;
 	margin: 10px;
 	transition-duration: 3s;
 	transition-timing-function: ease-in-out;
 }
-#scrollTop {
+.subScrollTop {
 	display: none;
 	position: fixed;
 	bottom: 20px;
@@ -824,7 +820,6 @@ video:focus {
 	font-size: 21px;
 	border: none;
 	outline: none;
-	background-color: #da5aa0;
 	color: white;
 	cursor: pointer;
 	padding: 7px;
@@ -832,12 +827,17 @@ video:focus {
 	width: 50px;
 	height: 50px;
 }
-#scrollTop:hover {
+.scrollTop-color1 {
+	background-color: #da5aa0;
+}
+.subScrollTop:hover {
 	background-color: #ffff;
-	border: 2px solid #a53b6d;
-	color: #a53b6d;
 	transition-timing-function: ease-in;
 	transition: background 0.2s;
+}
+.scrollTop-color1:hover {
+	border: 2px solid #a53b6d;
+	color: #a53b6d;
 }
 .sub-up-arrow {
 	position: relative;
@@ -847,32 +847,20 @@ video:focus {
 .sub-up-arrow:hover {
 	top: -4px;
 }
-.wie-link {
+.sub-link-color1 {
 	color: #a53b6d;
 }
-.wie-link:hover {
-	color: #ffffff;
+.sub-link:hover {
+	color: #825db1;
 }
 @media only screen and (max-width: 990px) and (min-width: 760px) {
-	.underline-overall-pink1::before {
-		content: '';
-		position: absolute;
+	.sub-underline-home::before {
 		width: 100%;
-		height: 4px;
-		left: 20%;
-		bottom: -10px;
-		background: #da5aa0;
 	}
 }
-@media only screen and (max-width: 349px) and (min-width: 250px) {
-	.underline-overall-pink1::before {
-		content: '';
-		position: absolute;
+@media only screen and (max-width: 320px) and (min-width: 250px) {
+	.sub-underline-home::before {
 		width: 100%;
-		height: 4px;
-		left: 20%;
-		bottom: -10px;
-		background: #da5aa0;
 	}
 }
 
