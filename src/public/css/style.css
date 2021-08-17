@@ -696,6 +696,9 @@ video:focus {
 .sub-banner-color1 {
 	background: linear-gradient(#a53b6d 20%, #24216e 110%);
 }
+.sub-banner-color3 {
+	background: linear-gradient(#005105 20%, #b2cb50 110%);
+}
 .sub-home {
 	font-family: 'Roboto';
 }
@@ -713,8 +716,14 @@ video:focus {
 .underline-color1::before {
 	background: #da5aa0;
 }
-.sub-info {
+.underline-color3::before {
+	background: #0f911b;
+}
+.sub-info1 {
 	background-color: #ebebf2;
+}
+.sub-info3 {
+	background-color: #edf2eb;
 }
 .sub-underline-home::before {
 	content: '';
@@ -731,6 +740,9 @@ video:focus {
 }
 .sub-act-color1 {
 	border: 4px solid #da5aa0;
+}
+.sub-act-color3 {
+	border: 4px solid #0f911b;
 }
 .sub-bg-wave {
 	background-attachment: fixed;
@@ -758,6 +770,9 @@ video:focus {
 .sub-carousel-color1 {
 	color: #a53b6d;
 }
+.sub-carousel-color3 {
+	color: #0f911b;
+}
 .sub-chevron-banner {
 	color: #ffffff;
 	font-size: 42px;
@@ -768,6 +783,9 @@ video:focus {
 }
 .sub-chevron-color1 {
 	animation: colorchange1 20s infinite alternate;
+}
+.sub-chevron-color3 {
+	animation: colorchange3 20s infinite alternate;
 }
 @keyframes colorchange1 {
 	0% {
@@ -804,6 +822,41 @@ video:focus {
 		color: #ffffff;
 	}
 }
+@keyframes colorchange3 {
+	0% {
+		color: #fff;
+	}
+	10% {
+		color: #005105;
+	}
+	20% {
+		color: #ffff;
+	}
+	30% {
+		color: #006a06;
+	}
+	40% {
+		color: #ffff;
+	}
+	50% {
+		color: #006a06;
+	}
+	60% {
+		color: #ffff;
+	}
+	70% {
+		color: #006a06;
+	}
+	80% {
+		color: #ffff;
+	}
+	90% {
+		color: #006a06;
+	}
+	100% {
+		color: #ffff;
+	}
+}
 .sub-carousel-card {
 	background: transparent;
 	border: none;
@@ -830,6 +883,9 @@ video:focus {
 .scrollTop-color1 {
 	background-color: #da5aa0;
 }
+.scrollTop-color3 {
+	background-color: #0f911b;
+}
 .subScrollTop:hover {
 	background-color: #ffff;
 	transition-timing-function: ease-in;
@@ -838,6 +894,10 @@ video:focus {
 .scrollTop-color1:hover {
 	border: 2px solid #a53b6d;
 	color: #a53b6d;
+}
+.scrollTop-color3:hover {
+	border: 2px solid #0f911b;
+	color: #0f911b;
 }
 .sub-up-arrow {
 	position: relative;
@@ -849,6 +909,9 @@ video:focus {
 }
 .sub-link-color1 {
 	color: #a53b6d;
+}
+.sub-link-color3 {
+	color: #0f911b;
 }
 .sub-link:hover {
 	color: #825db1;
