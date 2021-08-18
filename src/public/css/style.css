@@ -696,8 +696,10 @@ video:focus {
 .sub-banner-color1 {
 	background: linear-gradient(#a53b6d 20%, #24216e 110%);
 }
+.sub-banner-color2 {
+	background: linear-gradient(#3ba1a5 20%, #21366e 110%);
+}
 .sub-banner-color3 {
-	/* background: linear-gradient(#bfeeb7 20%, #77dd66 110%); */
 	background: linear-gradient(#bfeeb7 20%, #6ac25b 110%);
 }
 .sub-home {
@@ -717,11 +719,17 @@ video:focus {
 .underline-color1::before {
 	background: #da5aa0;
 }
+.underline-color2::before {
+	background: #084f92;
+}
 .underline-color3::before {
 	background: #0f911b;
 }
 .sub-info1 {
 	background-color: #ebebf2;
+}
+.sub-info2 {
+	background-color: #ebf1f2;
 }
 .sub-info3 {
 	background-color: #edf2eb;
@@ -741,6 +749,9 @@ video:focus {
 }
 .sub-act-color1 {
 	border: 4px solid #da5aa0;
+}
+.sub-act-color2 {
+	border: 4px solid #084f92;
 }
 .sub-act-color3 {
 	border: 4px solid #0f911b;
@@ -771,6 +782,9 @@ video:focus {
 .sub-carousel-color1 {
 	color: #a53b6d;
 }
+.sub-carousel-color2 {
+	color: #084f92;
+}
 .sub-carousel-color3 {
 	color: #0f911b;
 }
@@ -784,6 +798,9 @@ video:focus {
 }
 .sub-chevron-color1 {
 	animation: colorchange1 20s infinite alternate;
+}
+.sub-chevron-color2 {
+	animation: colorchange2 20s infinite alternate;
 }
 .sub-chevron-color3 {
 	animation: colorchange3 20s infinite alternate;
@@ -818,6 +835,41 @@ video:focus {
 	}
 	90% {
 		color: #da5aa0;
+	}
+	100% {
+		color: #ffffff;
+	}
+}
+@keyframes colorchange2 {
+	0% {
+		color: #fff;
+	}
+	10% {
+		color: #098e9a;
+	}
+	20% {
+		color: #ffffff;
+	}
+	30% {
+		color: #098e9a;
+	}
+	40% {
+		color: #ffff;
+	}
+	50% {
+		color: #098e9a;
+	}
+	60% {
+		color: #ffffff;
+	}
+	70% {
+		color: #098e9a;
+	}
+	80% {
+		color: #ffffff;
+	}
+	90% {
+		color: #098e9a;
 	}
 	100% {
 		color: #ffffff;
@@ -884,6 +936,9 @@ video:focus {
 .scrollTop-color1 {
 	background-color: #da5aa0;
 }
+.scrollTop-color2 {
+	background-color: #084f92;
+}
 .scrollTop-color3 {
 	background-color: #0f911b;
 }
@@ -895,6 +950,10 @@ video:focus {
 .scrollTop-color1:hover {
 	border: 2px solid #a53b6d;
 	color: #a53b6d;
+}
+.scrollTop-color2:hover {
+	border: 2px solid #084f92;
+	color: #084f92;
 }
 .scrollTop-color3:hover {
 	border: 2px solid #0f911b;
@@ -910,6 +969,9 @@ video:focus {
 }
 .sub-link-color1 {
 	color: #a53b6d;
+}
+.sub-link-color2 {
+	color: #084f92;
 }
 .sub-link-color3 {
 	color: #0f911b;
