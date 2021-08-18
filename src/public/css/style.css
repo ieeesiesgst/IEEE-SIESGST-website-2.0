@@ -697,7 +697,8 @@ video:focus {
 	background: linear-gradient(#a53b6d 20%, #24216e 110%);
 }
 .sub-banner-color3 {
-	background: linear-gradient(#005105 20%, #b2cb50 110%);
+	/* background: linear-gradient(#bfeeb7 20%, #77dd66 110%); */
+	background: linear-gradient(#bfeeb7 20%, #6ac25b 110%);
 }
 .sub-home {
 	font-family: 'Roboto';
