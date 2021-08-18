@@ -697,13 +697,15 @@ video:focus {
 	background: linear-gradient(#a53b6d 20%, #24216e 110%);
 }
 .sub-banner-color2 {
-	background: linear-gradient(#3ba1a5 20%, #21366e 110%);
+	background: linear-gradient(#3ca5c6 20%, #a5e1c6 110%);
+	/* #3eadcf to #abe9cd */
 }
 .sub-banner-color3 {
 	background: linear-gradient(#bfeeb7 20%, #6ac25b 110%);
 }
 .sub-banner-color4 {
-	background: linear-gradient(#eeeab7 20%, #9a8f09 110%);
+	background: linear-gradient(#f9d976 20%, #f39f86 110%);
+	/* #009ffd to #2a2a72 */
 }
 .sub-home {
 	font-family: 'Roboto';
@@ -863,31 +865,31 @@ video:focus {
 		color: #fff;
 	}
 	10% {
-		color: #098e9a;
+		color: #276d84;
 	}
 	20% {
 		color: #ffffff;
 	}
 	30% {
-		color: #098e9a;
+		color: #276d84;
 	}
 	40% {
 		color: #ffff;
 	}
 	50% {
-		color: #098e9a;
+		color: #276d84;
 	}
 	60% {
 		color: #ffffff;
 	}
 	70% {
-		color: #098e9a;
+		color: #276d84;
 	}
 	80% {
 		color: #ffffff;
 	}
 	90% {
-		color: #098e9a;
+		color: #276d84;
 	}
 	100% {
 		color: #ffffff;
@@ -1052,5 +1054,20 @@ video:focus {
 		width: 100%;
 	}
 }
-
+@media only screen and (max-width: 1800px) and (min-width: 700px) {
+	.cs-gif {
+		min-height: 290px;
+		min-width: 290px;
+		padding-top: 20px;
+		margin-top: 50px;
+	}
+}
+@media only screen and (max-width: 1800px) and (min-width: 1000px) {
+	.mtts-home {
+		min-height: 480px;
+	}
+	.cs-homeGif {
+		min-height: 480px;
+	}
+}
 /*------------------SUBCHAPTERS PAGE ENDS ------------*/
