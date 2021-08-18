@@ -702,6 +702,9 @@ video:focus {
 .sub-banner-color3 {
 	background: linear-gradient(#bfeeb7 20%, #6ac25b 110%);
 }
+.sub-banner-color4 {
+	background: linear-gradient(#eeeab7 20%, #9a8f09 110%);
+}
 .sub-home {
 	font-family: 'Roboto';
 }
@@ -725,6 +728,9 @@ video:focus {
 .underline-color3::before {
 	background: #0f911b;
 }
+.underline-color4::before {
+	background: #faa41a;
+}
 .sub-info1 {
 	background-color: #ebebf2;
 }
@@ -733,6 +739,9 @@ video:focus {
 }
 .sub-info3 {
 	background-color: #edf2eb;
+}
+.sub-info4 {
+	background-color: #f4f4ed;
 }
 .sub-underline-home::before {
 	content: '';
@@ -755,6 +764,9 @@ video:focus {
 }
 .sub-act-color3 {
 	border: 4px solid #0f911b;
+}
+.sub-act-color4 {
+	border: 4px solid #faa41a;
 }
 .sub-bg-wave {
 	background-attachment: fixed;
@@ -788,6 +800,9 @@ video:focus {
 .sub-carousel-color3 {
 	color: #0f911b;
 }
+.sub-carousel-color4 {
+	color: #faa41a;
+}
 .sub-chevron-banner {
 	color: #ffffff;
 	font-size: 42px;
@@ -804,6 +819,9 @@ video:focus {
 }
 .sub-chevron-color3 {
 	animation: colorchange3 20s infinite alternate;
+}
+.sub-chevron-color4 {
+	animation: colorchange4 20s infinite alternate;
 }
 @keyframes colorchange1 {
 	0% {
@@ -910,6 +928,41 @@ video:focus {
 		color: #ffff;
 	}
 }
+@keyframes colorchange4 {
+	0% {
+		color: #fff;
+	}
+	10% {
+		color: #dccd25;
+	}
+	20% {
+		color: #ffff;
+	}
+	30% {
+		color: #dccd25;
+	}
+	40% {
+		color: #ffff;
+	}
+	50% {
+		color: #dccd25;
+	}
+	60% {
+		color: #ffff;
+	}
+	70% {
+		color: #dccd25;
+	}
+	80% {
+		color: #ffff;
+	}
+	90% {
+		color: #dccd25;
+	}
+	100% {
+		color: #ffff;
+	}
+}
 .sub-carousel-card {
 	background: transparent;
 	border: none;
@@ -942,6 +995,9 @@ video:focus {
 .scrollTop-color3 {
 	background-color: #0f911b;
 }
+.scrollTop-color4 {
+	background-color: #faa41a;
+}
 .subScrollTop:hover {
 	background-color: #ffff;
 	transition-timing-function: ease-in;
@@ -959,6 +1015,10 @@ video:focus {
 	border: 2px solid #0f911b;
 	color: #0f911b;
 }
+.scrollTop-color4:hover {
+	border: 2px solid #faa41a;
+	color: #faa41a;
+}
 .sub-up-arrow {
 	position: relative;
 	top: 0;
@@ -975,6 +1035,9 @@ video:focus {
 }
 .sub-link-color3 {
 	color: #0f911b;
+}
+.sub-link-color4 {
+	color: #faa41a;
 }
 .sub-link:hover {
 	color: #825db1;
