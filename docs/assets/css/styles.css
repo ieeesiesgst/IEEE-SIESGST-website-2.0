@@ -836,10 +836,10 @@ video:focus {
 /*------------------SUBCHAPTERS PAGE ENDS ------------*/
 
 /*------------------ACHIEVEMENTS PAGE --------------*/
-.achieve-offer-section{
-	background: linear-gradient( #ffffff 70%, #CE5841 30%) no-repeat;
+.achieve-offer-section {
+	background: linear-gradient(#ffffff 70%, #ce5841 30%) no-repeat;
 }
-.achievement-card{
+.achievement-card {
 	background-color: #ffffff;
 	/* box-shadow: ; */
 }
