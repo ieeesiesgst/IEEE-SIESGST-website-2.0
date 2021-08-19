@@ -698,20 +698,61 @@ video:focus {
 }
 .sub-banner-color2 {
 	background: linear-gradient(#3ca5c6 20%, #a5e1c6 110%);
-	/* #3eadcf to #abe9cd */
 }
 .sub-banner-color3 {
 	background: linear-gradient(#bfeeb7 20%, #6ac25b 110%);
 }
 .sub-banner-color4 {
 	background: linear-gradient(#f9d976 20%, #f39f86 110%);
-	/* #009ffd to #2a2a72 */
 }
 .sub-home {
 	font-family: 'Roboto';
 }
-.sub-home-row {
-	max-height: 485px;
+.sub-home-row1 {
+	min-height: 450px;
+}
+.sub-home-row2 {
+	min-height: 530px;
+}
+.sub-home-row3 {
+	min-height: 450px;
+}
+.sub-home-row4 {
+	min-height: 450px;
+}
+.mtts-gif {
+	max-height: 320px;
+	max-width: 320px;
+}
+.wie-gif {
+	max-height: 370px;
+	max-width: 370px;
+}
+.cs-gif {
+	max-height: 370px;
+	max-width: 370px;
+}
+.isv-gif {
+	max-height: 420px;
+	max-width: 420px;
+}
+@media only screen and (max-width: 450px) and (min-width: 250px) {
+	.mtts-gif {
+		max-height: 280px;
+		max-width: 280px;
+	}
+	.cs-gif {
+		max-height: 290px;
+		max-width: 290px;
+	}
+	.wie-gif {
+		max-height: 280px;
+		max-width: 280px;
+	}
+	.isv-gif {
+		max-height: 290px;
+		max-width: 290px;
+	}
 }
 .sub-underline-overall::before {
 	content: '';
