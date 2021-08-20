@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
 			chapterRes = subRes.Wie;
 			renderPg = 'wie';
 		}
-		// console.log(chapterRes);
+		console.log(chapterRes);
 
 		if (subRes.Error) {
 			res.status(500).json({
@@ -32,9 +32,9 @@ router.get('/', (req, res) => {
 			});
 		} else {
 			res.render(renderPg, {
-				title: 'SUB-CHAPTERS MEMBERS | IEEE SIESGST'
+				title: 'SUB-CHAPTERS MEMBERS | IEEE SIESGST',
+				chapterRes: chapterRes
 			});
-			// res.send('done');
 		}
 	} catch (err) {
 		console.log(err);

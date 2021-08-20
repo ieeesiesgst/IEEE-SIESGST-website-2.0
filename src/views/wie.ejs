@@ -232,6 +232,7 @@
 				</div>
 			</div>
 		</section>
+		<% if(chapterRes.activities.length != 1 && chapterRes.activities[0].trim().toLowerCase() != 'nil' ){ %>
 		<section class="pt-4 mt-3 mx-2 mb-4 pb-5">
 			<div class="container sub-activities sub-act-color1">
 				<div class="about-headlines text-center fs-2 fw-bolder pb-4 pt-2">
@@ -279,37 +280,47 @@
 													justify-content-center
 												"
 											>
-												<div
+											<% chapterRes.activities.forEach((res,index)=>{ %>
+												<% if(index==0){ %>
+													<div
+														class="
+															carousel-item
+															active
+														"
+													>
+												<% }else{ %>
+													<div
 													class="
 														carousel-item
-														active
+													
 													"
-												>
+													>
+												<% } %>
 													<div class="card sub-carousel-card">
 														<div class="row">
 															<img
-																src="/images/aisywc.jpg"
+																src="<%= res %>"
 																class="
-																    img-fluid
+																	img-fluid
 																	d-block
 																	w-100
 																	subChp-img
 																"
 															/>
-															<div
-																class="		
-																	d-md-block py-2
-																	text-center
-																"
-															>
-																Lorem Ispum
-																tattatataaaatatatatatattatatattat
-																Lorem Ispum
-																tattatataaaatatatatatattatatattat
-															</div>
+															<% if(chapterRes.des[index].trim().toLowerCase() != 'nil' ){ %>
+																<div
+																	class="		
+																		d-md-block py-2
+																		text-center
+																	"
+																>
+																	<%= chapterRes.des[index] %>
+																</div>
+															<% } %>
 														</div>
 													</div>
 												</div>
+											<% }) %>
 											</div>
 										</div>
 									</div>
@@ -339,6 +350,7 @@
 				</div>
 			</div>
 		</section>
+		<% } %>
         <%- include('./partials/footer.ejs') %>
 		
 		<script>
