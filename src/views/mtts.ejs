@@ -48,42 +48,12 @@
 				sub-up-arrow
 			"
 		></i></button>
-		<!-- <section class="sub-banner sub-banner-color2 sub-bg-wave">sub-banner 
-			<div class="container px-5 pb-2 sub-home">
-				<div class="row h-100 justify-content-center align-items-center sub-home-row mtts-home">
-					<div class="col-md-6">
-						<img src="/images/mtts-home.gif" class="w-100" alt="wie"/>
-					</div>
-					<div class="col-md-6">
-						<div class="py-2">
-							<div class="fs-2 text-center text-white">
-								MICROWAVE THEORY AND TECHNIQUES SOCIETY
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="text-center" >
-					<div
-						class="home-banner-btn-div mx-auto"
-						onclick="if(window.innerWidth>850){window.scrollTo(0, document.getElementById('scroll-wie-banner').offsetTop - 70)}else{window.scrollTo(0, document.getElementById('scroll-wie-banner').offsetTop - 60)}"
-					>
-						<i
-						class="
-							fa fa-angle-double-down
-							
-							sub-chevron-banner sub-chevron-color2
-						"	
-						></i>
-					</div>
-				</div>
-			</div>	
-		</section> -->
 		<section class="pt-4 sub-home sub-banner sub-banner-color2 sub-bg-wave sub-home-row2">
 			<div class="container">
 				<div class="row pt-5">
 					<div class="col-md-6">
 						<div class="text-center">
-							<img src="/images/mtts-home.gif" class="mtts-gif" alt="mtts"/>
+							<img src="/images/mtts-home1.gif" class="mtts-gif" alt="mtts"/>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -242,113 +212,125 @@
 				</div>
 			</div>
 		</section>
-		<section class="pt-4 mt-3 mx-2 mb-4 pb-5">
-			<div class="container sub-activities sub-act-color2">
-				<div class="about-headlines text-center fs-2 fw-bolder pb-4 pt-2">
-					<span class="position-relative sub-underline-overall underline-color2"
-						>ACTIVITIES
-                    </span>
-				</div>
-				<div class="row">
-					<div class="col ">
-						<div class="container justify-content-center align-items-center sub-activity">
-							<div
-								id="carouselExampleIndicators"
-								class="carousel slide "
-								data-bs-ride="carousel"
-							>
-								<div class="row">
-									<div class="col">
-										<button
-                                            class="carousel-control-prev pb-4"
-                                            type="button"
-                                            data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide="prev"
-								        >
-                                            <i
-                                                class="
-                                                    fa fa-angle-double-left
-                                                    
-                                                    sub-chevron-carousel sub-carousel-color2
-                                                "
-                                            ></i>
-                                            <span class="visually-hidden"
-                                                >Previous
-                                            </span>
-								        </button>
-									</div>
-									<div class="col-9">
-										<div
-											class="
-												carousel-inner
-											"
-										>
+		<% if(chapterRes.activities.length != 1 && chapterRes.activities[0].trim().toLowerCase() != 'nil' ){ %>
+			<section class="pt-4 mt-3 mx-2 mb-4 pb-5">
+				<div class="container sub-activities sub-act-color2">
+					<div class="about-headlines text-center fs-2 fw-bolder pb-4 pt-2">
+						<span class="position-relative sub-underline-overall underline-color2"
+							>ACTIVITIES
+						</span>
+					</div>
+					<div class="row">
+						<div class="col ">
+							<div class="container justify-content-center align-items-center sub-activity">
+								<div
+									id="carouselExampleIndicators"
+									class="carousel slide "
+									data-bs-ride="carousel"
+								>
+									<div class="row">
+										<div class="col">
+											<button
+												class="carousel-control-prev pb-4"
+												type="button"
+												data-bs-target="#carouselExampleIndicators"
+												data-bs-slide="prev"
+											>
+												<i
+													class="
+														fa fa-angle-double-left
+														
+														sub-chevron-carousel sub-carousel-color2
+													"
+												></i>
+												<span class="visually-hidden"
+													>Previous
+												</span>
+											</button>
+										</div>
+										<div class="col-9">
 											<div
 												class="
-													align-items-center
-													justify-content-center
+													carousel-inner
 												"
 											>
 												<div
 													class="
-														carousel-item
-														active
+														align-items-center
+														justify-content-center
 													"
 												>
-													<div class="card sub-carousel-card">
-														<div class="row">
-															<img
-																src="/images/sameer.jpg"
-																class="
-																    img-fluid
-																	d-block
-																	w-100
-																	subChp-img
-																"
-															/>
-															<div
-																class="		
-																	d-md-block py-2
-																	text-center
-																"
-															>
-																Lorem Ispum
-																tattatataaaatatatatatattatatattat
-																Lorem Ispum
-																tattatataaaatatatatatattatatattat
+												<% chapterRes.activities.forEach((res,index)=>{ %>
+													<% if(index==0){ %>
+														<div
+															class="
+																carousel-item
+																active
+															"
+														>
+													<% }else{ %>
+														<div
+														class="
+															carousel-item
+														
+														"
+														>
+													<% } %>
+															<div class="card sub-carousel-card">
+																<div class="row">
+																	<img
+																		src="<%= res %>"
+																		class="
+																			img-fluid
+																			d-block
+																			w-100
+																			subChp-img
+																		"
+																	/>
+																	<% if(chapterRes.des[index].trim().toLowerCase() != 'nil' ){ %>
+																		<div
+																			class="		
+																				d-md-block py-2
+																				text-center
+																			"
+																		>
+																			<%= chapterRes.des[index] %>
+																		</div>
+																	<% } %>
+																</div>
 															</div>
 														</div>
-													</div>
+												<% }) %>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="col">
-										<button
-											class="carousel-control-next pb-4"
-											type="button"
-											data-bs-target="#carouselExampleIndicators"
-											data-bs-slide="next"
-										>
-											<i
-												class="
-													fa fa-angle-double-right
-													
-													sub-chevron-carousel sub-carousel-color2
-												"
-											></i>
-											<span class="sr-only"
-												>Next</span
+										<div class="col">
+											<button
+												class="carousel-control-next pb-4"
+												type="button"
+												data-bs-target="#carouselExampleIndicators"
+												data-bs-slide="next"
 											>
-										</button>
-									</div>		
+												<i
+													class="
+														fa fa-angle-double-right
+														
+														sub-chevron-carousel sub-carousel-color2
+													"
+												></i>
+												<span class="sr-only"
+													>Next</span
+												>
+											</button>
+										</div>		
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		<% } %>
         <%- include('./partials/footer.ejs') %>
 		
 		<script>

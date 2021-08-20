@@ -23,7 +23,6 @@ router.get('/', (req, res) => {
 			chapterRes = subRes.Wie;
 			renderPg = 'wie';
 		}
-		console.log(chapterRes);
 
 		if (subRes.Error) {
 			res.status(500).json({
