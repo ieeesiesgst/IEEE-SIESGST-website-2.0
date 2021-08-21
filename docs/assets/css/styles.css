@@ -842,11 +842,11 @@ video:focus {
 .achievement-card {
 	background-color: #ffffff;
 	box-shadow: 0 0 0 0 #333;
-	height:70%;
+	height: 70%;
 	max-height: 100px;
 
 	/* box-shadow: ; */
 }
-.achieve-numbers{
+.achieve-numbers {
 	background-color: #ce5841;
 }
