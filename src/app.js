@@ -20,6 +20,7 @@ const teamRouter = require('./routes/teamRouter');
 const memberRouter = require('./routes/memberRouter');
 const contactRouter = require('./routes/contactRouter');
 const subChapter = require('./routes/subChp');
+const achievement = require('./routes/achievement');
 
 const app = express();
 app.use(express.static(path.join(__dirname, './public')));
@@ -46,6 +47,7 @@ app.use('/allteams', teamRouter);
 app.use('/members', memberRouter);
 app.use('/contact', contactRouter);
 app.use('/subChapter', subChapter);
+app.use('/achievement', achievement);
 
 app.use('/', generalRouter);
 
