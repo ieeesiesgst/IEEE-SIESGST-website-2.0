@@ -12,6 +12,12 @@
 			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
 			crossorigin="anonymous"
 		/>
+		<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous"
+	/>
 		<!--- StyleSheet --->
 		<link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -87,28 +93,43 @@
 				</div>
 			</div>
 		</section>
-		<section class="achieve-numbers p-5">
+		<section class="achieve-numbers p-lg-5 p-md-3">
 			<div class="row about-number text-white text-center">
+				
 				<div class="d-inline-block col-md-3 text-center fs-5">
-					<span class="count">150</span>+
+					<div><i class="far fa-2x fa-smile"></i></div>
+					<span class="achieve-count">150</span>+
 					<p>Members</p>
 				</div>
 				<div class="d-inline-block col-md-3 text-center fs-5">
-					<span class="count">150</span>+
+					<div><i class="fas fa-2x fa-award"></i></div>
+					<span class="achieve-count">150</span>+
 					<p>Members</p>
 				</div>
 				<div class="d-inline-block col-md-3 text-center fs-5">
-					<span class="count">50</span>+
+					<div><i class="fas fa-2x fa-users"></i></div>
+					<span class="achieve-count">50</span>+
 					<p>Awards</p>
 				</div>
 				<div class="d-inline-block col-md-3 text-center fs-5">
-					<span class="count">10</span>+
+					<div><i class="fas fa-2x fa-user-check"></i></div>
+					<span class="achieve-count">10</span>+
 					<p>Events</p>
 				</div>
 				<div style="clear: both"></div>
 			</div>
 		</section>
+		<section>
 
+			<div class="container p-5">
+				<div class="about-headlines text-center fs-2 pb-5 fw-bolder">
+					<span class="position-relative underline-overall-orange"
+						>Our Achievements</span
+					>
+				</div>
+			
+			</div>
+		</section>
 		<!-- Optional JavaScript; choose one of the two! -->
 
 		<!-- Option 1: Bootstrap Bundle with Popper -->
@@ -118,6 +139,8 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://use.fontawesome.com/ce94556118.js"></script>
+		
 
 		<!-- Option 2: Separate Popper and Bootstrap JS -->
 		<!--
@@ -141,7 +164,7 @@
 			function testScroll() {
 				if (isScrolledIntoView($('.achieve-numbers')) && !viewed) {
 					viewed = true;
-					$('.count').each(function () {
+					$('.achieve-count').each(function () {
 						$(this)
 							.prop('Counter', 0)
 							.animate(
