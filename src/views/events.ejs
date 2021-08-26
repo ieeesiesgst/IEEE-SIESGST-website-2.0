@@ -42,57 +42,101 @@
 						>ACTIVE EVENTS</span
 					>
 				</h3>
-				<% eventArray.activeE.forEach((res)=>{ %>
-				<div class="container events-container p-4 my-3">
-					<div class="row">
-						<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
-							<div class="p-3 events-desc" id="activeDes">
-						<% }else{ %>
-							<div class="col-md-4" id="activePic">
-								<img
-									src="<%= res.pic %>" 
-									class="
-										img-thumbnail img-fluid
-										w-100
-										events-bg-img
-										rounded
-										p-2"
-								/>
+				<% eventArray.activeE.forEach((res,index)=>{ %>
+					<div
+						class="modal fade"
+						id="staticBackdrop<%= index %>"
+						data-bs-backdrop="static"
+						data-bs-keyboard="false"
+						tabindex="-1"
+						aria-labelledby="staticBackdropLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog modal-dialog-scrollable">
+							<div class="modal-content">
+								<div class="modal-header event-modal">
+									<h5 class="modal-title" id="staticBackdropLabel">
+										<%= res.name %>
+									</h5>
+									<button
+										type="button"
+										class="btn-close close btn-close-white eventModalBtn"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<%- res.long %>
+								</div>
+								<div class="modal-footer"></div>
 							</div>
-							<div class="col-md-8 p-3 events-desc" id="activeDes">
-						<% } %>
-							<div class="row">
-								<p>
-									<span class="fw-bold"><%= res.name %> : </span>
+						</div>
+					</div>
+					<div class="container events-container p-4 my-3">
+						<div class="row">
+							<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
+								<div class="p-3 events-desc" id="activeDes">
+							<% }else{ %>
+								<div class="col-md-4" id="activePic">
+									<img
+										src="<%= res.pic %>" 
+										class="
+											img-thumbnail img-fluid
+											w-100
+											events-bg-img
+											rounded
+											p-2"
+									/>
+								</div>
+								<div class="col-md-8 p-3 events-desc" id="activeDes">
+							<% } %>
+								<div class="row">
+									<p>
+										<span class="fw-bold"><%= res.name %> : </span>
+										<br />
+										<span class="fw-normal text-center">
+											<%= res.small %>
+										</span>
+									</p>
 									<br />
-									<span class="fw-normal text-center">
-										<%= res.small %>
-									</span>
-								</p>
-								<br />
-									<% if(res.start.trim().toLowerCase() == 'Date'){%>
-										<script>document.getElementById('activeDate').display = none</script>
-									<% }else{ %>
-										<div id="activeDate">
-											<span class="fw-bolder">DATE: </span><%= res.start %>
-										</div>
-									<% } %>
-									<% if(res.time.trim().toLowerCase() == 'nil'){%>
-										<script>document.getElementById('activeTime').display = none</script>
-									<% }else{ %>
-										<div id="activeTime">
-											<span class="fw-bolder">TIME: </span><%= res.time %>
-										</div>
-									<% } %>
-							</div>
-	
-							<div class="row float-end">
-								<div class="d-inline-flex mt-2">
-									<% if(res.website.trim().toLowerCase() == 'nil'){%>
-										<% if(res.long.trim().toLowerCase() == 'nil'){%>
-											<script>displayId('knowA')</script>
+										<% if(res.start.trim().toLowerCase() == 'Date'){%>
+											<script>document.getElementById('activeDate').display = none</script>
 										<% }else{ %>
-											<a
+											<div id="activeDate">
+												<span class="fw-bolder">DATE: </span><%= res.start %>
+											</div>
+										<% } %>
+										<% if(res.time.trim().toLowerCase() == 'nil'){%>
+											<script>document.getElementById('activeTime').display = none</script>
+										<% }else{ %>
+											<div id="activeTime">
+												<span class="fw-bolder">TIME: </span><%= res.time %>
+											</div>
+										<% } %>
+								</div>
+		
+								<div class="row float-end">
+									<div class="d-inline-flex mt-2">
+										<% if(res.website.trim().toLowerCase() == 'nil'){%>
+											<% if(res.long.trim().toLowerCase() == 'nil'){%>
+												<script>displayId('knowA')</script>
+											<% }else{ %>
+												<a
+												href="<%= res.website %>"
+												class="
+													p-2
+													pe-lg-5
+													ps-lg-5
+													ps-lg-3
+													btn-events
+												"data-bs-toggle="modal"
+												data-bs-target="#staticBackdrop<%= index %>"
+												id="knowA"
+												>Know More</a
+												>
+											<% } %>
+										<% }else{ %>
+										<a
 											href="<%= res.website %>"
 											class="
 												p-2
@@ -100,75 +144,31 @@
 												ps-lg-5
 												ps-lg-3
 												btn-events
-											"data-bs-toggle="modal"
-											data-bs-target="#staticBackdrop"
+											"
 											id="knowA"
 											>Know More</a
-											>
+										>
 										<% } %>
-									<% }else{ %>
-									<a
-										href="<%= res.website %>"
-										class="
+										&nbsp; &nbsp;
+										<% if(res.reg.trim().toLowerCase() == 'nil'){%>
+											<script>displayId('regA')</script>
+										<% }else{ %>
+										<a
+											href="<%res.reg %>"
+											class="
 											p-2
 											pe-lg-5
 											ps-lg-5
 											ps-lg-3
 											btn-events
-										"
-										id="knowA"
-										>Know More</a
-									>
-									<% } %>
-									&nbsp; &nbsp;
-									<% if(res.reg.trim().toLowerCase() == 'nil'){%>
-										<script>displayId('regA')</script>
-									<% }else{ %>
-									<a
-										href="<%res.reg %>"
-										class="
-										p-2
-										pe-lg-5
-										ps-lg-5
-										ps-lg-3
-										btn-events
-										" id="regA"
-										>Register Now</a
-									><% } %>
+											" id="regA"
+											>Register Now</a
+										><% } %>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div
-				class="modal fade"
-				id="staticBackdrop"
-				data-bs-backdrop="static"
-				data-bs-keyboard="false"
-				tabindex="-1"
-				aria-labelledby="staticBackdropLabel"
-				aria-hidden="true"
-				>
-					<div class="modal-dialog modal-dialog-scrollable">
-						<div class="modal-content">
-							<div class="modal-header event-modal">
-								<h5 class="modal-title" id="staticBackdropLabel">
-									<%= res.name %>
-								</h5>
-								<button
-									type="button"
-									class="btn-close close btn-close-white eventModalBtn"
-									data-bs-dismiss="modal"
-									aria-label="Close"
-								></button>
-							</div>
-							<div class="modal-body">
-								<%- res.long %>
-							</div>
-							<div class="modal-footer"></div>
-						</div>
-					</div>
-				</div>
 				<% }) %>
 			</section>
 		<% } %>
@@ -190,7 +190,36 @@
 						>UPCOMING EVENTS</span
 					>
 				</h3>
-				<% eventArray.upcomingE.forEach((res)=>{%>
+				<% eventArray.upcomingE.forEach((res,index)=>{%>
+					<div
+						class="modal fade"
+						id="staticbackdrop<%= index %>"
+						data-bs-backdrop="static"
+						data-bs-keyboard="false"
+						tabindex="-1"
+						aria-labelledby="staticBackdropLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog modal-dialog-scrollable">
+							<div class="modal-content">
+								<div class="modal-header event-modal">
+									<h5 class="modal-title" id="staticBackdropLabel">
+										<%= res.name %>
+									</h5>
+									<button
+										type="button"
+										class="btn-close close btn-close-white eventModalBtn"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<%- res.long %>
+								</div>
+								<div class="modal-footer"></div>
+							</div>
+						</div>
+					</div>
 					<div class="container events-container p-4 my-3">
 						<div class="row">
 							<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
@@ -237,7 +266,23 @@
 								<div class="row float-end">
 									<div class="d-inline-flex mt-2">
 										<% if(res.website.trim().toLowerCase() == 'nil'){%>
-											<script>displayId('knowU')</script>
+											<% if(res.long.trim().toLowerCase() == 'nil'){%>
+												<script>displayId('knowU')</script>
+											<% }else{ %>
+												<a
+												href="<%= res.website %>"
+												class="
+												p-2
+												pe-lg-5
+												ps-lg-5
+												ps-lg-3
+												btn-events
+												"data-bs-toggle="modal"
+												data-bs-target="#staticbackdrop<%= index %>"
+												id="knowU"
+												>Know More</a
+												>
+											<% } %>
 										<% }else{ %>
 										<a
 											href="<%= res.website %>"
@@ -272,7 +317,7 @@
 							</div>
 						</div>
 					</div>
-					<% }) %>
+				<% }) %>
 			</section>
 		<% } %>
 
