@@ -531,6 +531,15 @@ video:focus {
 /* ---------------- CONTACT PAGE ENDS------------- */
 
 /*-------------------TEAMS PAGE -------------------*/
+.event-modal {
+	background-image: url('../images/eventModal.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+}
+.eventModalBtn {
+	color: white;
+}
 .teams-bg {
 	background: linear-gradient(
 			rgba(236, 227, 227, 0.3),

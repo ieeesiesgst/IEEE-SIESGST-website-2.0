@@ -89,7 +89,23 @@
 							<div class="row float-end">
 								<div class="d-inline-flex mt-2">
 									<% if(res.website.trim().toLowerCase() == 'nil'){%>
-										<script>displayId('knowA')</script>
+										<% if(res.long.trim().toLowerCase() == 'nil'){%>
+											<script>displayId('knowA')</script>
+										<% }else{ %>
+											<a
+											href="<%= res.website %>"
+											class="
+												p-2
+												pe-lg-5
+												ps-lg-5
+												ps-lg-3
+												btn-events
+											"data-bs-toggle="modal"
+											data-bs-target="#staticBackdrop"
+											id="knowA"
+											>Know More</a
+											>
+										<% } %>
 									<% }else{ %>
 									<a
 										href="<%= res.website %>"
@@ -121,6 +137,35 @@
 									><% } %>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div
+				class="modal fade"
+				id="staticBackdrop"
+				data-bs-backdrop="static"
+				data-bs-keyboard="false"
+				tabindex="-1"
+				aria-labelledby="staticBackdropLabel"
+				aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header event-modal">
+								<h5 class="modal-title" id="staticBackdropLabel">
+									<%= res.name %>
+								</h5>
+								<button
+									type="button"
+									class="btn-close close btn-close-white eventModalBtn"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+							<div class="modal-body">
+								<%- res.long %>
+							</div>
+							<div class="modal-footer"></div>
 						</div>
 					</div>
 				</div>
@@ -230,6 +275,7 @@
 					<% }) %>
 			</section>
 		<% } %>
+
 		<%- include('./partials/footer.ejs') %>
     </body>
 </html>

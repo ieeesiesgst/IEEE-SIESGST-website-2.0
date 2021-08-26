@@ -22,6 +22,7 @@ function activeUpcoming(i, content) {
 		time: content.Etime[i],
 		start: start,
 		small: content.Esmall[i],
+		long: content.Elong[i],
 		website: content.Ewebsite[i],
 		reg: content.Ereg[i]
 	};
