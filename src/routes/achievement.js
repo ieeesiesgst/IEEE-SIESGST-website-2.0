@@ -11,13 +11,59 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
 	try {
-		// res.render('achivements', {
-		//     title: 'ACHIEVEMENTS | IEEE SIESGST',
-		//     lastPg: galleryRes.GlastPg,
-		//     galResponse: galleryRes.GalRes,
-		//     callPg: callPg
-		// });
-		res.send('done');
+		let callPg = parseInt(req.query.page);
+		if (isNaN(callPg) || callPg < 1) {
+			callPg = 1;
+		}
+		const domainData = {
+			domain: 'achieve',
+			page: callPg
+		};
+
+		let achieveRes;
+		if (callPg == 1) {
+			achieveRes = cachedata('achieve');
+		} else {
+			await cache
+				.get('achieve' + callPg, async () => {
+					const achieveData = await getData(domainData);
+					achieveRes = achieveData.data;
+					return achieveRes;
+				})
+				.then((result) => {
+					achieveRes = result;
+				})
+				.catch((err) => {
+					//rejected promise error
+					console.log(err);
+					res.status(500).json({
+						status: 'Fail',
+						message: 'Server Error!'
+					});
+				});
+		}
+
+		if (achieveRes.Error) {
+			res.status(500).json({
+				status: 'Fail',
+				message: 'Server Error!'
+			});
+		} else {
+			if (callPg > achieveRes.GlastPg) {
+				callPg = achieveRes.GlastPg;
+			}
+			// res.render('achieve', {
+			// 	title: 'ACHIEVEMENT | IEEE SIESGST',
+			// 	lastPg: achieveRes.AlastPg,
+			// 	achieveRes: achieveRes.ARes,
+			// 	callPg: callPg
+			// });
+			res.send({
+				lastPg: achieveRes.AlastPg,
+				achieveRes: achieveRes.ARes,
+				callPg: callPg
+			});
+		}
 	} catch (err) {
 		console.log(err);
 		res.status(500).json({
