@@ -1,0 +1,83 @@
+body {
+	font-family: 'Roboto';
+}
+/* .home {
+      background: url("./ss.jpg");
+      background-repeat: no-repeat;
+      background-size: 1300px 650px;
+      min-height: 700px;
+    } */
+.homev1 {
+	border-left: 3px solid #111722;
+	height: 480px;
+	top: 10px;
+	left: 30px;
+}
+.homev2 {
+	border-left: 3px solid #111722;
+	height: 420px;
+	top: 40px;
+	left: 50px;
+}
+.homev3 {
+	border-left: 3px solid #111722;
+	height: 480px;
+	top: 10px;
+	right: 30px;
+}
+.homev4 {
+	border-left: 3px solid #111722;
+	height: 420px;
+	top: 40px;
+	right: 50px;
+}
+.circleCount {
+	border: dashed #ffcc66;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	width: 100px;
+	animation: spin 10s linear infinite;
+}
+@keyframes spin {
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+.about-us {
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #111722;
+}
+.about-text {
+	max-width: 800px;
+}
+/* --------------------------------------- */
+.home-flagShip {
+	background: linear-gradient(#111722 20%, #2e3344 110%);
+}
+.flagShipv1 {
+	border-left: 3px solid #111722;
+	height: 220px;
+	left: 160px;
+}
+.flagShipv2 {
+	border-left: 3px solid #111722;
+	height: 220px;
+	right: 160px;
+}
+
+/* .flagshipEvent {
+    max-width: 1000px;
+  } */
+/* .falgshipImg {
+    position: absolute;
+    width: 200px;
+    left: 300px;
+  } */
+/* .home-techo {
+    background-color: white;
+  }
+  .home-epsilon {
+    background-color: #c95b0c;
+  } */
