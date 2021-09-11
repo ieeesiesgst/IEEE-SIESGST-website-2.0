@@ -1,12 +1,6 @@
 body {
 	font-family: 'Roboto';
 }
-/* .home {
-      background: url("./ss.jpg");
-      background-repeat: no-repeat;
-      background-size: 1300px 650px;
-      min-height: 700px;
-    } */
 .homev1 {
 	border-left: 3px solid #111722;
 	height: 480px;
@@ -66,18 +60,43 @@ body {
 	height: 220px;
 	right: 160px;
 }
+/* --events-- */
+.home-events {
+	color: #111722;
+	background: linear-gradient(#2e3344 10%, #111722 70%);
+	min-height: 600px;
+}
+.homeEvent-bg {
+	min-height: 400px;
+}
+.homeEvent-carousel {
+	top: 188px;
+}
+@media screen and (max-width: 390px) {
+	.homeEvent-bg {
+		min-height: 450px;
+	}
+	.homeEvent-carousel {
+		top: 238px;
+	}
+	.home-events {
+		min-height: 650px;
+	}
+}
+.event-slideBtn:hover {
+	cursor: pointer;
+}
+.eventv1 {
+	border-left: 3px solid #111722;
+	height: 350px;
+	top: 10px;
+	left: 30px;
+}
+.eventv2 {
+	border-left: 3px solid #111722;
+	height: 150px;
+	top: 50px;
+	left: 50px;
+}
 
-/* .flagshipEvent {
-    max-width: 1000px;
-  } */
-/* .falgshipImg {
-    position: absolute;
-    width: 200px;
-    left: 300px;
-  } */
-/* .home-techo {
-    background-color: white;
-  }
-  .home-epsilon {
-    background-color: #c95b0c;
-  } */
+/* ----------------------------------- */
