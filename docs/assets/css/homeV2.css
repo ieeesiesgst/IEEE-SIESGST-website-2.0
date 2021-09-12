@@ -105,4 +105,5 @@ body {
 }
 .event-slideBtn:hover {
 	cursor: pointer;
+	opacity: 0.8;
 }
