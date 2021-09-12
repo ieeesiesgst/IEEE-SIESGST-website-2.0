@@ -1,3 +1,4 @@
+/* -----------------------------------------------HOME PAGE----------------------------------------------- */
 body {
 	font-family: 'Roboto';
 }
@@ -46,7 +47,7 @@ body {
 .about-text {
 	max-width: 800px;
 }
-/* --------------------------------------- */
+/* -----Home Flagship----- */
 .home-flagShip {
 	background: linear-gradient(#111722 20%, #2e3344 110%);
 }
@@ -60,32 +61,7 @@ body {
 	height: 220px;
 	right: 160px;
 }
-/* --events-- */
-.home-events {
-	color: #111722;
-	background: linear-gradient(#2e3344 10%, #111722 70%);
-	min-height: 600px;
-}
-.homeEvent-bg {
-	min-height: 400px;
-}
-.homeEvent-carousel {
-	top: 188px;
-}
-@media screen and (max-width: 390px) {
-	.homeEvent-bg {
-		min-height: 450px;
-	}
-	.homeEvent-carousel {
-		top: 238px;
-	}
-	.home-events {
-		min-height: 650px;
-	}
-}
-.event-slideBtn:hover {
-	cursor: pointer;
-}
+/* -- Home Events-- */
 .eventv1 {
 	border-left: 3px solid #111722;
 	height: 350px;
@@ -98,5 +74,35 @@ body {
 	top: 50px;
 	left: 50px;
 }
-
-/* ----------------------------------- */
+.home-events {
+	color: #111722;
+	background: linear-gradient(#2e3344 10%, #111722 70%);
+	min-height: 600px;
+}
+.homeEvent-bg {
+	min-height: 400px;
+}
+.homeEvent-carousel {
+	top: 250px;
+}
+@media screen and (min-width: 1200px) {
+	.homeEvent-carousel {
+		left: 80px;
+		width: 980px;
+		top: 210px;
+	}
+}
+@media screen and (min-width: 800px) and (max-width: 990px) {
+	.homeEvent-carousel {
+		top: 270px;
+		left: -3px;
+	}
+}
+@media screen and (max-width: 800px) {
+	.homeEvent-carousel {
+		left: 2px;
+	}
+}
+.event-slideBtn:hover {
+	cursor: pointer;
+}

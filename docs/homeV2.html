@@ -143,7 +143,7 @@
 									class="
 										flagShipv1
 										position-absolute
-										d-none d-lg-block
+										d-none d-xl-block
 									"
 								></div>
 								<p class="fs-4 fw-bold">Techopedia</p>
@@ -175,7 +175,7 @@
 									class="
 										flagShipv2
 										position-absolute
-										d-none d-lg-block
+										d-none d-xl-block
 									"
 								></div>
 								<p class="fs-4 fw-bold">Epsilon</p>
@@ -192,10 +192,10 @@
 			</div>
 		</section>
 		<section class="home-events pt-5 px-5 mb-4">
-			<div class="container bg-white position-relative homeEvent-bg">
+			<div class="container bg-white homeEvent-bg position-relative">
 				<div class="eventv1 position-absolute d-none d-lg-block"></div>
 				<div class="eventv2 position-absolute d-none d-lg-block"></div>
-				<div class="container pt-5">
+				<div class="container pt-2 pt-md-5">
 					<div class="row text-lg-start text-center ms-lg-4">
 						<div class="col-lg-4 col-12 ms-lg-5 ms-0 py-2">
 							<div class="fs-3 fw-bold">OUR EVENTS</div>
@@ -238,7 +238,7 @@
 						</div>
 					</div>
 				</div>
-				<div
+				<!-- <div
 					class="
 						container
 						position-absolute
@@ -249,7 +249,7 @@
 					"
 				>
 					<div class="my-slider home-Ecarousel pb-5 pt-4">
-						<div class="card mx-4 card-c" style="width: 18rem">
+						<div class="card mx-4 card-2" style="width: 18rem">
 							<img
 								src="./assets/images/blue.jpg"
 								class="card-img-top"
@@ -388,6 +388,82 @@
 							</div>
 						</div>
 					</div>
+				</div> -->
+				<div class="container position-absolute homeEvent-carousel">
+					<div class="my-slider event-carousel">
+						<div>
+							<div class="card mx-3">
+								<img
+									src="./assets/images/blue.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<p class="card-text">1. WSHOP</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="card mx-3">
+								<img
+									src="./assets/images/blue.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<p class="card-text">2. XXXPPP</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="card mx-3">
+								<img
+									src="./assets/images/blue.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<p class="card-text">3. MTTS</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="card mx-3">
+								<img
+									src="./assets/images/blue.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<p class="card-text">4. TECHO</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="card mx-3">
+								<img
+									src="./assets/images/blue.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<p class="card-text">5. ABCD</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="card mx-3">
+								<img
+									src="./assets/images/blue.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<p class="card-text">6. EPSILON</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -397,21 +473,21 @@
 				items: 1,
 				slideBy: 'page',
 				autoplay: true,
-				nav: false,
+				mouseDrag: 'mouseDrag',
 				autoplayButtonOutput: false,
+				nav: false,
 				controlsContainer: '#controls',
 				prevButton: '.previous',
 				nextButton: '.next',
-				fixedWidth: 250,
 				center: true,
 				responsive: {
-					350: {
+					300: {
 						items: 1
 					},
-					600: {
+					570: {
 						items: 2
 					},
-					1200: {
+					800: {
 						items: 3
 					}
 				}
