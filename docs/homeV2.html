@@ -384,7 +384,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="home-subChp my-4">
+		<section class="home-subChp shadow-lg py-3 m-4">
 			<div class="container">
 				<div
 					class="
@@ -392,7 +392,6 @@
 						justify-content-end
 						text-lg-start text-center
 						ms-lg-4
-						mt-5
 						mb-4
 					"
 				>
@@ -401,11 +400,50 @@
 					</div>
 				</div>
 
-				<div class="row text-center gx-3">
-					<div class="col-12 col-lg-9 order-lg-first order-last">
-						col-8
+				<div class="row text-center gx-3" id="xx">
+					<div
+						class="
+							col-12 col-lg-9
+							order-lg-first order-last
+							my-2
+							position-relative
+						"
+					>
+						<div
+							class="
+								subImgv1
+								position-absolute
+								d-none d-lg-block
+								py-3
+							"
+						></div>
+						<div
+							class="
+								subImgv2
+								position-absolute
+								d-none d-lg-block
+								py-3
+							"
+						></div>
+
+						<img
+							src="./assets/images/sub-1.jpg"
+							class="
+								img-fluid
+								sub-img
+								animate__animated animate__pulse
+							"
+							alt="..."
+							id="home-subImg"
+						/>
 					</div>
-					<div class="col-12 col-lg-3 order-lg-last order-first">
+					<div
+						class="
+							col-12 col-lg-3
+							order-lg-last order-first
+							position-relative
+						"
+					>
 						<div
 							class="
 								subv1
@@ -427,6 +465,7 @@
 										subName
 										subName1
 									"
+									id="wie"
 								>
 									WIE
 								</div>
@@ -440,6 +479,7 @@
 										subName
 										subName2
 									"
+									id="mtts"
 								>
 									MTTs
 								</div>
@@ -453,6 +493,7 @@
 										subName
 										subName1
 									"
+									id="isv"
 								>
 									ISV
 								</div>
@@ -466,17 +507,12 @@
 										subName
 										subName2
 									"
+									id="cs"
 								>
 									CS
 								</div>
 							</div>
 						</div>
-						<!-- <ul class="subList">
-							<li class="py-4 my-3 subName">WIE</li>
-							<li class="py-4 my-3 subName">MTTs</li>
-							<li class="py-4 my-3 subName">ISV</li>
-							<li class="py-4 my-3 subName">CS</li>
-						</ul> -->
 					</div>
 				</div>
 			</div>
@@ -505,6 +541,33 @@
 						items: 3
 					}
 				}
+			});
+
+			function changeImage(i) {
+				document
+					.getElementById('home-subImg')
+					.setAttribute('src', `./assets/images/sub-${i}.jpg`);
+				document.getElementById(sub[3]).classList.add('active-sub');
+				for (var i = 0; i < 3; i++) {
+					document
+						.getElementById(sub[i])
+						.classList.remove('active-sub');
+				}
+			}
+
+			document.getElementById('wie').classList.add('active-sub');
+
+			document.getElementById('wie').addEventListener('click', () => {
+				changeImage(1);
+			});
+			document.getElementById('mtts').addEventListener('click', () => {
+				changeImage(2);
+			});
+			document.getElementById('cs').addEventListener('click', () => {
+				changeImage(3);
+			});
+			document.getElementById('isv').addEventListener('click', () => {
+				changeImage(2);
 			});
 		</script>
 	</body>

@@ -111,20 +111,20 @@ body {
 .subv1 {
 	border-left: 3px solid #111722;
 	height: 420px;
-	right: 320px;
+	right: 255px;
 }
-@media screen and (min-width: 1090px) and (max-width: 1150px) {
+@media screen and (min-width: 1090px) and (max-width: 1199px) {
 	.subv1 {
 		border-left: 3px solid #111722;
 		height: 420px;
-		right: 280px;
+		right: 209px;
 	}
 }
 @media screen and (min-width: 970px) and (max-width: 1090px) {
 	.subv1 {
 		border-left: 3px solid #111722;
 		height: 420px;
-		right: 250px;
+		right: 206px;
 	}
 }
 .subList {
@@ -137,4 +137,28 @@ body {
 .subName2 {
 	border: solid #ffcc66;
 	background-color: #ffcc66;
+}
+@media screen and (min-width: 1000px) {
+	.sub-img {
+		width: 600px;
+		height: 400px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.subImgv1 {
+		border-left: 3px solid #111722;
+		height: 220px;
+		right: 95px;
+		top: 90px;
+	}
+	.subImgv2 {
+		border-left: 3px solid #111722;
+		height: 220px;
+		left: 95px;
+		top: 90px;
+	}
+}
+.home-subChp {
+	color: #111722;
+	/* border: solid; */
 }
