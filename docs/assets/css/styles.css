@@ -837,13 +837,15 @@ video:focus {
 
 /*------------------ACHIEVEMENTS PAGE --------------*/
 .achieve-offer-section {
-	background: linear-gradient(#ffffff 70%, #ce5841 30%) no-repeat;
+	background: url("../images/Group\ 93.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }
-.achievement-card {
+.achievement-cards {
 	background-color: #ffffff;
 	box-shadow: 0 0 0 0 #333;
-	height: 70%;
-	max-height: 100px;
+	height:490px;
 
 	/* box-shadow: ; */
 }
