@@ -107,3 +107,34 @@ body {
 	cursor: pointer;
 	opacity: 0.8;
 }
+/* ---sub---- */
+.subv1 {
+	border-left: 3px solid #111722;
+	height: 420px;
+	right: 320px;
+}
+@media screen and (min-width: 1090px) and (max-width: 1150px) {
+	.subv1 {
+		border-left: 3px solid #111722;
+		height: 420px;
+		right: 280px;
+	}
+}
+@media screen and (min-width: 970px) and (max-width: 1090px) {
+	.subv1 {
+		border-left: 3px solid #111722;
+		height: 420px;
+		right: 250px;
+	}
+}
+.subList {
+	list-style-type: none;
+}
+.subName1 {
+	border: solid #111722;
+	background-color: #111722;
+}
+.subName2 {
+	border: solid #ffcc66;
+	background-color: #ffcc66;
+}
