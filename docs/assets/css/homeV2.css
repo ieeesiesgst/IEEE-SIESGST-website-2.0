@@ -138,6 +138,24 @@ body {
 	border: solid #ffcc66;
 	background-color: #ffcc66;
 }
+.subName1:hover {
+	cursor: pointer;
+	background-color: #323b4b;
+	transition: background-color 1s;
+}
+.subName2:hover {
+	cursor: pointer;
+	background-color: #ffbd3a;
+	transition: background-color 1s;
+}
+.active-sub2 {
+	cursor: pointer;
+	background-color: #ffbd3a;
+}
+.active-sub1 {
+	cursor: pointer;
+	background-color: #323b4b;
+}
 @media screen and (min-width: 1000px) {
 	.sub-img {
 		width: 600px;

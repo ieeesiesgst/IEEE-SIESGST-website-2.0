@@ -462,7 +462,6 @@
 										m-lg-3
 										fs-6
 										fw-bold
-										subName
 										subName1
 									"
 									id="wie"
@@ -476,7 +475,6 @@
 										m-lg-3
 										fs-6
 										fw-bold
-										subName
 										subName2
 									"
 									id="mtts"
@@ -490,7 +488,6 @@
 										m-lg-3
 										fs-6
 										fw-bold
-										subName
 										subName1
 									"
 									id="isv"
@@ -504,7 +501,6 @@
 										m-lg-3
 										fs-6
 										fw-bold
-										subName
 										subName2
 									"
 									id="cs"
@@ -543,7 +539,7 @@
 				}
 			});
 
-			function changeImage(i) {
+			function changeImage(i, sub) {
 				document
 					.getElementById('home-subImg')
 					.setAttribute('src', `./assets/images/sub-${i}.jpg`);
@@ -552,22 +548,44 @@
 					document
 						.getElementById(sub[i])
 						.classList.remove('active-sub');
+					if (
+						document.getElementById(sub[3]).classList[6] ==
+						'subName2'
+					) {
+						document
+							.getElementById(sub[i])
+							.classList.remove('active-sub2', 'active-sub1');
+						document
+							.getElementById(sub[3])
+							.classList.toggle('active-sub2');
+					} else {
+						{
+							document
+								.getElementById(sub[i])
+								.classList.remove('active-sub2', 'active-sub1');
+							document
+								.getElementById(sub[3])
+								.classList.toggle('active-sub1');
+						}
+					}
 				}
 			}
 
-			document.getElementById('wie').classList.add('active-sub');
+			document
+				.getElementById('wie')
+				.classList.add('active-sub', 'active-sub1');
 
 			document.getElementById('wie').addEventListener('click', () => {
-				changeImage(1);
+				changeImage(1, ['mtts', 'cs', 'isv', 'wie']);
 			});
 			document.getElementById('mtts').addEventListener('click', () => {
-				changeImage(2);
+				changeImage(2, ['wie', 'cs', 'isv', 'mtts']);
 			});
 			document.getElementById('cs').addEventListener('click', () => {
-				changeImage(3);
+				changeImage(3, ['wie', 'mtts', 'isv', 'cs']);
 			});
 			document.getElementById('isv').addEventListener('click', () => {
-				changeImage(2);
+				changeImage(2, ['wie', 'mtts', 'cs', 'isv']);
 			});
 		</script>
 	</body>
