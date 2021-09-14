@@ -207,37 +207,62 @@
 				/* border: solid; */
 			}
 		</style>
-        <script>function changeImage(i, sub) {
-            document
-                .getElementById('home-subImg')
-                .setAttribute('src', `/images/sub-${i}.jpg`);
-            document.getElementById(sub[3]).classList.add('active-Sub');
-            for (var i = 0; i < 3; i++) {
-                document
-                    .getElementById(sub[i])
-                    .classList.remove('active-Sub');
-                if (
-                    document.getElementById(sub[3]).classList[6] ==
-                    'subName2'
-                ) {
-                    document
-                        .getElementById(sub[i])
-                        .classList.remove('active-sub2', 'active-sub1');
-                    document
-                        .getElementById(sub[3])
-                        .classList.toggle('active-sub2');
-                } else {
-                    {
-                        document
-                            .getElementById(sub[i])
-                            .classList.remove('active-sub2', 'active-sub1');
-                        document
-                            .getElementById(sub[3])
-                            .classList.toggle('active-sub1');
-                    }
-                }
-            }
-        }</script>
+        <script>
+			function testScroll() {
+				if (isScrolledIntoView($('.about-us')) && !viewed) {
+					viewed = true;
+					$('.count').each(function () {
+						$(this)
+							.prop('Counter', -1)
+							.animate(
+								{
+									Counter: $(this).text()
+								},
+								{
+									duration: 4000,
+									easing: 'swing',
+									step: function (now) {
+										$(this).text(Math.ceil(now));
+									}
+								}
+							);
+					});
+				}
+			}
+
+		
+			function changeImage(i, sub) {
+				document
+					.getElementById('home-subImg')
+					.setAttribute('src', `/images/sub-${i}.jpg`);
+				document.getElementById(sub[3]).classList.add('active-Sub');
+				for (var i = 0; i < 3; i++) {
+					document
+						.getElementById(sub[i])
+						.classList.remove('active-Sub');
+					if (
+						document.getElementById(sub[3]).classList[6] ==
+						'subName2'
+					) {
+						document
+							.getElementById(sub[i])
+							.classList.remove('active-sub2', 'active-sub1');
+						document
+							.getElementById(sub[3])
+							.classList.toggle('active-sub2');
+					} else {
+						{
+							document
+								.getElementById(sub[i])
+								.classList.remove('active-sub2', 'active-sub1');
+							document
+								.getElementById(sub[3])
+								.classList.toggle('active-sub1');
+						}
+					}
+				}
+			}
+		</script>
 		<!-- <link rel="stylesheet" href="./assets/css/homeV2.css" /> -->
 	</head>
 	<body>
@@ -736,8 +761,19 @@
 				}
 			});
 
-			
+			$(window).scroll(testScroll);
+			var viewed = false;
 
+			function isScrolledIntoView(elem) {
+				var docViewTop = $(window).scrollTop();
+				var docViewBottom = docViewTop + $(window).height();
+
+				var elemTop = $(elem).offset().top;
+				var elemBottom = elemTop + $(elem).height();
+
+				return elemBottom <= docViewBottom && elemTop >= docViewTop;
+			}
+			
 			document
 				.getElementById('wie')
 				.classList.add('active-Sub', 'active-sub1');
