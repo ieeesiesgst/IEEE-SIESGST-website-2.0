@@ -46,13 +46,9 @@
 				-moz-border-radius: 50%;
 				-webkit-border-radius: 50%;
 				width: 100px;
-				animation: spin 10s linear infinite;
+				
 			}
-			@keyframes spin {
-				100% {
-					transform: rotateZ(360deg);
-				}
-			}
+			
 			.about-us {
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -204,7 +200,7 @@
 			}
 			.home-subChp {
 				color: #111722;
-				/* border: solid; */
+				border: double #111722;
 			}
 		</style>
         <script>
@@ -340,7 +336,7 @@
 									home-countImg
 									m-4
 								"
-								style="color: #ffcc66"
+								style="color: #ffcc66;"
 							></i>
 						</div>
 						<div class="fs-5 fw-bold m-3 d-inline-block">
@@ -378,7 +374,7 @@
 						</div>
 						<div class="col-lg-6 col-12 py-1 py-lg-0">
 							<img
-								src="/images/blue.jpg"
+								src="/images/techopedia.PNG"
 								class="img-fluid flagImg" alt="Techopedia"
 							/>
 						</div>
@@ -386,7 +382,7 @@
 					<div class="row g-0">
 						<div class="col-lg-6 col-12 py-1 py-lg-0">
 							<img
-								src="/images/blue.jpg"
+								src="/images/epsilon.jpg"
 								class="img-fluid flagImg" alt="Epsilon"
 							/>
 						</div>
@@ -412,6 +408,7 @@
 				</div>
 			</div>
 		</section>
+		<% if(eventArray.length != 0){ %>
 		<section class="home-events pt-5 px-5">
 			<div class="container bg-white homeEvent-bg position-relative">
 				<div class="eventv1 position-absolute d-none d-lg-block"></div>
@@ -423,7 +420,7 @@
 						</div>
 						<div class="col-lg-4 col-12 py-2">
 							<div class="fs-6 px-4">
-								some randome sentence... Get a look at our
+								some random sentence... Get a look at our
 								Ongoing and Upcoming Events!
 							</div>
 						</div>
@@ -461,40 +458,16 @@
 				</div>
 				<div class="container position-absolute homeEvent-carousel">
 					<div class="my-slider event-carousel">
+						<% eventArray.forEach((res,index)=>{ %>
 						<div>
 							<div class="card mx-3">
 								<img
-									src="/images/blue.jpg"
+									src="<%= res.pic %>"
 									class="card-img-top event-cardImg"
 									alt="Event"
 								/>
 								<div class="card-body">
-									<p class="card-text">
-										<span>ABCD</span>
-										<span
-											><a href="/events"><i
-												class="
-													bx
-													bxs-right-arrow
-													bx-xs
-													event-slideBtn
-												"
-												style="color: #111722"
-											></i
-										></a></span>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="card mx-3">
-								<img
-									src="/images/blue.jpg"
-									class="card-img-top event-cardImg"
-									alt="Event"
-								/>
-								<div class="card-body">
-									<span>XXXPPP</span>
+									<span><%= res.name %></span>
 									<span
 										><a href="/events"><i
 											class="
@@ -509,102 +482,12 @@
 								</div>
 							</div>
 						</div>
-						<div>
-							<div class="card mx-3">
-								<img
-									src="/images/blue.jpg"
-									class="card-img-top event-cardImg"
-									alt="Event"
-								/>
-								<div class="card-body">
-									<span>MTTS</span>
-									<span
-										><a href="/events"><i
-											class="
-												bx
-												bxs-right-arrow
-												bx-xs
-												event-slideBtn
-											"
-											style="color: #111722"
-										></i
-									></a></span>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="card mx-3">
-								<img
-									src="/images/blue.jpg"
-									class="card-img-top event-cardImg"
-									alt="Event"
-								/>
-								<div class="card-body">
-									<span>TECHO</span>
-									<span
-										><a href="/events"><i
-											class="
-												bx
-												bxs-right-arrow
-												bx-xs
-												event-slideBtn
-											"
-											style="color: #111722"
-										></i
-									></a></span>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="card mx-3">
-								<img
-									src="/images/blue.jpg"
-									class="card-img-top event-cardImg"
-									alt="Event"
-								/>
-								<div class="card-body">
-									<span>EPSILON</span>
-									<span
-										><a href="/events"><i
-											class="
-												bx
-												bxs-right-arrow
-												bx-xs
-												event-slideBtn
-											"
-											style="color: #111722"
-										></i
-									></a></span>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="card mx-3">
-								<img
-									src="/images/blue.jpg"
-									class="card-img-top event-cardImg"
-									alt="Event"
-								/>
-								<div class="card-body">
-									<span>SSTTYY</span>
-									<span
-										><a href="/events"><i
-											class="
-												bx
-												bxs-right-arrow
-												bx-xs
-												event-slideBtn
-											"
-											style="color: #111722"
-										></i
-									></a></span>
-								</div>
-							</div>
-						</div>
+						<% }) %>
 					</div>
 				</div>
 			</div>
 		</section>
+		<% } %>
 		<section class="home-subChp shadow-lg py-3 m-4 mb-5">
 			<div class="container">
 				<div
