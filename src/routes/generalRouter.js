@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 			});
 		} else {
 			const eventArray = await eventDivision(homeRes, 1);
-			res.render('home', {
+			res.render('homeV2', {
 				title: 'HOME | IEEE SIESGST',
 				eventArray: eventArray
 			});

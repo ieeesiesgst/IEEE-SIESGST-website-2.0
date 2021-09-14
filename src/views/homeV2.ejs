@@ -58,7 +58,7 @@
 			.homev2 {
 				border-left: 3px solid #111722;
 				height: 420px;
-				top: 40px;
+				top: 30px;
 				left: 50px;
 			}
 			.homev3 {
@@ -70,7 +70,7 @@
 			.homev4 {
 				border-left: 3px solid #111722;
 				height: 420px;
-				top: 40px;
+				top: 30px;
 				right: 50px;
 			}
 			.circleCount {
@@ -240,14 +240,47 @@
 				/* border: solid; */
 			}
 		</style>
+        <script>function changeImage(i, sub) {
+            document
+                .getElementById('home-subImg')
+                .setAttribute('src', `/images/sub-${i}.jpg`);
+            document.getElementById(sub[3]).classList.add('active-sub');
+            for (var i = 0; i < 3; i++) {
+                document
+                    .getElementById(sub[i])
+                    .classList.remove('active-sub');
+                if (
+                    document.getElementById(sub[3]).classList[6] ==
+                    'subName2'
+                ) {
+                    document
+                        .getElementById(sub[i])
+                        .classList.remove('active-sub2', 'active-sub1');
+                    document
+                        .getElementById(sub[3])
+                        .classList.toggle('active-sub2');
+                } else {
+                    {
+                        document
+                            .getElementById(sub[i])
+                            .classList.remove('active-sub2', 'active-sub1');
+                        document
+                            .getElementById(sub[3])
+                            .classList.toggle('active-sub1');
+                    }
+                }
+            }
+        }</script>
 		<!-- <link rel="stylesheet" href="./assets/css/homeV2.css" /> -->
 	</head>
 	<body>
-		<div class="homev1 position-absolute d-none d-lg-block"></div>
-		<div class="homev2 position-absolute d-none d-lg-block"></div>
-		<div class="homev3 position-absolute d-none d-lg-block"></div>
-		<div class="homev4 position-absolute d-none d-lg-block"></div>
-		<section class="about-us my-4">
+        <%- include('./partials/home-navbar.ejs') %>
+		
+		<section class="about-us my-4 position-relative">
+            <div class="homev1 position-absolute d-none d-lg-block"></div>
+            <div class="homev2 position-absolute d-none d-lg-block"></div>
+            <div class="homev3 position-absolute d-none d-lg-block"></div>
+            <div class="homev4 position-absolute d-none d-lg-block"></div>
 			<div class="text-center pt-4 fs-3 fw-bold">ABOUT US</div>
 			<div class="text-center pt-4 px-4 container px-lg-5 about-text">
 				IEEE SIESGST. One of the most vibrant and largest Student Branch
@@ -623,7 +656,7 @@
 						></div>
 
 						<img
-							src="./assets/images/sub-1.jpg"
+							src="/images/sub-1.jpg"
 							class="
 								img-fluid
 								sub-img
@@ -709,6 +742,7 @@
 				</div>
 			</div>
 		</section>
+        <%- include('./partials/footer.ejs') %>
 		<script>
 			let slider = tns({
 				container: '.my-slider',
@@ -735,37 +769,7 @@
 				}
 			});
 
-			function changeImage(i, sub) {
-				document
-					.getElementById('home-subImg')
-					.setAttribute('src', `./assets/images/sub-${i}.jpg`);
-				document.getElementById(sub[3]).classList.add('active-sub');
-				for (var i = 0; i < 3; i++) {
-					document
-						.getElementById(sub[i])
-						.classList.remove('active-sub');
-					if (
-						document.getElementById(sub[3]).classList[6] ==
-						'subName2'
-					) {
-						document
-							.getElementById(sub[i])
-							.classList.remove('active-sub2', 'active-sub1');
-						document
-							.getElementById(sub[3])
-							.classList.toggle('active-sub2');
-					} else {
-						{
-							document
-								.getElementById(sub[i])
-								.classList.remove('active-sub2', 'active-sub1');
-							document
-								.getElementById(sub[3])
-								.classList.toggle('active-sub1');
-						}
-					}
-				}
-			}
+			
 
 			document
 				.getElementById('wie')
