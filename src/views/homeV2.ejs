@@ -1,39 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Bootstrap CSS -->
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-			crossorigin="anonymous"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<script
-			src="https://code.jquery.com/jquery-3.6.0.min.js"
-			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			crossorigin="anonymous"
-		></script>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-		/>
-		<link
-			href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
 
 		<!-- tiny slider -->
 		<link
@@ -43,7 +10,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 		<!-- ---- -->
 
-		<title>Document</title>
+		<%- include('./partials/head-tag.ejs') %>
 		<style>
 			/* -----------------------------------------------HOME PAGE----------------------------------------------- */
 			body {
@@ -216,7 +183,7 @@
 				background-color: #323b4b;
 			}
 			@media screen and (min-width: 1000px) {
-				.sub-img {
+				.sub-Img {
 					width: 600px;
 					height: 400px;
 				}
@@ -244,11 +211,11 @@
             document
                 .getElementById('home-subImg')
                 .setAttribute('src', `/images/sub-${i}.jpg`);
-            document.getElementById(sub[3]).classList.add('active-sub');
+            document.getElementById(sub[3]).classList.add('active-Sub');
             for (var i = 0; i < 3; i++) {
                 document
                     .getElementById(sub[i])
-                    .classList.remove('active-sub');
+                    .classList.remove('active-Sub');
                 if (
                     document.getElementById(sub[3]).classList[6] ==
                     'subName2'
@@ -281,7 +248,7 @@
             <div class="homev2 position-absolute d-none d-lg-block"></div>
             <div class="homev3 position-absolute d-none d-lg-block"></div>
             <div class="homev4 position-absolute d-none d-lg-block"></div>
-			<div class="text-center pt-4 fs-3 fw-bold">ABOUT US</div>
+			<div class="text-center pt-4 pb-2 fs-3 fw-bold">ABOUT US</div>
 			<div class="text-center pt-4 px-4 container px-lg-5 about-text">
 				IEEE SIESGST. One of the most vibrant and largest Student Branch
 				in the Bombay Section, IEEE SIESGST have made a significant mark
@@ -387,7 +354,7 @@
 						<div class="col-lg-6 col-12 py-1 py-lg-0">
 							<img
 								src="/images/blue.jpg"
-								class="img-fluid flagImg"
+								class="img-fluid flagImg" alt="Techopedia"
 							/>
 						</div>
 					</div>
@@ -395,7 +362,7 @@
 						<div class="col-lg-6 col-12 py-1 py-lg-0">
 							<img
 								src="/images/blue.jpg"
-								class="img-fluid flagImg"
+								class="img-fluid flagImg" alt="Epsilon"
 							/>
 						</div>
 						<div class="col-lg-6 col-12 d-flex align-items-center">
@@ -474,13 +441,13 @@
 								<img
 									src="/images/blue.jpg"
 									class="card-img-top event-cardImg"
-									alt="..."
+									alt="Event"
 								/>
 								<div class="card-body">
 									<p class="card-text">
 										<span>ABCD</span>
 										<span
-											><i
+											><a href="/events"><i
 												class="
 													bx
 													bxs-right-arrow
@@ -489,7 +456,7 @@
 												"
 												style="color: #111722"
 											></i
-										></span>
+										></a></span>
 									</p>
 								</div>
 							</div>
@@ -499,12 +466,12 @@
 								<img
 									src="/images/blue.jpg"
 									class="card-img-top event-cardImg"
-									alt="..."
+									alt="Event"
 								/>
 								<div class="card-body">
 									<span>XXXPPP</span>
 									<span
-										><i
+										><a href="/events"><i
 											class="
 												bx
 												bxs-right-arrow
@@ -513,7 +480,7 @@
 											"
 											style="color: #111722"
 										></i
-									></span>
+									></a></span>
 								</div>
 							</div>
 						</div>
@@ -522,12 +489,12 @@
 								<img
 									src="/images/blue.jpg"
 									class="card-img-top event-cardImg"
-									alt="..."
+									alt="Event"
 								/>
 								<div class="card-body">
 									<span>MTTS</span>
 									<span
-										><i
+										><a href="/events"><i
 											class="
 												bx
 												bxs-right-arrow
@@ -536,7 +503,7 @@
 											"
 											style="color: #111722"
 										></i
-									></span>
+									></a></span>
 								</div>
 							</div>
 						</div>
@@ -545,12 +512,12 @@
 								<img
 									src="/images/blue.jpg"
 									class="card-img-top event-cardImg"
-									alt="..."
+									alt="Event"
 								/>
 								<div class="card-body">
 									<span>TECHO</span>
 									<span
-										><i
+										><a href="/events"><i
 											class="
 												bx
 												bxs-right-arrow
@@ -559,7 +526,7 @@
 											"
 											style="color: #111722"
 										></i
-									></span>
+									></a></span>
 								</div>
 							</div>
 						</div>
@@ -568,12 +535,12 @@
 								<img
 									src="/images/blue.jpg"
 									class="card-img-top event-cardImg"
-									alt="..."
+									alt="Event"
 								/>
 								<div class="card-body">
 									<span>EPSILON</span>
 									<span
-										><i
+										><a href="/events"><i
 											class="
 												bx
 												bxs-right-arrow
@@ -582,7 +549,7 @@
 											"
 											style="color: #111722"
 										></i
-									></span>
+									></a></span>
 								</div>
 							</div>
 						</div>
@@ -591,12 +558,12 @@
 								<img
 									src="/images/blue.jpg"
 									class="card-img-top event-cardImg"
-									alt="..."
+									alt="Event"
 								/>
 								<div class="card-body">
 									<span>SSTTYY</span>
 									<span
-										><i
+										><a href="/events"><i
 											class="
 												bx
 												bxs-right-arrow
@@ -605,7 +572,7 @@
 											"
 											style="color: #111722"
 										></i
-									></span>
+									></a></span>
 								</div>
 							</div>
 						</div>
@@ -613,7 +580,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="home-subChp shadow-lg py-3 m-4">
+		<section class="home-subChp shadow-lg py-3 m-4 mb-5">
 			<div class="container">
 				<div
 					class="
@@ -659,10 +626,10 @@
 							src="/images/sub-1.jpg"
 							class="
 								img-fluid
-								sub-img
+								sub-Img
 								animate__animated animate__pulse
 							"
-							alt="..."
+							alt="subChp"
 							id="home-subImg"
 						/>
 					</div>
@@ -773,7 +740,7 @@
 
 			document
 				.getElementById('wie')
-				.classList.add('active-sub', 'active-sub1');
+				.classList.add('active-Sub', 'active-sub1');
 
 			document.getElementById('wie').addEventListener('click', () => {
 				changeImage(1, ['mtts', 'cs', 'isv', 'wie']);
