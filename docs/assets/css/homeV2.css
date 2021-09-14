@@ -61,6 +61,12 @@ body {
 	height: 220px;
 	right: 160px;
 }
+@media screen and (min-width: 1000px) {
+	.flagImg {
+		width: 100%;
+		height: 310px;
+	}
+}
 /* -- Home Events-- */
 .eventv1 {
 	border-left: 3px solid #111722;
@@ -84,6 +90,12 @@ body {
 }
 .homeEvent-carousel {
 	top: 250px;
+}
+@media screen and (min-width: 1000px) {
+	.event-cardImg {
+		width: 100%;
+		height: 190px;
+	}
 }
 @media screen and (min-width: 1200px) {
 	.homeEvent-carousel {
