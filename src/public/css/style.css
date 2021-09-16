@@ -37,7 +37,7 @@ video:focus {
 	height: 4px;
 	left: 20%;
 	bottom: -10px;
-	background: #ce5841;
+	background: #ffbd3a;
 }
 .home-about {
 	scroll-behavior: smooth;
@@ -230,7 +230,7 @@ video:focus {
 .gallery-events-bg {
 	/* background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
 		url('../images/bg-events1.png'); */
-	background-color: #eeee;
+	background-color: #fff;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -357,7 +357,7 @@ video:focus {
 }
 .pagination-box:focus {
 	outline: none;
-	border: 1px solid #ce5841;
+	border: 1px solid #ffcc66;
 }
 
 .pagination-disabled {
@@ -365,11 +365,12 @@ video:focus {
 }
 
 .pagination-icon {
-	color: #ce5841;
+	color: #ffcc66;
 }
 .pagination-icon:hover {
 	color: #444444;
 	transition: ease-in 0.5s;
+	cursor: pointer;
 }
 
 .gallery-desc::-webkit-scrollbar {
@@ -421,7 +422,7 @@ video:focus {
 	width: 130px;
 	height: 130px;
 	float: right;
-	background-color: #e85c41;
+	background-color: #ffcc66;
 }
 @media (max-width: 350px) {
 	.half-circle {
@@ -440,33 +441,29 @@ video:focus {
 	background: transparent;
 	width: 100%;
 }
-/* .input-space:focus {
-	transition: ease text-indent 0.3s 0.3s;
-	text-indent: -100%;
-	opacity: 1;
+/* .input-space:hover {
+	color: #ffbd3a;
+	border-color: #ffcc66;
 } */
-.input-space:hover {
-	color: #ce5841;
-	border-color: #ce5841;
-}
 .submit-contact {
 	font-family: 'Roboto';
 	display: inline-flex;
-	background: #e85c41;
+	background: #ffcc66;
 	text-decoration: none;
 	cursor: pointer;
 	color: white;
 	border: none;
-	border: 1px solid #e85c41;
+	border: 1px solid #ffcc66;
 }
 .submit-contact:hover {
 	outline-offset: -3px;
 	outline: 2px solid white;
-	border: 2px solid #e85c41;
+	border: 2px solid #ffcc66;
 	transition: all 150ms;
+	background-color: #ffbd3a;
 }
 .contact-vertical {
-	border-left: thin solid #ff0000;
+	border-left: thin solid #ffcc66;
 }
 .contact-r-text {
 	font-family: 'Roboto';
