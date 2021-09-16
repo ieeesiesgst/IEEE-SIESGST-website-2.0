@@ -171,9 +171,11 @@ video:focus {
 		url('../images/backgruond-events.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
 .events-container {
-	background: #eeeeee;
+	background: #ffffff;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 12px;
 }
@@ -188,11 +190,11 @@ video:focus {
 	line-height: 21px;
 }
 .btn-events {
-	border: 2px solid #ce5841;
+	border: 2px solid #ffcc66;
 	font-size: 15px;
 	font-family: 'Roboto';
 	display: inline-flex;
-	background: #ce5841;
+	background: #ffcc66;
 	text-decoration: none;
 	cursor: pointer;
 	color: white;
@@ -200,10 +202,10 @@ video:focus {
 .btn-events:hover {
 	cursor: pointer;
 	outline-offset: 3px;
-	outline: 2px solid #ce5841;
-	border: 2px solid #ce5841;
+	outline: 2px solid #ffcc66;
+	border: 2px solid #ffcc66;
 	color: black;
-	background: #eeee;
+	background: #ffbd3a;
 	transition: all 250ms;
 }
 .home-carousel {
@@ -214,6 +216,15 @@ video:focus {
 }
 .event-tail {
 	font-family: 'Roboto';
+}
+.event-modal {
+	background-image: url('../images/eventModalPic.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+}
+.eventModalBtn {
+	color: white;
 }
 /*----------GALLERY PAGE ---------*/
 .gallery-events-bg {
@@ -531,15 +542,7 @@ video:focus {
 /* ---------------- CONTACT PAGE ENDS------------- */
 
 /*-------------------TEAMS PAGE -------------------*/
-.event-modal {
-	background-image: url('../images/eventModal.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: white;
-}
-.eventModalBtn {
-	color: white;
-}
+
 .teams-bg {
 	background: linear-gradient(
 			rgba(236, 227, 227, 0.3),
