@@ -7,7 +7,13 @@ const router = express.Router();
 router.get('/', async (req, res) => {
 	try {
 		const homeResponse = cachedata('events');
-		if (homeResponse.Error) {
+		if (homeResponse == undefined) {
+			const eventArray = [];
+			res.render('events', {
+				title: 'EVENTS | IEEE SIESGST',
+				eventArray: eventArray
+			});
+		} else if (homeResponse.Error) {
 			res.status(500).json({
 				status: 'Fail',
 				message: 'Server Error!'

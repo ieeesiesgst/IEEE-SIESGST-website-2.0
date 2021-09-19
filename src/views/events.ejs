@@ -23,105 +23,139 @@
 		/>
 		<!-- //Meta tag Keywords -->
 		<%- include('./partials/head-tag.ejs') %>
+		<style>
+			.flagShipv1 {
+				border-left: 3px solid #111722;
+				height: 220px;
+				left: 160px;
+			}
+			.flagShipv2 {
+				border-left: 3px solid #111722;
+				height: 220px;
+				right: 160px;
+			}
+			@media screen and (min-width: 1000px) {
+				.flagImg {
+					width: 100%;
+					height: 310px;
+				}
+			}
+		</style>
 	</head>
 	<body class="events-bg">
 		<%- include('./partials/navbar.ejs') %>
-		<% if(eventArray.activeE.length != 0){ %>
-			<section class="upcoming-events px-3 pt-3" id='activeId'>
-				<h3
-					class="
-						about-headlines
-						text-center text-white
-						p-5
-						pb-5
-						fs-2
-						fw-bolder
-					"
-				>
-					<span class="position-relative underline-overall-orange"
-						>ACTIVE EVENTS</span
+		<% if(eventArray.length != 0){ %>
+			<% if(eventArray.activeE.length != 0){ %>
+				<section class="upcoming-events px-3 pt-3" id='activeId'>
+					<h3
+						class="
+							about-headlines
+							text-center text-white
+							p-5
+							pb-5
+							fs-2
+							fw-bolder
+						"
 					>
-				</h3>
-				<% eventArray.activeE.forEach((res,index)=>{ %>
-					<div
-						class="modal fade"
-						id="staticBackdrop<%= index %>"
-						data-bs-backdrop="static"
-						data-bs-keyboard="false"
-						tabindex="-1"
-						aria-labelledby="staticBackdropLabel"
-						aria-hidden="true"
-					>
-						<div class="modal-dialog modal-dialog-scrollable">
-							<div class="modal-content">
-								<div class="modal-header event-modal">
-									<h5 class="modal-title" id="staticBackdropLabel">
-										<%= res.name %>
-									</h5>
-									<button
-										type="button"
-										class="btn-close close btn-close-white eventModalBtn"
-										data-bs-dismiss="modal"
-										aria-label="Close"
-									></button>
+						<span class="position-relative underline-overall-orange"
+							>ACTIVE EVENTS</span
+						>
+					</h3>
+					<% eventArray.activeE.forEach((res,index)=>{ %>
+						<div
+							class="modal fade"
+							id="staticBackdrop<%= index %>"
+							data-bs-backdrop="static"
+							data-bs-keyboard="false"
+							tabindex="-1"
+							aria-labelledby="staticBackdropLabel"
+							aria-hidden="true"
+						>
+							<div class="modal-dialog modal-dialog-scrollable">
+								<div class="modal-content">
+									<div class="modal-header event-modal">
+										<h5 class="modal-title" id="staticBackdropLabel">
+											<%= res.name %>
+										</h5>
+										<button
+											type="button"
+											class="btn-close close btn-close-white eventModalBtn"
+											data-bs-dismiss="modal"
+											aria-label="Close"
+										></button>
+									</div>
+									<div class="modal-body">
+										<%- res.long %>
+									</div>
+									<div class="modal-footer"></div>
 								</div>
-								<div class="modal-body">
-									<%- res.long %>
-								</div>
-								<div class="modal-footer"></div>
 							</div>
 						</div>
-					</div>
-					<div class="container events-container p-4 my-3">
-						<div class="row">
-							<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
-								<div class="p-3 events-desc" id="activeDes">
-							<% }else{ %>
-								<div class="col-md-4" id="activePic">
-									<img
-										src="<%= res.pic %>" 
-										class="
-											img-thumbnail img-fluid
-											w-100
-											events-bg-img
-											rounded
-											p-2"
-									/>
-								</div>
-								<div class="col-md-8 p-3 events-desc" id="activeDes">
-							<% } %>
-								<div class="row">
-									<p>
-										<span class="fw-bold"><%= res.name %> : </span>
+						<div class="container events-container p-4 my-3">
+							<div class="row">
+								<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
+									<div class="p-3 events-desc" id="activeDes">
+								<% }else{ %>
+									<div class="col-md-4" id="activePic">
+										<img
+											src="<%= res.pic %>" 
+											class="
+												img-thumbnail img-fluid
+												w-100
+												events-bg-img
+												rounded
+												p-2"
+										/>
+									</div>
+									<div class="col-md-8 p-3 events-desc" id="activeDes">
+								<% } %>
+									<div class="row">
+										<p>
+											<span class="fw-bold"><%= res.name %> : </span>
+											<br />
+											<span class="fw-normal text-center">
+												<%= res.small %>
+											</span>
+										</p>
 										<br />
-										<span class="fw-normal text-center">
-											<%= res.small %>
-										</span>
-									</p>
-									<br />
-										<% if(res.start.trim().toLowerCase() == 'Date'){%>
-											<script>document.getElementById('activeDate').display = none</script>
-										<% }else{ %>
-											<div id="activeDate">
-												<span class="fw-bolder">DATE: </span><%= res.start %>
-											</div>
-										<% } %>
-										<% if(res.time.trim().toLowerCase() == 'nil'){%>
-											<script>document.getElementById('activeTime').display = none</script>
-										<% }else{ %>
-											<div id="activeTime">
-												<span class="fw-bolder">TIME: </span><%= res.time %>
-											</div>
-										<% } %>
-								</div>
-		
-								<div class="row float-end">
-									<div class="d-inline-flex mt-2">
-										<% if(res.website.trim().toLowerCase() == 'nil'){%>
-											<% if(res.long.trim().toLowerCase() == 'nil'){%>
-												<script>displayId('knowA')</script>
+											<% if(res.start.trim().toLowerCase() == 'Date'){%>
+												<script>document.getElementById('activeDate').display = none</script>
 											<% }else{ %>
-												<a
+												<div id="activeDate">
+													<span class="fw-bolder">DATE: </span><%= res.start %>
+												</div>
+											<% } %>
+											<% if(res.time.trim().toLowerCase() == 'nil'){%>
+												<script>document.getElementById('activeTime').display = none</script>
+											<% }else{ %>
+												<div id="activeTime">
+													<span class="fw-bolder">TIME: </span><%= res.time %>
+												</div>
+											<% } %>
+									</div>
+			
+									<div class="row float-end">
+										<div class="d-inline-flex mt-2">
+											<% if(res.website.trim().toLowerCase() == 'nil'){%>
+												<% if(res.long.trim().toLowerCase() == 'nil'){%>
+													<script>displayId('knowA')</script>
+												<% }else{ %>
+													<a
+													href="<%= res.website %>"
+													class="
+														p-2
+														pe-lg-5
+														ps-lg-5
+														ps-lg-3
+														btn-events
+													"data-bs-toggle="modal"
+													data-bs-target="#staticBackdrop<%= index %>"
+													id="knowA"
+													>Know More</a
+													>
+												<% } %>
+											<% }else{ %>
+											<a
 												href="<%= res.website %>"
 												class="
 													p-2
@@ -129,147 +163,147 @@
 													ps-lg-5
 													ps-lg-3
 													btn-events
-												"data-bs-toggle="modal"
-												data-bs-target="#staticBackdrop<%= index %>"
+												"
 												id="knowA"
 												>Know More</a
-												>
+											>
 											<% } %>
-										<% }else{ %>
-										<a
-											href="<%= res.website %>"
-											class="
+											&nbsp; &nbsp;
+											<% if(res.reg.trim().toLowerCase() == 'nil'){%>
+												<script>displayId('regA')</script>
+											<% }else{ %>
+											<a
+												href="<%res.reg %>"
+												class="
 												p-2
 												pe-lg-5
 												ps-lg-5
 												ps-lg-3
 												btn-events
-											"
-											id="knowA"
-											>Know More</a
-										>
-										<% } %>
-										&nbsp; &nbsp;
-										<% if(res.reg.trim().toLowerCase() == 'nil'){%>
-											<script>displayId('regA')</script>
-										<% }else{ %>
-										<a
-											href="<%res.reg %>"
-											class="
-											p-2
-											pe-lg-5
-											ps-lg-5
-											ps-lg-3
-											btn-events
-											" id="regA"
-											>Register Now</a
-										><% } %>
+												" id="regA"
+												>Register Now</a
+											><% } %>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				<% }) %>
-			</section>
-		<% } %>
+					<% }) %>
+				</section>
+			<% } %>
 
-		<% if(eventArray.upcomingE.length != 0){ %>
-			<section class="upcoming-events px-3 pt-3 pb-5" id="upcomingId">
-				<h3
-					class="
-						about-headlines
-						text-center text-white
-						pt-4
-						px-5
-						pb-5
-						fs-2
-						fw-bolder
-					"
-				>
-					<span class="position-relative underline-overall-orange"
-						>UPCOMING EVENTS</span
+			<% if(eventArray.upcomingE.length != 0){ %>
+				<section class="upcoming-events px-3 pt-3 pb-5" id="upcomingId">
+					<h3
+						class="
+							about-headlines
+							text-center text-white
+							pt-4
+							px-5
+							pb-5
+							fs-2
+							fw-bolder
+						"
 					>
-				</h3>
-				<% eventArray.upcomingE.forEach((res,index)=>{%>
-					<div
-						class="modal fade"
-						id="staticbackdrop<%= index %>"
-						data-bs-backdrop="static"
-						data-bs-keyboard="false"
-						tabindex="-1"
-						aria-labelledby="staticBackdropLabel"
-						aria-hidden="true"
-					>
-						<div class="modal-dialog modal-dialog-scrollable">
-							<div class="modal-content">
-								<div class="modal-header event-modal">
-									<h5 class="modal-title" id="staticBackdropLabel">
-										<%= res.name %>
-									</h5>
-									<button
-										type="button"
-										class="btn-close close btn-close-white eventModalBtn"
-										data-bs-dismiss="modal"
-										aria-label="Close"
-									></button>
+						<span class="position-relative underline-overall-orange"
+							>UPCOMING EVENTS</span
+						>
+					</h3>
+					<% eventArray.upcomingE.forEach((res,index)=>{%>
+						<div
+							class="modal fade"
+							id="staticbackdrop<%= index %>"
+							data-bs-backdrop="static"
+							data-bs-keyboard="false"
+							tabindex="-1"
+							aria-labelledby="staticBackdropLabel"
+							aria-hidden="true"
+						>
+							<div class="modal-dialog modal-dialog-scrollable">
+								<div class="modal-content">
+									<div class="modal-header event-modal">
+										<h5 class="modal-title" id="staticBackdropLabel">
+											<%= res.name %>
+										</h5>
+										<button
+											type="button"
+											class="btn-close close btn-close-white eventModalBtn"
+											data-bs-dismiss="modal"
+											aria-label="Close"
+										></button>
+									</div>
+									<div class="modal-body">
+										<%- res.long %>
+									</div>
+									<div class="modal-footer"></div>
 								</div>
-								<div class="modal-body">
-									<%- res.long %>
-								</div>
-								<div class="modal-footer"></div>
 							</div>
 						</div>
-					</div>
-					<div class="container events-container p-4 my-3">
-						<div class="row">
-							<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
-								<div class="p-3 events-desc" id="upcomingDes">
-							<% }else{ %>
-								<div class="col-md-4">
-									<img
-										src="<%= res.pic %>" 
-										class="
-											img-thumbnail img-fluid
-											w-100
-											events-bg-img
-											rounded
-											p-2
-										"
-									/>
-								</div>
-								<div class="col-md-8 p-3 events-desc" id="upcomingDes">
-							<% } %>
-								<div class="row">
-									<p>
-										<span class="fw-bold"><%= res.name %> : </span>
+						<div class="container events-container p-4 my-3">
+							<div class="row">
+								<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
+									<div class="p-3 events-desc" id="upcomingDes">
+								<% }else{ %>
+									<div class="col-md-4">
+										<img
+											src="<%= res.pic %>" 
+											class="
+												img-thumbnail img-fluid
+												w-100
+												events-bg-img
+												rounded
+												p-2
+											"
+										/>
+									</div>
+									<div class="col-md-8 p-3 events-desc" id="upcomingDes">
+								<% } %>
+									<div class="row">
+										<p>
+											<span class="fw-bold"><%= res.name %> : </span>
+											<br />
+											<span class="fw-normal text-center">
+												<%= res.small %>
+											</span>
+										</p>
 										<br />
-										<span class="fw-normal text-center">
-											<%= res.small %>
-										</span>
-									</p>
-									<br />
-									<% if(res.start.trim().toLowerCase() == 'Date'){%>
-										<script>document.getElementById('upcomingDate').display = none</script>
-									<% }else{ %>
-										<div>
-											<span class="fw-bolder" id="upcomingDate">DATE: </span><%= res.start %>
-										</div>
-									<% } %>
-									<% if(res.time.trim().toLowerCase() == 'nil'){%>
-										<script>document.getElementById('upcomingTime').display = none</script>
-									<% }else{ %>
-										<div>
-											<span class="fw-bolder" id="upcomingTime">TIME: </span><%= res.time %>
-										</div>
-									<% } %>
-								</div>
-								<div class="row float-end">
-									<div class="d-inline-flex mt-2">
-										<% if(res.website.trim().toLowerCase() == 'nil'){%>
-											<% if(res.long.trim().toLowerCase() == 'nil'){%>
-												<script>displayId('knowU')</script>
+										<% if(res.start.trim().toLowerCase() == 'Date'){%>
+											<script>document.getElementById('upcomingDate').display = none</script>
+										<% }else{ %>
+											<div>
+												<span class="fw-bolder" id="upcomingDate">DATE: </span><%= res.start %>
+											</div>
+										<% } %>
+										<% if(res.time.trim().toLowerCase() == 'nil'){%>
+											<script>document.getElementById('upcomingTime').display = none</script>
+										<% }else{ %>
+											<div>
+												<span class="fw-bolder" id="upcomingTime">TIME: </span><%= res.time %>
+											</div>
+										<% } %>
+									</div>
+									<div class="row float-end">
+										<div class="d-inline-flex mt-2">
+											<% if(res.website.trim().toLowerCase() == 'nil'){%>
+												<% if(res.long.trim().toLowerCase() == 'nil'){%>
+													<script>displayId('knowU')</script>
+												<% }else{ %>
+													<a
+													href="<%= res.website %>"
+													class="
+													p-2
+													pe-lg-5
+													ps-lg-5
+													ps-lg-3
+													btn-events
+													"data-bs-toggle="modal"
+													data-bs-target="#staticbackdrop<%= index %>"
+													id="knowU"
+													>Know More</a
+													>
+												<% } %>
 											<% }else{ %>
-												<a
+											<a
 												href="<%= res.website %>"
 												class="
 												p-2
@@ -277,47 +311,95 @@
 												ps-lg-5
 												ps-lg-3
 												btn-events
-												"data-bs-toggle="modal"
-												data-bs-target="#staticbackdrop<%= index %>"
+												"
 												id="knowU"
 												>Know More</a
-												>
+											>
 											<% } %>
-										<% }else{ %>
-										<a
-											href="<%= res.website %>"
-											class="
-											p-2
-											pe-lg-5
-											ps-lg-5
-											ps-lg-3
-											btn-events
-											"
-											id="knowU"
-											>Know More</a
-										>
-										<% } %>
-										&nbsp; &nbsp;
-										<% if(res.reg.trim().toLowerCase() == 'nil'){%>
-											<script>displayId('regU')</script>
-										<% }else{ %>
-										<a
-											href="<%= res.reg %>"
-											class="
-											p-2
-											pe-lg-5
-											ps-lg-5
-											ps-lg-3
-											btn-events
-											" id="regU"
-											>Register Now</a
-										><% } %>
+											&nbsp; &nbsp;
+											<% if(res.reg.trim().toLowerCase() == 'nil'){%>
+												<script>displayId('regU')</script>
+											<% }else{ %>
+											<a
+												href="<%= res.reg %>"
+												class="
+												p-2
+												pe-lg-5
+												ps-lg-5
+												ps-lg-3
+												btn-events
+												" id="regU"
+												>Register Now</a
+											><% } %>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+					<% }) %>
+				</section>
+			<% } %>
+		<% }else{ %>
+			<section class="pb-5 mt-2">
+				<div class="text-center pt-5 pb-4 fs-3 fw-bold text-white">
+					OUR FLAGSHIP EVENTS
+				</div>
+				<div class="container" style="max-width: 1000px">
+					<div class="text-black text-center mt-4 bg-white">
+						<div class="row g-0">
+							<div class="col-lg-6 col-12 d-flex align-items-center">
+								<div class="px-4 fs-6 py-3">
+									<div
+										class="
+											flagShipv1
+											position-absolute
+											d-none d-xl-block
+										"
+									></div>
+									<p class="fs-4 fw-bold">Techopedia</p>
+									IEEE SIESGST. One of the most vibrant and
+									largest Student Branch in the Bombay Section,
+									IEEE SIESGST have made a significant mark for
+									itself over the years. IEEE SIESGST. One of the
+									most vibrant and largest Student Branch in the
+									Bombay Section......
+								</div>
+							</div>
+							<div class="col-lg-6 col-12 py-1 py-lg-0">
+								<img
+									src="/images/events/techopedia.png"
+									class="img-fluid flagImg" alt="Techopedia"
+								/>
+							</div>
+						</div>
+						<div class="row g-0">
+							<div class="col-lg-6 col-12 py-1 py-lg-0">
+								<img
+									src="/images/events/epsilon.jpg"
+									class="img-fluid flagImg" alt="Epsilon"
+								/>
+							</div>
+							<div class="col-lg-6 col-12 d-flex align-items-center">
+								<div class="px-4 fs-6 py-3">
+									<div
+										class="
+											flagShipv2
+											position-absolute
+											d-none d-xl-block
+										"
+									></div>
+									<p class="fs-4 fw-bold">Epsilon</p>
+									IEEE SIESGST. One of the most vibrant and
+									largest Student Branch in the Bombay Section,
+									IEEE SIESGST have made a significant mark for
+									itself over the years. IEEE SIESGST. One of the
+									most vibrant and largest Student Branch in the
+									Bombay Section......
+								</div>
+							</div>
+						</div>
 					</div>
-				<% }) %>
+				</div>
 			</section>
 		<% } %>
 
