@@ -1123,7 +1123,7 @@ video:focus {
 /*------------------SUBCHAPTERS PAGE ENDS ------------*/
 /* -----------------ACHIVEMENTS PAGE STARTS----------- */
 .achieve-offer-section {
-	background: url('/images/achievement/achieveBg.png');
+	background: url('/images/achievement/achieveBg.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -1133,7 +1133,7 @@ video:focus {
 	height: 500px;
 }
 .achieve-numbers {
-	background-color: #ce5841;
+	background-color: #111722;
 }
 .achieve-count {
 	font-size: 36px;
