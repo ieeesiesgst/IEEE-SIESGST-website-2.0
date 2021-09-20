@@ -1121,3 +1121,43 @@ video:focus {
 	}
 }
 /*------------------SUBCHAPTERS PAGE ENDS ------------*/
+/* -----------------ACHIVEMENTS PAGE STARTS----------- */
+.achieve-offer-section {
+	background: url('/images/achievement/achieveBg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.achievement-cards {
+	background-color: #ffffff;
+	box-shadow: 0 0 0 0 #333;
+	height: 500px;
+}
+.achieve-numbers {
+	background-color: #ce5841;
+}
+.achieve-count {
+	font-size: 36px;
+}
+.achieve-card {
+	position: relative;
+}
+.achieve-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.achieve-desc {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #111722;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: 0.5s ease;
+}
+.achieve-card:hover .achieve-desc {
+	height: 100%;
+}
+/* ------------ACHIVEMENTS PAGE ENDS----------------- */

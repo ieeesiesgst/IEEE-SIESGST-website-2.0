@@ -52,17 +52,17 @@ router.get('/', async (req, res) => {
 			if (callPg > achieveRes.GlastPg) {
 				callPg = achieveRes.GlastPg;
 			}
-			// res.render('achieve', {
-			// 	title: 'ACHIEVEMENT | IEEE SIESGST',
-			// 	lastPg: achieveRes.AlastPg,
-			// 	achieveRes: achieveRes.ARes,
-			// 	callPg: callPg
-			// });
-			res.send({
+			res.render('achieve', {
+				title: 'ACHIEVEMENT | IEEE SIESGST',
 				lastPg: achieveRes.AlastPg,
 				achieveRes: achieveRes.ARes,
 				callPg: callPg
 			});
+			// res.send({
+			// 	lastPg: achieveRes.AlastPg,
+			// 	achieveRes: achieveRes.ARes,
+			// 	callPg: callPg
+			// });
 		}
 	} catch (err) {
 		console.log(err);
