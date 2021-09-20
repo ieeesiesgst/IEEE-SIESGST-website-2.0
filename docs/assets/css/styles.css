@@ -847,7 +847,7 @@ video:focus {
 	height: 500px;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.41);
 	border-radius: 10px;
-	
+
 	/* box-shadow: ; */
 }
 .achieve-numbers {
@@ -870,7 +870,6 @@ video:focus {
 	background-color: #ffcc66;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.41);
 	border-radius: 10px;
-	
 }
 
 .achieve-desc {
