@@ -26,6 +26,7 @@
 	</head>
 	<body>
 		<%- include('./partials/navbar.ejs') %>
+		<% if(callPg < 2){ %>
 		<section class="achieve-offer-section p-3">
 			<div class="container">
 				<div class="about-headlines text-center fs-2 pb-5 fw-bolder mt-3">
@@ -95,7 +96,6 @@
 				</div>
 			</div>
 		</section>
-
 		<section class="achieve-numbers p-3">
 			<div class="row about-number text-white text-center">
 				<div class="col-lg-3 col-sm-6 text-center fs-5">
@@ -123,6 +123,8 @@
 				<div style="clear: both"></div>
 			</div>
 		</section>
+		<% } %>
+
 		<section>
 			<div class="container p-3">
 				<div class="about-headlines text-center fs-2 pb-5 fw-bolder mt-3">
@@ -131,14 +133,15 @@
 					>
 				</div>
 				<div class="row">
-					<div class="col-md-4">
+					<% achieveRes.forEach((res,index)=>{ %>
+					<div class="col-md-4 my-3">
 						<div class="achieve-card card">
 							<img
-								src="/images/o2.jpg"
+								src="<%= res.AImg %>"
 								class="achieve-image"
 							/>
 							<div class="card-body text-center fw-bold">
-								<div class="card-title">Achievement 1</div>
+								<div class="card-title"><%= res.AName %></div>
 							</div>
 							<div class="achieve-desc">
 								<div
@@ -153,80 +156,12 @@
 										p-3 mt-3
 									"
 								>
-									Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Eius est nesciunt
-									repellendus at distinctio sapiente, officiis
-									iste esse placeat fugit quae tempore magni,
-									nobis quod doloremque dolorem alias
-									assumenda? Nemo!
+									<%= res.ADes %>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="achieve-card card">
-							<img
-								src="/images/o2.jpg"
-								class="achieve-image"
-							/>
-							<div class="card-body text-center fw-bold">
-								<div class="card-title">Achievement 1</div>
-							</div>
-							<div class="achieve-desc">
-								<div
-									class="
-										gallery-desc
-										text-center
-										overflow-auto
-										text-white
-										d-flex
-										flex-column
-										text-center
-										p-3 mt-3
-									"
-								>
-									Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Eius est nesciunt
-									repellendus at distinctio sapiente, officiis
-									iste esse placeat fugit quae tempore magni,
-									nobis quod doloremque dolorem alias
-									assumenda? Nemo!
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="achieve-card card">
-							<img
-								src="/images/o2.jpg"
-								class="achieve-image"
-							/>
-							<div class="card-body text-center fw-bold">
-								<div class="card-title">Achievement 1</div>
-							</div>
-							<div class="achieve-desc">
-								<div
-									class="
-										gallery-desc
-										text-center
-										overflow-auto
-										text-white
-										d-flex
-										flex-column
-										text-center
-										p-3 mt-3
-									"
-								>
-									Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Eius est nesciunt
-									repellendus at distinctio sapiente, officiis
-									iste esse placeat fugit quae tempore magni,
-									nobis quod doloremque dolorem alias
-									assumenda? Nemo!
-								</div>
-							</div>
-						</div>
-					</div>
+					<% }) %>
 				</div>
 			</div>
 		</section>
