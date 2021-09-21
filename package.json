@@ -35,7 +35,7 @@
 		"mongoose": "^6.0.7",
 		"node-cache": "^5.1.2",
 		"passport": "^0.4.1",
-		"passport-azure-ad": "^4.3.0",
+		"passport-azure-ad": "^4.3.1",
 		"passport-google-oauth20": "^2.0.0",
 		"passport-local": "^1.0.0",
 		"passport-local-mongoose": "^6.1.0",
