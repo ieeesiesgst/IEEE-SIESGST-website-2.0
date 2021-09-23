@@ -64,12 +64,12 @@
 			.flagShipv1 {
 				border-left: 3px solid #111722;
 				height: 220px;
-				left: 160px;
+				left: 15px;
 			}
 			.flagShipv2 {
 				border-left: 3px solid #111722;
 				height: 220px;
-				right: 160px;
+				right: 15px;
 			}
 			@media screen and (min-width: 1000px) {
 				.flagImg {
@@ -133,21 +133,8 @@
 			.subv1 {
 				border-left: 3px solid #111722;
 				height: 420px;
-				right: 255px;
-			}
-			@media screen and (min-width: 1090px) and (max-width: 1199px) {
-				.subv1 {
-					border-left: 3px solid #111722;
-					height: 420px;
-					right: 209px;
-				}
-			}
-			@media screen and (min-width: 970px) and (max-width: 1090px) {
-				.subv1 {
-					border-left: 3px solid #111722;
-					height: 420px;
-					right: 206px;
-				}
+				top:5px;
+				left:28px
 			}
 			.subList {
 				list-style-type: none;
@@ -269,7 +256,7 @@
             <div class="homev2 position-absolute d-none d-lg-block"></div>
             <div class="homev3 position-absolute d-none d-lg-block"></div>
             <div class="homev4 position-absolute d-none d-lg-block"></div>
-			<div class="text-center pt-4 pb-2 fs-3 fw-bold">ABOUT US</div>
+			<div class="text-center pt-4 pb-2 fs-3 fw-bold"><span class=" position-relative underline-overall-black">ABOUT US</span></div>
 			<div class="text-center pt-4 px-4 container px-lg-5 about-text">
 				IEEE SIESGST. One of the most vibrant and largest Student Branch
 				in the Bombay Section, IEEE SIESGST have made a significant mark
@@ -349,13 +336,13 @@
 		</section>
 		<section class="home-flagShip pb-5 mt-5">
 			<div class="text-center pt-5 pb-4 fs-3 fw-bold text-white">
-				OUR FLAGSHIP EVENTS
+				<span class=" position-relative underline-overall-orange">OUR FLAGSHIP EVENTS</span>
 			</div>
 			<div class="container" style="max-width: 1000px">
 				<div class="text-black text-center mt-4 bg-white">
 					<div class="row g-0">
 						<div class="col-lg-6 col-12 d-flex align-items-center">
-							<div class="px-4 fs-6 py-3">
+							<div class="px-4 fs-6 py-3 position-relative">
 								<div
 									class="
 										flagShipv1
@@ -387,7 +374,7 @@
 							/>
 						</div>
 						<div class="col-lg-6 col-12 d-flex align-items-center">
-							<div class="px-4 fs-6 py-3">
+							<div class="px-4 fs-6 py-3 position-relative">
 								<div
 									class="
 										flagShipv2
@@ -500,7 +487,8 @@
 					"
 				>
 					<div class="col-lg-4 col-12 ms-lg-5 ms-0 py-2">
-						<div class="fs-3 fw-bold">SUBCHAPTERS</div>
+						<div class="fs-3 fw-bold"><span class="position-relative underline-overall-black"
+							>SUBCHAPTERS</span></div>
 					</div>
 				</div>
 
@@ -548,15 +536,6 @@
 							position-relative
 						"
 					>
-						<div
-							class="
-								subv1
-								position-absolute
-								d-none d-lg-block
-								py-3
-							"
-						></div>
-
 						<div class="container">
 							<div class="row row-cols-4 mt-lg-5 text-white">
 								<div
@@ -569,7 +548,14 @@
 										subName1
 									"
 									id="wie"
-								>
+								><div
+								class="
+									subv1
+									position-absolute
+									d-none d-lg-block
+									py-3
+								"
+							></div>
 									WIE
 								</div>
 								<div
