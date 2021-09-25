@@ -495,7 +495,7 @@ body {
 	position: absolute;
 }
 .line:nth-child(1) {
-	background: #dad41e;
+	background: #ffcc66;
 	left: 49%;
 }
 .line:nth-child(2) {
@@ -510,7 +510,7 @@ body {
 }
 .line:nth-child(4) {
 	animation-delay: 540ms;
-	background: #e67e22;
+	background: #111722;
 	left: 52%;
 }
 @media screen and (max-width: 650px) {
