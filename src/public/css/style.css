@@ -539,11 +539,12 @@ body {
 
 /*--------------------------------------------TEAMS PAGE STARTS ---------------------------------------------*/
 .teams-bg {
-	background: linear-gradient(
+	/* background: linear-gradient(
 			rgba(236, 227, 227, 0.3),
 			rgba(196, 191, 191, 0.6)
 		),
-		url('../images/bg-teams.png');
+		url('../images/bg-teams.png'); */
+	background: white;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -555,20 +556,25 @@ body {
 	cursor: pointer;
 }
 .teams-bg-1 {
-	background: #ffc8bd;
+	/* background: #ffc8bd; */
+	background: #ffcc66;
 }
 .teams-bg-2 {
-	background: #444444;
+	/* background: #444444; */
+	background: #111722;
 	color: #fff;
 }
 .teams-bg-3 {
-	background: #fdc727;
+	/* background: #fdc727; */
+	background: #ffbd3a;
 }
 .teams-bg-4 {
-	background: #c4c4c4;
+	/* background: #c4c4c4; */
+	background: #c7c8ca;
 }
 .teams-bg-5 {
-	background: #e85c41;
+	/* background: #e85c41; */
+	background: #1e293c;
 	color: #fff;
 }
 .teams-bg-2 .all-team-name,
@@ -597,15 +603,15 @@ body {
 }
 .tech-card {
 	background: linear-gradient(rgba(22, 22, 22, 0.4), rgba(43, 28, 28, 0.4)),
-		url('../images/tech-background.png');
+		url('../images/membersBg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 }
 .memberCard-img {
-	height: 190px;
-	width: 190px;
+	height: 170px;
+	width: 170px;
 	border-radius: 50%;
 }
 .card-border-1 {
