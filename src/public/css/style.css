@@ -608,10 +608,16 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
+	/* background-image: linear-gradient(to right, #111722, #2e3344, #111722); */
 }
+.team-card:hover {
+	text-decoration: none;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
 .memberCard-img {
-	height: 170px;
-	width: 170px;
+	height: 190px;
+	width: 190px;
 	border-radius: 50%;
 }
 .card-border-1 {
@@ -655,14 +661,14 @@ body {
 }
 .social-link-2:hover {
 	background-color: #ffff;
-	color: #e85c41;
+	color: #ffcc66;
 	padding: 2px;
 }
 .team-card-1 {
 	background-color: #e5e5e5;
 }
 .team-card-2 {
-	background-color: #e85c41;
+	background-color: #ffcc66;
 }
 .team-card {
 	max-width: 300px;
@@ -679,7 +685,7 @@ body {
 	transform: translate(0%, -50%);
 	font-weight: bolder;
 	font-size: 3rem;
-	color: #e85c41;
+	color: #ffcc66;
 }
 
 /*------------------------------------------MEMBERS PAGE ENDS--------------------------------------------*/

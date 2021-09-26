@@ -42,9 +42,9 @@
 					<%= memberRes.des  %>
 				</div>
 		</section>
-		<section class="tech-card pb-4">
-			<div class="container align-items-center">
-				<div class="row mb-5">
+		<section class="tech-card pb-3">
+			<div class="container align-items-center px-1 pt-2">
+				<div class="row mb-4">
 					<div class="col">
 						<h3 class="about-headlines text-center text-white pt-4 fs-2 fw-bolder">
 							<span class="position-relative underline-overall-orange"
@@ -54,9 +54,9 @@
 					</div>
 				</div>
 				<div class="container team-grid">
-					<div class= "row justify-content-center">
+					<div class= "row m-3 justify-content-center">
 						<% memberRes.member.forEach((res,index)=>{ if(index%2 ==0){ %>
-							<div class="col-2 p-3 team-card">
+							<div class="col-4 p-3 team-card">
 								<div class="card pt-2 team-card-1">
 									<div class="card-body text-center">
 										<img
@@ -64,7 +64,7 @@
 											src="<%= res.profilePic %>"
 										/>
 
-										<div class="card-title text-center pt-2">
+										<div class="card-title text-center pt-3">
 											<div class="fs-4 fw-bold"><%= res.name %></div>
 											<div class="lead"><%= res.post %></div>
 										</div>
@@ -108,7 +108,7 @@
 								</div>
 							</div>
 						<%}else{%>
-							<div class="col-2 p-3 team-card ">
+							<div class="col-4 p-3 team-card ">
 								<div class="card pt-2 team-card-2">
 								<div class="card-body text-center">
 									<img
@@ -120,7 +120,7 @@
 										class="
 											card-title
 											text-white text-center
-											pt-2
+											pt-3
 										"
 									>
 									<div class="fs-4 fw-bold"><%= res.name %></div>
@@ -167,8 +167,13 @@
 							</div>
 						<% }}) %>
 					</div>
-				</div>						
+				</div>	
+							
+						
+					</div>
+				</div>
 			</div>
+			
 		</section>
 		<section class="tech-offer p-4">
 			<div class="container">
