@@ -225,6 +225,10 @@ body {
 	background: #e5e5e5;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.Eimg-fluid {
+	width: 100%;
+	max-height: 250px;
+}
 .events-desc {
 	font-style: normal;
 	color: #000000;
@@ -261,7 +265,7 @@ body {
 .eventModalBtn {
 	color: white;
 }
-/*------------------------------------------EVENT PAGE STARTS-------------------------------------------*/
+/*------------------------------------------EVENT PAGE ENDS-------------------------------------------*/
 
 /*------------------------------------------GALLERY PAGE STARTS-------------------------------------------*/
 .gallery-events-bg {
