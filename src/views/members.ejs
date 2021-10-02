@@ -42,7 +42,7 @@
 					<%= memberRes.des  %>
 				</div>
 		</section>
-		<section class="tech-card pb-3">
+		<section class="tech-card pb-3 mb-1">
 			<div class="container align-items-center px-1 pt-2">
 				<div class="row mb-4 container">
 					<div class="col">
@@ -83,7 +83,7 @@
 											<% } if(res.gmail.toLowerCase().trim() != 'nil'){ %>
 											<li class="list-inline-item">
 												<a
-													href="<%= res.gmail %>"
+													href="mailto:<%= res.gmail %>"
 													class="
 														social-link-1
 														text-decoration-none
@@ -141,7 +141,7 @@
 										<% }if(res.gmail.toLowerCase().trim() != 'nil'){ %>
 										<li class="list-inline-item">
 											<a
-												href="<%= res.gmail %>"
+												href="mailto:<%= res.gmail %>"
 												class="
 													social-link-2
 													text-decoration-none
@@ -175,6 +175,7 @@
 			</div>
 			
 		</section>
+		<% if(memberRes.offer[0] != ''){ %>
 		<section class="tech-offer p-4">
 			<div class="container">
 				<h3 class="about-headlines text-center pb-4 pt-4 fs-2 fw-bolder">
@@ -186,14 +187,17 @@
 			<div class="container ps-lg-5 align-items-center pb-5 pe-lg-5">
 				<div class="justify-content-center parent ps-lg-5 pe-lg-5">
 					<% memberRes.offer.forEach((res,index)=>{ %>
-					<div class="team-points my-4 ms-4">
-						<div class="text-bullet">&#8226;</div>
-						<%= res %>
-					</div>
+						<% if(res.trim().toLowerCase() != 'nil'){ %>
+							<div class="team-points my-4 ms-4">
+								<div class="text-bullet">&#8226;</div>
+								<%= res %>
+							</div>
+						<% } %>
 					<% }) %>
 				</div>
 			</div>
 		</section>
+		<% } %>
         <%- include('./partials/footer.ejs') %>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
