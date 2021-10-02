@@ -69,40 +69,47 @@
 											<div class="lead"><%= res.post %></div>
 										</div>
 										<ul class="social mb-2 list-inline mt-3">
-											<% if(res.linkdIn.toLowerCase().trim() != 'nil'){ %>
-											<li class="list-inline-item">
-												<a
-													href="<%= res.linkdIn %>"
-													class="
-														social-link-1
-														text-decoration-none
-													"
-													><i class="fa fa-linkedin"></i
-												></a>
-											</li>
-											<% } if(res.gmail.toLowerCase().trim() != 'nil'){ %>
-											<li class="list-inline-item">
-												<a
-													href="mailto:<%= res.gmail %>"
-													class="
-														social-link-1
-														text-decoration-none
-													"
-													><i class="far fa-envelope"></i></a>
-											</li>
-											<% } if(res.gitHub.toLowerCase().trim() != 'nil'){ %>
-											<li class="list-inline-item">
-												<a
-													href="<%= res.gitHub %>"
-													class="
-														social-link-1
-														text-decoration-none
-													"
-													>
-													<i class="fa fa-github"></i>
-												</a>
-											</li>
-											<% } %>
+											<% if(!(res.linkdIn.toLowerCase().trim() == 'nil' && res.gmail.toLowerCase().trim() == 'nil' && res.gitHub.toLowerCase().trim() == 'nil')){ %>
+												<% if(res.linkdIn.toLowerCase().trim() != 'nil'){ %>
+												<li class="list-inline-item">
+													<a
+														href="<%= res.linkdIn %>"
+														class="
+															social-link-1
+															text-decoration-none
+														"
+														><i class="fa fa-linkedin"></i
+													></a>
+												</li>
+												<% } if(res.gmail.toLowerCase().trim() != 'nil'){ %>
+												<li class="list-inline-item">
+													<a
+														href="mailto:<%= res.gmail %>"
+														class="
+															social-link-1
+															text-decoration-none
+														"
+														><i class="far fa-envelope"></i></a>
+												</li>
+												<% } if(res.gitHub.toLowerCase().trim() != 'nil'){ %>
+												<li class="list-inline-item">
+													<a
+														href="<%= res.gitHub %>"
+														class="
+															social-link-1
+															text-decoration-none
+														"
+														>
+														<i class="fa fa-github"></i>
+													</a>
+												</li>
+												<% } %>
+											<% }else{ %>
+												<div class="p-1">
+													<li class="list-inline-item">
+													</li>
+												</div>
+											<% } %>	
 										</ul>
 									</div>
 								</div>
@@ -127,40 +134,47 @@
 										<div class="fs-5"><%= res.post %></div>
 									</div>
 									<ul class="social mb-2 list-inline mt-3">
-										<% if(res.linkdIn.toLowerCase().trim() != 'nil'){ %>
-										<li class="list-inline-item">
-											<a
-												href="<%= res.linkdIn %>"
-												class="
-													social-link-2
-													text-decoration-none
-												"
-												><i class="fa fa-linkedin"></i
-											></a>
-										</li>
-										<% }if(res.gmail.toLowerCase().trim() != 'nil'){ %>
-										<li class="list-inline-item">
-											<a
-												href="mailto:<%= res.gmail %>"
-												class="
-													social-link-2
-													text-decoration-none
-												"
-												><i class="far fa-envelope"></i>
-											</a>
-										</li>
-										<% }if(res.gitHub.toLowerCase().trim() != 'nil'){ %>
-										<li class="list-inline-item">
-											<a
-												href="<%= res.gitHub %>"
-												class="
-													social-link-2
-													text-decoration-none
-												"
-												><i class="fa fa-github"></i
-											></a>
-										</li>
-										<% } %>
+										<% if(!(res.linkdIn.toLowerCase().trim() == 'nil' && res.gmail.toLowerCase().trim() == 'nil' && res.gitHub.toLowerCase().trim() == 'nil')){ %>
+											<% if(res.linkdIn.toLowerCase().trim() != 'nil'){ %>
+											<li class="list-inline-item">
+												<a
+													href="<%= res.linkdIn %>"
+													class="
+														social-link-2
+														text-decoration-none
+													"
+													><i class="fa fa-linkedin"></i
+												></a>
+											</li>
+											<% }if(res.gmail.toLowerCase().trim() != 'nil'){ %>
+											<li class="list-inline-item">
+												<a
+													href="mailto:<%= res.gmail %>"
+													class="
+														social-link-2
+														text-decoration-none
+													"
+													><i class="far fa-envelope"></i>
+												</a>
+											</li>
+											<% }if(res.gitHub.toLowerCase().trim() != 'nil'){ %>
+											<li class="list-inline-item">
+												<a
+													href="<%= res.gitHub %>"
+													class="
+														social-link-2
+														text-decoration-none
+													"
+													><i class="fa fa-github"></i
+												></a>
+											</li>
+											<% } %>
+										<% }else{ %>
+											<div class="p-1">
+												<li class="list-inline-item">
+												</li>
+											</div>
+										<% } %>	
 									</ul>
 								</div>
 							</div>
