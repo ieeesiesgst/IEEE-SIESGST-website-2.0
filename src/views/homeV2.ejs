@@ -38,7 +38,7 @@
 			function changeImage(i, sub) {
 				document
 					.getElementById('home-subImg')
-					.setAttribute('src', `/images/subChp/sub-${i}.jpg`);
+					.setAttribute('src', `/images/subChp/sub-${i}.png`);
 				document.getElementById(sub[3]).classList.add('active-Sub');
 				for (var i = 0; i < 3; i++) {
 					document
@@ -323,7 +323,7 @@
 						></div>
 
 						<img
-							src="/images/subChp/sub-1.jpg"
+							src="/images/subChp/sub-1.png"
 							class="
 								img-fluid
 								sub-Img
@@ -360,7 +360,7 @@
 									py-3
 								"
 							></div>
-									WIE
+									MTTs
 								</div>
 								<div
 									class="
@@ -373,7 +373,7 @@
 									"
 									id="mtts"
 								>
-									MTTs
+									WIE
 								</div>
 								<div
 									class="
@@ -461,7 +461,7 @@
 				changeImage(3, ['wie', 'mtts', 'isv', 'cs']);
 			});
 			document.getElementById('isv').addEventListener('click', () => {
-				changeImage(2, ['wie', 'mtts', 'cs', 'isv']);
+				changeImage(4, ['wie', 'mtts', 'cs', 'isv']);
 			});
 		</script>
 	</body>

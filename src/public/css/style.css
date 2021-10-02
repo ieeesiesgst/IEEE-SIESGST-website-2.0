@@ -210,7 +210,7 @@ body {
 /*--------------------------------------- EVENTS PAGE STARTS--------------------------------------------------*/
 .events-bg {
 	background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
-		url('../images/o1.jpg');
+		url('../images/pageBg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -253,7 +253,7 @@ body {
 	max-width: 400px;
 }
 .event-modal {
-	background-image: url('../images/o1.jpg');
+	background-image: url('../images/pageBg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
@@ -425,7 +425,7 @@ body {
 /* ---------------------------------------CONTACT PAGE STARTS------------------------------------------ */
 .contact-bg {
 	background: linear-gradient(rgba(22, 22, 22, 0.1), rgba(100, 99, 99, 0.3)),
-		url('../images/o1.jpg');
+		url('../images/pageBg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
