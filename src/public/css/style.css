@@ -73,6 +73,13 @@ body {
 	}
 }
 /* -- Home Events-- */
+.homeE-title {
+	text-decoration: none;
+}
+.homeE-title:hover {
+	font-weight: bold;
+	transition: ease;
+}
 .eventv1 {
 	border-left: 3px solid #111722;
 	height: 350px;
@@ -155,10 +162,14 @@ body {
 .active-sub2 {
 	cursor: pointer;
 	background-color: #ffbd3a;
+	outline: 2px solid #fff;
+	outline-offset: -7px;
 }
 .active-sub1 {
 	cursor: pointer;
 	background-color: #323b4b;
+	outline: 2px solid #fff;
+	outline-offset: -7px;
 }
 @media screen and (min-width: 1000px) {
 	.sub-Img {

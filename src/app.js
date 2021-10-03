@@ -43,7 +43,7 @@ app.set('view engine', 'ejs');
 // app.use('/auth', localLoginRouter);
 app.use('/events', eventsRouter);
 app.use('/gallery', galleryRouter);
-app.use('/allteams', teamRouter);
+app.use('/teams', teamRouter);
 app.use('/teams', memberRouter);
 app.use('/contact', contactRouter);
 app.use('/subChapter', subChapter);
