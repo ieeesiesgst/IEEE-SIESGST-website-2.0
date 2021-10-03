@@ -769,25 +769,6 @@ body {
 	background-position: center;
 }
 
-.teams-bg-1 {
-	background: #ffcc66;
-}
-.teams-bg-2 {
-	background: #111722;
-	color: #fff;
-}
-.teams-bg-3 {
-	background: #ffbd3a;
-}
-.teams-bg-4 {
-	background: #c7c8ca;
-}
-.teams-bg-5 {
-	background: #1e293c;
-	color: #fff;
-}
-.teams-bg-2 .all-team-name,
-.teams-bg-5 .all-team-name,
 .teams-bg-pr .all-team-name,
 .teams-bg-admin .all-team-name,
 .teams-bg-mtts .all-team-name,
