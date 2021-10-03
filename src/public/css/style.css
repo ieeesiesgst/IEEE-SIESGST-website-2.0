@@ -465,7 +465,6 @@ body {
 	text-decoration: none;
 	cursor: pointer;
 	color: white;
-	border: none;
 	border: 1px solid #ffcc66;
 }
 .submit-contact:hover {
@@ -603,11 +602,173 @@ body {
 }
 .all-team-name {
 	border: 1px solid rgba(0, 0, 0, 0.3);
-	transition: 0.5s;
+	transition: 0.2s;
 	transition-timing-function: ease-out;
 	box-shadow: 0 0 0 0 #333;
 	cursor: pointer;
+	font-size: 18px;
 }
+
+.teams-bg-core {
+	background: linear-gradient(
+			rgba(255, 204, 102, 0.85),
+			rgba(255, 204, 102, 0.85)
+		),
+		url('../images/team_bg/core.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-tech {
+	background: linear-gradient(rgba(17, 23, 34, 0.5), rgba(17, 23, 34, 0.5)),
+		url('../images/team_bg/tech.jpg');
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-design {
+	background: linear-gradient(
+			rgba(255, 204, 102, 0.75),
+			rgba(255, 204, 102, 0.75)
+		),
+		url('../images/team_bg/design.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-creative {
+	background: linear-gradient(rgba(17, 23, 34, 0.7), rgba(17, 23, 34, 0.7)),
+		url('../images/team_bg/creative.jpg');
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-media {
+	background: linear-gradient(rgba(30, 41, 60, 0.7), rgba(30, 41, 60, 0.7)),
+		url('../images/team_bg/media.jpg');
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-cs {
+	background: linear-gradient(
+			rgba(255, 204, 102, 0.7),
+			rgba(255, 204, 102, 0.7)
+		),
+		url('../images/team_bg/cs.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-isv {
+	background: linear-gradient(
+			rgba(255, 204, 102, 0.69),
+			rgba(255, 204, 102, 0.69)
+		),
+		url('../images/team_bg/isv.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-mdo {
+	background: linear-gradient(
+			rgba(255, 204, 102, 0.69),
+			rgba(255, 204, 102, 0.69)
+		),
+		url('../images/team_bg/mdo.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-pr {
+	background: linear-gradient(rgba(17, 23, 34, 0.65), rgba(17, 23, 34, 0.65)),
+		url('../images/team_bg/pr.jpg');
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-admin {
+	background: linear-gradient(rgba(17, 23, 34, 0.65), rgba(17, 23, 34, 0.65)),
+		url('../images/team_bg/admin.jpg');
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-mtts {
+	background: linear-gradient(rgba(30, 41, 60, 0.1), rgba(30, 41, 60, 0.1)),
+		url('../images/team_bg/mtts.jpg');
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-treasurer {
+	background: linear-gradient(rgba(30, 41, 60, 0.7), rgba(30, 41, 60, 0.7)),
+		url('../images/team_bg/treasurer.jpg');
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-faculty {
+	background: linear-gradient(
+			rgba(255, 189, 58, 0.65),
+			rgba(255, 189, 58, 0.65)
+		),
+		url('../images/team_bg/faculty.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-secretary {
+	background: linear-gradient(
+			rgba(199, 200, 202, 0.86),
+			rgba(199, 200, 202, 0.86)
+		),
+		url('../images/team_bg/secretary.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-wie {
+	background: linear-gradient(
+			rgba(199, 200, 202, 0.84),
+			rgba(199, 200, 202, 0.84)
+		),
+		url('../images/team_bg/wie.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.teams-bg-publicity {
+	background: linear-gradient(rgba(30, 41, 60, 0.7), rgba(30, 41, 60, 0.7)),
+		url('../images/team_bg/publicity.jpg');
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .teams-bg-1 {
 	background: #ffcc66;
 }
@@ -626,7 +787,15 @@ body {
 	color: #fff;
 }
 .teams-bg-2 .all-team-name,
-.teams-bg-5 .all-team-name {
+.teams-bg-5 .all-team-name,
+.teams-bg-pr .all-team-name,
+.teams-bg-admin .all-team-name,
+.teams-bg-mtts .all-team-name,
+.teams-bg-media .all-team-name,
+.teams-bg-creative .all-team-name,
+.teams-bg-treasurer .all-team-name,
+.teams-bg-publicity .all-team-name,
+.teams-bg-tech .all-team-name {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .all-team-div .all-team-name:hover {

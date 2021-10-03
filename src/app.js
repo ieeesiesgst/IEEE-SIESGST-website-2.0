@@ -44,7 +44,7 @@ app.set('view engine', 'ejs');
 app.use('/events', eventsRouter);
 app.use('/gallery', galleryRouter);
 app.use('/allteams', teamRouter);
-app.use('/members', memberRouter);
+app.use('/teams', memberRouter);
 app.use('/contact', contactRouter);
 app.use('/subChapter', subChapter);
 app.use('/achievement', achievement);

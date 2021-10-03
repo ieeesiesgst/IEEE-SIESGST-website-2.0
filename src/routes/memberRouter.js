@@ -3,7 +3,7 @@ const cachedata = require('../cache/cacheData');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/:teamname', (req, res) => {
 	try {
 		const teamRes = cachedata('teams');
 		let memberRes;
@@ -14,40 +14,40 @@ router.get('/', (req, res) => {
 				message: 'Server Error!'
 			});
 		} else {
-			if (req.query.team == 'core') {
+			if (req.params.teamname == 'core') {
 				memberRes = teamRes.core;
-			} else if (req.query.team == 'faculty') {
+			} else if (req.params.teamname == 'faculty') {
 				memberRes = teamRes.faculty;
-			} else if (req.query.team == 'wie') {
+			} else if (req.params.teamname == 'wie') {
 				memberRes = teamRes.wie;
-			} else if (req.query.team == 'cs') {
+			} else if (req.params.teamname == 'cs') {
 				memberRes = teamRes.cs;
-			} else if (req.query.team == 'mtts') {
+			} else if (req.params.teamname == 'mtts') {
 				memberRes = teamRes.mtts;
-			} else if (req.query.team == 'isv') {
+			} else if (req.params.teamname == 'isv') {
 				memberRes = teamRes.isv;
-			} else if (req.query.team == 'jsec') {
+			} else if (req.params.teamname == 'jsec') {
 				memberRes = teamRes.jsec;
-			} else if (req.query.team == 'tech') {
+			} else if (req.params.teamname == 'tech') {
 				memberRes = teamRes.tech;
-			} else if (req.query.team == 'admin') {
+			} else if (req.params.teamname == 'admin') {
 				memberRes = teamRes.admin;
-			} else if (req.query.team == 'pr') {
+			} else if (req.params.teamname == 'pr') {
 				memberRes = teamRes.pr;
-			} else if (req.query.team == 'media') {
+			} else if (req.params.teamname == 'media') {
 				memberRes = teamRes.media;
-			} else if (req.query.team == 'publicity') {
+			} else if (req.params.teamname == 'publicity') {
 				memberRes = teamRes.publicity;
-			} else if (req.query.team == 'design') {
+			} else if (req.params.teamname == 'design') {
 				memberRes = teamRes.design;
-			} else if (req.query.team == 'creative') {
+			} else if (req.params.teamname == 'creative') {
 				memberRes = teamRes.creative;
-			} else if (req.query.team == 'mdo') {
+			} else if (req.params.teamname == 'mdo') {
 				memberRes = teamRes.mdo;
-			} else if (req.query.team == 'treasurer') {
+			} else if (req.params.teamname == 'treasurer') {
 				memberRes = teamRes.treasurer;
 			} else {
-				memberRes = teamRes.core;
+				res.redirect('/teams');
 			}
 			res.render('members', {
 				title: 'TEAM MEMBERS | IEEE SIESGST',
