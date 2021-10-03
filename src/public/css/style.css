@@ -1199,5 +1199,18 @@ body {
 }
 .achieve-card:hover .achieve-desc {
 	height: 100%;
+	overflow-y: scroll;
+}
+.achieve-desc::-webkit-scrollbar {
+	width: 4px;
+}
+.achieve-desc::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+.achieve-desc::-webkit-scrollbar-thumb {
+	background: #888;
+}
+.achieve-desc::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 /* ------------------------------------------ACHIVEMENTS PAGE ENDS-------------------------------------------*/
