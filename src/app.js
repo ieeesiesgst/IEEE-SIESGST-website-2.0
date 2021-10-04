@@ -46,8 +46,8 @@ app.use('/gallery', galleryRouter);
 app.use('/teams', teamRouter);
 app.use('/teams', memberRouter);
 app.use('/contact', contactRouter);
-app.use('/subChapter', subChapter);
-app.use('/achievement', achievement);
+app.use('/sub-chapter', subChapter);
+app.use('/achievements', achievement);
 
 app.use('/', generalRouter);
 

@@ -2,21 +2,21 @@ const express = require('express');
 const cachedata = require('../cache/cacheData');
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/:chapter', (req, res) => {
 	try {
 		const subRes = cachedata('subChp');
 		let chapterRes, renderPg;
 
-		if (req.query.chp == 'wie') {
+		if (req.params.chapter == 'wie') {
 			chapterRes = subRes.Wie;
 			renderPg = 'wie';
-		} else if (req.query.chp == 'mtts') {
+		} else if (req.params.chapter == 'mtts') {
 			chapterRes = subRes.Mtts;
 			renderPg = 'mtts';
-		} else if (req.query.chp == 'isv') {
+		} else if (req.params.chapter == 'isv') {
 			chapterRes = subRes.Isv;
 			renderPg = 'isv';
-		} else if (req.query.chp == 'cs') {
+		} else if (req.params.chapter == 'cs') {
 			chapterRes = subRes.Cs;
 			renderPg = 'cs';
 		} else {

@@ -66,6 +66,11 @@ body {
 	height: 220px;
 	right: 15px;
 }
+@media screen and (max-width: 991px) {
+	.home-flag-img {
+		max-width: 400px;
+	}
+}
 @media screen and (min-width: 1000px) {
 	.flagImg {
 		width: 100%;

@@ -245,8 +245,11 @@
 	}
 
 	.navbar-drop-list {
-		padding: 10px 15px;
 		transition: 0.4s;
+	}
+
+	.navbar-drop-list a {
+		padding: 10px 15px;
 		color: #ffcc66;
 	}
 
@@ -255,12 +258,15 @@
 	}
 
 	.navbar-drop-list:hover {
-		color: #0b0c10;
 		background: #F2F7F8;
 	}
 
+	.navbar-drop-list:hover a {
+		color: #0b0c10;
+	}
+
 	@media (max-width: 850px) {
-		.navbar-drop-list {
+		.navbar-drop-list, .navbar-drop-list a {
 			overflow: hidden;
 			transition: 0.5s;
 		}
@@ -485,7 +491,7 @@
 				<div class="navbar-link-text d-inline">Events</div>
 			</li>
 		</a>
-		<a href="javascript: void(0)" class="navbar-link dropdown-head">
+		<span class="navbar-link dropdown-head cursor-pointer">
 			<li class="navbar-list">
 				<div class="navbar-link-text d-inline">
 					Explore
@@ -494,18 +500,30 @@
 			</li>
 
 			<span class="nav-drop-down overflow-hidden">
-				<li class="navbar-drop-list" onclick="location.href='/gallery'">
-					<div class="navbar-link-text d-inline">Gallery</div>
+				<li
+						class="navbar-drop-list"
+				>
+						<div class="navbar-link-text d-inline">
+								<a href="/gallery" class="d-block w-100 h-100 text-decoration-none">Gallery</a>
+						</div>
 				</li>
-				<li class="navbar-drop-list" onclick="location.href='/achievement?page=1'">
-					<div class="navbar-link-text d-inline">Achievements</div>
+				<li
+						class="navbar-drop-list"
+				>
+						<div class="navbar-link-text d-inline">
+								<a href="/achievements" class="d-block w-100 h-100 text-decoration-none">Achievements</a>
+						</div>
 				</li>
-				<li class="navbar-drop-list" onclick="location.href='/teams'">
-					<div class="navbar-link-text d-inline">Teams</div>
+				<li
+						class="navbar-drop-list"
+				>
+						<div class="navbar-link-text d-inline">
+								<a href="/teams" class="d-block w-100 h-100 text-decoration-none">Teams</a>
+						</div>
 				</li>
 			</span>
-		</a>
-		<a href="javascript: void(0)" class="navbar-link dropdown-head">
+		</span>
+		<span class="navbar-link dropdown-head cursor-pointer">
 			<li class="navbar-list">
 				<div class="navbar-link-text d-inline">
 					Sub-Chapters
@@ -515,39 +533,35 @@
 
 			<span class="nav-drop-down overflow-hidden">
 				<li
-                        class="navbar-drop-list"
-                        onclick="location.href='/subChapter?chp=wie'"
-                    >
-                        <div class="navbar-link-text d-inline">
-                            WIE          
-                        </div>
+						class="navbar-drop-list"
+				>
+						<div class="navbar-link-text d-inline">
+								<a href="/sub-chapter/wie" class="d-block w-100 h-100 text-decoration-none">WIE</a>
+						</div>
 				</li>
 				<li
-					class="navbar-drop-list"
-					onclick="location.href='/subChapter?chp=mtts'"
+						class="navbar-drop-list"
 				>
-					<div class="navbar-link-text d-inline">
-						MTTS
-					</div>
+						<div class="navbar-link-text d-inline">
+								<a href="/sub-chapter/mtts" class="d-block w-100 h-100 text-decoration-none">MTTS</a>
+						</div>
 				</li>
 				<li
-				class="navbar-drop-list"
-				onclick="location.href='/subChapter?chp=isv'"
+						class="navbar-drop-list"
 				>
-					<div class="navbar-link-text d-inline">
-						ISV
-					</div>
+						<div class="navbar-link-text d-inline">
+								<a href="/sub-chapter/isv" class="d-block w-100 h-100 text-decoration-none">ISV</a>
+						</div>
 				</li>
 				<li
-				class="navbar-drop-list"
-				onclick="location.href='/subChapter?chp=cs'"
+						class="navbar-drop-list"
 				>
-					<div class="navbar-link-text d-inline">
-						CS
-					</div>
+						<div class="navbar-link-text d-inline">
+								<a href="/sub-chapter/cs" class="d-block w-100 h-100 text-decoration-none">CS</a>
+						</div>
 				</li>
 			</span>
-		</a>
+		</span>
 		<a href="/contact" class="navbar-link">
 			<li class="navbar-list">
 				<div class="navbar-link-text d-inline">Contact Us</div>
