@@ -817,12 +817,11 @@ body {
 }
 .tech-card {
 	background: linear-gradient(rgba(22, 22, 22, 0.4), rgba(43, 28, 28, 0.4)),
-		url('../images/memberBg.png');
+		url('../images/team_bg/memberBg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
-	/* background-image: linear-gradient(to right, #111722, #2e3344, #111722); */
 }
 .team-card:hover {
 	text-decoration: none;
