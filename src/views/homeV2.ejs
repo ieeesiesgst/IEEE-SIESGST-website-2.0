@@ -61,6 +61,7 @@
 				document
 					.getElementById('home-subImg')
 					.setAttribute('src', `/images/subChp/sub-${i}.png`);
+				document.getElementById('sub-link').setAttribute('href', `/sub-chapter/${sub[3]}`)
 				document.getElementById(sub[3]).classList.add('active-Sub');
 				for (var i = 0; i < 3; i++) {
 					document
@@ -343,17 +344,21 @@
 								py-3
 							"
 						></div>
-
-						<img
-							src="/images/subChp/sub-1.png"
-							class="
-								img-fluid
-								sub-Img
-								animate__animated animate__pulse
-							"
-							alt="subChp"
-							id="home-subImg"
-						/>
+						<a href="/sub-chapter/mtts" id="sub-link" class="homeSub-Img text-decoration-none position-relative">
+							<img
+								src="/images/subChp/sub-1.png"
+								class="
+									img-fluid
+									sub-Img
+									animate__animated animate__pulse
+								"
+								alt="subChp"
+								id="home-subImg"
+							/>
+							<div class="homeSub position-relative">
+								<div class="text-dark fw-bolder fs-2 text-center">Click To Know More!</div>
+							</div>
+						</a>
 					</div>
 					<div
 						class="
@@ -373,7 +378,7 @@
 										fw-bold
 										subName1
 									"
-									id="wie"
+									id="mtts"
 								><div
 								class="
 									subv1
@@ -393,7 +398,7 @@
 										fw-bold
 										subName2
 									"
-									id="mtts"
+									id="wie"
 								>
 									WIE
 								</div>
@@ -470,14 +475,14 @@
 			}
 			
 			document
-				.getElementById('wie')
+				.getElementById('mtts')
 				.classList.add('active-Sub', 'active-sub1');
 
 			document.getElementById('wie').addEventListener('click', () => {
-				changeImage(1, ['mtts', 'cs', 'isv', 'wie']);
+				changeImage(2, ['mtts', 'cs', 'isv', 'wie']);
 			});
 			document.getElementById('mtts').addEventListener('click', () => {
-				changeImage(2, ['wie', 'cs', 'isv', 'mtts']);
+				changeImage(1, ['wie', 'cs', 'isv', 'mtts']);
 			});
 			document.getElementById('cs').addEventListener('click', () => {
 				changeImage(3, ['wie', 'mtts', 'isv', 'cs']);
