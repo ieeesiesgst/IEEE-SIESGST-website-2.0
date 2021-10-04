@@ -51,7 +51,8 @@ router.get('/:teamname', (req, res) => {
 			}
 			res.render('members', {
 				title: 'TEAM MEMBERS | IEEE SIESGST',
-				memberRes: memberRes
+				memberRes: memberRes,
+				teamname: req.params.teamname
 			});
 		}
 	} catch (err) {
