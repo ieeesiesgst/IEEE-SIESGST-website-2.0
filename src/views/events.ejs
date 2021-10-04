@@ -24,7 +24,7 @@
 		/>
 		<!-- //Meta tag Keywords -->
 		<%- include('./partials/head-tag.ejs') %>
-		<style>
+		<!-- <style>
 			.flagShipv1 {
 				border-left: 3px solid #111722;
 				height: 220px;
@@ -41,11 +41,11 @@
 					height: 310px;
 				}
 			}
-		</style>
+		</style> -->
 	</head>
 	<body class="events-bg">
 		<%- include('./partials/navbar.ejs') %>
-		<% if(eventArray.length != 0){ %>
+		<% if(eventArray.activeE.length != 0 || eventArray.upcomingE.length != 0){ %>
 			<% if(eventArray.activeE.length != 0){ %>
 				<section class="upcoming-events px-3 pt-3" id='activeId'>
 					<h3
@@ -137,44 +137,25 @@
 			
 									<div class="row float-end">
 										<div class="d-inline-flex mt-2">
-											<% if(res.website.trim().toLowerCase() == 'nil'){%>
-												<% if(res.long.trim().toLowerCase() == 'nil'){%>
-													<script>displayId('knowA')</script>
-												<% }else{ %>
-													<a
-													href="<%= res.website %>"
-													class="
-														p-2
-														pe-lg-5
-														ps-lg-5
-														ps-lg-3
-														btn-events
-													"data-bs-toggle="modal"
-													data-bs-target="#staticBackdrop<%= index %>"
-													id="knowA"
-													>Know More</a
-													>
-												<% } %>
-											<% }else{ %>
-											<a
-												href="<%= res.website %>"
+											<% if(res.long.trim().toLowerCase() != 'nil'){%>
+												<a
+												href="<%= res.website %>"target="_blank" rel="noopener noreferrer"
 												class="
 													p-2
 													pe-lg-5
 													ps-lg-5
 													ps-lg-3
 													btn-events
-												"
+												"data-bs-toggle="modal"
+												data-bs-target="#staticBackdrop<%= index %>"
 												id="knowA"
 												>Know More</a
-											>
+												>
 											<% } %>
 											&nbsp; &nbsp;
-											<% if(res.reg.trim().toLowerCase() == 'nil'){%>
-												<script>displayId('regA')</script>
-											<% }else{ %>
+											<% if(res.reg.trim().toLowerCase() != 'nil'){%>
 											<a
-												href="<%res.reg %>"
+												href="<%= res.reg %>"target="_blank" rel="noopener noreferrer"
 												class="
 												p-2
 												pe-lg-5
@@ -285,44 +266,25 @@
 									</div>
 									<div class="row float-end">
 										<div class="d-inline-flex mt-2">
-											<% if(res.website.trim().toLowerCase() == 'nil'){%>
-												<% if(res.long.trim().toLowerCase() == 'nil'){%>
-													<script>displayId('knowU')</script>
-												<% }else{ %>
-													<a
-													href="<%= res.website %>"
-													class="
-													p-2
-													pe-lg-5
-													ps-lg-5
-													ps-lg-3
-													btn-events
-													"data-bs-toggle="modal"
-													data-bs-target="#staticbackdrop<%= index %>"
-													id="knowU"
-													>Know More</a
-													>
-												<% } %>
-											<% }else{ %>
-											<a
-												href="<%= res.website %>"
+											<% if(res.long.trim().toLowerCase() != 'nil'){%>
+												<a
+												href="<%= res.website %>"target="_blank" rel="noopener noreferrer"
 												class="
 												p-2
 												pe-lg-5
 												ps-lg-5
 												ps-lg-3
 												btn-events
-												"
+												"data-bs-toggle="modal"
+												data-bs-target="#staticbackdrop<%= index %>"
 												id="knowU"
 												>Know More</a
-											>
+												>
 											<% } %>
 											&nbsp; &nbsp;
-											<% if(res.reg.trim().toLowerCase() == 'nil'){%>
-												<script>displayId('regU')</script>
-											<% }else{ %>
+											<!-- <% if(res.reg.trim().toLowerCase() != 'nil'){%>
 											<a
-												href="<%= res.reg %>"
+												href="<%= res.reg %>"target="_blank" rel="noopener noreferrer"
 												class="
 												p-2
 												pe-lg-5
@@ -331,7 +293,7 @@
 												btn-events
 												" id="regU"
 												>Register Now</a
-											><% } %>
+											><% } %> -->
 										</div>
 									</div>
 								</div>
@@ -341,15 +303,15 @@
 				</section>
 			<% } %>
 		<% }else{ %>
-			<section class="pb-5 mt-2">
+			<section class="pb-5 mt-5">
 				<div class="text-center pt-5 pb-4 fs-3 fw-bold text-white">
-					OUR FLAGSHIP EVENTS
+					<span class=" position-relative underline-overall-orange">OUR FLAGSHIP EVENTS</span>
 				</div>
 				<div class="container" style="max-width: 1000px">
 					<div class="text-black text-center mt-4 bg-white">
 						<div class="row g-0">
 							<div class="col-lg-6 col-12 d-flex align-items-center">
-								<div class="px-4 fs-6 py-3">
+								<div class="px-4 fs-6 py-3 position-relative">
 									<div
 										class="
 											flagShipv1
@@ -358,30 +320,25 @@
 										"
 									></div>
 									<p class="fs-4 fw-bold">Techopedia</p>
-									IEEE SIESGST. One of the most vibrant and
-									largest Student Branch in the Bombay Section,
-									IEEE SIESGST have made a significant mark for
-									itself over the years. IEEE SIESGST. One of the
-									most vibrant and largest Student Branch in the
-									Bombay Section......
+									Techopedia is a technical fest organized by the IEEE SIESGST branch for the involvement of the student members as well as the development of students under the guise of fun-filled and intriguing games and events. This year Techopedia 10.0 is planned to be conducted, despite the pandemic situation, as the organizing team strives to achieve a grand festival virtually for its student members’ benefit. 
 								</div>
 							</div>
-							<div class="col-lg-6 col-12 py-1 py-lg-0">
+							<div class="col-lg-6 col-12 py-2 py-lg-0">
 								<img
 									src="/images/events/techopedia.png"
-									class="img-fluid flagImg" alt="Techopedia"
+									class="img-fluid w-100 home-flag-img" alt="Techopedia"
 								/>
 							</div>
 						</div>
 						<div class="row g-0">
-							<div class="col-lg-6 col-12 py-1 py-lg-0">
+							<div class="col-lg-6 col-12 py-2 py-lg-0">
 								<img
 									src="/images/events/epsilon.jpg"
-									class="img-fluid flagImg" alt="Epsilon"
+									class="img-fluid w-100 home-flag-img" alt="Epsilon"
 								/>
 							</div>
 							<div class="col-lg-6 col-12 d-flex align-items-center">
-								<div class="px-4 fs-6 py-3">
+								<div class="px-4 fs-6 py-3 position-relative">
 									<div
 										class="
 											flagShipv2
@@ -390,12 +347,7 @@
 										"
 									></div>
 									<p class="fs-4 fw-bold">Epsilon</p>
-									IEEE SIESGST. One of the most vibrant and
-									largest Student Branch in the Bombay Section,
-									IEEE SIESGST have made a significant mark for
-									itself over the years. IEEE SIESGST. One of the
-									most vibrant and largest Student Branch in the
-									Bombay Section......
+									IEEE SIES GST with its sub-chapters MTT-S and Computer Society in feature conducted EPSILON 2021~ a Symposium, with exceptional success. Epsilon 2021 was a 3-Day long Academic Convention wherein the invited Industry Experts spoke about their expertise in the field of ‘Computing and Knowledge Engineering’ which was the theme profusely covered in this Symposium.
 								</div>
 							</div>
 						</div>

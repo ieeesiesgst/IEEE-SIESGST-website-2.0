@@ -270,7 +270,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="container position-absolute homeEvent-carousel">
+				<% if(eventArray.length == 1){ %>
+					<div class="container position-absolute homeEvent-carousel homeE1-left">
+				<% }else if(eventArray.length == 2){ %>
+					<div class="container position-absolute homeEvent-carousel homeE-left">
+				<% }else{ %>
+					<div class="container position-absolute homeEvent-carousel homeEvent">
+				<% } %>
 					<div class="my-slider event-carousel">
 						<% eventArray.forEach((res,index)=>{ %>
 						<div>

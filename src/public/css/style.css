@@ -116,20 +116,47 @@ body {
 }
 @media screen and (min-width: 1200px) {
 	.homeEvent-carousel {
-		left: 80px;
 		width: 980px;
 		top: 210px;
+	}
+	.homeEvent {
+		left: 80px;
+	}
+	.homeE-left {
+		left: -180px;
+	}
+	.homeE1-left {
+		left: 70px;
+	}
+}
+@media screen and (min-width: 1000px) and (max-width: 1800px) {
+	.homeE-left {
+		right: 110px;
 	}
 }
 @media screen and (min-width: 800px) and (max-width: 990px) {
 	.homeEvent-carousel {
 		top: 270px;
+	}
+	.homeEvent {
 		left: -3px;
+	}
+	.homeE-left {
+		left: -110px;
+	}
+	.homeE1-left {
+		left: 0px;
 	}
 }
 @media screen and (max-width: 800px) {
-	.homeEvent-carousel {
+	.homeEvent {
 		left: 2px;
+	}
+	.homeE-left {
+		left: -1px;
+	}
+	.homeE1-left {
+		right: 0px;
 	}
 }
 .event-slideBtn:hover {
