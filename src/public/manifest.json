@@ -47,7 +47,7 @@
 	"theme_color": "#ffcc67",
 	"manifest_version": 2,
 	"version": "2.0.0",
-	"display": "standalone",
+	"display": "browser",
 	"dir": "ltr",
 	"lang": "en"
 }
