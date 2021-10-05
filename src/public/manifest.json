@@ -44,5 +44,6 @@
 	"background_color": "#ffcc67",
 	"theme_color": "#ffcc67",
 	"manifest_version": 2,
-	"version": "2.0.0"
+	"version": "2.0.0",
+	"display": "standalone"
 }
