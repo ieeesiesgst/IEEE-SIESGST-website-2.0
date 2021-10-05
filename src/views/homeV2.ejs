@@ -211,6 +211,7 @@
 				</div>
 			</div>
 		</section>
+		
 		<% if(eventArray.length != 0){ %>
 			<section class="home-events pt-5 px-5">
 				<div class="container bg-white homeEvent-bg position-relative">
@@ -223,43 +224,16 @@
 					  </div>
 					  <div class="col-lg-4 col-12 py-2">
 						<div class="fs-6 px-4">
-						  some randome sentence... Get a look at our Ongoing and Upcoming
+						  Have a look at our Ongoing and Upcoming
 						  Events!
 						</div>
 					  </div>
 					</div>
-					<div class="row text-lg-start text-center ms-lg-4">
-					  <div class="col-lg-4 col-12 ms-lg-5 ms-0" id="controls">
-						<span
-						  class="previous"
-						  type="button"
-						  data-bs-target="#carouselExampleCaptions"
-						  data-bs-slide="prev"
-						  style="opacity: 1"
-						>
-						  <i
-							class="bx bxs-left-arrow-circle bx-md event-slideBtn"
-							style="color: #ffcc66"
-						  ></i>
-						</span>
-		  
-						<span
-						  class="next"
-						  type="button"
-						  data-bs-target="#carouselExampleCaptions"
-						  data-bs-slide="next"
-						  style="opacity: 1"
-						>
-						  <i
-							class="bx bxs-right-arrow-circle bx-md event-slideBtn"
-							style="color: #111722"
-						  ></i>
-						</span>
-					  </div>
-					</div>
+				
+					
 				  </div>
 				  <div
-					id="carouselExampleCaptions"
+					id="eventHomeCarousel"
 					class="
 					  carousel
 					  slide
@@ -270,18 +244,26 @@
 					"
 					data-bs-ride="carousel"
 				  >
-					<div class="carousel-inner">
-						<% eventArray.forEach((res,index)=>{ %>
-							<div class="carousel-item active">
-								<div class="card mb-3 eventCard">
-								<img src="<%= res.pic %>" class="card-img-top eventImg" alt="Event" />
-								<div class="card-body">
-									<h5 class="card-title text-center"><%= res.name %></h5>
+						<div class="carousel-inner">
+							<% eventArray.forEach((res,index)=>{ %>
+								<div class="carousel-item <%= index==0 && "active" %>">
+									<div class="card mb-3 eventCard">
+									<img src="<%= res.pic %>" class="card-img-top eventImg" alt="Event" />
+									<div class="card-body">
+										<h5 class="card-title text-center"><%= res.name %></h5>
+									</div>
+									</div>
 								</div>
-								</div>
-							</div>
-						<% }) %>
-					</div>
+							<% }) %>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#eventHomeCarousel" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#eventHomeCarousel" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
 				  </div>
 				</div>
 			</section>

@@ -105,6 +105,31 @@ body {
 .homeEvent-bg {
 	min-height: 400px;
 }
+
+@media (max-width: 800px) {
+	.homeEvent-bg {
+		min-height: 300px;
+	}
+	.home-events {
+		min-height: 560px;
+	}
+}
+
+@media (max-width: 620px) {
+	.home-events {
+		min-height: 460px;
+	}
+}
+
+@media (max-width: 450px) {
+	.homeEvent-bg {
+		min-height: 250px;
+	}
+	.home-events {
+		min-height: 440px;
+	}
+}
+
 .homeCarousel {
 	top: 30%;
 }
