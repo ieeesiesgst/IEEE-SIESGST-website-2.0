@@ -1,5 +1,7 @@
 {
-	"name": "App",
+	"name": "IEEE Student Branch of SIES Graduate School of Technology",
+	"short_name": "IEEE SIES GST",
+	"author": "IEEE SIES GST",
 	"icons": [
 		{
 			"src": "/android-icon-36x36.png",
@@ -37,5 +39,10 @@
 			"type": "image/png",
 			"density": "4.0"
 		}
-	]
+	],
+	"start_url": "/",
+	"background_color": "#ffcc67",
+	"theme_color": "#ffcc67",
+	"manifest_version": 2,
+	"version": "2.0.0"
 }
