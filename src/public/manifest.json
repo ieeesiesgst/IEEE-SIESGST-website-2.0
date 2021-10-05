@@ -2,6 +2,7 @@
 	"name": "IEEE Student Branch of SIES Graduate School of Technology",
 	"short_name": "IEEE SIES GST",
 	"author": "IEEE SIES GST",
+	"description": "Official website of IEEE student chapter of SIES GST, Navi Mumbai.",
 	"icons": [
 		{
 			"src": "/android-icon-36x36.png",
@@ -41,9 +42,13 @@
 		}
 	],
 	"start_url": "/",
+	"scope": "/",
+	"orientation": "portrait",
 	"background_color": "#ffcc67",
 	"theme_color": "#ffcc67",
 	"manifest_version": 2,
 	"version": "2.0.0",
-	"display": "standalone"
+	"display": "standalone",
+	"dir": "ltr",
+	"lang": "en"
 }
