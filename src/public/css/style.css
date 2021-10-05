@@ -664,6 +664,7 @@ body {
 	box-shadow: 0 0 0 0 #333;
 	cursor: pointer;
 	font-size: 18px;
+	user-select: none;
 }
 
 .teams-bg-core {
@@ -688,8 +689,8 @@ body {
 
 .teams-bg-design {
 	background: linear-gradient(
-			rgba(255, 204, 102, 0.75),
-			rgba(255, 204, 102, 0.75)
+			rgba(255, 204, 102, 0.81),
+			rgba(255, 204, 102, 0.81)
 		),
 		url('../images/team_bg/design.jpg');
 	background-size: cover;
@@ -717,8 +718,8 @@ body {
 
 .teams-bg-cs {
 	background: linear-gradient(
-			rgba(255, 204, 102, 0.7),
-			rgba(255, 204, 102, 0.7)
+			rgba(255, 204, 102, 0.8),
+			rgba(255, 204, 102, 0.8)
 		),
 		url('../images/team_bg/cs.jpg');
 	background-size: cover;
@@ -728,8 +729,8 @@ body {
 
 .teams-bg-isv {
 	background: linear-gradient(
-			rgba(255, 204, 102, 0.69),
-			rgba(255, 204, 102, 0.69)
+			rgba(255, 204, 102, 0.75),
+			rgba(255, 204, 102, 0.75)
 		),
 		url('../images/team_bg/isv.jpg');
 	background-size: cover;
@@ -739,8 +740,8 @@ body {
 
 .teams-bg-mdo {
 	background: linear-gradient(
-			rgba(255, 204, 102, 0.69),
-			rgba(255, 204, 102, 0.69)
+			rgba(255, 204, 102, 0.75),
+			rgba(255, 204, 102, 0.75)
 		),
 		url('../images/team_bg/mdo.jpg');
 	background-size: cover;
@@ -786,8 +787,8 @@ body {
 
 .teams-bg-faculty {
 	background: linear-gradient(
-			rgba(255, 189, 58, 0.65),
-			rgba(255, 189, 58, 0.65)
+			rgba(255, 189, 58, 0.7),
+			rgba(255, 189, 58, 0.7)
 		),
 		url('../images/team_bg/faculty.jpg');
 	background-size: cover;
