@@ -105,7 +105,6 @@ body {
 .homeEvent-bg {
 	min-height: 400px;
 }
-
 @media (max-width: 800px) {
 	.homeEvent-bg {
 		min-height: 300px;
@@ -114,13 +113,11 @@ body {
 		min-height: 560px;
 	}
 }
-
 @media (max-width: 620px) {
 	.home-events {
 		min-height: 460px;
 	}
 }
-
 @media (max-width: 450px) {
 	.homeEvent-bg {
 		min-height: 250px;
@@ -129,9 +126,8 @@ body {
 		min-height: 440px;
 	}
 }
-
 .homeCarousel {
-	top: 30%;
+	top: 25%;
 }
 .eventCard {
 	width: 500px;
@@ -539,6 +535,17 @@ body {
 .contact-head {
 	padding-left: 60px;
 }
+@media screen and (min-width: 440px) {
+	.textarea-space {
+		width: 300px;
+	}
+}
+@media screen and (min-width: 520px) {
+	.textarea-space {
+		width: 400px;
+	}
+}
+
 .input-space {
 	border: none;
 	border-bottom: 1px solid #000000;
@@ -630,13 +637,13 @@ body {
 /*--------------------------------------------TEAMS PAGE STARTS ---------------------------------------------*/
 .teams-bg {
 	/* background: linear-gradient(
-			rgba(236, 227, 227, 0.3),
-			rgba(196, 191, 191, 0.6)
-		),
-		url('../images/bg-teams.png'); */
+			  rgba(236, 227, 227, 0.3),
+			  rgba(196, 191, 191, 0.6)
+		  ),
+		  url('../images/bg-teams.png'); */
 	/* background: white;
-	background-repeat: no-repeat;
-	background-size: cover; */
+	  background-repeat: no-repeat;
+	  background-size: cover; */
 	background: linear-gradient(-45deg, #ffcc66, #fff, #fff, #ffcc66);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -1003,7 +1010,7 @@ body {
 	min-height: 450px;
 }
 .sub-home-row4 {
-	min-height: 450px;
+	min-height: 470px;
 }
 .mtts-gif {
 	max-height: 320px;
@@ -1027,6 +1034,7 @@ body {
 		max-width: 280px;
 	}
 	.cs-gif {
+		padding-top: 50px;
 		max-height: 290px;
 		max-width: 290px;
 	}
@@ -1450,4 +1458,4 @@ body {
 .achieve-desc::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
-/* ------------------------------------------ACHIVEMENTS PAGE ENDS-------------------------------------------*/
+/* ----------------------------------------ACHIVEMENTS PAGE ENDS-------------------------------------------*/

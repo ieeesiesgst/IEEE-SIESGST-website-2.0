@@ -45,7 +45,6 @@
 					});
 				}
 			}
-
 		
 			function changeImage(i, sub) {
 				document
@@ -404,21 +403,17 @@
 		<script>
 			$(window).scroll(testScroll);
 			var viewed = false;
-
 			function isScrolledIntoView(elem) {
 				var docViewTop = $(window).scrollTop();
 				var docViewBottom = docViewTop + $(window).height();
-
 				var elemTop = $(elem).offset().top;
 				var elemBottom = elemTop + $(elem).height();
-
 				return elemBottom <= docViewBottom && elemTop >= docViewTop;
 			}
 			
 			document
 				.getElementById('mtts')
 				.classList.add('active-Sub', 'active-sub1');
-
 			document.getElementById('wie').addEventListener('click', () => {
 				changeImage(2, ['mtts', 'cs', 'isv', 'wie']);
 			});
