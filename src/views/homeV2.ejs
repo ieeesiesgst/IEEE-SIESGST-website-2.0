@@ -246,11 +246,11 @@
 				  >
 						<div class="carousel-inner">
 							<% eventArray.forEach((res,index)=>{ %>
-								<div class="carousel-item <%= index==0 && "active" %>">
-									<div class="card mb-3 eventCard">
+								<div class="carousel-item cursor-pointer <%= index==0 && "active" %>" onclick="location.href='/events'">
+									<div class="card eventCard">
 									<img src="<%= res.pic %>" class="card-img-top eventImg" alt="Event" />
-									<div class="card-body">
-										<h5 class="card-title text-center"><%= res.name %></h5>
+									<div class="card-body pb-0">
+										<h6 class="card-title text-center"><%= res.name %> <i class="fas fa-caret-right"></i></h6>
 									</div>
 									</div>
 								</div>
