@@ -29,7 +29,7 @@
 		<%- include('./partials/navbar.ejs') %>
 		<% if(eventArray.activeE.length != 0 || eventArray.upcomingE.length != 0){ %>
 			<% if(eventArray.activeE.length != 0){ %>
-				<section class="upcoming-events px-3 pt-3" id='activeId'>
+				<section class="upcoming-events px-3 pb-4" id='activeId'>
 					<h3
 						class="
 							about-headlines
@@ -79,12 +79,12 @@
 								<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
 									<div class="p-3 events-desc" id="activeDes">
 								<% }else{ %>
-									<div class="col-md-4" id="activePic">
+									<div class="col-md-4 text-center" id="activePic">
 										<img
 											src="<%= res.pic %>" 
 											class="
 												img-thumbnail Eimg-fluid
-												w-100
+												w-auto
 												events-bg-img
 												rounded
 												p-2"
@@ -157,7 +157,7 @@
 			<% } %>
 
 			<% if(eventArray.upcomingE.length != 0){ %>
-				<section class="upcoming-events px-3 pt-3 pb-5" id="upcomingId">
+				<section class="upcoming-events px-3 pb-5" id="upcomingId">
 					<h3
 						class="
 							about-headlines
@@ -208,12 +208,12 @@
 								<% if(res.pic.trim().toLowerCase() == 'nil'){ %>
 									<div class="p-3 events-desc" id="upcomingDes">
 								<% }else{ %>
-									<div class="col-md-4">
+									<div class="col-md-4 text-center">
 										<img
 											src="<%= res.pic %>" 
 											class="
 												img-thumbnail Eimg-fluid
-												w-100
+												w-auto
 												events-bg-img
 												rounded
 												p-2
