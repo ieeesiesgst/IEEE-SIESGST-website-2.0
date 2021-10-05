@@ -22,16 +22,6 @@
 			property="twitter:description"
 			content="Official website of IEEE student chapter of SIES GST, Navi Mumbai."
 		/>
-		<!-- //Meta tag Keywords -->
-
-		<!-- tiny slider -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
-		/>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-		<!-- ---- -->
-
 		<%- include('./partials/head-tag.ejs') %>
         <script>
 			function testScroll() {
@@ -90,11 +80,9 @@
 				}
 			}
 		</script>
-		<!-- <link rel="stylesheet" href="./assets/css/homeV2.css" /> -->
 	</head>
 	<body>
         <%- include('./partials/home-navbar.ejs') %>
-		
 		<section class="about-us my-4 position-relative">
             <div class="homev1 position-absolute d-none d-lg-block"></div>
             <div class="homev2 position-absolute d-none d-lg-block"></div>
@@ -224,89 +212,79 @@
 			</div>
 		</section>
 		<% if(eventArray.length != 0){ %>
-		<section class="home-events pt-5 px-5">
-			<div class="container bg-white homeEvent-bg position-relative">
-				<div class="eventv1 position-absolute d-none d-lg-block"></div>
-				<div class="eventv2 position-absolute d-none d-lg-block"></div>
-				<div class="container pt-2 pt-md-5">
+			<section class="home-events pt-5 px-5">
+				<div class="container bg-white homeEvent-bg position-relative">
+				  <div class="eventv1 position-absolute d-none d-lg-block"></div>
+				  <div class="eventv2 position-absolute d-none d-lg-block"></div>
+				  <div class="container pt-2 pt-md-3">
 					<div class="row text-lg-start text-center ms-lg-4">
-						<div class="col-lg-4 col-12 ms-lg-5 ms-0 py-2">
-							<div class="fs-3 fw-bold">OUR EVENTS</div>
+					  <div class="col-lg-4 col-12 ms-lg-5 ms-0 py-2">
+						<div class="fs-3 fw-bold">OUR EVENTS</div>
+					  </div>
+					  <div class="col-lg-4 col-12 py-2">
+						<div class="fs-6 px-4">
+						  some randome sentence... Get a look at our Ongoing and Upcoming
+						  Events!
 						</div>
-						<div class="col-lg-4 col-12 py-2">
-							<div class="fs-6 px-4">
-								Have a look at our Ongoing and Upcoming Events!!!
-							</div>
-						</div>
+					  </div>
 					</div>
 					<div class="row text-lg-start text-center ms-lg-4">
-						<div
-							class="col-lg-4 col-12 ms-lg-5 ms-0 py-2"
-							id="controls"
+					  <div class="col-lg-4 col-12 ms-lg-5 ms-0" id="controls">
+						<span
+						  class="previous"
+						  type="button"
+						  data-bs-target="#carouselExampleCaptions"
+						  data-bs-slide="prev"
+						  style="opacity: 1"
 						>
-							<span class="previous">
-								<i
-									class="
-										bx
-										bxs-left-arrow-circle
-										bx-md
-										event-slideBtn
-									"
-									style="color: #ffcc66"
-								></i>
-							</span>
-
-							<span class="next">
-								<i
-									class="
-										bx
-										bxs-right-arrow-circle
-										bx-md
-										event-slideBtn
-									"
-									style="color: #111722"
-								></i>
-							</span>
-						</div>
+						  <i
+							class="bx bxs-left-arrow-circle bx-md event-slideBtn"
+							style="color: #ffcc66"
+						  ></i>
+						</span>
+		  
+						<span
+						  class="next"
+						  type="button"
+						  data-bs-target="#carouselExampleCaptions"
+						  data-bs-slide="next"
+						  style="opacity: 1"
+						>
+						  <i
+							class="bx bxs-right-arrow-circle bx-md event-slideBtn"
+							style="color: #111722"
+						  ></i>
+						</span>
+					  </div>
 					</div>
-				</div>
-				<% if(eventArray.length == 1){ %>
-					<div class="container position-absolute homeEvent-carousel homeE1-left">
-				<% }else if(eventArray.length == 2){ %>
-					<div class="container position-absolute homeEvent-carousel homeE-left">
-				<% }else{ %>
-					<div class="container position-absolute homeEvent-carousel homeEvent">
-				<% } %>
-					<div class="my-slider event-carousel">
+				  </div>
+				  <div
+					id="carouselExampleCaptions"
+					class="
+					  carousel
+					  slide
+					  homeCarousel
+					  position-absolute
+					  translate-middle-x
+					  start-50
+					"
+					data-bs-ride="carousel"
+				  >
+					<div class="carousel-inner">
 						<% eventArray.forEach((res,index)=>{ %>
-						<div>
-							<div class="card mx-3">
-								<img
-									src="<%= res.pic %>"
-									class="card-img-top event-cardImg"
-									alt="Event"
-								/>
+							<div class="carousel-item active">
+								<div class="card mb-3 eventCard">
+								<img src="<%= res.pic %>" class="card-img-top eventImg" alt="Event" />
 								<div class="card-body">
-									<a href="/events" class=" homeE-title"><span class="text-dark"><%= res.name %></span>
-									<span
-										><i
-											class="
-												bx
-												bxs-right-arrow
-												bx-xs
-												event-slideBtn
-											"
-											style="color: #111722"
-										></i
-									></span></a>
+									<h5 class="card-title text-center"><%= res.name %></h5>
+								</div>
 								</div>
 							</div>
-						</div>
 						<% }) %>
 					</div>
+				  </div>
 				</div>
-			</div>
-		</section>
+			</section>
 		<% } %>
 		<section class="home-subChp shadow-lg py-3 m-4 mb-5">
 			<div class="container">
@@ -442,31 +420,6 @@
 		</section>
         <%- include('./partials/footer.ejs') %>
 		<script>
-			let slider = tns({
-				container: '.my-slider',
-				items: 1,
-				slideBy: 'page',
-				autoplay: true,
-				mouseDrag: 'mouseDrag',
-				autoplayButtonOutput: false,
-				nav: false,
-				controlsContainer: '#controls',
-				prevButton: '.previous',
-				nextButton: '.next',
-				center: true,
-				responsive: {
-					300: {
-						items: 1
-					},
-					570: {
-						items: 2
-					},
-					800: {
-						items: 3
-					}
-				}
-			});
-
 			$(window).scroll(testScroll);
 			var viewed = false;
 
@@ -497,5 +450,10 @@
 				changeImage(4, ['wie', 'mtts', 'cs', 'isv']);
 			});
 		</script>
+		<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"
+		></script>
 	</body>
 </html>

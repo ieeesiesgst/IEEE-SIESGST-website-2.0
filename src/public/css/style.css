@@ -105,58 +105,63 @@ body {
 .homeEvent-bg {
 	min-height: 400px;
 }
-.homeEvent-carousel {
-	top: 250px;
+.homeCarousel {
+	top: 30%;
 }
-@media screen and (min-width: 1000px) {
-	.event-cardImg {
-		width: 100%;
-		height: 190px;
-	}
+.eventCard {
+	width: 500px;
+	height: 350px;
 }
-@media screen and (min-width: 1200px) {
-	.homeEvent-carousel {
-		width: 980px;
-		top: 210px;
-	}
-	.homeEvent {
-		left: 80px;
-	}
-	.homeE-left {
-		left: -180px;
-	}
-	.homeE1-left {
-		left: 70px;
+.eventImg {
+	height: 300px;
+}
+@media screen and (max-width: 620px) {
+	.eventImg {
+		height: 200px;
 	}
 }
-@media screen and (min-width: 1000px) and (max-width: 1800px) {
-	.homeE-left {
-		right: 110px;
+@media screen and (max-width: 450px) {
+	.eventImg {
+		height: 180px;
 	}
 }
-@media screen and (min-width: 800px) and (max-width: 990px) {
-	.homeEvent-carousel {
-		top: 270px;
-	}
-	.homeEvent {
-		left: -3px;
-	}
-	.homeE-left {
-		left: -110px;
-	}
-	.homeE1-left {
-		left: 0px;
+@media screen and (max-width: 390px) {
+	.eventImg {
+		height: 150px;
 	}
 }
-@media screen and (max-width: 800px) {
-	.homeEvent {
-		left: 2px;
+@media screen and (min-width: 770px) and (max-width: 990px) {
+	.homeCarousel {
+		top: 38%;
 	}
-	.homeE-left {
-		left: -1px;
+}
+@media screen and (min-width: 400px) and (max-width: 770px) {
+	.homeCarousel {
+		top: 42%;
 	}
-	.homeE1-left {
-		right: 0px;
+}
+@media screen and (min-width: 450px) and (max-width: 620px) {
+	.eventCard {
+		width: 350px;
+		height: 250px;
+	}
+}
+@media screen and (min-width: 390px) and (max-width: 450px) {
+	.eventCard {
+		width: 300px;
+		height: 220px;
+	}
+	.homeCarousel {
+		top: 55%;
+	}
+}
+@media screen and (max-width: 390px) {
+	.eventCard {
+		width: 240px;
+		height: 200px;
+	}
+	.homeCarousel {
+		top: 64%;
 	}
 }
 .event-slideBtn:hover {

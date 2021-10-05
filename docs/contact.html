@@ -2,11 +2,9 @@
 <html lang="en">
 	<head>
 		<!-- Required meta tags -->
-		<meta charset="utf-8" />
+		<!-- <meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--- StyleSheet --->
 		<link rel="stylesheet" href="assets/css/styles.css" />
-		<!-- Bootstrap CSS -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -18,8 +16,93 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
 			rel="stylesheet"
+		/> -->
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<!-- boxIcons -->
+		<link
+			href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+			rel="stylesheet"
 		/>
 		<title>CONTACT | IEEE SIESGST</title>
+		<style>
+			/* -- Home Events-- */
+			.eventv1 {
+				border-left: 3px solid #111722;
+				height: 350px;
+				top: 10px;
+				left: 30px;
+			}
+			.eventv2 {
+				border-left: 3px solid #111722;
+				height: 150px;
+				top: 50px;
+				left: 50px;
+			}
+			.home-events {
+				color: #111722;
+				background: linear-gradient(#2e3344 10%, #111722 70%);
+				min-height: 600px;
+			}
+			.homeEvent-bg {
+				min-height: 400px;
+			}
+			.homeCarousel {
+				top: 30%;
+			}
+			.eventCard {
+				width: 500px;
+				height: 350px;
+			}
+			@media screen and (min-width: 770px) and (max-width: 990px) {
+				.homeCarousel {
+					top: 38%;
+				}
+			}
+			@media screen and (min-width: 400px) and (max-width: 770px) {
+				.homeCarousel {
+					top: 42%;
+				}
+			}
+			@media screen and (min-width: 450px) and (max-width: 620px) {
+				.eventCard {
+					width: 350px;
+					height: 250px;
+				}
+			}
+			@media screen and (min-width: 390px) and (max-width: 450px) {
+				.eventCard {
+					width: 300px;
+					height: 220px;
+				}
+				.homeCarousel {
+					top: 55%;
+				}
+			}
+			@media screen and (max-width: 390px) {
+				.eventCard {
+					width: 240px;
+					height: 200px;
+				}
+				.homeCarousel {
+					top: 64%;
+				}
+			}
+
+			.event-slideBtn:hover {
+				cursor: pointer;
+				opacity: 0.8;
+			}
+		</style>
 	</head>
 	<body class="contact-bg">
 		<h3
@@ -135,5 +218,125 @@
 		</div>
 		<br />
 		<br />
+		<section class="home-events pt-5 px-5">
+			<div class="container bg-white homeEvent-bg position-relative">
+				<div class="eventv1 position-absolute d-none d-lg-block"></div>
+				<div class="eventv2 position-absolute d-none d-lg-block"></div>
+				<div class="container pt-2 pt-md-3">
+					<div class="row text-lg-start text-center ms-lg-4">
+						<div class="col-lg-4 col-12 ms-lg-5 ms-0 py-2">
+							<div class="fs-3 fw-bold">OUR EVENTS</div>
+						</div>
+						<div class="col-lg-4 col-12 py-2">
+							<div class="fs-6 px-4">
+								some randome sentence... Get a look at our
+								Ongoing and Upcoming Events!
+							</div>
+						</div>
+					</div>
+					<div class="row text-lg-start text-center ms-lg-4">
+						<div class="col-lg-4 col-12 ms-lg-5 ms-0" id="controls">
+							<span
+								class="previous"
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide="prev"
+								style="opacity: 1"
+							>
+								<i
+									class="
+										bx
+										bxs-left-arrow-circle
+										bx-md
+										event-slideBtn
+									"
+									style="color: #ffcc66"
+								></i>
+							</span>
+
+							<span
+								class="next"
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide="next"
+								style="opacity: 1"
+							>
+								<i
+									class="
+										bx
+										bxs-right-arrow-circle
+										bx-md
+										event-slideBtn
+									"
+									style="color: #111722"
+								></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div
+					id="carouselExampleCaptions"
+					class="
+						carousel
+						slide
+						homeCarousel
+						position-absolute
+						translate-middle-x
+						start-50
+					"
+					data-bs-ride="carousel"
+				>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="card mb-3 eventCard">
+								<img
+									src="./images/sub-1.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<h5 class="card-title text-center">
+										Card title
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="card mb-3 eventCard">
+								<img
+									src="./images/sub-2.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<h5 class="card-title text-center">
+										Card title
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="card mb-3 eventCard">
+								<img
+									src="./images/sub-3.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<h5 class="card-title text-center">
+										Card title
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
