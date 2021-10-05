@@ -42,7 +42,6 @@
 		}
 	],
 	"start_url": "/",
-	"scope": "*",
 	"orientation": "portrait",
 	"background_color": "#ffcc67",
 	"theme_color": "#ffcc67",
