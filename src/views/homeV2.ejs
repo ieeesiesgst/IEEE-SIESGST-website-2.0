@@ -25,7 +25,7 @@
 		<%- include('./partials/head-tag.ejs') %>
         <script>
 			function testScroll() {
-				if (isScrolledIntoView($('.about-us')) && !viewed) {
+				if (isScrolledIntoView($('.about-text')) && !viewed) {
 					viewed = true;
 					$('.count').each(function () {
 						$(this)
