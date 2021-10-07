@@ -49,9 +49,9 @@ module.exports = function (info, page) {
 		}
 	}
 	if (page == 2) {
-		return { activeE: active, upcomingE: upcoming };
+		return { activeE: active.reverse(), upcomingE: upcoming.reverse() };
 	} else if (page == 1) {
 		const allEvent = active.concat(upcoming);
-		return allEvent;
+		return allEvent.reverse();
 	}
 };
