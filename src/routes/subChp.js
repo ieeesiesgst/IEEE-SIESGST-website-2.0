@@ -31,7 +31,9 @@ router.get('/:chapter', (req, res) => {
 			});
 		} else {
 			res.render(renderPg, {
-				title: 'SUB-CHAPTERS MEMBERS | IEEE SIESGST',
+				title:
+					req.params.chapter?.toLocaleUpperCase() +
+					' SUB-CHAPTER | IEEE SIESGST',
 				chapterRes: chapterRes
 			});
 		}

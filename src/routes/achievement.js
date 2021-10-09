@@ -53,7 +53,7 @@ router.get('/', async (req, res) => {
 				callPg = achieveRes.GlastPg;
 			}
 			res.render('achieve', {
-				title: 'ACHIEVEMENT | IEEE SIESGST',
+				title: 'ACHIEVEMENTS | IEEE SIESGST',
 				lastPg: achieveRes.AlastPg,
 				achieveRes: achieveRes.ARes,
 				callPg: callPg

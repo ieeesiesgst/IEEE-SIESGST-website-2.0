@@ -5,6 +5,7 @@ async function updateCache() {
 	try {
 		const allData = await getData({ domain: 'allDomain' });
 		defaultCache = allData.data;
+		console.log('Cache updated at ' + new Date());
 	} catch (err) {
 		console.log(err);
 	}

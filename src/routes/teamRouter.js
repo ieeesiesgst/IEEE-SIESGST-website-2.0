@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
 	try {
 		res.render('teams', {
-			title: 'TEAM | IEEE SIESGST'
+			title: 'TEAMS | IEEE SIESGST'
 		});
 	} catch (err) {
 		console.log(err);

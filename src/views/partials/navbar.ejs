@@ -488,12 +488,12 @@
 			</li>
 		</a>
 		<a href="/events" class="navbar-link">
-			<li class="navbar-list">
+			<li class="navbar-list <%= title == 'EVENTS | IEEE SIESGST' && 'active' %>">
 				<div class="navbar-link-text d-inline">Events</div>
 			</li>
 		</a>
 		<span class="navbar-link dropdown-head cursor-pointer">
-			<li class="navbar-list">
+			<li class="navbar-list <%= (title.startsWith('GALLERY |') || title.startsWith('ACHIEVEMENTS |') || title.startsWith('TEAMS |')) && 'active' %>">
 				<div class="navbar-link-text d-inline">
 					Explore
 					<i class="fas fa-caret-down dropdown-icon"></i>
@@ -525,7 +525,7 @@
 			</span>
 		</span>
 		<span class="navbar-link dropdown-head cursor-pointer">
-			<li class="navbar-list">
+			<li class="navbar-list <%= (title.startsWith('WIE SUB-CHAPTER') || title.startsWith('MTTS SUB-CHAPTER') || title.startsWith('CS SUB-CHAPTER') || title.startsWith('ISV SUB-CHAPTER')) && 'active' %>">
 				<div class="navbar-link-text d-inline">
 					Sub-Chapters
 					<i class="fas fa-caret-down dropdown-icon"></i>
@@ -564,7 +564,7 @@
 			</span>
 		</span>
 		<a href="/contact" class="navbar-link">
-			<li class="navbar-list">
+			<li class="navbar-list <%= title == 'CONTACT | IEEE SIESGST' && 'active' %>">
 				<div class="navbar-link-text d-inline">Contact Us</div>
 			</li>
 		</a>
