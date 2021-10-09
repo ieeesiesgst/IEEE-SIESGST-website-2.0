@@ -130,7 +130,8 @@
 							<div class="card-body text-center fw-bold">
 								<div class="card-title"><%= res.AName %></div>
 							</div>
-							<div class="achieve-desc">	
+							<% if(res.ADes.trim().toLowerCase() != 'nil' && res.ADes != ''){ %>
+							<div class="achieve-desc">							
 								<div
 									class="
 										text-center
@@ -143,8 +144,9 @@
 									"
 								>
 								<%= res.ADes %>	
-								</div>
+								</div>				
 							</div>
+							<% } %>
 						</div>
 					</div>
 					<% }) %>

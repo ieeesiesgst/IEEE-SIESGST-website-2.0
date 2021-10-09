@@ -1386,6 +1386,9 @@ body {
 	transition: 0.5s ease;
 	overflow-y: scroll;
 }
+.achieve-desc:hover {
+	cursor: pointer;
+}
 .achieve-card:hover .achieve-desc {
 	height: 100%;
 }
