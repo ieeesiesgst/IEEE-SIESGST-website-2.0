@@ -110,7 +110,7 @@
 		height: 2px;
 		width: 70%;
 		background: #ffcc66;
-		left: 15%;
+		left: 10%;
 		bottom: -4px;
 		transform-origin: right;
 		transform: scaleX(1);
@@ -525,9 +525,9 @@
 			</span>
 		</span>
 		<span class="navbar-link dropdown-head cursor-pointer">
-			<li class="navbar-list <%= (title.startsWith('WIE SUB-CHAPTER') || title.startsWith('MTTS SUB-CHAPTER') || title.startsWith('CS SUB-CHAPTER') || title.startsWith('ISV SUB-CHAPTER')) && 'active' %>">
+			<li class="navbar-list <%= (title.startsWith('WIE') || title.startsWith('MTTS') || title.startsWith('CS') || title.startsWith('ISV')) && 'active' %>">
 				<div class="navbar-link-text d-inline">
-					Sub-Chapters
+					Chapters
 					<i class="fas fa-caret-down dropdown-icon"></i>
 				</div>
 			</li>
@@ -537,28 +537,28 @@
 						class="navbar-drop-list"
 				>
 						<div class="navbar-link-text d-inline">
-								<a href="/sub-chapter/wie" class="d-block w-100 h-100 text-decoration-none">WIE</a>
+								<a href="/chapter/wie" class="d-block w-100 h-100 text-decoration-none">WIE AG</a>
 						</div>
 				</li>
 				<li
 						class="navbar-drop-list"
 				>
 						<div class="navbar-link-text d-inline">
-								<a href="/sub-chapter/mtts" class="d-block w-100 h-100 text-decoration-none">MTTS</a>
+								<a href="/chapter/mtts" class="d-block w-100 h-100 text-decoration-none">MTT-S</a>
 						</div>
 				</li>
 				<li
 						class="navbar-drop-list"
 				>
 						<div class="navbar-link-text d-inline">
-								<a href="/sub-chapter/isv" class="d-block w-100 h-100 text-decoration-none">ISV</a>
+								<a href="/chapter/isv" class="d-block w-100 h-100 text-decoration-none">ISV Group</a>
 						</div>
 				</li>
 				<li
 						class="navbar-drop-list"
 				>
 						<div class="navbar-link-text d-inline">
-								<a href="/sub-chapter/cs" class="d-block w-100 h-100 text-decoration-none">CS</a>
+								<a href="/chapter/cs" class="d-block w-100 h-100 text-decoration-none">CS</a>
 						</div>
 				</li>
 			</span>

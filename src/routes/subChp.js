@@ -32,8 +32,7 @@ router.get('/:chapter', (req, res) => {
 		} else {
 			res.render(renderPg, {
 				title:
-					req.params.chapter?.toLocaleUpperCase() +
-					' SUB-CHAPTER | IEEE SIESGST',
+					req.params.chapter?.toLocaleUpperCase() + ' | IEEE SIESGST',
 				chapterRes: chapterRes
 			});
 		}
