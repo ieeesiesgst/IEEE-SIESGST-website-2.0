@@ -295,6 +295,7 @@
 										></i>
 									</div>
 								</div>
+								<% if(res.Gdes.trim().toLowerCase() != 'nil' && res.Gdes.trim().toLowerCase() != ''){ %>
 								<div
 									class="
 										gallery-desc
@@ -311,6 +312,7 @@
 								>
 									<%= res.Gdes %>
 								</div>
+								<% } %>
 							</div>
 						</div>
 					<% }
