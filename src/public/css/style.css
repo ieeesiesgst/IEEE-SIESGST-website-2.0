@@ -545,7 +545,6 @@ body {
 		width: 400px;
 	}
 }
-
 .input-space {
 	border: none;
 	border-bottom: 1px solid #000000;
@@ -636,14 +635,6 @@ body {
 
 /*--------------------------------------------TEAMS PAGE STARTS ---------------------------------------------*/
 .teams-bg {
-	/* background: linear-gradient(
-			  rgba(236, 227, 227, 0.3),
-			  rgba(196, 191, 191, 0.6)
-		  ),
-		  url('../images/bg-teams.png'); */
-	/* background: white;
-	  background-repeat: no-repeat;
-	  background-size: cover; */
 	background: linear-gradient(-45deg, #ffcc66, #fff, #fff, #ffcc66);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -651,36 +642,6 @@ body {
 @media screen and (min-width: 300px) and (max-width: 600px) {
 	.teams-bg {
 		background: linear-gradient(75deg, #ffe3aa, #fff, #fff, #ffe3aa);
-	}
-}
-@media screen and (max-width: 575px) {
-	.teamv1 {
-		display: block;
-		border-left: 3px solid #111722;
-		height: 780px;
-		top: 0px;
-		left: -1px;
-	}
-	.teamv2 {
-		display: block;
-		border-left: 3px solid #111722;
-		height: 780px;
-		top: 130px;
-		right: -1px;
-	}
-	.teamv3 {
-		display: block;
-		border-left: 3px solid #111722;
-		height: 780px;
-		top: 112px;
-		right: 10px;
-	}
-	.teamv4 {
-		display: block;
-		border-left: 3px solid #111722;
-		height: 780px;
-		top: 15px;
-		left: 10px;
 	}
 }
 @keyframes gradient {
@@ -703,7 +664,6 @@ body {
 	font-size: 18px;
 	user-select: none;
 }
-
 .teams-bg-core {
 	background: linear-gradient(
 			rgba(255, 204, 102, 0.85),
@@ -714,7 +674,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-tech {
 	background: linear-gradient(rgba(17, 23, 34, 0.5), rgba(17, 23, 34, 0.5)),
 		url('../images/team_bg/tech.jpg');
@@ -723,7 +682,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-design {
 	background: linear-gradient(
 			rgba(255, 204, 102, 0.81),
@@ -734,7 +692,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-creative {
 	background: linear-gradient(rgba(17, 23, 34, 0.7), rgba(17, 23, 34, 0.7)),
 		url('../images/team_bg/creative.jpg');
@@ -743,7 +700,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-media {
 	background: linear-gradient(rgba(30, 41, 60, 0.7), rgba(30, 41, 60, 0.7)),
 		url('../images/team_bg/media.jpg');
@@ -752,7 +708,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-cs {
 	background: linear-gradient(
 			rgba(255, 204, 102, 0.8),
@@ -763,7 +718,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-isv {
 	background: linear-gradient(
 			rgba(255, 204, 102, 0.75),
@@ -774,7 +728,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-mdo {
 	background: linear-gradient(
 			rgba(255, 204, 102, 0.75),
@@ -785,7 +738,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-pr {
 	background: linear-gradient(rgba(17, 23, 34, 0.65), rgba(17, 23, 34, 0.65)),
 		url('../images/team_bg/pr.jpg');
@@ -794,7 +746,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-admin {
 	background: linear-gradient(rgba(17, 23, 34, 0.65), rgba(17, 23, 34, 0.65)),
 		url('../images/team_bg/admin.jpg');
@@ -803,7 +754,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-mtts {
 	background: linear-gradient(rgba(30, 41, 60, 0.1), rgba(30, 41, 60, 0.1)),
 		url('../images/team_bg/mtts.jpg');
@@ -812,7 +762,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-treasurer {
 	background: linear-gradient(rgba(30, 41, 60, 0.7), rgba(30, 41, 60, 0.7)),
 		url('../images/team_bg/treasurer.jpg');
@@ -821,7 +770,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-faculty {
 	background: linear-gradient(
 			rgba(255, 189, 58, 0.7),
@@ -832,7 +780,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-secretary {
 	background: linear-gradient(
 			rgba(199, 200, 202, 0.86),
@@ -843,7 +790,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-wie {
 	background: linear-gradient(
 			rgba(199, 200, 202, 0.84),
@@ -854,7 +800,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-publicity {
 	background: linear-gradient(rgba(30, 41, 60, 0.7), rgba(30, 41, 60, 0.7)),
 		url('../images/team_bg/publicity.jpg');
@@ -863,7 +808,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .teams-bg-pr .all-team-name,
 .teams-bg-admin .all-team-name,
 .teams-bg-mtts .all-team-name,
@@ -906,7 +850,6 @@ body {
 	text-decoration: none;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-
 .memberCard-img {
 	height: 190px;
 	width: 190px;
@@ -1442,6 +1385,9 @@ body {
 	height: 0;
 	transition: 0.5s ease;
 	overflow-y: scroll;
+}
+.achieve-desc:hover {
+	cursor: pointer;
 }
 .achieve-card:hover .achieve-desc {
 	height: 100%;
