@@ -32,7 +32,7 @@
 		"express-flash-message": "^2.1.0",
 		"express-rate-limit": "^5.4.1",
 		"express-session": "^1.17.2",
-		"mongoose": "^6.0.9",
+		"mongoose": "^6.0.10",
 		"node-cache": "^5.1.2",
 		"passport": "^0.5.0",
 		"passport-azure-ad": "^4.3.1",
