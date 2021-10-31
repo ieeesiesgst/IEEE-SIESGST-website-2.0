@@ -19,7 +19,6 @@ router.get('/', async (req, res) => {
 			domain: 'gallery',
 			page: callPg
 		};
-
 		let galleryRes;
 		if (callPg == 1) {
 			galleryRes = cachedata('gallery');
