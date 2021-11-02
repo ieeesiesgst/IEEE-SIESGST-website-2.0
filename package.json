@@ -41,7 +41,7 @@
 		"passport-local-mongoose": "^6.1.0",
 		"qs": "^6.10.1",
 		"rate-limit-mongo": "^2.3.2",
-		"validator": "^13.6.0"
+		"validator": "^13.7.0"
 	},
 	"devDependencies": {
 		"eslint": "^8.1.0",
