@@ -21,6 +21,7 @@ const memberRouter = require('./routes/memberRouter');
 const contactRouter = require('./routes/contactRouter');
 const subChapter = require('./routes/subChp');
 const achievement = require('./routes/achievement');
+const techopedia9 = require('./routes/techopedia9');
 
 const app = express();
 app.use(express.static(path.join(__dirname, './public')));
@@ -48,6 +49,7 @@ app.use('/teams', memberRouter);
 app.use('/contact', contactRouter);
 app.use('/chapter', subChapter);
 app.use('/achievements', achievement);
+app.use('/Techopedia9', techopedia9);
 
 app.use('/', generalRouter);
 
