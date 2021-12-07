@@ -39,7 +39,7 @@
 		"passport-google-oauth20": "^2.0.0",
 		"passport-local": "^1.0.0",
 		"passport-local-mongoose": "^6.1.0",
-		"qs": "^6.10.1",
+		"qs": "^6.10.2",
 		"rate-limit-mongo": "^2.3.2",
 		"validator": "^13.7.0"
 	},
