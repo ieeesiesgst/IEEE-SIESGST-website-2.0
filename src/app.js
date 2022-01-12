@@ -51,7 +51,7 @@ app.use('/contact', contactRouter);
 app.use('/chapter', subChapter);
 app.use('/achievements', achievement);
 app.use('/Techopedia9', techopedia9);
-app.use('/Techopedia10', techopedia10Receipts);
+app.use('/TechopediaX', techopedia10Receipts);
 
 app.use('/', generalRouter);
 
