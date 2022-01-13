@@ -22,7 +22,7 @@ const contactRouter = require('./routes/contactRouter');
 const subChapter = require('./routes/subChp');
 const achievement = require('./routes/achievement');
 const techopedia9 = require('./routes/techopedia9');
-const techopedia10Receipts = require('./routes/techopedia10');
+const techopedia10Receipts = require('./routes/techopediaX/techopedia10');
 
 const app = express();
 app.use(express.static(path.join(__dirname, './public')));
@@ -51,7 +51,7 @@ app.use('/contact', contactRouter);
 app.use('/chapter', subChapter);
 app.use('/achievements', achievement);
 app.use('/Techopedia9', techopedia9);
-app.use('/TechopediaX', techopedia10Receipts);
+app.use('/TechopediaX-Receipts', techopedia10Receipts);
 
 app.use('/', generalRouter);
 
