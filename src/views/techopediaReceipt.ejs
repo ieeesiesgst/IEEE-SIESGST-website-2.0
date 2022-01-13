@@ -87,7 +87,6 @@
         })
         .then(response => response.json())
         .then(data => {
-          console.log(data);
           if(!data.message) {
             $('#fetch-text').addClass('d-none');
             $('#error-block').removeClass('d-none');
@@ -102,7 +101,7 @@
             success.appendChild(img);
             let downloadBtn = document.getElementById('download-btn');
             downloadBtn.href = data.img;
-            downloadBtn.download = 'TechopediaX_'+data.event;
+            downloadBtn.download = 'TechopediaX_'+data.event.split(' ').join('-');
           }
         })
         .catch(err => {
