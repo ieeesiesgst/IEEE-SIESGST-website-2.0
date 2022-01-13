@@ -7,12 +7,12 @@ router.get('/', (req, res) => {
 	try {
 		let decryptName = CryptoJS.Rabbit.decrypt(
 			req.query.x,
-			'NsdvkbDIK23kjv0bNFvV349vbhK920bJ'
+			process.env.TECHOEDIAX_KEY
 		).toString(CryptoJS.enc.Utf8);
 
 		let decryptEvent = CryptoJS.Rabbit.decrypt(
 			req.query.y,
-			'NsdvkbDIK23kjv0bNFvV349vbhK920bJ'
+			process.env.TECHOEDIAX_KEY
 		).toString(CryptoJS.enc.Utf8);
 
 		console.log(decryptName, decryptEvent);
