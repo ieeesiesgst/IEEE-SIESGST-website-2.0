@@ -84,22 +84,16 @@ module.exports = async (body) => {
 			image.getHeight()
 		);
 
-		// image.rotate(-90);
+		const fontCanvas = await Jimp.create(760, 60);
+		fontCanvas
+			.print(font44, 0, 0, {
+				text: body.d,
+				alignmentX: Jimp.HORIZONTAL_ALIGN_LEFT,
+				alignmentY: Jimp.VERTICAL_ALIGN_TOP
+			})
+			.rotate(90);
 
-		// image.print(
-		// 	font44,
-		// 	843,
-		// 	1190,
-		// 	{
-		// 		text: body.d,
-		// 		alignmentX: Jimp.HORIZONTAL_ALIGN_LEFT,
-		// 		alignmentY: Jimp.VERTICAL_ALIGN_TOP
-		// 	},
-		// 	image.getWidth(),
-		// 	image.getHeight()
-		// );
-
-		// image.rotate(90);
+		image.blit(fontCanvas, 1190, 690);
 
 		let data = await image.getBase64Async(Jimp.MIME_PNG);
 		return { message: true, data };
