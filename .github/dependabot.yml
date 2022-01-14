@@ -8,7 +8,6 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     assignees:
-      - "abhijoshi2k"
       - "Shruti-T"
       - "Nadita10062001"
     commit-message:
@@ -17,7 +16,6 @@ updates:
     labels:
       - "dependency-update"
     reviewers: 
-      - "abhijoshi2k"
       - "Shruti-T"
       - "Nadita10062001"
     schedule:
