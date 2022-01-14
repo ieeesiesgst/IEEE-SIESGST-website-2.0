@@ -26,11 +26,12 @@ let image, font44, font36;
 
 module.exports = async (body) => {
 	try {
+		let imgCopy = await image.clone();
 		let xCoord = 326;
 		let yCoord = 782;
 
 		body.x?.forEach((name) => {
-			image.print(
+			imgCopy.print(
 				font36,
 				xCoord,
 				yCoord,
@@ -39,13 +40,13 @@ module.exports = async (body) => {
 					alignmentX: Jimp.HORIZONTAL_ALIGN_LEFT,
 					alignmentY: Jimp.VERTICAL_ALIGN_TOP
 				},
-				image.getWidth(),
-				image.getHeight()
+				imgCopy.getWidth(),
+				imgCopy.getHeight()
 			);
 			yCoord += 61;
 		});
 
-		image.print(
+		imgCopy.print(
 			font36,
 			xCoord,
 			1097,
@@ -54,11 +55,11 @@ module.exports = async (body) => {
 				alignmentX: Jimp.HORIZONTAL_ALIGN_LEFT,
 				alignmentY: Jimp.VERTICAL_ALIGN_TOP
 			},
-			image.getWidth(),
-			image.getHeight()
+			imgCopy.getWidth(),
+			imgCopy.getHeight()
 		);
 
-		image.print(
+		imgCopy.print(
 			font36,
 			xCoord,
 			1290,
@@ -67,11 +68,11 @@ module.exports = async (body) => {
 				alignmentX: Jimp.HORIZONTAL_ALIGN_LEFT,
 				alignmentY: Jimp.VERTICAL_ALIGN_TOP
 			},
-			image.getWidth(),
-			image.getHeight()
+			imgCopy.getWidth(),
+			imgCopy.getHeight()
 		);
 
-		image.print(
+		imgCopy.print(
 			font36,
 			xCoord,
 			1483,
@@ -80,8 +81,8 @@ module.exports = async (body) => {
 				alignmentX: Jimp.HORIZONTAL_ALIGN_LEFT,
 				alignmentY: Jimp.VERTICAL_ALIGN_TOP
 			},
-			image.getWidth(),
-			image.getHeight()
+			imgCopy.getWidth(),
+			imgCopy.getHeight()
 		);
 
 		const fontCanvas = await Jimp.create(760, 60);
@@ -93,9 +94,9 @@ module.exports = async (body) => {
 			})
 			.rotate(90);
 
-		image.blit(fontCanvas, 1190, 690);
+		imgCopy.blit(fontCanvas, 1190, 690);
 
-		let data = await image.getBase64Async(Jimp.MIME_PNG);
+		let data = await imgCopy.getBase64Async(Jimp.MIME_PNG);
 		return { message: true, data };
 	} catch (e) {
 		console.log(e);
