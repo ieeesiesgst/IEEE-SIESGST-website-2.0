@@ -7,7 +7,7 @@ let image, font44, font36;
 	image = await Jimp.read(
 		path.join(__dirname, './receipt-files/receipt.png')
 	);
-	console.log('Image Loaded');
+	console.log('Receipt Image Loaded');
 })();
 
 (async () => {
