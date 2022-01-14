@@ -84,22 +84,22 @@ module.exports = async (body) => {
 			image.getHeight()
 		);
 
-		image.rotate(-90);
+		// image.rotate(-90);
 
-		image.print(
-			font44,
-			843,
-			1190,
-			{
-				text: body.d,
-				alignmentX: Jimp.HORIZONTAL_ALIGN_LEFT,
-				alignmentY: Jimp.VERTICAL_ALIGN_TOP
-			},
-			image.getWidth(),
-			image.getHeight()
-		);
+		// image.print(
+		// 	font44,
+		// 	843,
+		// 	1190,
+		// 	{
+		// 		text: body.d,
+		// 		alignmentX: Jimp.HORIZONTAL_ALIGN_LEFT,
+		// 		alignmentY: Jimp.VERTICAL_ALIGN_TOP
+		// 	},
+		// 	image.getWidth(),
+		// 	image.getHeight()
+		// );
 
-		image.rotate(90);
+		// image.rotate(90);
 
 		let data = await image.getBase64Async(Jimp.MIME_PNG);
 		return { message: true, data };
