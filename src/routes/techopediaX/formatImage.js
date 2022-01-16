@@ -14,14 +14,14 @@ let image, font44, font36;
 	font44 = await Jimp.loadFont(
 		path.join(__dirname, './receipt-files/font44.fnt')
 	);
-	console.log('Font 44 Loaded');
+	// console.log('Font 44 Loaded');
 })();
 
 (async () => {
 	font36 = await Jimp.loadFont(
 		path.join(__dirname, './receipt-files/font36.fnt')
 	);
-	console.log('Font 36 Loaded');
+	// console.log('Font 36 Loaded');
 })();
 
 module.exports = async (body) => {
