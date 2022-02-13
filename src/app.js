@@ -43,6 +43,7 @@ app.set('view engine', 'ejs');
 // app.use('/auth', microsoftRouter);
 // app.use('/auth', localSignUpRouter);
 // app.use('/auth', localLoginRouter);
+
 app.use('/events', eventsRouter);
 app.use('/gallery', galleryRouter);
 app.use('/teams', teamRouter);
