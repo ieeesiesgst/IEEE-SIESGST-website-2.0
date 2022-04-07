@@ -1,7 +1,6 @@
 const express = require('express');
 const eventDivision = require('../functions/subFunctions/eventDivision');
 const cachedata = require('../cache/cacheData');
-
 const router = express.Router();
 
 router.get('/', async (req, res) => {
