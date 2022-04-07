@@ -42,6 +42,7 @@ app.set('view engine', 'ejs');
 
 // app.use('/auth', googleRouter);
 // app.use('/auth', microsoftRouter);
+
 // app.use('/auth', localSignUpRouter);
 // app.use('/auth', localLoginRouter);
 
