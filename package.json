@@ -31,7 +31,7 @@
 		"express": "^4.18.1",
 		"express-flash-message": "^2.1.0",
 		"express-rate-limit": "^6.4.0",
-		"express-session": "^1.17.2",
+		"express-session": "^1.17.3",
 		"jimp": "^0.16.1",
 		"mongoose": "^6.4.2",
 		"node-cache": "^5.1.2",
@@ -47,7 +47,7 @@
 	"devDependencies": {
 		"eslint": "^8.14.0",
 		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-prettier": "^4.2.1",
 		"nodemon": "^2.0.18",
 		"prettier": "^2.6.2"
 	}
