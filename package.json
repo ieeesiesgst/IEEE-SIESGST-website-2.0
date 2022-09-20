@@ -32,7 +32,7 @@
 		"express-flash-message": "^2.1.0",
 		"express-rate-limit": "^6.6.0",
 		"express-session": "^1.17.3",
-		"jimp": "^0.16.1",
+		"jimp": "^0.16.2",
 		"mongoose": "^6.6.1",
 		"node-cache": "^5.1.2",
 		"passport": "^0.6.0",
