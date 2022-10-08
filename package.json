@@ -21,7 +21,7 @@
 	},
 	"homepage": "https://github.com/ieeesiesgst/IEEE-SIESGST-website-2.0#readme",
 	"dependencies": {
-		"axios": "^1.0.0",
+		"axios": "^1.1.2",
 		"body-parser": "^1.20.1",
 		"connect-flash": "^0.1.1",
 		"connect-mongo": "^4.6.0",
