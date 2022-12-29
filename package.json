@@ -33,7 +33,7 @@
 		"express-rate-limit": "^6.6.0",
 		"express-session": "^1.17.3",
 		"jimp": "^0.16.2",
-		"mongoose": "^6.7.1",
+		"mongoose": "^6.8.2",
 		"node-cache": "^5.1.2",
 		"passport": "^0.6.0",
 		"passport-azure-ad": "^4.3.4",
